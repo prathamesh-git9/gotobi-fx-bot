@@ -1,0 +1,25 @@
+daily bars 2015-08-10 -> 2026-09-30 2864
+rules tested 192; >=60% win AND profitable in both halves of 2019-23: 9
+ fam  p  trend  exit  k sides  n_sel  win_sel  avg_sel  t_sel  n_3y  win_3y  avg_3y  n_1518  win_1518  avg_1518
+lowN  7     50   pdh  2    LS     71    0.732    0.093  1.317    40   0.650   0.010      45     0.533    -0.121
+rsi2 25     50  sma5  2     L     53    0.698    0.096  1.146    40   0.675   0.039      38     0.605    -0.019
+lowN  7     50 highN  2    LS     63    0.667    0.093  1.098    37   0.676   0.146      43     0.558    -0.069
+rsi2 25    100  sma5  2     L     72    0.653    0.072  0.973    52   0.692   0.042      45     0.622    -0.011
+rsi2 25    100  sma5  3     L     70    0.657    0.048  0.894    51   0.725   0.062      43     0.628    -0.024
+rsi2 25    200  sma5  3     L     83    0.651    0.041  0.873    57   0.719   0.045      31     0.548    -0.107
+lowN  3    100 highN  2     L    113    0.628    0.023  0.453    97   0.722   0.094      68     0.588    -0.036
+rsi2 25    100  sma5  2    LS    116    0.638    0.025  0.441    61   0.689   0.002      72     0.611    -0.044
+rsi2 25    100 rsi65  2    LS    112    0.634    0.005  0.089    57   0.684   0.004      69     0.623    -0.025
+
+Top-20 average  2019-23: win 66% avg +0.055R | last 3y: win 69% avg +0.049R | 2015-18: win 59% avg -0.051R
+
+WINNER (chosen on 2019 - Sep 2023 only): ('lowN', 7, 50, 'pdh', 2, 'LS')
+  2019-Sep 2023 (selection): 71 trades, win 73%, avg +0.093R, longs 51%, stops hit 17%, avg hold 4.1d
+      $1,000 -> $1,067 after swap+tax (tax $0), $1,077 if swap-free; max DD 3%
+      drift test: strategy +0.329%/trade vs random same-length -0.032%  (p = 0.047)
+  Oct 2023-Sep 2026 (last 3 years): 40 trades, win 65%, avg +0.010R, longs 72%, stops hit 15%, avg hold 4.7d
+      $1,000 -> $1,003 after swap+tax (tax $0), $1,011 if swap-free; max DD 4%
+      drift test: strategy +0.201%/trade vs random same-length +0.243%  (p = 0.540)
+  2015-2018 (stress): 45 trades, win 53%, avg -0.121R, longs 49%, stops hit 33%, avg hold 5.2d
+      $1,000 -> $946 after swap+tax (tax $0), $955 if swap-free; max DD 10%
+      drift test: strategy -0.229%/trade vs random same-length -0.033%  (p = 0.766)

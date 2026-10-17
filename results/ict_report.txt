@@ -1,0 +1,46 @@
+configs 15600, with >= 80 selection trades 5453, positive in selection 14.5%
+
+What each signal does on its own (selection period, all symbols, market entry, 3R):
+  trend      on -0.066 (n= 1508)   off -0.038
+  sane       on -0.054 (n= 3835)   off +0.009
+  quick      on -0.042 (n=  858)   off -0.049
+  fvg        on -0.043 (n= 3296)   off -0.065
+  of_spike   on -0.063 (n= 1364)   off -0.041
+  of_absorb  on -0.111 (n=  702)   off -0.035
+  of_disp    on -0.036 (n= 2495)   off -0.065
+  heat       on -0.069 (n= 2428)   off -0.020
+  magnet     on -0.043 (n= 3999)   off -0.127
+
+Order-block limit entry vs market entry (selection, all symbols, 3R):
+  ob   n=  919  avg -0.176R  win 22%
+  mkt  n= 4251  avg -0.048R  win 34%
+
+Top 20 by selection t-stat -> last 3 years:
+universe model entry              filters    exit  n_sel  avgR_sel  t_sel  n_3y  avgR_3y   t_3y
+  eurusd  asia   mkt    fvg+of_spike+heat     r_2     91     0.217  1.591    40   -0.180 -1.051
+    all4  both   mkt    quick+heat+magnet r_range    170     0.175  1.504    89   -0.019 -0.127
+    all4  both   mkt      sane+quick+heat r_range    172     0.173  1.498    85   -0.054 -0.341
+  gbpusd  asia   mkt           fvg+magnet   r_3be    493     0.087  1.435   309    0.005  0.063
+  gbpusd  asia   mkt                  fvg   r_3be    496     0.085  1.413   312   -0.002 -0.023
+    all4  both   mkt           quick+heat r_range    177     0.150  1.323    91   -0.041 -0.272
+  gbpusd  asia   mkt      sane+fvg+magnet   r_3be    459     0.082  1.298   289    0.005  0.068
+  eurusd  asia   mkt    fvg+of_spike+heat   r_3be     91     0.179  1.276    40   -0.147 -0.839
+  gbpusd  asia   mkt             sane+fvg   r_3be    462     0.080  1.275   292   -0.002 -0.020
+  eurusd  both   mkt quick+of_disp+magnet r_range     91     0.225  1.238    40   -0.157 -0.702
+  gbpusd  asia   mkt     fvg+of_disp+heat     r_3    164     0.139  1.233    44   -0.282 -1.458
+  gbpusd  both   mkt      sane+quick+heat     r_2     83     0.183  1.177    43   -0.208 -1.119
+  gbpusd  both    ob    sane+of_disp+heat r_range    138     0.343  1.166    32    0.574  0.669
+  gbpusd  both   mkt       sane+quick+fvg     r_2    130     0.140  1.162    72   -0.106 -0.678
+  gbpusd  asia   mkt     fvg+of_disp+heat   r_3be    164     0.114  1.134    44   -0.105 -0.568
+  eurusd  both   mkt   sane+quick+of_disp r_range     95     0.199  1.133    40   -0.157 -0.702
+  eurusd  both   mkt        quick+of_disp r_range     95     0.199  1.133    41   -0.178 -0.810
+  gbpusd  both   mkt    quick+heat+magnet     r_2     91     0.162  1.121    51   -0.160 -0.967
+  gbpusd  both    ob         of_disp+heat r_range    163     0.320  1.120    39    0.316  0.447
+    gold  pdhl   mkt            trend+fvg   r_3be    124     0.129  1.102    78   -0.090 -0.743
+Top-20 average: selection +0.169R -> last 3y -0.050R
+
+WINNER (chosen on 2019-09/2023 only): {'universe': 'eurusd', 'model': 'asia', 'entry': 'mkt', 'filters': 'fvg+of_spike+heat', 'exit': 'r_2'}
+Last 3 years: trades 40  win 35%  avg -0.180R  total -7.2R
+$1,000 Oct 2023 -> Sep 2026: end $941   max drawdown 9%   skipped 0
+without best 5 trades: -17.2R
+bootstrap: P(end < $1000) 87%  median $927  5-95% $834-$1,039

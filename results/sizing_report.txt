@@ -1,0 +1,38 @@
+Kelly-optimal risk per trade (maximises long-run growth; real traders use half or less):
+  good (last 3y, real costs)           n= 170 avg +0.138R win 74%  Kelly 32%
+  typical (2016-26, today's spread)    n= 514 avg +0.085R win 67%  Kelly 20%
+  bad (2016 + 2022 only)               n=  77 avg -0.105R win 49%  Kelly 0%
+
+=== good (last 3y, real costs) ===
+ risk | median 1y median 3y | P(3y < 100) P(3y < 50) P(3y < 20) | median maxDD 5% worst 3y 95% best 3y
+   1% | EUR   107 EUR   123 |          0%         0%         0% |           4% EUR     109 EUR     138
+   2% | EUR   115 EUR   150 |          0%         0%         0% |           8% EUR     117 EUR     189
+   5% | EUR   139 EUR   264 |          1%         0%         0% |          19% EUR     142 EUR     472
+  10% | EUR   184 EUR   598 |          1%         0%         0% |          36% EUR     173 EUR   1,971
+  15% | EUR   233 EUR 1,190 |          2%         0%         0% |          51% EUR     179 EUR   6,056
+  20% | EUR   274 EUR 1,980 |          3%         1%         0% |          63% EUR     148 EUR  16,073
+
+=== typical (2016-26, today's spread) ===
+ risk | median 1y median 3y | P(3y < 100) P(3y < 50) P(3y < 20) | median maxDD 5% worst 3y 95% best 3y
+   1% | EUR   104 EUR   113 |          5%         0%         0% |           5% EUR     100 EUR     128
+   2% | EUR   109 EUR   128 |          6%         0%         0% |          10% EUR      99 EUR     164
+   5% | EUR   121 EUR   176 |          7%         0%         0% |          23% EUR      94 EUR     325
+  10% | EUR   140 EUR   269 |         10%         2%         0% |          43% EUR      74 EUR     919
+  15% | EUR   152 EUR   347 |         15%         5%         1% |          60% EUR      50 EUR   2,315
+  20% | EUR   158 EUR   387 |         19%        10%         3% |          73% EUR      28 EUR   4,592
+
+=== bad (2016 + 2022 only) ===
+ risk | median 1y median 3y | P(3y < 100) P(3y < 50) P(3y < 20) | median maxDD 5% worst 3y 95% best 3y
+   1% | EUR    95 EUR    85 |         98%         0%         0% |          17% EUR      75 EUR      97
+   2% | EUR    90 EUR    72 |         98%         1%         0% |          32% EUR      55 EUR      94
+   5% | EUR    75 EUR    42 |         98%        67%         3% |          63% EUR      22 EUR      81
+  10% | EUR    53 EUR    15 |         99%        93%        64% |          88% EUR       4 EUR      58
+  15% | EUR    35 EUR     4 |         99%        97%        89% |          97% EUR       1 EUR      34
+  20% | EUR    22 EUR     1 |        100%        99%        96% |          99% EUR       0 EUR      16
+
+Position size today: gold ~$4,795, daily ATR ~$140, stop 0.3xATR = $42.0/oz
+  risk 2%: $2.34 at risk -> 0.06 oz = 0.0006 lots; notional $267 = 2x leverage
+  risk 5%: $5.85 at risk -> 0.14 oz = 0.0014 lots; notional $669 = 6x leverage
+  risk 10%: $11.70 at risk -> 0.28 oz = 0.0028 lots; notional $1,337 = 11x leverage
+  Exness Standard minimum is 0.01 lot = 1 oz (risk $42 = 36% of EUR 100). The Standard Cent account trades 0.01 oz.
+  EU retail leverage cap on gold is 1:20 -> max ~0.49 oz with EUR 100 (= 17.5% risk).

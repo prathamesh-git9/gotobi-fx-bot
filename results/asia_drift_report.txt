@@ -1,0 +1,16 @@
+nights 2660 2016-06-03 -> 2026-09-30  median entry spread $ 0.27
+
+Buy 18:00 / sell 03:00 NY, no stop/target, gross return per night:
+  2015-18    nights 662  win 43%  avg -0.0211%  after $0.10 slip+spread win 42%
+  2019-Sep23 nights 1224  win 49%  avg -0.0048%  after $0.10 slip+spread win 48%
+  last 3y    nights 774  win 55%  avg +0.0518%  after $0.10 slip+spread win 55%
+
+rules 330; >=60% win AND profitable in both halves of 2019-23: 1
+       filters       plan  n_sel  win_sel  avg_sel  t_sel  n_3y  win_3y  avg_3y  n_1518  win_1518  avg_1518
+ny_down+vol_hi r_0.15_0.3    225    0.618    0.014  0.347   170   0.735   0.138     119     0.605    -0.042
+Top-20 average: 2019-23 win 62% avg +0.014R | last 3y win 74% avg +0.138R | 2015-18 win 61% avg -0.042R
+
+WINNER (chosen on 2019 - Sep 2023 only): ny_down+vol_hi r_0.15_0.3
+  2019-Sep 2023 (selection): 225 trades, win 62%, avg +0.014R, $1,000 -> $1,028 after costs+tax (tax $0), max DD 11%
+  Oct 2023-Sep 2026 (last 3 years): 170 trades, win 74%, avg +0.138R, $1,000 -> $1,260 after costs+tax (tax $0), max DD 4%
+  2015-2018 (stress): 119 trades, win 61%, avg -0.042R, $1,000 -> $949 after costs+tax (tax $0), max DD 8%

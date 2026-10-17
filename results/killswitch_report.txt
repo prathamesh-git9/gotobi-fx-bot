@@ -1,0 +1,24 @@
+
+### real spreads of each year
+risk 5% no kill switch  : EUR 100 -> EUR 230  maxDD 47%  live trades 514/514
+     year-end balance: {2016: 75, 2017: 75, 2018: 73, 2019: 66, 2020: 72, 2021: 104, 2022: 70, 2023: 100, 2024: 141, 2025: 187, 2026: 230}
+risk 5% WITH kill switch: EUR 100 -> EUR 225  maxDD 38%  live trades 303/514
+     year-end balance: {2016: 100, 2017: 93, 2018: 77, 2019: 69, 2020: 69, 2021: 100, 2022: 72, 2023: 104, 2024: 146, 2025: 185, 2026: 225}
+risk 10% no kill switch  : EUR 100 -> EUR 317  maxDD 78%  live trades 514/514
+     year-end balance: {2016: 55, 2017: 52, 2018: 48, 2019: 37, 2020: 41, 2021: 83, 2022: 35, 2023: 70, 2024: 131, 2025: 218, 2026: 317}
+risk 10% WITH kill switch: EUR 100 -> EUR 376  maxDD 64%  live trades 303/514
+     year-end balance: {2016: 100, 2017: 86, 2018: 57, 2019: 45, 2020: 44, 2021: 90, 2022: 45, 2023: 90, 2024: 169, 2025: 260, 2026: 376}
+
+### today's spread in every year
+risk 5% no kill switch  : EUR 100 -> EUR 687  maxDD 45%  live trades 514/514
+     year-end balance: {2016: 93, 2017: 129, 2018: 148, 2019: 145, 2020: 181, 2021: 272, 2022: 187, 2023: 279, 2024: 425, 2025: 558, 2026: 687}
+risk 5% WITH kill switch: EUR 100 -> EUR 564  maxDD 28%  live trades 374/514
+     year-end balance: {2016: 100, 2017: 118, 2018: 124, 2019: 126, 2020: 146, 2021: 219, 2022: 162, 2023: 241, 2024: 367, 2025: 462, 2026: 564}
+risk 10% no kill switch  : EUR 100 -> EUR 2,837  maxDD 71%  live trades 514/514
+     year-end balance: {2016: 84, 2017: 155, 2018: 194, 2019: 178, 2020: 261, 2021: 569, 2022: 254, 2023: 543, 2024: 1189, 2025: 1942, 2026: 2837}
+risk 10% WITH kill switch: EUR 100 -> EUR 2,227  maxDD 50%  live trades 374/514
+     year-end balance: {2016: 100, 2017: 135, 2018: 142, 2019: 143, 2020: 184, 2021: 401, 2022: 215, 2023: 461, 2024: 1009, 2025: 1531, 2026: 2227}
+
+Last 3 years only (Oct 2023-Sep 2026), real costs, risk 5%: EUR 100 -> EUR 298, maxDD 19%
+
+Last 3 years only (Oct 2023-Sep 2026), real costs, risk 10%: EUR 100 -> EUR 755, maxDD 36%

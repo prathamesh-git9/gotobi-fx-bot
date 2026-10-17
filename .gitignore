@@ -1,0 +1,8 @@
+data/
+__pycache__/
+results/trades.parquet
+bot_state/
+bot_config.toml
+.pytest_cache/
+results/*.pkl
+results/asia_v2_nights.parquet

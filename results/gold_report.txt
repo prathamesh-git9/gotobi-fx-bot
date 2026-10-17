@@ -1,0 +1,39 @@
+configs with >= 100 trades: 34567   profitable in both halves of 2019-23: 1284 (3.7%)
+
+Exit plans on ALL gold signals, 2019-Sep 2023 (win rate vs average R):
+         T1   T1.5     T2     T3     T4    BE2    BE3    BE4     P2     P3     P4     PT     TR
+win   0.452  0.378  0.331  0.294  0.273  0.259  0.214  0.192  0.452  0.452  0.452  0.452  0.432
+avgR -0.139 -0.129 -0.139 -0.107 -0.115 -0.139 -0.118 -0.123 -0.136 -0.128 -0.130 -0.135 -0.130
+
+Top 20 stable rules (by selection t-stat) and what they did in the last 3 years:
+  entry model                   filters plan  n_sel  win_sel  avgR_sel  t_sel    h1    h2  n_3y  win_3y  avgR_3y
+    mss  both       trend+no_nfp+vol_hi   T4    145    0.448     0.248  1.893 0.122 0.391   101   0.376   -0.069
+reclaim  pdhl    trend+quick+asia_tight   T3    100    0.390     0.321  1.771 0.381 0.263    50   0.260   -0.181
+    mss  both         trend+sane+vol_hi   T3    139    0.446     0.222  1.741 0.207 0.239    89   0.371   -0.017
+    mss  both         trend+sane+vol_hi   T4    139    0.439     0.236  1.728 0.149 0.334    89   0.360   -0.056
+    mss  both   trend+vol_hi+above_open   T3    131    0.443     0.227  1.727 0.225 0.229    87   0.379   -0.011
+    mss  pdhl shallow+vol_hi+pd_against T1.5    111    0.514     0.185  1.724 0.104 0.276    61   0.377   -0.017
+    mss  both              trend+vol_hi   T3    153    0.451     0.202  1.721 0.172 0.236   104   0.385   -0.053
+    mss  both      trend+mss_too+vol_hi   T3    153    0.451     0.202  1.721 0.172 0.236   104   0.385   -0.053
+    mss  both   trend+vol_hi+above_open   T4    131    0.435     0.242  1.712 0.162 0.326    87   0.368   -0.043
+    mss  both      trend+mss_too+vol_hi   T4    153    0.444     0.215  1.710 0.119 0.320   104   0.375   -0.086
+    mss  both              trend+vol_hi   T4    153    0.444     0.215  1.710 0.119 0.320   104   0.375   -0.086
+    mss  both       trend+no_nfp+vol_hi   T3    145    0.448     0.207  1.709 0.125 0.300   101   0.386   -0.035
+reclaim  pdhl  trend+shallow+pd_against   T4    102    0.343     0.341  1.674 0.344 0.338    61   0.197   -0.196
+reclaim  pdhl          trend+pd_against   T4    108    0.352     0.324  1.671 0.326 0.322    65   0.200   -0.208
+reclaim  pdhl    trend+quick+asia_tight   T4    100    0.360     0.335  1.658 0.406 0.266    50   0.240   -0.141
+    mss  pdhl     strong+shallow+vol_hi   T1    104    0.596     0.144  1.613 0.099 0.199    76   0.487   -0.046
+reclaim  pdhl          trend+sane+quick   T3    118    0.364     0.265  1.611 0.196 0.335    80   0.325    0.108
+reclaim  pdhl midweek+vol_hi+pd_against T1.5    110    0.500     0.191  1.603 0.210 0.171    70   0.343   -0.163
+reclaim  pdhl vol_hi+premium+pd_against T1.5    130    0.485     0.174  1.598 0.172 0.176    85   0.388   -0.054
+    mss  both   trend+vol_hi+asia_tight   T2    110    0.491     0.189  1.589 0.202 0.175    49   0.449    0.121
+Top-20 average: selection +0.234R (win 44%) -> last 3y -0.064R (win 35%)
+
+WINNER (chosen on 2019 - Sep 2023 only): {'entry': 'mss', 'model': 'both', 'filters': 'trend+no_nfp+vol_hi', 'plan': 'T4'}
+
+  Standard account (spread + $0.10/oz slippage)
+  last 3y: 101 trades, win rate 38%, avg -0.069R, avg cost per trade 0.035R
+  $1,000 -> before tax $976 | after Irish CGT $976 (tax paid $0)  max drawdown 15%
+    year, P&L $, tax $, balance $: [(2023, np.float64(-55.41), 0.0, np.float64(944.59)), (2024, np.float64(-21.68), 0.0, np.float64(922.91)), (2025, np.float64(45.81), np.float64(0.0), np.float64(968.73)), (2026, 6.94, np.float64(0.0), np.float64(975.67))]
+  $10,000 -> before tax $9,373 | after Irish CGT $9,373 (tax paid $0)  max drawdown 16%
+  (Raw Spread account ($7/lot commission + raw spread + $0.10/oz slippage): no data yet)

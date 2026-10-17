@@ -1,0 +1,5 @@
+rules tested 2682; >=60% win + profitable both halves (today's costs): 0
+rules with >=60% win at all in 2019-23: 1853, of which avg R > 0: 4
+Empty DataFrame
+Columns: [fam, p, sess, trend, sides, tp, sl, H, n_sel, win_sel, avg_sel, t_sel, n_3y, win_3y, avg_3y, n_1618, win_1618, avg_1618]
+Index: []

@@ -1,0 +1,83 @@
+
+################ pasted rule dates
+
+=== A only (pasted rule): 753 trades (70/yr)  avg +0.058R  win 55.2%  full-Kelly risk 18% per trade
+  -- scenario: history (avg +0.058R)
+     risk  1.0%: 3-year EUR 100 -> median    112 (5%:    98, 95%:     129)  P(loss)   8%  median maxDD   5%  P(DD>50%)   0%
+     risk  2.0%: 3-year EUR 100 -> median    125 (5%:    96, 95%:     167)  P(loss)   9%  median maxDD  10%  P(DD>50%)   0%
+     risk  3.1%: 3-year EUR 100 -> median    141 (5%:    92, 95%:     217)  P(loss)  10%  median maxDD  16%  P(DD>50%)   0%
+     risk  5.0%: 3-year EUR 100 -> median    167 (5%:    84, 95%:     339)  P(loss)  11%  median maxDD  25%  P(DD>50%)   2%
+     risk 10.0%: 3-year EUR 100 -> median    238 (5%:    63, 95%:     942)  P(loss)  14%  median maxDD  45%  P(DD>50%)  37%
+  -- scenario: half edge (avg +0.029R)
+     risk  1.0%: 3-year EUR 100 -> median    106 (5%:    92, 95%:     122)  P(loss)  25%  median maxDD   7%  P(DD>50%)   0%
+     risk  2.0%: 3-year EUR 100 -> median    111 (5%:    84, 95%:     147)  P(loss)  27%  median maxDD  13%  P(DD>50%)   0%
+     risk  3.1%: 3-year EUR 100 -> median    117 (5%:    76, 95%:     181)  P(loss)  28%  median maxDD  20%  P(DD>50%)   0%
+     risk  5.0%: 3-year EUR 100 -> median    123 (5%:    63, 95%:     249)  P(loss)  31%  median maxDD  31%  P(DD>50%)   7%
+     risk 10.0%: 3-year EUR 100 -> median    128 (5%:    33, 95%:     505)  P(loss)  38%  median maxDD  54%  P(DD>50%)  60%
+  -- real sequence (with Irish CGT):
+     risk   2%: 2016-2026 EUR 100 ->       227 (max DD 12%) | 2016-18 only ->   120 (DD 8%) | last 3 years ->    124 (DD 12%)
+     risk   5%: 2016-2026 EUR 100 ->       641 (max DD 29%) | 2016-18 only ->   146 (DD 19%) | last 3 years ->    158 (DD 29%)
+     risk  10%: 2016-2026 EUR 100 ->     2,222 (max DD 51%) | 2016-18 only ->   172 (DD 35%) | last 3 years ->    199 (DD 51%)
+
+=== A + D (long into fix, short after): 753 trades (70/yr)  avg +0.043R  win 55.6%  full-Kelly risk 41% per trade
+  -- scenario: history (avg +0.043R)
+     risk  1.0%: 3-year EUR 100 -> median    109 (5%:   101, 95%:     118)  P(loss)   3%  median maxDD   3%  P(DD>50%)   0%
+     risk  2.0%: 3-year EUR 100 -> median    119 (5%:   102, 95%:     140)  P(loss)   3%  median maxDD   5%  P(DD>50%)   0%
+     risk  3.1%: 3-year EUR 100 -> median    131 (5%:   103, 95%:     168)  P(loss)   3%  median maxDD   8%  P(DD>50%)   0%
+     risk  5.0%: 3-year EUR 100 -> median    153 (5%:   104, 95%:     226)  P(loss)   4%  median maxDD  13%  P(DD>50%)   0%
+     risk 10.0%: 3-year EUR 100 -> median    220 (5%:   102, 95%:     484)  P(loss)   5%  median maxDD  25%  P(DD>50%)   2%
+  -- scenario: half edge (avg +0.022R)
+     risk  1.0%: 3-year EUR 100 -> median    104 (5%:    97, 95%:     113)  P(loss)  18%  median maxDD   4%  P(DD>50%)   0%
+     risk  2.0%: 3-year EUR 100 -> median    109 (5%:    93, 95%:     128)  P(loss)  19%  median maxDD   7%  P(DD>50%)   0%
+     risk  3.1%: 3-year EUR 100 -> median    114 (5%:    89, 95%:     146)  P(loss)  19%  median maxDD  11%  P(DD>50%)   0%
+     risk  5.0%: 3-year EUR 100 -> median    122 (5%:    83, 95%:     181)  P(loss)  20%  median maxDD  17%  P(DD>50%)   0%
+     risk 10.0%: 3-year EUR 100 -> median    140 (5%:    64, 95%:     314)  P(loss)  24%  median maxDD  32%  P(DD>50%)   9%
+  -- real sequence (with Irish CGT):
+     risk   2%: 2016-2026 EUR 100 ->       189 (max DD 8%) | 2016-18 only ->   114 (DD 5%) | last 3 years ->    121 (DD 8%)
+     risk   5%: 2016-2026 EUR 100 ->       460 (max DD 19%) | 2016-18 only ->   137 (DD 11%) | last 3 years ->    159 (DD 19%)
+     risk  10%: 2016-2026 EUR 100 ->     1,726 (max DD 36%) | 2016-18 only ->   176 (DD 22%) | last 3 years ->    234 (DD 36%)
+
+################ Japanese holidays moved
+
+=== A only (pasted rule): 751 trades (70/yr)  avg +0.067R  win 57.3%  full-Kelly risk 21% per trade
+  -- scenario: history (avg +0.067R)
+     risk  1.0%: 3-year EUR 100 -> median    115 (5%:   100, 95%:     132)  P(loss)   5%  median maxDD   5%  P(DD>50%)   0%
+     risk  2.0%: 3-year EUR 100 -> median    131 (5%:   100, 95%:     172)  P(loss)   5%  median maxDD  10%  P(DD>50%)   0%
+     risk  3.1%: 3-year EUR 100 -> median    150 (5%:    99, 95%:     230)  P(loss)   6%  median maxDD  15%  P(DD>50%)   0%
+     risk  5.0%: 3-year EUR 100 -> median    187 (5%:    96, 95%:     376)  P(loss)   6%  median maxDD  23%  P(DD>50%)   1%
+     risk 10.0%: 3-year EUR 100 -> median    290 (5%:    76, 95%:   1,142)  P(loss)  10%  median maxDD  43%  P(DD>50%)  30%
+  -- scenario: half edge (avg +0.034R)
+     risk  1.0%: 3-year EUR 100 -> median    107 (5%:    93, 95%:     123)  P(loss)  21%  median maxDD   6%  P(DD>50%)   0%
+     risk  2.0%: 3-year EUR 100 -> median    113 (5%:    86, 95%:     150)  P(loss)  23%  median maxDD  12%  P(DD>50%)   0%
+     risk  3.1%: 3-year EUR 100 -> median    121 (5%:    79, 95%:     186)  P(loss)  23%  median maxDD  19%  P(DD>50%)   0%
+     risk  5.0%: 3-year EUR 100 -> median    130 (5%:    66, 95%:     259)  P(loss)  26%  median maxDD  29%  P(DD>50%)   5%
+     risk 10.0%: 3-year EUR 100 -> median    144 (5%:    37, 95%:     563)  P(loss)  33%  median maxDD  52%  P(DD>50%)  55%
+  -- real sequence (with Irish CGT):
+     risk   2%: 2016-2026 EUR 100 ->       262 (max DD 13%) | 2016-18 only ->   127 (DD 8%) | last 3 years ->    133 (DD 13%)
+     risk   5%: 2016-2026 EUR 100 ->       921 (max DD 31%) | 2016-18 only ->   169 (DD 19%) | last 3 years ->    189 (DD 31%)
+     risk  10%: 2016-2026 EUR 100 ->     4,303 (max DD 54%) | 2016-18 only ->   230 (DD 35%) | last 3 years ->    284 (DD 54%)
+
+=== A + D (long into fix, short after): 751 trades (70/yr)  avg +0.047R  win 57.5%  full-Kelly risk 44% per trade
+  -- scenario: history (avg +0.047R)
+     risk  1.0%: 3-year EUR 100 -> median    110 (5%:   102, 95%:     119)  P(loss)   2%  median maxDD   3%  P(DD>50%)   0%
+     risk  2.0%: 3-year EUR 100 -> median    121 (5%:   104, 95%:     142)  P(loss)   2%  median maxDD   5%  P(DD>50%)   0%
+     risk  3.1%: 3-year EUR 100 -> median    134 (5%:   106, 95%:     170)  P(loss)   2%  median maxDD   8%  P(DD>50%)   0%
+     risk  5.0%: 3-year EUR 100 -> median    159 (5%:   108, 95%:     236)  P(loss)   2%  median maxDD  13%  P(DD>50%)   0%
+     risk 10.0%: 3-year EUR 100 -> median    236 (5%:   110, 95%:     517)  P(loss)   3%  median maxDD  24%  P(DD>50%)   1%
+  -- scenario: half edge (avg +0.023R)
+     risk  1.0%: 3-year EUR 100 -> median    105 (5%:    97, 95%:     113)  P(loss)  16%  median maxDD   3%  P(DD>50%)   0%
+     risk  2.0%: 3-year EUR 100 -> median    110 (5%:    94, 95%:     128)  P(loss)  16%  median maxDD   7%  P(DD>50%)   0%
+     risk  3.1%: 3-year EUR 100 -> median    115 (5%:    90, 95%:     147)  P(loss)  17%  median maxDD  10%  P(DD>50%)   0%
+     risk  5.0%: 3-year EUR 100 -> median    124 (5%:    84, 95%:     183)  P(loss)  18%  median maxDD  16%  P(DD>50%)   0%
+     risk 10.0%: 3-year EUR 100 -> median    145 (5%:    67, 95%:     317)  P(loss)  22%  median maxDD  31%  P(DD>50%)   8%
+  -- real sequence (with Irish CGT):
+     risk   2%: 2016-2026 EUR 100 ->       198 (max DD 8%) | 2016-18 only ->   118 (DD 5%) | last 3 years ->    125 (DD 8%)
+     risk   5%: 2016-2026 EUR 100 ->       521 (max DD 20%) | 2016-18 only ->   147 (DD 11%) | last 3 years ->    171 (DD 20%)
+     risk  10%: 2016-2026 EUR 100 ->     2,219 (max DD 36%) | 2016-18 only ->   202 (DD 22%) | last 3 years ->    270 (DD 36%)
+
+Leverage at USD/JPY 157.5: a 55-pip stop = 0.349% of the position
+  risk   1% -> position =  2.9x equity = 335 USD on EUR 100 (0.0034 standard lots)  OK the EU 30:1 cap
+  risk   2% -> position =  5.7x equity = 670 USD on EUR 100 (0.0067 standard lots)  OK the EU 30:1 cap
+  risk   5% -> position = 14.3x equity = 1,676 USD on EUR 100 (0.0168 standard lots)  OK the EU 30:1 cap
+  risk  10% -> position = 28.6x equity = 3,351 USD on EUR 100 (0.0335 standard lots)  OK the EU 30:1 cap
+  Exness Standard minimum 0.01 lot = 1,000 USD -> min risk 3.0% of EUR 100; the Standard Cent account (same USD/JPY spread, checked) can size 1% exactly.

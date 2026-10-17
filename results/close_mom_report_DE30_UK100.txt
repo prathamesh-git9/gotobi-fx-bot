@@ -1,0 +1,22 @@
+
+=== DE30  2019-08-06 -> 2026-09-30  days 1808  median round-trip spread 3.47 bp  avg |last 30m| 13.7 bp
+  always-long last 30m (drift): +0.56 bp/day
+  Baltussen: prev close -> close-30m: gross +1.60 bp (t +3.27, hit 52.4%)  |  net -2.16 bp (t -4.46, hit 42.0%, Sharpe -1.66)
+      up-signal days 966: net -1.71 bp | down-signal days 842: net -2.68 bp
+      bigger-than-usual signal days 869: net -0.66 bp (t -0.83)
+      by year (net bp): 19:-6.2 20:+1.3 21:-4.3 22:-1.1 23:-3.6 24:-3.2 25:-0.7 26:-1.9
+  Gao: prev close -> first 30m: gross +0.51 bp (t +1.05, hit 49.8%)  |  net -3.25 bp (t -6.65, hit 39.4%, Sharpe -2.48)
+      up-signal days 997: net -2.79 bp | down-signal days 811: net -3.80 bp
+      bigger-than-usual signal days 839: net -2.21 bp (t -2.61)
+      by year (net bp): 19:-8.7 20:-0.5 21:-3.0 22:-6.5 23:-3.5 24:-3.0 25:-1.8 26:-1.8
+
+=== UK100  2019-08-06 -> 2026-09-30  days 1774  median round-trip spread 7.53 bp  avg |last 30m| 12.3 bp
+  always-long last 30m (drift): +0.04 bp/day
+  Baltussen: prev close -> close-30m: gross +1.11 bp (t +2.51, hit 52.2%)  |  net -6.10 bp (t -13.94, hit 30.9%, Sharpe -5.25)
+      up-signal days 964: net -6.10 bp | down-signal days 810: net -6.09 bp
+      bigger-than-usual signal days 823: net -5.42 bp (t -7.35)
+      by year (net bp): 19:-5.5 20:-3.3 21:-7.1 22:-8.2 23:-7.8 24:-7.1 25:-5.2 26:-3.8
+  Gao: prev close -> first 30m: gross +0.11 bp (t +0.26, hit 50.2%)  |  net -7.10 bp (t -16.11, hit 29.4%, Sharpe -6.07)
+      up-signal days 962: net -7.05 bp | down-signal days 812: net -7.16 bp
+      bigger-than-usual signal days 829: net -7.15 bp (t -9.12)
+      by year (net bp): 19:-8.1 20:-6.4 21:-7.1 22:-11.7 23:-7.3 24:-7.6 25:-4.2 26:-4.3
