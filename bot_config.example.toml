@@ -1,0 +1,40 @@
+# Gotobi bot settings. Copy to bot_config.toml and edit. Anything left out uses the backtested default.
+# All times are UTC. The bot refuses real-money accounts unless allow_live = true AND you pass --allow-live.
+
+# Symbols to try, in order: Exness Cent = USDJPYc, Standard = USDJPYm, Raw/Pro = USDJPY.
+symbols = ["USDJPYc", "USDJPYm", "USDJPY"]
+
+# % of equity lost if the 55-pip stop is hit. Backtest 2016-2026 at 10%: worst drawdown ~50%.
+# On an EU account (1:30 leverage) 10% needs ~29x leverage; the bot then caps the size at 90% of free
+# margin, which makes the real risk about 9.4%.
+risk_pct = 10.0
+
+# The rule (leave as backtested unless you re-run the tests)
+stop_pips = 55.0
+entry_utc = "15:55"               # day before the gotobi day
+fix_utc = "00:55"                 # 09:55 Tokyo
+exit_minutes_before_fix = 1       # closes 00:54 UTC; a late exit gives the edge back
+move_off_jp_holidays = true       # no Tokyo fix on Japanese holidays: the 2026 holiday trades lost 125 pips
+jp_bank_holidays = true
+fx_closed_mmdd = ["12-25", "01-01"]
+
+# Execution safety
+max_entry_delay_min = 120
+reopen_wait_min = 15
+min_hold_min = 30
+max_spread_pips = 5.0
+
+# Kill switch: stops opening trades (open trades are still closed on time). Clear it by deleting the
+# "halted" entry from bot_state/state.json.
+kill_window = 60
+kill_sum_r = -6.0
+kill_max_drawdown = 0.50
+
+# Plumbing
+magic = 950955
+poll_sec = 5.0
+state_dir = "bot_state"
+server_utc_offset_hours = 0.0     # broker server clock minus UTC (Exness: 0)
+auto_server_offset = true         # measure it from live prices (most other brokers run UTC+2/+3 and shift with DST)
+# terminal_path = "C:/Program Files/MetaTrader 5 EXNESS/terminal64.exe"
+allow_live = false

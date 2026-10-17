@@ -1,0 +1,8 @@
+# live bot (Windows; MetaTrader5 talks to the MT5 terminal)
+MetaTrader5==5.0.6231
+holidays==0.106
+# replay and tests
+pandas==3.0.6
+numpy==2.5.2
+pyarrow==26.0.0
+pytest==9.1.1
