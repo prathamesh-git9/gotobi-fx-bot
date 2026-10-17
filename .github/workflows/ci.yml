@@ -1,0 +1,12 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: windows-latest          # the MetaTrader5 package is Windows-only; its API checks run here
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: pip install -r requirements-bot.txt
+      - run: python -m pytest -m "not slow" -q
