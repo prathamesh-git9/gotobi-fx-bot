@@ -13,10 +13,11 @@ survived: an automated **Gotobi USD/JPY bot** for MetaTrader 5.
 | `src/` | Backtests on Exness bid/ask tick data: liquidity sweeps, ICT order blocks, order flow, 5-minute rules, session drift, trend following, into-the-close momentum, Gotobi |
 | `results/` | Reports and trade lists from those backtests |
 | `bot/` | The Gotobi bot: calendar, sizing, MT5 broker wrapper, engine, journal, CLI, MT5 simulator, replay |
-| `tests/` | 157 fast tests + 2016-2026 replays + a 24/7 soak test + a check that the tests catch mistakes |
+| `tests/` | 162 fast tests + 2016-2026 replays + a 24/7 soak test + a check that the tests catch mistakes |
 | `codex_audit/` | Independent reviews by a second AI agent: the strategy rebuilt from scratch, and three rounds on the bot's code |
 | `BOT_README.md` | How to connect an MT5 account and run the bot unattended (demo first) |
-| `install_autostart.ps1` | Starts the bot at Windows log-on (Task Scheduler, no time limit) |
+| `install_autostart.ps1` | Starts the bot at Windows log-on (Task Scheduler, no time limit; `-TaskName` per account) |
+| `.github/workflows/host.yml`, `ci/` | Free hosting on GitHub's Windows machines: the bot runs around each trade, so the PC can be off |
 
 ## The finding
 
@@ -73,7 +74,7 @@ Not yet verified: a real MT5 terminal, real fills at the fix, and swap. That is 
 
 ```
 pip install -r requirements-bot.txt
-python -m pytest -m "not slow"      # 157 tests, no data needed
+python -m pytest -m "not slow"      # 162 tests, no data needed
 python -m pytest                    # + 2016-2026 replays and the soak test (needs the Exness data, src/fetch_exness.py)
 python tests/mutation_check.py      # on a throwaway copy: 68 one-line mistakes, each must fail a test
 ```

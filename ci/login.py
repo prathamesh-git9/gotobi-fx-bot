@@ -2,8 +2,9 @@
 the hosted bot (.github/workflows/host.yml). The bot then attaches to the logged-in terminal.
 
 A terminal on its first start is busy (it updates and recompiles its MQL5 folder), and may not know a numbered
-server such as Exness-MT5Trial11 yet. So: try the Python API's login a few times; failing that, start the terminal
-with a startup file that logs in (MT5's own command-line login, which also switches Algo Trading on).
+server such as Exness-MT5Trial11 yet. So: try the Python API's login a few times; if that fails, or Algo Trading
+is off, start the terminal with a startup file that logs in (MT5's own command-line login) and switches Algo
+Trading on.
 
   python ci/login.py "C:/Program Files/MetaTrader 5 EXNESS/terminal64.exe"
 """
@@ -22,6 +23,11 @@ import MetaTrader5 as mt5
 def logged_in(login: int) -> bool:
     acct = mt5.account_info()
     return acct is not None and acct.login == login
+
+
+def algo_on() -> bool:
+    term = mt5.terminal_info()
+    return term is not None and bool(term.trade_allowed)
 
 
 def known_servers(server: str) -> str:
@@ -54,6 +60,10 @@ def main() -> int:
         print(f"login through the Python API, attempt {attempt}: {mt5.last_error()}", flush=True)
         mt5.shutdown()
         time.sleep(15)
+    if ok and not algo_on():
+        print("logged in, but Algo Trading is off: restarting the terminal with it switched on", flush=True)
+        mt5.shutdown()
+        ok = False
     if not ok:
         print(f"server list: {known_servers(server)}", flush=True)
         print("starting the terminal with a startup login file instead", flush=True)
@@ -65,7 +75,7 @@ def main() -> int:
             deadline = time.monotonic() + 180
             while time.monotonic() < deadline:
                 time.sleep(10)
-                if mt5.initialize(path, timeout=60_000) and logged_in(login):
+                if mt5.initialize(path, timeout=60_000) and logged_in(login) and algo_on():
                     ok = True
                     break
                 print(f"  waiting for the startup login: {mt5.last_error()}", flush=True)
@@ -73,9 +83,10 @@ def main() -> int:
         finally:
             time.sleep(5)
             ini.unlink(missing_ok=True)       # it holds the password
-    if not ok:
+    if not ok and not (mt5.initialize(path, timeout=60_000) and logged_in(login)):
         print(f"server list: {known_servers(server)}", flush=True)
-        print("could not log in: check MT5_LOGIN, MT5_PASSWORD and MT5_SERVER (the MT5 journal below says more)")
+        print("could not log in: check MT5_LOGIN, MT5_PASSWORD and MT5_SERVER. 'Invalid account' in the MT5 "
+              "journal below means the server answered and refused that login and password", flush=True)
         return 1
     acct, term = mt5.account_info(), mt5.terminal_info()
     kind = {mt5.ACCOUNT_TRADE_MODE_DEMO: "demo", mt5.ACCOUNT_TRADE_MODE_CONTEST: "contest"}.get(acct.trade_mode, "REAL")

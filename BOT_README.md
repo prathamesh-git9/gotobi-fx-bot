@@ -90,6 +90,10 @@ Do every step on a **demo** account first.
   - It sets **no time limit**. Tasks made with the wizard, schtasks or PowerShell defaults are stopped after 3
     days.
   - `-DryRun` shows what it would create; `-Remove` deletes it.
+  - More than one account: one MT5 terminal, one bot folder and one task per account. Install each account's MT5
+    into its own folder, copy the bot folder, point each copy's `terminal_path` at its own terminal, and run the
+    script from each folder with its own name, e.g. `-TaskName "Gotobi bot 2"`. Each copy sizes its trades on
+    its own account's equity, and the bot refuses to run twice on one account.
 - **Sign in automatically after a reboot** (Windows Update, power cut):
   - Settings > Accounts > Sign-in options: turn off "only allow Windows Hello sign-in".
   - Win+R > `netplwiz`: untick "Users must enter a user name and password".
@@ -118,6 +122,58 @@ Do every step on a **demo** account first.
 - Exness may not open real accounts for EU residents. With an EU MT5 broker:
   - Check its USD/JPY spread at 15:55, 00:54 and 00:55 UTC: the edge is only about 3 pips a trade.
   - 1:30 leverage is enough.
+
+## Run it in the cloud for free (GitHub Actions)
+
+The repository can run the bot on GitHub's own Windows machines, so your PC can be off. In a public repository
+it costs nothing.
+
+**How it works**
+- A GitHub job lives at most 6 hours, so the bot is not on all the time. It runs around each trade:
+  - from about 14:13 UTC to 18:00 UTC the day before a gotobi day: the 15:55 buy, which may wait up to 2 hours
+    for a usable price;
+  - from about 22:43 UTC to 01:30 UTC: the 00:54 close and the post-fix short.
+- Each start has a backup about 34 minutes later, in case GitHub drops one. GitHub starts scheduled runs late
+  (sometimes by an hour), never early, so the starts are early on purpose.
+- In between, the stop and the take-profit sit at the broker, as they do when the bot runs on a PC.
+- Each run is a fresh machine. It installs MT5, logs in, runs the preflight, runs the bot with `--until`, prints
+  `--status`, and keeps `bot_state/` in the Actions cache for the next run.
+- One run at a time: a second one waits, so two copies never trade one account.
+- The files: `.github/workflows/host.yml`; in `ci/`, `plan.py` (is a trade window near?), `install_mt5.ps1`,
+  `login.py` and `run_until.ps1`.
+
+**Set it up**
+1. The repository must be yours (fork it), because the login is stored in it.
+2. Settings > Secrets and variables > Actions > New repository secret. Add three:
+   - `MT5_LOGIN`: the account number;
+   - `MT5_PASSWORD`: the account's trading password (not the Personal Area password);
+   - `MT5_SERVER`: e.g. `Exness-MT5Trial11`.
+   GitHub encrypts them, never shows them again, and hides them in the logs.
+3. Actions > host bot > Run workflow, mode **preflight**. In the run:
+   - "log in to the account" must say `logged in: demo account ...`;
+   - "preflight" must end with READY.
+   - `Invalid account` in MT5's journal at the bottom means Exness refused that login, password and server
+     together. Check all three in the Personal Area, or set a new trading password there.
+4. Nothing else. The schedule runs by itself; mode **smoke** runs the bot loop for 10 minutes as a test.
+
+**Check on it, stop it**
+- Actions > host bot lists every run. Each shows the bot's log and, at the end, `--status`: the next trade and
+  the journal.
+- GitHub emails you when a run fails: a refused login, or a preflight that is not READY.
+- To stop it: Actions > host bot > "..." > Disable workflow. Do that before running the bot anywhere else on
+  the same account: two copies on one account would both trade.
+
+**Limits**
+- **The logs of a public repository are public.** The login and password are hidden, but anyone can read the
+  balance and the trades. A private repository keeps them private, but GitHub then charges for minutes: 2,000
+  free a month, Windows minutes count double, and this schedule needs far more.
+- **A dropped run misses a trade.** If GitHub drops both starts of a window, or starts them after it, that trade
+  is missed. An open long is still protected by its stop and take-profit.
+- **60 days.** GitHub switches schedules off in a public repository after 60 days without activity. Each run
+  calls GitHub's "enable workflow" API, which is how common keep-alive tools stop that. If runs stop anyway,
+  enable the workflow again in the Actions tab.
+- **Fair use.** GitHub's terms are for building and testing the project in the repository. A demo forward test
+  of this bot is testing, but GitHub decides what fits. For real money, use your PC or a paid Windows VPS.
 
 ## What it writes (`bot_state/`)
 - `bot.log`: everything, in UTC (rotated at 5 MB, 5 old files kept).
@@ -215,14 +271,21 @@ Do every step on a **demo** account first.
   broker. A rest left queued (a broker that accepts neither) is cancelled by the bot. The trade is managed at the
   size that filled.
 - **No alerts.** The bot writes problems to `bot.log` but does not message you. During the demo, read the log.
+  (Hosted on GitHub, a failed run sends an email.)
+- **Small balances.** The smallest trade on Exness Standard (0.01 lot) loses about EUR 3 at the 55-pip stop. With
+  `risk_pct = 6`, a balance under about EUR 50 cannot place it without risking more than 6%, so the trade is
+  skipped (`below_min_lot = "skip"`). Up to a few hundred euros, the 0.01-lot steps make the real risk land
+  between about 3% and 6%. A Standard Cent account sizes almost exactly from a few euros.
 - **The simulator fills at minute prices.** It has no partial fills, queueing or network delay. Real fill timing
   at the fix is what the demo is for.
 
 ## Tests
-- `python -m pytest -m "not slow"`: 157 unit, scenario and safety tests on the MT5 simulator (about 15 s). They
+- `python -m pytest -m "not slow"`: 162 unit, scenario and safety tests on the MT5 simulator (about 20 s). They
   include:
   - a regression test for every safety finding of the independent review;
-  - quick runs of the real entry point, `bot.main.main()`.
+  - quick runs of the real entry point, `bot.main.main()`, including the hosted pattern: two runs with
+    `--until` on one state folder;
+  - the hosted schedule: every trade window of 2026-2028 covered by a scheduled start and by its backup.
 - `python -m pytest`: adds the 2016-2026 replays and the 24/7 soak test (about 16 minutes). The soak test runs
   `bot.main.main()` through 5.5 months of real prices while injecting:
   - terminal disconnects (some at the exact entry, exit and fix second);
