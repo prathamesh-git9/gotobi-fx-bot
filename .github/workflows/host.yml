@@ -88,7 +88,14 @@ jobs:
         run: ./ci/run_until.ps1 "${{ needs.plan.outputs.until }}"
       - name: status
         if: always()
+        continue-on-error: true
         run: python -m bot.main --config bot_config.toml --status
+      - name: MetaTrader 5's own journal (why a login or an order failed)
+        if: always()
+        continue-on-error: true
+        run: |
+          Get-ChildItem "$env:APPDATA\MetaQuotes\Terminal\*\logs\*.log", "C:\Program Files\MetaTrader 5*\logs\*.log" -ErrorAction SilentlyContinue |
+            ForEach-Object { Write-Host "== $($_.FullName)"; Get-Content $_.FullName -Tail 40 }
       - name: save the bot's state
         if: always()
         uses: actions/cache/save@v4
@@ -96,5 +103,5 @@ jobs:
           path: bot_state
           key: gotobi-state-${{ github.run_id }}-${{ github.run_attempt }}
       - name: fail the run if the preflight failed (GitHub then emails you)
-        if: steps.preflight.outcome == 'failure'
+        if: always() && steps.preflight.outcome == 'failure'
         run: exit 1

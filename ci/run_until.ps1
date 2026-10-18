@@ -1,6 +1,8 @@
 # Run the bot until a UTC time, restarting it 30 s after a failure the way run_bot.bat does, for the hosted bot
 # (.github/workflows/host.yml). The bot stops by itself at the time (--until) once no trade action is due.
 param([Parameter(Mandatory = $true)][string]$Until)
+$ErrorActionPreference = "Continue"
+$PSNativeCommandUseErrorActionPreference = $false   # a non-zero exit must reach the restart logic, not throw
 
 $end = [DateTimeOffset]::Parse($Until, [Globalization.CultureInfo]::InvariantCulture).UtcDateTime
 while ($true) {
