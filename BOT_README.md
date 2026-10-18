@@ -59,7 +59,11 @@ Do every step on a **demo** account first.
   opens nothing (a manual trade on the same account would otherwise sit next to the bot's).
 
 **3. Install the bot.**
-- Install Python 3.12 or newer from python.org and tick "Add python.exe to PATH". The bot is tested on 3.14.
+- Install 64-bit Python 3.10 to 3.14 from python.org (e.g.
+  https://www.python.org/ftp/python/3.14.8/python-3.14.8-amd64.exe) and tick "Add python.exe to PATH". Not
+  3.15: the MetaTrader5 package (5.0.6231) has no build for it yet. The bot is tested on 3.14.
+  - Or keep everything in the bot folder: `python -m venv .venv`, install into it with
+    `.venv\Scripts\python -m pip ...`, and set `set PYTHON=%~dp0.venv\Scripts\python.exe` in `run_bot.bat`.
 - Get the code: `git clone https://github.com/prathamesh-git9/gotobi-fx-bot`, or Code > Download ZIP.
 - In that folder, run `pip install -r requirements-bot.txt`.
 
@@ -97,7 +101,13 @@ Do every step on a **demo** account first.
 - **Sign in automatically after a reboot** (Windows Update, power cut):
   - Settings > Accounts > Sign-in options: turn off "only allow Windows Hello sign-in".
   - Win+R > `netplwiz`: untick "Users must enter a user name and password".
+  - Or use Microsoft's Autologon (https://learn.microsoft.com/sysinternals/downloads/autologon), which stores the
+    password encrypted. On a Microsoft-account PC the username is the email address and the password is the
+    account password, not the PIN.
   - Anyone with access to the PC can then use it.
+  - Without automatic sign-in, a restart leaves the bot off until someone signs in. Then at least pause Windows
+    Update (Settings > Windows Update > Pause updates) over the trade days, and never sign out: closing a remote
+    desktop connection or locking the screen is fine.
 - **Power.** Plugged in, never sleep. Lid closed: do nothing. If the BIOS has "restore on AC power loss", turn it
   on. The bot stops idle sleep while it runs; it cannot stop a closed lid or the power button.
 - **Windows Update.** Set Active hours to 15:00-03:00. That keeps restarts out of every trade window (15:55-01:25
