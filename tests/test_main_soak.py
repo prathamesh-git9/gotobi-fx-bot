@@ -11,6 +11,9 @@ must not pass for a broker in another time zone (it used to buy an hour early).
 test_main_starts_on_a_damaged_state_file: a bad state.json (disk fault, a typo when clearing the kill switch)
 must not stop the bot from starting and managing its trade.
 
+test_main_hosted_only_around_each_trade: a host that starts the bot only before the buy and before the close
+(.github/workflows/host.yml, with --until) must see it stop by itself each time and still close and short on time.
+
 test_main_runs_24_7_with_faults (slow): ~5.5 months, with faults injected the whole time:
   - terminal disconnects of 1-20 min, some exactly at an entry, an exit or the fix second;
   - positions_get failures, requoted and timed-out orders;
@@ -290,6 +293,57 @@ def test_main_keeps_running_but_opens_nothing_when_all_state_is_lost(monkeypatch
     assert codes == ["end"], codes                       # it did not crash or loop on restarts
     assert journal.halted and "--clear-halt" in journal.halted["reason"]
     assert not [d for d in fake.deal_log if d.entry == fake.DEAL_ENTRY_IN]
+
+
+def test_main_hosted_only_around_each_trade(monkeypatch, tmp_path):
+    """The free cloud host (.github/workflows/host.yml) starts the bot on a fresh machine before the 15:55 buy and
+    again before the 00:54 close, each time with --until, carrying the state folder over. Each run must stop by
+    itself (exit 0) once nothing is due, and the second must close the long on time and trade the short."""
+    sys.path.insert(0, str(ROOT / "tests"))
+    from conftest import make_bars
+    bars = make_bars("2026-10-11 21:05", "2026-10-16 20:59")
+    fake = FakeMT5(bars, 1.17, balance=1000.0, currency="EUR", leverage=500)
+    sim = Sim(fake, datetime(2026, 10, 14, 14, 13, tzinfo=UTC), datetime(2026, 10, 15, 3, 0, tzinfo=UTC), Faults(), 1)
+    state = tmp_path / "state"
+    cfg_path = tmp_path / "bot_config.toml"
+    cfg_path.write_text(f'symbols = ["USDJPYm"]\nrisk_pct = 6.0\npoll_sec = 5.0\nstate_dir = "{state.as_posix()}"\n',
+                        encoding="utf-8")
+
+    def quiet_logging(state_dir):
+        ORIG["setup"](state_dir)
+        root = logging.getLogger()
+        root.handlers[:] = [h for h in root.handlers if isinstance(h, logging.FileHandler)]
+
+    monkeypatch.setitem(sys.modules, "MetaTrader5", fake)
+    monkeypatch.setattr(bm, "time", types.SimpleNamespace(sleep=sim.sleep, gmtime=real_time.gmtime))
+    monkeypatch.setattr(bm, "keep_awake", lambda: None)
+    monkeypatch.setattr(bm, "Clock", lambda servers: Clock(servers, query=sim.query, wall=sim.wall, mono=sim.mono))
+    monkeypatch.setattr(bm, "setup_logging", quiet_logging)
+    saved = logging.getLogger().handlers[:]
+    try:
+        assert bm.main(["--config", str(cfg_path), "--until", "2026-10-14T18:00Z"]) == 0
+        assert datetime(2026, 10, 14, 18, 0, tzinfo=UTC) <= sim.true < datetime(2026, 10, 14, 18, 1, tzinfo=UTC)
+        assert Journal(state, durable=False).get("2026-10-15")["status"] == "open"
+        assert len(fake.positions) == 1
+        gc.collect()                                     # the finished run lets go of its lock files
+        sim.advance((datetime(2026, 10, 14, 22, 43, tzinfo=UTC) - sim.true).total_seconds(), allow_restart=False)
+        assert bm.main(["--config", str(cfg_path), "--until", "2026-10-15T01:30Z"]) == 0
+        assert sim.true < datetime(2026, 10, 15, 1, 31, tzinfo=UTC)
+    finally:
+        for h in logging.getLogger().handlers:
+            h.close()
+        logging.getLogger().handlers[:] = saved
+    journal = Journal(state, durable=False)
+    long, short = journal.get("2026-10-15"), journal.get("2026-10-15/short")
+    assert long["status"] == "closed" and long["closed"].startswith("2026-10-15T00:54"), long
+    assert short is not None and short["status"] == "closed", short
+    assert not fake.positions
+
+
+def test_until_must_be_a_time(tmp_path):
+    assert bm.main(["--until", "tomorrow"]) == 2
+    assert bm.parse_until("2026-10-19T18:00Z") == datetime(2026, 10, 19, 18, 0, tzinfo=UTC)
+    assert bm.parse_until("2026-10-19 18:00") == datetime(2026, 10, 19, 18, 0, tzinfo=UTC)
 
 
 # --------------------------------------------------------------------------------------------- the soak

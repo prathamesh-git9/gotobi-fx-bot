@@ -3,6 +3,7 @@
   python -m bot.main --config bot_config.toml              trade (demo accounts only, unless unlocked)
   python -m bot.main --config bot_config.toml --dry-run    check each order with order_check, send nothing
   python -m bot.main --config bot_config.toml --status     print the next trade and the journal, then exit
+  python -m bot.main --config bot_config.toml --until 2026-10-19T18:00Z    trade, and stop by itself at that time
 
 Real money needs BOTH allow_live = true in the config and the --allow-live flag.
 Login details can come from the environment (MT5_LOGIN, MT5_PASSWORD, MT5_SERVER); otherwise the terminal's
@@ -98,6 +99,12 @@ def retry_delay(engine, now, failures: int) -> float:
     return delay
 
 
+def parse_until(text: str) -> datetime:
+    """The --until time: ISO date and time; one without a zone is UTC."""
+    t = datetime.fromisoformat(text.strip().replace("Z", "+00:00"))
+    return t if t.tzinfo else t.replace(tzinfo=timezone.utc)
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Gotobi USD/JPY bot for MetaTrader 5")
     ap.add_argument("--config", help="TOML settings file (defaults are the backtested rule)")
@@ -107,7 +114,15 @@ def main(argv=None) -> int:
     ap.add_argument("--preflight", action="store_true", help="check terminal, account and a test order (no trade)")
     ap.add_argument("--clear-halt", action="store_true",
                     help="switch the kill switch off (and restart the drawdown peak from today), then exit")
+    ap.add_argument("--until", metavar="UTC_TIME",
+                    help="stop (exit code 0) at this UTC time, e.g. 2026-10-19T18:00Z, once no trade action is due "
+                         "within 5 minutes; for hosts that start the bot only around each trade")
     args = ap.parse_args(argv)
+    try:
+        until = parse_until(args.until) if args.until else None
+    except ValueError:
+        print(f"--until: not a date and time: {args.until!r}", file=sys.stderr)
+        return 2
     try:
         cfg = load_config(args.config)
     except (ConfigError, OSError) as e:
@@ -171,6 +186,10 @@ def main(argv=None) -> int:
     while True:
         try:
             now = now_fn()
+            if until is not None and now >= until and engine.quiet(now):
+                log.info("--until %s reached and no trade action is due: stopping (an open trade keeps its stop "
+                         "and take-profit at the broker until the bot runs again)", until.isoformat(timespec="seconds"))
+                return 0
             if clock is not None:
                 try:
                     if engine.quiet(now):

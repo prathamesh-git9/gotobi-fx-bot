@@ -1,0 +1,100 @@
+# Free hosting for the bot on GitHub's Windows machines (no cost in a public repository).
+# A GitHub job lives at most 6 hours, so the bot runs only around each trade: from before the 15:55 UTC buy, and
+# from before the 00:54 UTC close and the post-fix short. Stops and take-profits sit at the broker in between.
+# Setup, limits and how to stop it: BOT_README.md, "Run it in the cloud for free".
+name: host bot
+
+on:
+  schedule:                   # UTC. GitHub starts these late (sometimes by an hour), never early
+    - cron: "13 14 * * *"     # covers the 15:55 buy
+    - cron: "47 14 * * *"     # backup, in case GitHub drops the first
+    - cron: "43 22 * * *"     # covers the 00:54 close and the post-fix short
+    - cron: "17 23 * * *"     # backup
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "preflight: check MT5, the account and a test order, trade nothing. smoke: run the bot loop for ~10 minutes. auto: what the schedule does"
+        type: choice
+        options: [preflight, smoke, auto]
+        default: preflight
+
+concurrency:
+  group: gotobi-bot           # one copy at a time: two on one account would trade twice
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  actions: write              # to keep the schedule switched on (plan job)
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      run: ${{ steps.plan.outputs.run }}
+      until: ${{ steps.plan.outputs.until }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: pip install holidays==0.106
+      - id: plan
+        run: python ci/plan.py --mode "${{ inputs.mode || 'auto' }}" | tee -a "$GITHUB_OUTPUT"
+      - name: keep the schedule switched on
+        # GitHub switches schedules off in a public repository after 60 days without activity
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/host.yml/enable"
+
+  bot:
+    needs: plan
+    if: needs.plan.outputs.run == 'true'
+    runs-on: windows-latest
+    timeout-minutes: 355
+    env:
+      MT5_LOGIN: ${{ secrets.MT5_LOGIN }}
+      MT5_PASSWORD: ${{ secrets.MT5_PASSWORD }}
+      MT5_SERVER: ${{ secrets.MT5_SERVER }}
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: pip install MetaTrader5==5.0.6231 holidays==0.106
+      - name: check the account secrets
+        run: if (-not $env:MT5_LOGIN -or -not $env:MT5_PASSWORD -or -not $env:MT5_SERVER) { throw "set the MT5_LOGIN, MT5_PASSWORD and MT5_SERVER secrets (BOT_README.md)" }
+      - id: mt5
+        name: install MetaTrader 5
+        run: ./ci/install_mt5.ps1
+      - name: restore the bot's state
+        uses: actions/cache/restore@v4
+        with:
+          path: bot_state
+          key: gotobi-state-${{ github.run_id }}
+          restore-keys: gotobi-state-
+      - name: settings
+        run: |
+          Copy-Item bot_config.example.toml bot_config.toml
+          Add-Content bot_config.toml "terminal_path = '${{ steps.mt5.outputs.terminal }}'"
+      - id: preflight
+        name: preflight (no trade)
+        continue-on-error: true
+        run: python -m bot.main --config bot_config.toml --preflight
+      - name: run the bot until ${{ needs.plan.outputs.until }}
+        if: inputs.mode != 'preflight'
+        run: ./ci/run_until.ps1 "${{ needs.plan.outputs.until }}"
+      - name: status
+        if: always()
+        run: python -m bot.main --config bot_config.toml --status
+      - name: save the bot's state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: bot_state
+          key: gotobi-state-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: fail the run if the preflight failed (GitHub then emails you)
+        if: steps.preflight.outcome == 'failure'
+        run: exit 1
