@@ -41,6 +41,17 @@ def known_servers(server: str) -> str:
     return "; ".join(found) or "no servers.dat yet"
 
 
+def refused() -> bool:
+    """MT5's journal says the server answered and refused the login ('Invalid account': a wrong account number,
+    password or server). Retrying cannot fix that, and a server may block a machine that keeps trying."""
+    root = Path(os.environ.get("APPDATA", "")) / "MetaQuotes" / "Terminal"
+    for f in root.glob("*/logs/*.log"):
+        data = f.read_bytes()
+        if "Invalid account".encode("utf-16-le") in data or b"Invalid account" in data:
+            return True
+    return False
+
+
 def startup_file(login: int, password: str, server: str) -> Path:
     text = (f"[Common]\nLogin={login}\nPassword={password}\nServer={server}\nKeepPrivate=1\nNewsEnable=0\n"
             "[Experts]\nAllowLiveTrading=1\nAllowDllImport=0\nEnabled=1\nAccount=0\nProfile=0\n")
@@ -85,8 +96,15 @@ def main() -> int:
             ini.unlink(missing_ok=True)       # it holds the password
     if not ok and not (mt5.initialize(path, timeout=60_000) and logged_in(login)):
         print(f"server list: {known_servers(server)}", flush=True)
-        print("could not log in: check MT5_LOGIN, MT5_PASSWORD and MT5_SERVER. 'Invalid account' in the MT5 "
-              "journal below means the server answered and refused that login and password", flush=True)
+        if refused():
+            print("could not log in: the server refused this account number, password and server ('Invalid "
+                  "account'). Check the MT5_LOGIN, MT5_PASSWORD and MT5_SERVER secrets; the bot is not started",
+                  flush=True)
+            if os.environ.get("GITHUB_OUTPUT"):
+                with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+                    print("refused=true", file=out)
+        else:
+            print("could not log in (no answer from the server?); the bot will keep trying", flush=True)
         return 1
     acct, term = mt5.account_info(), mt5.terminal_info()
     kind = {mt5.ACCOUNT_TRADE_MODE_DEMO: "demo", mt5.ACCOUNT_TRADE_MODE_CONTEST: "contest"}.get(acct.trade_mode, "REAL")

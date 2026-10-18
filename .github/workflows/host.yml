@@ -88,7 +88,7 @@ jobs:
         continue-on-error: true
         run: python -m bot.main --config bot_config.toml --preflight
       - name: run the bot until ${{ needs.plan.outputs.until }}
-        if: inputs.mode != 'preflight'
+        if: inputs.mode != 'preflight' && steps.login.outputs.refused != 'true'
         run: ./ci/run_until.ps1 "${{ needs.plan.outputs.until }}"
       - name: status
         if: always()
