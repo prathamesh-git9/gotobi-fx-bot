@@ -1,0 +1,161 @@
+Gotobi lab, 752 slots 2016-01-05 -> 2026-10-15 (69.8/yr), 108 variants. Design 2016-2021 (417 slots), hold-out 2022-2026 (335 slots).
+Score = yearly Sharpe of the per-slot result in R (skipped trade = 0). 'p rand' = share of random filters (same number of trades skipped) that scored at least as well in design.
+BASE: design Sharpe 0.75, hold-out 1.08, all 0.91; avg +0.063R/trade, win 57%, worst -1.01R, max DD 6.6R
+
+=== T ema
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  only D1 EMAs stacked up (20>50>200)                 358  +0.089  59% |   0.74  -0.00   0.51   1.83 |     1.05  -0.04 |  -1.01  0.160
+  only above D1 EMA100                                438  +0.056  56% |   0.74  -0.01   0.53   1.63 |     0.56  -0.52 |  -1.01  0.205
+  size 1.5x above D1 EMA200, 0.5x below               752  +0.070  57% |   0.73  -0.02   0.53   1.52 |     1.01  -0.07 |  -1.52      -
+  only below H4 EMA50                                 321  +0.103  57% |   0.73  -0.02   0.79   0.70 |     1.05  -0.03 |  -1.01  0.224
+  only below H4 EMA20                                 346  +0.113  59% |   0.73  -0.02   0.80   0.71 |     1.23  +0.15 |  -1.01  0.236
+  only above H1 EMA20                                 389  +0.052  57% |   0.66  -0.09   0.38   1.21 |     0.70  -0.38 |  -1.01  0.314
+  only above H1 EMA200                                423  +0.038  57% |   0.64  -0.11   0.55   1.09 |     0.24  -0.84 |  -1.01  0.344
+  only above D1 EMA200                                434  +0.066  57% |   0.63  -0.12   0.40   1.56 |     0.87  -0.21 |  -1.01  0.322
+  only above H1 EMA100                                414  +0.035  56% |   0.59  -0.16   0.46   1.09 |     0.17  -0.92 |  -1.01  0.442
+  only below D1 EMA50                                 325  +0.074  58% |   0.57  -0.17   0.76   0.31 |     0.74  -0.34 |  -1.01  0.453
+  only below H4 EMA100                                326  +0.079  56% |   0.57  -0.18   0.73   0.34 |     0.81  -0.28 |  -1.01  0.452
+  only above D1 EMA20                                 418  +0.050  56% |   0.55  -0.19   0.44   1.04 |     0.60  -0.49 |  -1.01  0.460
+  size 1.5x above H4 EMA50, 0.5x below                752  +0.050  57% |   0.54  -0.20   0.39   1.07 |     0.78  -0.30 |  -1.52      -
+  only below H4 EMA200                                332  +0.073  57% |   0.54  -0.21   0.70   0.31 |     0.76  -0.32 |  -1.01  0.487
+  only below H1 EMA50                                 347  +0.102  59% |   0.54  -0.21   0.56   0.63 |     1.20  +0.12 |  -1.01  0.484
+  only above H1 EMA50                                 405  +0.029  55% |   0.52  -0.23   0.35   0.92 |     0.20  -0.89 |  -1.01  0.516
+  only above H4 EMA200                                420  +0.054  56% |   0.52  -0.23   0.23   1.42 |     0.77  -0.32 |  -1.01  0.522
+  only below D1 EMA20                                 334  +0.079  57% |   0.50  -0.25   0.49   0.58 |     0.92  -0.16 |  -1.01  0.551
+  only above H4 EMA100                                426  +0.050  57% |   0.49  -0.26   0.20   1.27 |     0.71  -0.37 |  -1.01  0.556
+  only above D1 EMA50                                 427  +0.054  55% |   0.48  -0.27   0.19   1.45 |     0.78  -0.30 |  -1.01  0.564
+  only below H1 EMA100                                338  +0.096  58% |   0.46  -0.29   0.48   0.47 |     1.23  +0.15 |  -1.01  0.586
+  only below H1 EMA20                                 363  +0.074  56% |   0.43  -0.31   0.53   0.32 |     0.83  -0.25 |  -1.01  0.645
+  only below D1 EMA200                                318  +0.057  57% |   0.43  -0.32   0.54   0.27 |     0.64  -0.44 |  -1.01  0.704
+  only below H1 EMA200                                329  +0.094  57% |   0.40  -0.34   0.37   0.52 |     1.18  +0.10 |  -1.01  0.667
+  only above H4 EMA50                                 431  +0.033  56% |   0.34  -0.40   0.18   0.87 |     0.44  -0.64 |  -1.01  0.758
+  skip D1 EMAs stacked up                             394  +0.039  55% |   0.34  -0.41   0.42   0.25 |     0.47  -0.61 |  -1.01  0.877
+  only above H4 EMA20                                 406  +0.020  55% |   0.29  -0.46   0.05   0.87 |     0.20  -0.88 |  -1.01  0.804
+  only below D1 EMA100                                314  +0.071  58% |   0.29  -0.46   0.39   0.15 |     0.97  -0.11 |  -1.01  0.816
+  design pick: 'only D1 EMAs stacked up (20>50>200)' -> hold-out Sharpe 1.05 vs base 1.08
+  walk-forward 2019-2026: Sharpe 0.66 vs base 1.04; picks by year: 19:only below H4 EMA20, 20:only below D1 EMA50, 21:only below H4 EMA20, 22:BASE, 23:size 1.5x above D1 EMA200, 0, 24:BASE, 25:only above H1 EMA20, 26:only below H4 EMA20
+
+=== N news
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  skip quiet entry day (range so far < 0.4 ATR)       627  +0.068  57% |   0.93  +0.18   0.88   1.24 |     0.80  -0.28 |  -1.01  0.052
+  skip wild entry day (range so far > 0.8 ATR)        416  +0.066  57% |   0.67  -0.07   0.86   0.41 |     0.82  -0.26 |  -1.01  0.325
+  skip BoJ decision day (fix day)                     715  +0.059  56% |   0.66  -0.08   0.54   1.09 |     1.00  -0.08 |  -1.01  0.812
+  skip FOMC decision or minutes in the trade          713  +0.054  57% |   0.62  -0.13   0.41   1.12 |     1.06  -0.02 |  -1.01  0.913
+  skip wild entry day (range so far > 1.0 ATR)        533  +0.059  56% |   0.62  -0.13   0.65   0.70 |     0.85  -0.23 |  -1.01  0.515
+  skip BoJ decision on fix day or day before          703  +0.056  55% |   0.60  -0.15   0.48   1.02 |     0.97  -0.11 |  -1.01  0.903
+  skip FOMC decision in the trade                     731  +0.057  57% |   0.59  -0.16   0.27   1.28 |     1.13  +0.05 |  -1.01  0.988
+  skip all Fed + BoJ event days                       670  +0.047  56% |   0.44  -0.31   0.26   0.85 |     0.96  -0.13 |  -1.01  0.980
+  design pick: 'skip quiet entry day (range so far < 0.4 ATR)' -> hold-out Sharpe 0.80 vs base 1.08
+  walk-forward 2019-2026: Sharpe 0.89 vs base 1.04; picks by year: 19:skip quiet entry day (range , 20:skip quiet entry day (range , 21:skip quiet entry day (range , 22:skip quiet entry day (range , 23:skip quiet entry day (range , 24:skip wild entry day (range s, 25:skip quiet entry day (range , 26:BASE
+
+=== S stop
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  no stop at all (sized as 55)                        752  +0.076  57% |   1.18  +0.44   1.10   1.56 |     1.02  -0.06 |  -3.14      -
+  ATR stop 2.0 x ATR14(D1)                            752  +0.019  57% |   1.10  +0.35   0.80   1.56 |     0.96  -0.12 |  -1.00      -
+  ATR stop 1.5 x ATR14(D1)                            752  +0.024  57% |   1.09  +0.34   0.77   1.56 |     0.74  -0.34 |  -1.01      -
+  fixed stop 150 pips                                 752  +0.026  57% |   1.08  +0.33   0.95   1.56 |     0.89  -0.20 |  -1.04      -
+  ATR stop 1.0 x ATR14(D1)                            752  +0.037  57% |   1.05  +0.30   0.74   1.48 |     0.93  -0.15 |  -1.01      -
+  breakeven after +25 pips                            752  +0.064  62% |   1.02  +0.27   1.03   1.22 |     0.96  -0.12 |  -1.01      -
+  fixed stop 100 pips                                 752  +0.038  57% |   0.99  +0.24   0.88   1.38 |     0.96  -0.12 |  -1.16      -
+  ATR stop 0.5 x ATR14(D1)                            752  +0.063  57% |   0.98  +0.23   0.75   1.31 |     0.78  -0.30 |  -1.03      -
+  ATR stop 0.75 x ATR14(D1)                           752  +0.047  57% |   0.97  +0.22   0.55   1.60 |     0.94  -0.14 |  -1.13      -
+  fixed stop 75 pips                                  752  +0.047  57% |   0.97  +0.22   0.82   1.49 |     0.87  -0.21 |  -1.06      -
+  trailing stop 50 pips                               752  +0.070  58% |   0.88  +0.13   0.88   1.05 |     1.25  +0.17 |  -1.01      -
+  trailing stop 30 pips                               752  +0.059  60% |   0.87  +0.12   0.78   1.09 |     1.15  +0.07 |  -1.01      -
+  breakeven after +40 pips                            752  +0.071  59% |   0.86  +0.11   0.88   1.00 |     1.27  +0.19 |  -1.01      -
+  trailing stop 20 pips                               752  +0.043  64% |   0.84  +0.09   0.71   1.13 |     0.81  -0.27 |  -1.01      -
+  fixed stop 30 pips                                  752  +0.083  53% |   0.82  +0.07   0.71   1.19 |     0.65  -0.43 |  -1.13      -
+  breakeven after +15 pips                            752  +0.048  67% |   0.81  +0.06   0.77   1.05 |     0.79  -0.30 |  -1.01      -
+  fixed stop 40 pips                                  752  +0.076  56% |   0.77  +0.02   0.71   1.03 |     0.93  -0.15 |  -1.09      -
+  design pick: 'no stop at all (sized as 55)' -> hold-out Sharpe 1.02 vs base 1.08
+  walk-forward 2019-2026: Sharpe 1.08 vs base 1.04; picks by year: 19:no stop at all (sized as 55), 20:no stop at all (sized as 55), 21:no stop at all (sized as 55), 22:no stop at all (sized as 55), 23:no stop at all (sized as 55), 24:no stop at all (sized as 55), 25:no stop at all (sized as 55), 26:no stop at all (sized as 55)
+
+=== P target
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  take profit +30 pips                                752  +0.063  61% |   0.93  +0.18   0.80   1.17 |     1.42  +0.34 |  -1.01      -
+  half off at +30, rest to the fix                    752  +0.063  59% |   0.88  +0.13   0.77   1.14 |     1.30  +0.22 |  -0.51      -
+  take profit 0.75 x ATR                              752  +0.068  57% |   0.86  +0.11   0.71   1.23 |     1.22  +0.14 |  -1.01      -
+  take profit +50 pips                                752  +0.069  58% |   0.86  +0.11   0.65   1.26 |     1.43  +0.35 |  -1.01      -
+  half off at +20, rest to the fix                    752  +0.055  61% |   0.83  +0.08   0.68   1.17 |     1.22  +0.14 |  -0.51      -
+  take profit +80 pips                                752  +0.063  57% |   0.80  +0.05   0.70   1.10 |     1.16  +0.08 |  -1.01      -
+  take profit +20 pips                                752  +0.047  65% |   0.79  +0.04   0.58   1.18 |     1.20  +0.12 |  -1.01      -
+  take profit 0.5 x ATR                               752  +0.059  57% |   0.73  -0.01   0.56   1.11 |     1.16  +0.08 |  -1.01      -
+  take profit 0.25 x ATR                              752  +0.053  61% |   0.52  -0.23   0.39   0.81 |     1.40  +0.32 |  -1.01      -
+  design pick: 'take profit +30 pips' -> hold-out Sharpe 1.42 vs base 1.08
+  walk-forward 2019-2026: Sharpe 1.26 vs base 1.04; picks by year: 19:take profit +30 pips, 20:take profit +30 pips, 21:take profit +30 pips, 22:take profit +30 pips, 23:take profit +30 pips, 24:take profit +30 pips, 25:take profit +30 pips, 26:take profit +50 pips
+
+=== Z sizing
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  ATR sizing: risk x median/ATR (0.5-2x)              752  +0.060  57% |   0.80  +0.05   0.66   1.29 |     1.00  -0.08 |  -1.80      -
+  ATR sizing: risk x median/ATR (0.67-1.5x)           752  +0.060  57% |   0.78  +0.03   0.66   1.21 |     1.01  -0.07 |  -1.52      -
+  half size after a losing last-10                    752  +0.049  57% |   0.59  -0.16   0.45   1.05 |     1.05  -0.03 |  -1.01      -
+  skip after a losing last-10                         491  +0.053  56% |   0.36  -0.38   0.19   0.87 |     0.89  -0.19 |  -1.01      -
+  design pick: 'ATR sizing: risk x median/ATR (0.5-2x)' -> hold-out Sharpe 1.00 vs base 1.08
+  walk-forward 2019-2026: Sharpe 0.96 vs base 1.04; picks by year: 19:ATR sizing: risk x median/AT, 20:BASE, 21:ATR sizing: risk x median/AT, 22:ATR sizing: risk x median/AT, 23:BASE, 24:BASE, 25:BASE, 26:BASE
+
+=== X extra
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  + short after the fix, 120 min                      752  +0.103  55% |   0.95  +0.20   0.97   1.19 |     1.39  +0.31 |  -1.01      -
+  + short after the fix, 60 min                       752  +0.090  55% |   0.95  +0.20   0.82   1.40 |     1.41  +0.33 |  -1.01      -
+  + short after the fix, 30 min                       752  +0.094  56% |   0.93  +0.18   0.80   1.35 |     1.64  +0.55 |  -1.01      -
+  + half-size short after the fix, 60 min             752  +0.076  55% |   0.87  +0.12   0.75   1.29 |     1.29  +0.21 |  -1.01      -
+  + short after the fix only if the long made >= 0    752  +0.080  56% |   0.80  +0.05   0.64   1.28 |     1.36  +0.28 |  -1.01      -
+  + re-buy at 23:00 UTC after a stop-out              752  +0.063  56% |   0.79  +0.04   0.56   1.41 |     0.92  -0.16 |  -1.02      -
+  + add a long at 23:00 UTC if down >= 30 pips        752  +0.062  56% |   0.77  +0.03   0.66   1.18 |     0.97  -0.12 |  -1.02      -
+  + add a long at 23:00 UTC if down >= 15 pips        752  +0.058  56% |   0.75  -0.00   0.75   0.85 |     0.70  -0.38 |  -1.02      -
+  + short after the fix only if the long made >= 2    752  +0.076  57% |   0.75  -0.00   0.63   1.13 |     1.36  +0.28 |  -1.01      -
+  + add a long at 23:00 UTC if up >= 20 pips          752  +0.069  56% |   0.74  -0.01   0.76   0.94 |     0.93  -0.15 |  -1.02      -
+  + short after the fix only if the long made >= 1    752  +0.076  56% |   0.72  -0.03   0.60   1.10 |     1.36  +0.28 |  -1.01      -
+  + add a long at 23:00 UTC if up >= 10 pips          752  +0.067  55% |   0.68  -0.07   0.58   1.11 |     0.80  -0.28 |  -1.02      -
+  + always add a long at 23:00 UTC                    752  +0.064  54% |   0.47  -0.28   0.26   0.89 |     0.57  -0.51 |  -1.02      -
+  design pick: '+ short after the fix, 120 min' -> hold-out Sharpe 1.39 vs base 1.08
+  walk-forward 2019-2026: Sharpe 1.40 vs base 1.04; picks by year: 19:+ short after the fix, 120 m, 20:+ short after the fix, 120 m, 21:+ short after the fix, 120 m, 22:+ short after the fix, 120 m, 23:+ short after the fix, 30 mi, 24:+ short after the fix, 30 mi, 25:+ short after the fix, 30 mi, 26:+ short after the fix, 30 mi
+
+=== D day
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  skip Monday fixes (Sunday-reopen entry)             655  +0.065  57% |   0.87  +0.12   0.79   1.25 |     0.83  -0.25 |  -1.01  0.108
+  size 1.5x on 25th/30th, 0.75x else                  752  +0.060  57% |   0.73  -0.02   0.60   1.14 |     0.99  -0.09 |  -1.52      -
+  only the 5th-20th                                   514  +0.067  57% |   0.62  -0.13   0.60   0.80 |     0.95  -0.13 |  -1.01  0.503
+  skip moved days (weekend/holiday)                   513  +0.068  55% |   0.52  -0.23   0.46   0.76 |     1.10  +0.02 |  -1.01  0.701
+  only the 25th / 30th                                238  +0.053  57% |   0.42  -0.33   0.28   0.80 |     0.52  -0.56 |  -1.01  0.512
+  only 5th, 10th, 25th, 30th                          493  +0.041  55% |   0.37  -0.38   0.23   0.75 |     0.63  -0.45 |  -1.01  0.859
+  only month-end                                       70  +0.036  57% |  -0.19  -0.94  -0.60   0.56 |     0.43  -0.65 |  -1.01  0.862
+  design pick: 'skip Monday fixes (Sunday-reopen entry)' -> hold-out Sharpe 0.83 vs base 1.08
+  walk-forward 2019-2026: Sharpe 0.95 vs base 1.04; picks by year: 19:skip Monday fixes (Sunday-re, 20:skip Monday fixes (Sunday-re, 21:skip Monday fixes (Sunday-re, 22:skip Monday fixes (Sunday-re, 23:skip Monday fixes (Sunday-re, 24:BASE, 25:BASE, 26:BASE
+
+=== R regime
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  skip after a London surge > +40 pips                632  +0.077  58% |   0.91  +0.16   0.85   1.27 |     1.14  +0.05 |  -1.01  0.056
+  skip top-20% volatility (ATR rank)                  585  +0.066  57% |   0.88  +0.13   0.84   1.21 |     0.84  -0.24 |  -1.01  0.102
+  skip top-10% volatility (ATR rank)                  650  +0.056  56% |   0.85  +0.10   0.76   1.31 |     0.69  -0.39 |  -1.01  0.123
+  skip if > 5% below the 60-day high                  632  +0.046  56% |   0.76  +0.01   0.48   1.45 |     0.57  -0.51 |  -1.01  0.302
+  skip after a London drop > 40 pips                  662  +0.060  57% |   0.75  +0.00   0.70   0.99 |     1.00  -0.08 |  -1.01  0.373
+  skip after a 5-day fall > 1.5%                      678  +0.049  56% |   0.72  -0.03   0.40   1.59 |     0.70  -0.38 |  -1.01  0.504
+  skip after a 5-day fall > 3%                        735  +0.063  57% |   0.71  -0.04   0.61   1.06 |     1.12  +0.04 |  -1.01  0.750
+  only if the rate gap widened (3 months)             445  +0.066  58% |   0.68  -0.07   0.57   1.92 |     0.79  -0.29 |  -1.01  0.337
+  only if up over 20 days                             420  +0.048  56% |   0.66  -0.09   0.49   1.30 |     0.45  -0.63 |  -1.01  0.317
+  skip bottom-20% volatility                          547  +0.057  55% |   0.56  -0.18   0.52   0.76 |     0.77  -0.31 |  -1.01  0.644
+  design pick: 'skip after a London surge > +40 pips' -> hold-out Sharpe 1.14 vs base 1.08
+  walk-forward 2019-2026: Sharpe 1.04 vs base 1.04; picks by year: 19:skip after a London surge > , 20:skip after a London surge > , 21:skip top-20% volatility (ATR, 22:skip after a London surge > , 23:skip after a London surge > , 24:skip after a London surge > , 25:skip after a London surge > , 26:skip after a London surge > 
+
+=== E entry
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  enter 17:55 UTC                                     752  +0.033  58% |   1.04  +0.29   1.13   1.00 |     0.03  -1.05 |  -1.10      -
+  enter 13:55 UTC                                     752  +0.064  55% |   0.92  +0.17   0.48   1.74 |     0.57  -0.51 |  -1.01      -
+  enter 14:55 UTC                                     752  +0.072  57% |   0.91  +0.16   0.65   1.59 |     0.98  -0.10 |  -1.01      -
+  enter 12:55 UTC                                     752  +0.047  53% |   0.87  +0.12   0.52   1.45 |     0.17  -0.91 |  -1.08      -
+  enter 19:55 UTC                                     752  +0.015  55% |   0.59  -0.16   0.49   0.78 |     0.05  -1.03 |  -1.16      -
+  enter 21:55 UTC                                     752  -0.023  50% |   0.08  -0.67  -0.21   0.54 |    -1.00  -2.08 |  -1.12      -
+  enter 23:00 UTC                                     752  -0.001  52% |   0.01  -0.74  -0.41   0.65 |    -0.06  -1.14 |  -1.01      -
+  design pick: 'enter 17:55 UTC' -> hold-out Sharpe 0.03 vs base 1.08
+  walk-forward 2019-2026: Sharpe 0.80 vs base 1.04; picks by year: 19:enter 17:55 UTC, 20:enter 17:55 UTC, 21:enter 17:55 UTC, 22:enter 17:55 UTC, 23:enter 14:55 UTC, 24:enter 14:55 UTC, 25:enter 14:55 UTC, 26:enter 14:55 UTC
+
+=== Q exit
+  variant                                          trades   avg R  win | design      Δ  16-18  19-21 | hold-out      Δ |  worst p rand
+  exit at 00:55 UTC                                   752  +0.067  57% |   0.81  +0.06   0.78   1.04 |     1.12  +0.04 |  -1.01      -
+  exit at 00:45 UTC                                   752  +0.053  58% |   0.57  -0.18   0.42   1.04 |     1.03  -0.05 |  -1.01      -
+  exit at 00:50 UTC                                   752  +0.048  56% |   0.52  -0.23   0.42   0.86 |     0.94  -0.15 |  -1.01      -
+  exit at 01:00 UTC                                   752  +0.032  53% |   0.40  -0.35   0.43   0.42 |     0.53  -0.55 |  -1.01      -
+  exit at 00:30 UTC                                   752  +0.044  56% |   0.34  -0.41   0.25   0.60 |     1.02  -0.06 |  -1.01      -
+  design pick: 'exit at 00:55 UTC' -> hold-out Sharpe 1.12 vs base 1.08
+  walk-forward 2019-2026: Sharpe 1.05 vs base 1.04; picks by year: 19:exit at 00:55 UTC, 20:exit at 00:55 UTC, 21:exit at 00:55 UTC, 22:exit at 00:55 UTC, 23:exit at 00:55 UTC, 24:exit at 00:55 UTC, 25:exit at 00:55 UTC, 26:exit at 00:55 UTC

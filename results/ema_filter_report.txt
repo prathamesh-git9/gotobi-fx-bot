@@ -1,0 +1,24 @@
+=== 1 Jan - 16 Oct 2026, $1,000 start ===
+rule (long only if above 200 EMA)  trades |            1% risk |            5% risk |           10% risk
+no filter (our bot)                    56 |   $1,035.48 DD  3% |   $1,306.01 DD 13% |   $1,658.62 DD 26%
+D1 200 EMA                             49 |   $1,028.87 DD  3% |   $1,234.90 DD 14% |   $1,481.68 DD 28%
+H4 200 EMA                             38 |   $  994.10 DD  3% |   $  977.71 DD 17% |   $  932.23 DD 32%
+H1 200 EMA                             39 |   $  994.80 DD  3% |   $  985.06 DD 14% |   $  937.54 DD 29%
+M15 200 EMA                            34 |   $1,003.74 DD  2% |   $1,037.15 DD 13% |   $1,051.05 DD 26%
+M5 200 EMA                             32 |   $  997.24 DD  2% |   $  989.76 DD 13% |   $  962.39 DD 25%
+
+=== 2016 - 2026 (752 trades), is the filter better over 10 years? ===
+rule                 trades   win  avg pips  skipped trades avg |   $1,000 at 10% risk  max DD | years better than no filter
+no filter (our bot)     752   57%     +3.45                     | $            28,878     53% | -
+D1 200 EMA              442   57%     +3.29         +3.66 (310) | $             6,771     55% | 3/11
+H4 200 EMA              420   56%     +2.99         +4.02 (332) | $             5,129     45% | 3/11
+H1 200 EMA              423   57%     +2.10         +5.17 (329) | $             2,740     53% | 1/11
+M15 200 EMA             409   56%     +2.35         +4.75 (343) | $             3,419     35% | 2/11
+M5 200 EMA              393   56%     +2.78         +4.17 (359) | $             4,407     33% | 4/11
+
+=== Blow-up risk: 10,000 simulated 3-year runs from the real 2016-2026 trades (no filter) ===
+    1% risk: median end $    1,133 | P(drop > 50%)  0.0% | P(lose 80% at some point)  0.0% | P(account below $100)  0.0%
+    2% risk: median end $    1,274 | P(drop > 50%)  0.0% | P(lose 80% at some point)  0.0% | P(account below $100)  0.0%
+    5% risk: median end $    1,754 | P(drop > 50%)  1.0% | P(lose 80% at some point)  0.0% | P(account below $100)  0.0%
+   10% risk: median end $    2,617 | P(drop > 50%) 30.9% | P(lose 80% at some point)  0.5% | P(account below $100)  0.0%
+   20% risk: median end $    3,712 | P(drop > 50%) 93.9% | P(lose 80% at some point) 29.0% | P(account below $100)  3.3%

@@ -1,0 +1,49 @@
+Post-fix short haircut: 0.0 pips per trade. $1,000 USD account, 1:500, kill switch at 50% drawdown.
+
+=== plain bot (today): 752 trades, +0.063R per slot, Sharpe 0.91
+    5% | 2016-26 $    6,957 DD 30% | 2025-26 $    1,762 DD 26% | 2026 $    1,306 DD 13%
+        3-year Monte Carlo: median x1.75, P(loss)   8%, P(DD>30%)  24%, P(DD>50%) 0.9%, median DD  24% | half the edge: median x1.27, P(loss)  28%, P(DD>50%) 5.7%
+    6% | 2016-26 $    9,746 DD 35% | 2025-26 $    1,923 DD 31% | 2026 $    1,369 DD 16%
+        3-year Monte Carlo: median x1.92, P(loss)   9%, P(DD>30%)  41%, P(DD>50%) 3.4%, median DD  28% | half the edge: median x1.31, P(loss)  29%, P(DD>50%) 12.4%
+    7% | 2016-26 $   13,523 DD 40% | 2025-26 $    2,133 DD 34% | 2026 $    1,446 DD 18%
+        3-year Monte Carlo: median x2.11, P(loss)   9%, P(DD>30%)  57%, P(DD>50%) 7.9%, median DD  32% | half the edge: median x1.33, P(loss)  31%, P(DD>50%) 22.7%
+    8% | 2016-26 $   17,571 DD 44% | 2025-26 $    2,328 DD 39% | 2026 $    1,513 DD 21%
+        3-year Monte Carlo: median x2.30, P(loss)  10%, P(DD>30%)  72%, P(DD>50%) 13.5%, median DD  36% | half the edge: median x1.36, P(loss)  32%, P(DD>50%) 33.5%
+   10% | 2016-26 $    7,081 DD 50% HALT 2024-09-25 | 2025-26 $    2,750 DD 47% | 2026 $    1,659 DD 26%
+        3-year Monte Carlo: median x2.65, P(loss)  11%, P(DD>30%)  90%, P(DD>50%) 30.9%, median DD  43% | half the edge: median x1.37, P(loss)  35%, P(DD>50%) 55.2%
+
+=== take-profit +30: 752 trades, +0.063R per slot, Sharpe 1.17
+    5% | 2016-26 $    8,050 DD 28% | 2025-26 $    1,745 DD 27% | 2026 $    1,462 DD 14%
+        3-year Monte Carlo: median x1.82, P(loss)   4%, P(DD>30%)  10%, P(DD>50%) 0.1%, median DD  19% | half the edge: median x1.31, P(loss)  20%, P(DD>50%) 1.3%
+    6% | 2016-26 $   11,667 DD 33% | 2025-26 $    1,949 DD 32% | 2026 $    1,583 DD 16%
+        3-year Monte Carlo: median x2.04, P(loss)   4%, P(DD>30%)  20%, P(DD>50%) 0.6%, median DD  23% | half the edge: median x1.38, P(loss)  21%, P(DD>50%) 4.2%
+    7% | 2016-26 $   16,838 DD 37% | 2025-26 $    2,176 DD 36% | 2026 $    1,707 DD 18%
+        3-year Monte Carlo: median x2.27, P(loss)   4%, P(DD>30%)  34%, P(DD>50%) 1.8%, median DD  26% | half the edge: median x1.42, P(loss)  22%, P(DD>50%) 9.4%
+    8% | 2016-26 $   24,283 DD 41% | 2025-26 $    2,397 DD 41% | 2026 $    1,836 DD 21%
+        3-year Monte Carlo: median x2.49, P(loss)   4%, P(DD>30%)  49%, P(DD>50%) 5.0%, median DD  30% | half the edge: median x1.48, P(loss)  23%, P(DD>50%) 16.2%
+   10% | 2016-26 $   46,039 DD 49% | 2025-26 $    2,912 DD 49% | 2026 $    2,117 DD 26%
+        3-year Monte Carlo: median x3.00, P(loss)   5%, P(DD>30%)  74%, P(DD>50%) 13.6%, median DD  36% | half the edge: median x1.58, P(loss)  25%, P(DD>50%) 32.9%
+
+=== plain + post-fix short: 1504 trades, +0.094R per slot, Sharpe 1.27
+    5% | 2016-26 $   21,692 DD 30% | 2025-26 $    2,197 DD 29% | 2026 $    1,314 DD 14%
+        3-year Monte Carlo: median x2.41, P(loss)   2%, P(DD>30%)  17%, P(DD>50%) 0.4%, median DD  22% | half the edge: median x1.48, P(loss)  18%, P(DD>50%) 4.3%
+    6% | 2016-26 $   38,639 DD 35% | 2025-26 $    2,536 DD 34% | 2026 $    1,390 DD 16%
+        3-year Monte Carlo: median x2.80, P(loss)   2%, P(DD>30%)  33%, P(DD>50%) 1.7%, median DD  26% | half the edge: median x1.54, P(loss)  20%, P(DD>50%) 12.0%
+    7% | 2016-26 $   64,006 DD 39% | 2025-26 $    2,929 DD 39% | 2026 $    1,452 DD 19%
+        3-year Monte Carlo: median x3.24, P(loss)   3%, P(DD>30%)  50%, P(DD>50%) 4.5%, median DD  30% | half the edge: median x1.63, P(loss)  21%, P(DD>50%) 20.2%
+    8% | 2016-26 $  105,769 DD 44% | 2025-26 $    3,288 DD 44% | 2026 $    1,525 DD 22%
+        3-year Monte Carlo: median x3.76, P(loss)   3%, P(DD>30%)  65%, P(DD>50%) 8.7%, median DD  34% | half the edge: median x1.71, P(loss)  22%, P(DD>50%) 30.6%
+   10% | 2016-26 $   73,808 DD 51% HALT 2025-10-15 | 2025-26 $    1,231 DD 51% HALT 2025-10-15 | 2026 $    1,671 DD 27%
+        3-year Monte Carlo: median x4.86, P(loss)   3%, P(DD>30%)  87%, P(DD>50%) 23.4%, median DD  41% | half the edge: median x1.82, P(loss)  24%, P(DD>50%) 53.4%
+
+=== take-profit +30 + post-fix short: 1504 trades, +0.094R per slot, Sharpe 1.53
+    5% | 2016-26 $   25,116 DD 32% | 2025-26 $    2,167 DD 31% | 2026 $    1,471 DD 10%
+        3-year Monte Carlo: median x2.49, P(loss)   1%, P(DD>30%)   8%, P(DD>50%) 0.1%, median DD  19% | half the edge: median x1.53, P(loss)  13%, P(DD>50%) 1.6%
+    6% | 2016-26 $   45,717 DD 37% | 2025-26 $    2,556 DD 36% | 2026 $    1,580 DD 13%
+        3-year Monte Carlo: median x2.94, P(loss)   1%, P(DD>30%)  18%, P(DD>50%) 0.5%, median DD  23% | half the edge: median x1.64, P(loss)  14%, P(DD>50%) 4.6%
+    7% | 2016-26 $   82,561 DD 42% | 2025-26 $    2,929 DD 42% | 2026 $    1,714 DD 15%
+        3-year Monte Carlo: median x3.49, P(loss)   1%, P(DD>30%)  32%, P(DD>50%) 1.5%, median DD  26% | half the edge: median x1.74, P(loss)  15%, P(DD>50%) 10.4%
+    8% | 2016-26 $  143,052 DD 47% | 2025-26 $    3,381 DD 46% | 2026 $    1,842 DD 17%
+        3-year Monte Carlo: median x4.05, P(loss)   1%, P(DD>30%)  47%, P(DD>50%) 3.6%, median DD  29% | half the edge: median x1.85, P(loss)  15%, P(DD>50%) 17.2%
+   10% | 2016-26 $  109,082 DD 51% HALT 2025-09-05 | 2025-26 $    1,198 DD 51% HALT 2025-09-05 | 2026 $    2,119 DD 21%
+        3-year Monte Carlo: median x5.40, P(loss)   1%, P(DD>30%)  73%, P(DD>50%) 12.4%, median DD  36% | half the edge: median x2.03, P(loss)  17%, P(DD>50%) 36.3%
