@@ -69,6 +69,10 @@ jobs:
       - id: mt5
         name: install MetaTrader 5
         run: ./ci/install_mt5.ps1
+      - id: login
+        name: log in to the account
+        continue-on-error: true      # the bot still tries (and retries) by itself
+        run: python ci/login.py "${{ steps.mt5.outputs.terminal }}"
       - name: restore the bot's state
         uses: actions/cache/restore@v4
         with:
@@ -102,6 +106,6 @@ jobs:
         with:
           path: bot_state
           key: gotobi-state-${{ github.run_id }}-${{ github.run_attempt }}
-      - name: fail the run if the preflight failed (GitHub then emails you)
-        if: always() && steps.preflight.outcome == 'failure'
+      - name: fail the run if the login or the preflight failed (GitHub then emails you)
+        if: always() && (steps.login.outcome == 'failure' || steps.preflight.outcome == 'failure')
         run: exit 1
