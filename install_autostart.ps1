@@ -6,6 +6,9 @@ Start the Gotobi bot automatically every time you log on to Windows.
   powershell -ExecutionPolicy Bypass -File install_autostart.ps1 -Remove    delete the task
 
 It creates a Task Scheduler task "Gotobi bot" that runs run_bot.bat in a console window at log-on.
+More than one account: give each bot folder (each with its own MT5 terminal and bot_config.toml) its own task,
+running this script from that folder with a name of its own, e.g. -TaskName "Gotobi bot 2" (and -Remove with
+the same -TaskName to delete it).
 - It runs in your own desktop session, because the MetaTrader 5 terminal is a desktop program and the bot talks
   to it.
 - There is NO time limit. Tasks made with the Task Scheduler wizard, schtasks or PowerShell defaults are
@@ -13,9 +16,9 @@ It creates a Task Scheduler task "Gotobi bot" that runs run_bot.bat in a console
 - It runs on battery too, and starts 1 minute after log-on so the network and MT5 are up.
 - After a reboot it only starts once Windows has logged you on (see BOT_README.md: automatic sign-in).
 #>
-param([switch]$Remove, [switch]$DryRun)
+param([switch]$Remove, [switch]$DryRun, [string]$TaskName = "Gotobi bot")
 $ErrorActionPreference = "Stop"
-$name = "Gotobi bot"
+$name = $TaskName
 $dir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $bat = Join-Path $dir "run_bot.bat"
 
