@@ -17,22 +17,28 @@ class BrokerUnavailable(RuntimeError):
 @dataclass
 class OrderResult:
     ok: bool
-    category: str            # done | transient | market_closed | fatal
+    category: str            # done | transient | unknown | market_closed | fatal
+                             # unknown = it may have executed (no reply, timeout, lost connection, order only placed):
+                             # check the broker's positions and deal history before sending it again
     retcode: int | None
     price: float = 0.0
     volume: float = 0.0
     order: int = 0
     deal: int = 0
     message: str = ""
+    sl: float = 0.0          # the stop and target actually sent with the order
+    tp: float = 0.0
 
 
 class MT5Broker:
     def __init__(self, mt5):
         self.mt5 = m = mt5
-        self.done = {m.TRADE_RETCODE_DONE, m.TRADE_RETCODE_PLACED, m.TRADE_RETCODE_DONE_PARTIAL}
+        self.done = {m.TRADE_RETCODE_DONE, m.TRADE_RETCODE_DONE_PARTIAL}    # a deal happened (partial: the rest
+                                                                            # is cancelled under FOK/IOC)
+        self.unknown = {m.TRADE_RETCODE_PLACED,       # an order exists but has not filled (yet)
+                        m.TRADE_RETCODE_TIMEOUT, m.TRADE_RETCODE_CONNECTION}   # the server may still have filled it
         self.transient = {m.TRADE_RETCODE_REQUOTE, m.TRADE_RETCODE_PRICE_CHANGED, m.TRADE_RETCODE_PRICE_OFF,
-                          m.TRADE_RETCODE_TIMEOUT, m.TRADE_RETCODE_CONNECTION, m.TRADE_RETCODE_TOO_MANY_REQUESTS,
-                          m.TRADE_RETCODE_LOCKED, m.TRADE_RETCODE_FROZEN,
+                          m.TRADE_RETCODE_TOO_MANY_REQUESTS, m.TRADE_RETCODE_LOCKED, m.TRADE_RETCODE_FROZEN,
                           m.TRADE_RETCODE_CLIENT_DISABLES_AT}   # Algo Trading switched off: retry until it is on
 
     # ---- connection
@@ -75,15 +81,43 @@ class MT5Broker:
     def tick(self, s: str):
         return self.mt5.symbol_info_tick(s)
 
-    def positions(self, s: str, magic: int) -> list:
-        ps = self.mt5.positions_get(symbol=s)
-        if ps is None:   # an error, NOT "no positions": treating it as empty could open a duplicate trade
-            raise BrokerUnavailable(f"positions_get failed: {self.mt5.last_error()}")
-        return [p for p in ps if p.magic == magic]
+    def _listing(self, result, what: str) -> list:
+        """MT5 returns None both on an error and, in some builds, for an empty list. Only None with the
+        success code (1) is "none": anything else is an error, NOT "nothing open" (that could open a duplicate)."""
+        if result is not None:
+            return list(result)
+        err = self.mt5.last_error()
+        if err and err[0] == 1:
+            return []
+        raise BrokerUnavailable(f"{what} failed: {err}")
 
-    def deals(self, position_id: int) -> list:
+    def symbol_positions(self, s: str) -> list:
+        """Every open position on the symbol, whoever opened it (manual trades and other robots included)."""
+        return self._listing(self.mt5.positions_get(symbol=s), "positions_get")
+
+    def orders(self, s: str, magic: int) -> list:
+        """This bot's live (queued, unfilled) orders on the symbol. The bot only ever sends market orders, so a
+        live one is a leftover: a request answered only with "placed", or the rest of a partial fill."""
+        return [o for o in self._listing(self.mt5.orders_get(symbol=s), "orders_get") if o.magic == magic]
+
+    def cancel(self, ticket: int) -> OrderResult:
+        m = self.mt5
+        r = m.order_send({"action": m.TRADE_ACTION_REMOVE, "order": int(ticket)})
+        if r is None:
+            return OrderResult(False, "unknown", None, order=int(ticket), message=f"no answer: {m.last_error()}")
+        ok = r.retcode in self.done
+        return OrderResult(ok, "done" if ok else "fatal", r.retcode, order=int(ticket), message=r.comment)
+
+    def positions(self, s: str, magic: int) -> list:
+        return [p for p in self.symbol_positions(s) if p.magic == magic]
+
+    def deals(self, position_id: int) -> list | None:
+        """The position's deals; [] if there are none (yet), None if the history could not be read."""
         ds = self.mt5.history_deals_get(position=int(position_id))
-        return list(ds) if ds else []
+        if ds is None:
+            err = self.mt5.last_error()
+            return [] if err and err[0] == 1 else None      # (1, "Success"): simply no deals
+        return list(ds)
 
     def deals_between(self, date_from, date_to) -> list:
         ds = self.mt5.history_deals_get(date_from, date_to)
@@ -91,17 +125,19 @@ class MT5Broker:
             raise BrokerUnavailable(f"history_deals_get failed: {self.mt5.last_error()}")
         return list(ds)
 
-    def loss_per_lot(self, s: str, price: float, sl: float) -> float:
-        """Money lost by 1 lot bought at `price` and stopped at `sl`, in the account currency."""
-        v = self.mt5.order_calc_profit(self.mt5.ORDER_TYPE_BUY, s, 1.0, price, sl)
+    def loss_per_lot(self, s: str, price: float, sl: float, side: int = +1) -> float:
+        """Money lost by 1 lot bought (side +1) or sold (-1) at `price` and stopped at `sl`, in the account currency."""
+        typ = self.mt5.ORDER_TYPE_BUY if side > 0 else self.mt5.ORDER_TYPE_SELL
+        v = self.mt5.order_calc_profit(typ, s, 1.0, price, sl)
         if v is not None and v < 0:
             return -v
         info = self.symbol(s)
         per_tick = info.trade_tick_value_loss or info.trade_tick_value
-        return (price - sl) / info.trade_tick_size * per_tick
+        return abs(price - sl) / info.trade_tick_size * per_tick
 
-    def margin_per_lot(self, s: str, price: float) -> float | None:
-        v = self.mt5.order_calc_margin(self.mt5.ORDER_TYPE_BUY, s, 1.0, price)
+    def margin_per_lot(self, s: str, price: float, side: int = +1) -> float | None:
+        typ = self.mt5.ORDER_TYPE_BUY if side > 0 else self.mt5.ORDER_TYPE_SELL
+        v = self.mt5.order_calc_margin(typ, s, 1.0, price)
         return v if v and v > 0 else None
 
     def filling_modes(self, s: str) -> list[int]:
@@ -116,18 +152,29 @@ class MT5Broker:
 
     # ---- orders
     def market_order(self, s: str, side: int, volume: float, sl: float = 0.0, deviation: int = 30, magic: int = 0,
-                     comment: str = "", position: int | None = None, check_only: bool = False) -> OrderResult:
-        """Buy (side=+1) or sell (side=-1) at market; with `position` it closes that position."""
+                     comment: str = "", position: int | None = None, check_only: bool = False,
+                     tp: float = 0.0, sl_dist: float = 0.0, tp_dist: float = 0.0,
+                     digits: int | None = None) -> OrderResult:
+        """Buy (side=+1) or sell (side=-1) at market; with `position` it closes that position.
+        sl_dist / tp_dist (price distances) place the stop and target from the very quote the order is sent at,
+        so the stop is 55 pips from the request price even if the market moved since the size was worked out."""
         m = self.mt5
         tick = m.symbol_info_tick(s)
         if tick is None:
             return OrderResult(False, "transient", None, message=f"no price: {m.last_error()}")
+        price = tick.ask if side > 0 else tick.bid
+        if sl_dist:
+            sl = round(price - side * sl_dist, digits) if digits is not None else price - side * sl_dist
+        if tp_dist:
+            tp = round(price + side * tp_dist, digits) if digits is not None else price + side * tp_dist
         req = {"action": m.TRADE_ACTION_DEAL, "symbol": s, "volume": float(volume),
                "type": m.ORDER_TYPE_BUY if side > 0 else m.ORDER_TYPE_SELL,
-               "price": tick.ask if side > 0 else tick.bid, "deviation": int(deviation), "magic": int(magic),
+               "price": price, "deviation": int(deviation), "magic": int(magic),
                "comment": comment[:31], "type_time": m.ORDER_TIME_GTC}
         if sl:
             req["sl"] = float(sl)
+        if tp:
+            req["tp"] = float(tp)
         if position:
             req["position"] = int(position)
         last = None
@@ -135,21 +182,26 @@ class MT5Broker:
             req["type_filling"] = fill
             r = m.order_check(req) if check_only else m.order_send(req)
             if r is None:
-                return OrderResult(False, "transient", None, message=f"no answer from terminal: {m.last_error()}")
+                return OrderResult(False, "transient" if check_only else "unknown", None,
+                                   message=f"no answer from terminal: {m.last_error()}")
             rc = r.retcode
             if check_only:
                 ok = rc in (0, m.TRADE_RETCODE_DONE)
-                return OrderResult(ok, "done" if ok else "fatal", rc, req["price"], req["volume"], message=r.comment)
+                return OrderResult(ok, "done" if ok else "fatal", rc, req["price"], req["volume"], message=r.comment,
+                                   sl=req.get("sl", 0.0), tp=req.get("tp", 0.0))
             if rc in self.done:
-                return OrderResult(True, "done", rc, r.price, r.volume, r.order, r.deal, r.comment)
+                return OrderResult(True, "done", rc, r.price, r.volume, r.order, r.deal, r.comment,
+                                   sl=req.get("sl", 0.0), tp=req.get("tp", 0.0))
             if rc == m.TRADE_RETCODE_INVALID_FILL:
                 last = r
                 continue
-            if rc in self.transient:
+            if rc in self.unknown:
+                cat = "unknown"
+            elif rc in self.transient:
                 cat = "transient"
             elif rc == m.TRADE_RETCODE_MARKET_CLOSED:
                 cat = "market_closed"
             else:
                 cat = "fatal"
-            return OrderResult(False, cat, rc, message=r.comment)
+            return OrderResult(False, cat, rc, order=getattr(r, "order", 0) or 0, message=r.comment)
         return OrderResult(False, "fatal", last.retcode if last else None, message="no filling mode accepted")

@@ -27,6 +27,15 @@ class Config:
     move_off_jp_holidays: bool = True    # no Tokyo fix on Japanese public holidays
     jp_bank_holidays: bool = True        # ... nor on 31 Dec and 2-3 Jan, when Japanese banks are shut
     fx_closed_mmdd: tuple[str, ...] = ("12-25", "01-01")   # FX market shut at the exit time: skip
+    take_profit_pips: float = 30.0       # close the long early at +30 pips (0 = off): same average, smaller swings
+
+    # the post-fix short (gotobi days only): sell at the 09:55 JST fix, when the importers' dollar buying stops,
+    # and buy back 30 minutes later. src/gotobi_lab2.py + src/fix_seconds.py: works on gotobi days, not others.
+    post_fix_short: bool = True
+    short_minutes: int = 30
+    short_stop_pips: float = 55.0
+    short_send_sec: float = -1.0         # send the sell this many seconds after the fix (negative = before)
+    short_max_late_sec: float = 5.0      # past fix + this, skip the sell: most of the drop has happened
 
     # execution safety
     max_entry_delay_min: int = 120       # give up if the entry cannot be made this long after schedule
@@ -49,6 +58,8 @@ class Config:
     state_dir: str = "bot_state"
     server_utc_offset_hours: float = 0.0  # broker server clock minus UTC (Exness: 0); used to judge tick freshness
     auto_server_offset: bool = True       # measure it from live prices (many brokers run UTC+2/+3 and shift with DST)
+    clock_sync: bool = True               # correct the PC clock against internet time servers (for the fix-second sell)
+    time_servers: tuple[str, ...] = ("time.google.com", "time.cloudflare.com", "time.windows.com", "pool.ntp.org")
 
     def validate(self) -> "Config":
         hhmm = re.compile(r"^([01]\d|2[0-3]):[0-5]\d$")
@@ -64,6 +75,12 @@ class Config:
             (0 <= self.max_entry_delay_min <= 600, "max_entry_delay_min must be in [0, 600]"),
             (0 <= self.reopen_wait_min <= 120, "reopen_wait_min must be in [0, 120]"),
             (0 <= self.min_hold_min <= 480, "min_hold_min must be in [0, 480]"),
+            (0 <= self.take_profit_pips <= 300, "take_profit_pips must be in [0, 300] (0 = off)"),
+            (1 <= self.short_minutes <= 240, "short_minutes must be in [1, 240]"),
+            (10 <= self.short_stop_pips <= 300, "short_stop_pips must be in [10, 300]"),
+            (-30 <= self.short_send_sec <= 10, "short_send_sec must be in [-30, 10]"),
+            (self.short_send_sec < self.short_max_late_sec <= 60,
+             "short_max_late_sec must be above short_send_sec and at most 60"),
             (self.max_spread_pips > 0, "max_spread_pips must be > 0"),
             (30 <= self.stale_tick_sec <= 3600, "stale_tick_sec must be in [30, 3600]"),
             (0 <= self.deviation_points <= 1000, "deviation_points must be in [0, 1000]"),

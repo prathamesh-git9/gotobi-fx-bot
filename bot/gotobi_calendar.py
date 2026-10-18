@@ -3,6 +3,8 @@
 Gotobi days are the 5th, 10th, 15th, 20th, 25th and 30th. One that falls on a weekend (or, optionally, a Japanese
 public or bank holiday) moves to the business day before. The trade for gotobi day D opens on D-1 at entry_utc
 and closes on D at fix_utc minus exit_minutes_before_fix. Days whose fix falls in an FX-market closure are skipped.
+The post-fix short is sold at the fix plus short_send_sec (may be negative), no later than the fix plus
+short_max_late_sec, and bought back short_minutes after the fix.
 """
 from __future__ import annotations
 
@@ -31,24 +33,32 @@ class Slot:
     entry: datetime     # UTC, on the calendar day before
     fix: datetime       # 09:55 JST expressed in UTC
     exit: datetime      # UTC, when the bot closes
+    short_open: datetime | None = None     # post-fix short: earliest moment to send the sell
+    short_late: datetime | None = None     # ... and the latest
+    short_close: datetime | None = None    # ... and when it is bought back
 
 
 class GotobiCalendar:
     def __init__(self, move_off_jp_holidays: bool = True, jp_bank_holidays: bool = True,
                  fx_closed_mmdd: tuple[str, ...] = ("12-25", "01-01"), entry_utc: str = "15:55",
-                 fix_utc: str = "00:55", exit_minutes_before_fix: int = 1):
+                 fix_utc: str = "00:55", exit_minutes_before_fix: int = 1, short_send_sec: float = -1.0,
+                 short_max_late_sec: float = 5.0, short_minutes: int = 30):
         self.move_holidays = move_off_jp_holidays
         self.bank_holidays = jp_bank_holidays
         self.fx_closed = frozenset(fx_closed_mmdd)
         self.entry_time = parse_hm(entry_utc)
         self.fix_time = parse_hm(fix_utc)
         self.exit_before = timedelta(minutes=exit_minutes_before_fix)
+        self.short_send = timedelta(seconds=short_send_sec)
+        self.short_late = timedelta(seconds=short_max_late_sec)
+        self.short_hold = timedelta(minutes=short_minutes)
         self._jp = holidays.Japan()
 
     @classmethod
     def from_config(cls, cfg) -> "GotobiCalendar":
         return cls(cfg.move_off_jp_holidays, cfg.jp_bank_holidays, cfg.fx_closed_mmdd, cfg.entry_utc,
-                   cfg.fix_utc, cfg.exit_minutes_before_fix)
+                   cfg.fix_utc, cfg.exit_minutes_before_fix, cfg.short_send_sec, cfg.short_max_late_sec,
+                   cfg.short_minutes)
 
     def business_day(self, d: date) -> bool:
         if d.weekday() >= 5:
@@ -89,7 +99,8 @@ class GotobiCalendar:
     def slot(self, d: date) -> Slot:
         fix = datetime.combine(d, self.fix_time, UTC)
         entry = datetime.combine(d - timedelta(days=1), self.entry_time, UTC)
-        return Slot(d, entry, fix, fix - self.exit_before)
+        return Slot(d, entry, fix, fix - self.exit_before, fix + self.short_send, fix + self.short_late,
+                    fix + self.short_hold)
 
     def active(self, now: datetime) -> Slot | None:
         """The slot whose entry window [entry, exit) contains `now` (an aware UTC datetime)."""
@@ -97,6 +108,15 @@ class GotobiCalendar:
             if self.is_trade_day(d):
                 s = self.slot(d)
                 if s.entry <= now < s.exit:
+                    return s
+        return None
+
+    def short_active(self, now: datetime) -> Slot | None:
+        """The slot whose post-fix short window [short_open, short_close) contains `now`."""
+        for d in (now.date(), now.date() + timedelta(days=1)):
+            if self.is_trade_day(d):
+                s = self.slot(d)
+                if s.short_open <= now < s.short_close:
                     return s
         return None
 

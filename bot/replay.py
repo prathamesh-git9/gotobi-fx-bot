@@ -61,7 +61,7 @@ def step_times(cal: GotobiCalendar, start: datetime, end: datetime, coarse_min: 
     for d in cal.trade_days((start - timedelta(days=2)).date(), (end + timedelta(days=2)).date()):
         s = cal.slot(d)
         t = max(start, s.entry - pad).replace(second=0, microsecond=0)
-        stop = min(end, max(s.exit, s.fix) + pad)
+        stop = min(end, max(s.exit, s.fix, s.short_close) + pad)
         while t <= stop:
             pts.add(t)
             t += timedelta(minutes=1)
@@ -93,9 +93,12 @@ def replay(cfg: Config, fake: FakeMT5, start: datetime, end: datetime, state_dir
 def trades_frame(journal: Journal) -> pd.DataFrame:
     rows = []
     for key, rec in journal.closed():
-        rows.append({"gotobi": key, "opened": rec.get("opened"), "closed": rec.get("closed"),
-                     "entry": rec.get("entry_price"), "exit": rec.get("close_price"), "lots": rec.get("volume"),
-                     "pips": round((rec["close_price"] - rec["entry_price"]) * 100, 2) if rec.get("close_price") else None,
+        sign = -1 if rec.get("side") == "short" else 1
+        rows.append({"gotobi": key[:10], "trade": "short" if sign < 0 else "long", "opened": rec.get("opened"),
+                     "closed": rec.get("closed"), "entry": rec.get("entry_price"), "exit": rec.get("close_price"),
+                     "lots": rec.get("volume"),
+                     "pips": round(sign * (rec["close_price"] - rec["entry_price"]) * 100, 2)
+                     if rec.get("close_price") else None,
                      "pnl": rec.get("pnl"), "r": rec.get("r"), "reason": rec.get("reason")})
     return pd.DataFrame(rows)
 
@@ -107,6 +110,7 @@ def main(argv=None) -> int:
     ap.add_argument("--balance", type=float, default=1000.0)
     ap.add_argument("--risk", type=float, default=Config().risk_pct)
     ap.add_argument("--leverage", type=int, default=30)
+    ap.add_argument("--currency", default="USD", choices=["USD", "EUR"], help="account currency")
     ap.add_argument("--out", help="write the trade list to this CSV")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(message)s")
@@ -115,7 +119,8 @@ def main(argv=None) -> int:
     bars = load_bars()
     bars = bars[(bars.index >= start.replace(tzinfo=None) - timedelta(days=3)) &
                 (bars.index <= end.replace(tzinfo=None) + timedelta(days=1))]
-    fake = FakeMT5(bars, load_eurusd(), balance=args.balance, leverage=args.leverage)
+    fake = FakeMT5(bars, load_eurusd() if args.currency == "EUR" else 1.0, balance=args.balance,
+                   leverage=args.leverage, currency=args.currency)
     cfg = replace(Config(), risk_pct=args.risk)
     with tempfile.TemporaryDirectory() as tmp:
         journal, _ = replay(cfg, fake, start, end, tmp)
@@ -126,7 +131,8 @@ def main(argv=None) -> int:
     print(t.to_string(index=False))
     won = (t.pnl > 0).sum()
     print(f"\n{len(t)} trades, {won} won ({won / max(len(t), 1):.0%}); balance {args.balance:,.2f} -> {fake.balance:,.2f} "
-          f"({fake.balance / args.balance - 1:+.1%}); stops {int((t.reason == 'stop').sum())}")
+          f"({fake.balance / args.balance - 1:+.1%}); stops {int((t.reason == 'stop').sum())}, "
+          f"take-profits {int((t.reason == 'target').sum())}")
     for k, v in sorted(others.items()):
         print(f"  {k}: {v.get('status')} - {v.get('note')}")
     return 0

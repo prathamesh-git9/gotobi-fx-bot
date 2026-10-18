@@ -60,7 +60,21 @@ def dip(bars: pd.DataFrame, when: str, low: float) -> None:
     bars.loc[pd.Timestamp(when), "blow"] = low
 
 
-TEST_CFG = replace(Config(), risk_pct=10.0, symbols=("USDJPYm",))
+FULL_CFG = replace(Config(), risk_pct=10.0, symbols=("USDJPYm",))              # production rule: long + TP + short
+TEST_CFG = replace(FULL_CFG, take_profit_pips=0.0, post_fix_short=False)        # the long alone (test_engine.py)
+
+
+def spike(bars: pd.DataFrame, when: str, high: float | None = None, ask_low: float | None = None) -> None:
+    """One minute whose bid high (reaches a buy's take-profit) or ask low (a sell's take-profit) goes this far."""
+    if high is not None:
+        bars.loc[pd.Timestamp(when), "bhigh"] = high
+    if ask_low is not None:
+        bars.loc[pd.Timestamp(when), "alow"] = ask_low
+
+
+def ask_spike(bars: pd.DataFrame, when: str, high: float) -> None:
+    """One minute whose ask high reaches `high` (hits a sell's stop)."""
+    bars.loc[pd.Timestamp(when), "ahigh"] = high
 
 
 class Rig:

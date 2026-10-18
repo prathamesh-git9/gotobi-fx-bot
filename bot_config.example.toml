@@ -4,13 +4,15 @@
 # Symbols to try, in order: Exness Cent = USDJPYc, Standard = USDJPYm, Raw/Pro = USDJPY.
 symbols = ["USDJPYc", "USDJPYm", "USDJPY"]
 
-# % of equity lost if the 55-pip stop is hit. Backtest 2016-2026 at 10%: worst drawdown ~50%.
-# On an EU account (1:30 leverage) 10% needs ~29x leverage; the bot then caps the size at 90% of free
-# margin, which makes the real risk about 9.4%.
-risk_pct = 10.0
+# % of equity lost if a 55-pip stop is hit, for each trade (the long and the post-fix short).
+# 2016-2026 on $1,000 (src/gotobi_lab3.py, short haircut 0.5 pip): 6% -> worst drawdown 38%, 3-year chance of a
+# 50% drawdown 1% (6% if the edge is only half as good). At 10% the 50% kill switch would have stopped the bot in
+# Sept 2025. On an EU account (1:30 leverage) 6% needs ~17x leverage, which fits.
+risk_pct = 6.0
 
-# The rule (leave as backtested unless you re-run the tests)
+# The long (leave as backtested unless you re-run the tests)
 stop_pips = 55.0
+take_profit_pips = 30.0           # 0 = off. Same average profit, smaller swings (src/gotobi_lab2.py)
 entry_utc = "15:55"               # day before the gotobi day
 fix_utc = "00:55"                 # 09:55 Tokyo
 exit_minutes_before_fix = 1       # closes 00:54 UTC; a late exit gives the edge back
@@ -18,14 +20,24 @@ move_off_jp_holidays = true       # no Tokyo fix on Japanese holidays: the 2026 
 jp_bank_holidays = true
 fx_closed_mmdd = ["12-25", "01-01"]
 
+# The post-fix short: sell at the fix, buy back 30 minutes later. It works on gotobi days only (control days lose),
+# and it needs the sell to land within ~10 s before to ~1 s after 09:55:00 JST (src/fix_seconds.py).
+post_fix_short = true
+short_minutes = 30
+short_stop_pips = 55.0
+short_send_sec = -1.0             # send 1 s before the fix (latency and clock error push it later, never earlier)
+short_max_late_sec = 5.0          # skip the sell if it cannot go out by fix + 5 s
+
 # Execution safety
 max_entry_delay_min = 120
 reopen_wait_min = 15
 min_hold_min = 30
-max_spread_pips = 5.0
+max_spread_pips = 5.0             # for the short too: some fixes (late 2022) had 7-12 pip spreads; those are skipped
+# below_min_lot = "skip"          # "min" = trade the minimum lot even when it risks more than risk_pct (up to 2x)
 
-# Kill switch: stops opening trades (open trades are still closed on time). Clear it by deleting the
-# "halted" entry from bot_state/state.json.
+# Kill switch: stops opening trades (open trades are still closed on time). Clear it, with the bot stopped, by
+# running: python -m bot.main --config bot_config.toml --clear-halt
+# The R rule counts the longs; the drawdown rule the whole account (equity vs its peak).
 kill_window = 60
 kill_sum_r = -6.0
 kill_max_drawdown = 0.50
@@ -36,5 +48,6 @@ poll_sec = 5.0
 state_dir = "bot_state"
 server_utc_offset_hours = 0.0     # broker server clock minus UTC (Exness: 0)
 auto_server_offset = true         # measure it from live prices (most other brokers run UTC+2/+3 and shift with DST)
+clock_sync = true                 # correct the PC clock against internet time servers (SNTP, UDP 123), hourly
 # terminal_path = "C:/Program Files/MetaTrader 5 EXNESS/terminal64.exe"
 allow_live = false

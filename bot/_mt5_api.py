@@ -34,6 +34,10 @@ FIELDS = {'AccountInfo': ['login', 'trade_mode', 'leverage', 'limit_orders', 'ma
  'Tick': ['time', 'bid', 'ask', 'last', 'volume', 'time_msc', 'flags', 'volume_real'],
  'TradeDeal': ['ticket', 'order', 'time', 'time_msc', 'type', 'entry', 'magic', 'position_id', 'reason', 'volume',
                'price', 'commission', 'swap', 'profit', 'fee', 'symbol', 'comment', 'external_id'],
+ 'TradeOrder': ['ticket', 'time_setup', 'time_setup_msc', 'time_done', 'time_done_msc', 'time_expiration', 'type',
+                'type_time', 'type_filling', 'state', 'magic', 'position_id', 'position_by_id', 'reason',
+                'volume_initial', 'volume_current', 'price_open', 'sl', 'tp', 'price_current', 'price_stoplimit',
+                'symbol', 'comment', 'external_id'],
  'TradePosition': ['ticket', 'time', 'time_msc', 'time_update', 'time_update_msc', 'type', 'magic', 'identifier',
                    'reason', 'volume', 'price_open', 'sl', 'tp', 'price_current', 'swap', 'profit', 'symbol',
                    'comment', 'external_id']}

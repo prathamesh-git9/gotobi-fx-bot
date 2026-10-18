@@ -5,7 +5,8 @@ tests/test_api_surface.py), so the bot runs on it unchanged.
   prices  at time `now` the tick is the opening price of that minute's bar; in a gap (market shut) it is the last
           bar's close stamped with that bar's time, so prices go stale exactly as they do in the terminal
   stops   triggered on bar lows (buys) / highs (sells) between successive set_time() calls, from the bar the
-          position was opened in; a stop gapped through fills at the bar's open
+          position was opened in; a stop gapped through fills at the bar's open. Take-profits likewise on bar
+          highs (buys) / lows (sells); if stop and target are both touched in one minute, the stop wins
   fills   market orders fill at the current ask / bid, `slip_bp` basis points worse
   money   EUR account: JPY profit -> USD at the closing price -> EUR at the EUR/USD rate of that moment
 Fault injection: fail_next(), positions_fail, connected, trade_mode, filling_mode.
@@ -62,6 +63,8 @@ class FakeMT5:
         self.offset_s = server_offset_h * 3600
         self.stops_level = stops_level
         self.positions: dict[int, SimpleNamespace] = {}
+        self.orders: dict[int, SimpleNamespace] = {}      # live (queued) orders: only via queue_order()
+        self._queued: dict[int, dict] = {}
         self._open_minute: dict[int, int] = {}
         self.deal_log: list[SimpleNamespace] = []
         self.requests: list[dict] = []
@@ -85,6 +88,25 @@ class FakeMT5:
             self._run_stops(self.processed, m)
         self.processed = m if self.processed is None else max(self.processed, m)
         self.now, self.minute = now, m
+
+    def queue_order(self, request: dict) -> int:
+        """Test hook: the broker queues this market request as a live order (what a TRADE_RETCODE_PLACED reply
+        means) instead of filling it. fill_order() fills it later; a TRADE_ACTION_REMOVE request cancels it."""
+        ticket = self._id()
+        stamp = (self.now.timestamp() if self.now else 0) + self.offset_s
+        self.orders[ticket] = make("TradeOrder", ticket=ticket, time_setup=int(stamp), time_setup_msc=int(stamp * 1000),
+                                   type=request["type"], state=self.ORDER_STATE_PLACED,
+                                   magic=int(request.get("magic", 0)), volume_initial=request["volume"],
+                                   volume_current=request["volume"], price_open=request.get("price", 0.0),
+                                   sl=float(request.get("sl", 0.0) or 0.0), tp=float(request.get("tp", 0.0) or 0.0),
+                                   symbol=self.name, comment=request.get("comment", ""))
+        self._queued[ticket] = dict(request)
+        return ticket
+
+    def fill_order(self, ticket: int):
+        """Test hook: the queued order fills now (at the current price)."""
+        self.orders.pop(ticket)
+        return self.order_send(self._queued.pop(ticket))
 
     def fail_next(self, kind: str, retcode: int | None, times: int = 1) -> None:
         """Make the next `times` order_send calls of kind 'open', 'close' or 'any' return `retcode` (None = no answer)."""
@@ -151,23 +173,28 @@ class FakeMT5:
             return
         i1 = int(np.searchsorted(self.t, b, side="left"))
         for p in list(self.positions.values()):
-            if not p.sl:
+            if not p.sl and not p.tp:
                 continue
             j0 = int(np.searchsorted(self.t, max(a, self._open_minute[p.ticket]), side="left"))
             if j0 >= i1:
                 continue
-            if p.type == self.POSITION_TYPE_BUY:
-                hit = np.flatnonzero(self.bl[j0:i1] <= p.sl)
-                if len(hit):
-                    k = j0 + int(hit[0])
-                    px = min(p.sl, self.bo[k])
-                    self._close(p, px - self.slip * px, float(self.t[k] * 60), self.DEAL_REASON_SL)
+            buy = p.type == self.POSITION_TYPE_BUY
+            ks = kt = None
+            if p.sl:
+                hit = np.flatnonzero(self.bl[j0:i1] <= p.sl) if buy else np.flatnonzero(self.ah[j0:i1] >= p.sl)
+                ks = j0 + int(hit[0]) if len(hit) else None
+            if p.tp:
+                hit = np.flatnonzero(self.bh[j0:i1] >= p.tp) if buy else np.flatnonzero(self.al[j0:i1] <= p.tp)
+                kt = j0 + int(hit[0]) if len(hit) else None
+            if ks is not None and (kt is None or ks <= kt):
+                k, reason = ks, self.DEAL_REASON_SL
+                px = min(p.sl, self.bo[k]) if buy else max(p.sl, self.ao[k])
+            elif kt is not None:
+                k, reason = kt, self.DEAL_REASON_TP
+                px = max(p.tp, self.bo[k]) if buy else min(p.tp, self.ao[k])
             else:
-                hit = np.flatnonzero(self.ah[j0:i1] >= p.sl)
-                if len(hit):
-                    k = j0 + int(hit[0])
-                    px = max(p.sl, self.ao[k])
-                    self._close(p, px + self.slip * px, float(self.t[k] * 60), self.DEAL_REASON_SL)
+                continue
+            self._close(p, px - self.slip * px if buy else px + self.slip * px, float(self.t[k] * 60), reason)
 
     def _take_fault(self, kind: str):
         for f in self._faults:
@@ -206,8 +233,11 @@ class FakeMT5:
             return 0, "Done", (p, price, ts, vol, bid, ask)
         price = ask + self.slip * ask if typ == self.ORDER_TYPE_BUY else bid - self.slip * bid
         sl = float(request.get("sl", 0.0) or 0.0)
+        tp = float(request.get("tp", 0.0) or 0.0)
         gap = self.stops_level * self.point
         if sl and ((typ == self.ORDER_TYPE_BUY and sl >= bid - gap) or (typ == self.ORDER_TYPE_SELL and sl <= ask + gap)):
+            return self.TRADE_RETCODE_INVALID_STOPS, "Invalid stops", None
+        if tp and ((typ == self.ORDER_TYPE_BUY and tp <= ask + gap) or (typ == self.ORDER_TYPE_SELL and tp >= bid - gap)):
             return self.TRADE_RETCODE_INVALID_STOPS, "Invalid stops", None
         if self._margin(vol) > self.balance + self._floating() - sum(self._margin(q.volume) for q in self.positions.values()):
             return self.TRADE_RETCODE_NO_MONEY, "No money", None
@@ -288,6 +318,7 @@ class FakeMT5:
             self.error = (-10004, "No IPC connection")
             return None
         if not self.connected:
+            self.error = (-10004, "No IPC connection")
             return None
         tk = self._tick()
         out = []
@@ -298,9 +329,18 @@ class FakeMT5:
                                                     "profit": round(self._profit(p.type, p.volume, p.price_open, cur), 2)}))
         return tuple(out)
 
+    def orders_get(self, symbol: str | None = None, ticket: int | None = None, group: str | None = None):
+        if not self.connected:
+            self.error = (-10004, "No IPC connection")
+            return None
+        return tuple(o for o in self.orders.values()
+                     if (symbol is None or o.symbol == symbol) and (ticket is None or o.ticket == ticket))
+
     def history_deals_get(self, date_from=None, date_to=None, group=None, position=None, ticket=None):
         if not self.connected:
+            self.error = (-10004, "No IPC connection")
             return None
+        self.error = (1, "Success")
 
         def secs(x):
             if x is None or isinstance(x, (int, float)):
@@ -343,6 +383,11 @@ class FakeMT5:
             return None
         if not self.algo_trading or self.tradeapi_disabled:
             return self._result(self.TRADE_RETCODE_CLIENT_DISABLES_AT, request, comment="AutoTrading disabled by client")
+        if request.get("action") == self.TRADE_ACTION_REMOVE:          # cancel a live order
+            if self.orders.pop(int(request.get("order", 0)), None) is None:
+                return self._result(self.TRADE_RETCODE_INVALID, request, comment="Order not found")
+            self._queued.pop(int(request["order"]), None)
+            return self._result(self.TRADE_RETCODE_DONE, request, order=int(request["order"]), comment="Request executed")
         rc, msg, ctx = self._validate(request)
         if rc:
             return self._result(rc, request, comment=msg)
@@ -356,7 +401,8 @@ class FakeMT5:
         stamp = ts + self.offset_s
         pos = make("TradePosition", ticket=ticket, time=int(stamp), time_msc=int(stamp * 1000), time_update=int(stamp),
                    time_update_msc=int(stamp * 1000), type=typ, magic=int(request.get("magic", 0)), identifier=ticket,
-                   reason=3, volume=vol, price_open=price, sl=float(request.get("sl", 0.0) or 0.0), tp=0.0,
+                   reason=3, volume=vol, price_open=price, sl=float(request.get("sl", 0.0) or 0.0),
+                   tp=float(request.get("tp", 0.0) or 0.0),
                    price_current=price, symbol=self.name, comment=request.get("comment", ""))
         self.positions[ticket] = pos
         self._open_minute[ticket] = self.minute

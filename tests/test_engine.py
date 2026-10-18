@@ -99,11 +99,11 @@ def test_late_start(week, tmp_path, start, entered):
 
 def test_transient_errors_are_retried(week, tmp_path):
     rig = Rig(week, tmp_path, start="2026-10-14 15:50")
-    rig.fake.fail_next("open", rig.fake.TRADE_RETCODE_REQUOTE, 2)
-    rig.fake.fail_next("open", None, 1)                                  # terminal does not answer once
+    rig.fake.fail_next("open", rig.fake.TRADE_RETCODE_REQUOTE, 2)       # definite rejections: safe to try again
     rig.run("2026-10-14 15:50", "2026-10-14 16:05")
-    assert len(rig.opens()) == 4 and len(rig.fake.positions) == 1
-    assert rig.journal.get(GOTOBI)["opened"] == "2026-10-14T15:58:00+00:00"
+    assert len(rig.opens()) == 3 and len(rig.fake.positions) == 1
+    assert rig.journal.get(GOTOBI)["opened"] == "2026-10-14T15:57:00+00:00"
+    # (a request with NO answer is never resent: it may have filled; see test_safety.py)
 
 
 def test_fatal_error_skips_the_day(week, tmp_path):

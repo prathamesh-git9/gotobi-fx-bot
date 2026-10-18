@@ -6,3 +6,6 @@ bot_config.toml
 .pytest_cache/
 results/*.pkl
 results/asia_v2_nights.parquet
+results/*.log
+codex_audit/**/codex_run*.log
+codex_audit/**/pytest_base/
