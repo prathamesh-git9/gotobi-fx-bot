@@ -1,0 +1,7 @@
+I trade a USD/JPY "gotobi" strategy that has survived 20 years of honest backtesting: on the 5th/10th/15th/20th/25th/30th (moved to the previous business day), buy USD/JPY at 15:55 UTC the day before and sell at 00:54 UTC, then short from the 09:55 Tokyo fix for 30 minutes. It works because Japanese importers are forced to buy dollars at the Tokyo fix on those days: a scheduled, predictable flow at a known time. On ordinary days the same trade loses.
+
+I want OTHER edges of the same kind: forced or scheduled flows at a known time that move a price predictably (fixes, month-end or quarter-end rebalancing, index rebalances, settlement days, session handovers, etc.). Not indicators, not chart patterns.
+
+I can backtest with 1-minute bid/ask data from 2016 to now for EURUSD, GBPUSD, USDJPY and XAUUSD, 2019 onwards for US500, US30, USTEC, DE30 (DAX) and UK100, plus daily closes of the S&P 500, DAX, FTSE and Nikkei. Retail MT5 account, EUR 1,000, real spreads.
+
+Give me your 5 best candidates. For each one give EXACT testable rules: instrument, which days, entry time and exit time in UTC (say how daylight saving is handled), direction and how it is decided, stop, and the economic reason the flow exists. Say which published research supports it and how big the effect is after a typical retail spread. Be honest about which ones have probably been arbitraged away.
