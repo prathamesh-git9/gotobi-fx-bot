@@ -2,10 +2,11 @@
 gotobi bot's src/fetch_histdata.py, which is left untouched). Timestamps are New York local time with daylight
 saving. Saved to strategies/month_end_fix/data/{PAIR}_hd_bid_m1.parquet (naive UTC index, bopen/bhigh/blow/bclose).
 
-  python strategies/month_end_fix/fetch_old.py
+  python strategies/month_end_fix/fetch_old.py [PAIR ...]
 """
 import io
 import re
+import sys
 import time
 import zipfile
 from pathlib import Path
@@ -50,7 +51,7 @@ def parse(path):
 def main():
     s = requests.Session()
     s.headers["User-Agent"] = "Mozilla/5.0"
-    for pair in ("EURUSD", "GBPUSD"):
+    for pair in sys.argv[1:] or ("EURUSD", "GBPUSD"):
         parts = [parse(fetch(s, pair, y)) for y in range(2006, 2016)]
         df = pd.concat(parts).sort_index()
         df = df[~df.index.duplicated()]

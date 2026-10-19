@@ -1,0 +1,4277 @@
+{
+  "GBPUSD": {
+    "meta": {
+      "sources": {
+        "GBPUSD_hd_bid_m1.parquet": [
+          "2006-01-03 00:00:00",
+          "2015-12-31 21:58:00",
+          3483695
+        ],
+        "GBPUSDm_2016_m1.parquet": [
+          "2016-01-03 21:02:00",
+          "2018-12-31 22:00:00",
+          1102959
+        ],
+        "GBPUSDm_m1.parquet": [
+          "2019-01-02 00:00:00",
+          "2026-09-30 23:59:00",
+          2855877
+        ],
+        "GBPUSDm_2026_m1.parquet": [
+          "2026-01-01 22:05:00",
+          "2026-10-16 20:58:00",
+          294896
+        ]
+      },
+      "duplicates": 58194,
+      "duplicate_disagreements": 0,
+      "model_spread_pips": 1.5,
+      "spread_sample_n": 1546,
+      "spread_quantiles": {
+        "0.1": 1.0,
+        "0.5": 1.5,
+        "0.9": 1.6,
+        "0.99": 3.01
+      }
+    },
+    "main": {
+      "n": 248,
+      "mean": 4.301,
+      "total": 1066.6,
+      "t": 3.181,
+      "ci95_mean": [
+        1.637,
+        6.964
+      ],
+      "win_pct": 58.06,
+      "stops": 46
+    },
+    "other_business_days": {
+      "n": 5021,
+      "mean": -1.481,
+      "total": -7437.3,
+      "t": -8.06,
+      "ci95_mean": [
+        -1.842,
+        -1.121
+      ],
+      "win_pct": 44.41,
+      "stops": 383
+    },
+    "other_business_days_since_2016": {
+      "n": 2600,
+      "mean": -1.23,
+      "total": -3198.3,
+      "t": -5.223,
+      "ci95_mean": [
+        -1.692,
+        -0.768
+      ],
+      "win_pct": 44.58,
+      "stops": 144
+    },
+    "other_business_days_since_2025": {
+      "n": 425,
+      "mean": -1.5,
+      "total": -637.5,
+      "t": -3.481,
+      "ci95_mean": [
+        -2.347,
+        -0.653
+      ],
+      "win_pct": 43.76,
+      "stops": 11
+    },
+    "since_2016": {
+      "n": 128,
+      "mean": 3.498,
+      "total": 447.7,
+      "t": 1.886,
+      "ci95_mean": [
+        -0.173,
+        7.168
+      ],
+      "win_pct": 54.69,
+      "stops": 26
+    },
+    "since_2025": {
+      "n": 21,
+      "mean": 7.752,
+      "total": 162.8,
+      "t": 1.948,
+      "ci95_mean": [
+        -0.55,
+        16.055
+      ],
+      "win_pct": 76.19,
+      "stops": 3
+    },
+    "periods": {
+      "2006-15": {
+        "n": 120,
+        "mean": 5.157,
+        "total": 618.9,
+        "t": 2.607,
+        "ci95_mean": [
+          1.24,
+          9.075
+        ],
+        "win_pct": 61.67,
+        "stops": 20
+      },
+      "2016-21": {
+        "n": 71,
+        "mean": 3.845,
+        "total": 273.0,
+        "t": 1.403,
+        "ci95_mean": [
+          -1.621,
+          9.311
+        ],
+        "win_pct": 53.52,
+        "stops": 17
+      },
+      "2022-26": {
+        "n": 57,
+        "mean": 3.065,
+        "total": 174.7,
+        "t": 1.27,
+        "ci95_mean": [
+          -1.768,
+          7.898
+        ],
+        "win_pct": 56.14,
+        "stops": 9
+      }
+    },
+    "per_year": {
+      "2006": {
+        "n": 12,
+        "mean": 8.708,
+        "total": 104.5,
+        "t": 1.36,
+        "ci95_mean": [
+          -5.39,
+          22.806
+        ],
+        "win_pct": 75.0,
+        "stops": 1
+      },
+      "2007": {
+        "n": 12,
+        "mean": 10.875,
+        "total": 130.5,
+        "t": 2.055,
+        "ci95_mean": [
+          -0.772,
+          22.522
+        ],
+        "win_pct": 83.33,
+        "stops": 1
+      },
+      "2008": {
+        "n": 12,
+        "mean": -5.75,
+        "total": -69.0,
+        "t": -0.839,
+        "ci95_mean": [
+          -20.843,
+          9.343
+        ],
+        "win_pct": 41.67,
+        "stops": 6
+      },
+      "2009": {
+        "n": 12,
+        "mean": 19.75,
+        "total": 237.0,
+        "t": 2.056,
+        "ci95_mean": [
+          -1.39,
+          40.89
+        ],
+        "win_pct": 66.67,
+        "stops": 2
+      },
+      "2010": {
+        "n": 12,
+        "mean": 1.917,
+        "total": 23.0,
+        "t": 0.328,
+        "ci95_mean": [
+          -10.935,
+          14.768
+        ],
+        "win_pct": 50.0,
+        "stops": 2
+      },
+      "2011": {
+        "n": 12,
+        "mean": 2.792,
+        "total": 33.5,
+        "t": 0.456,
+        "ci95_mean": [
+          -10.692,
+          16.275
+        ],
+        "win_pct": 66.67,
+        "stops": 2
+      },
+      "2012": {
+        "n": 12,
+        "mean": 0.525,
+        "total": 6.3,
+        "t": 0.107,
+        "ci95_mean": [
+          -10.274,
+          11.324
+        ],
+        "win_pct": 58.33,
+        "stops": 2
+      },
+      "2013": {
+        "n": 12,
+        "mean": 8.658,
+        "total": 103.9,
+        "t": 1.6,
+        "ci95_mean": [
+          -3.25,
+          20.567
+        ],
+        "win_pct": 58.33,
+        "stops": 1
+      },
+      "2014": {
+        "n": 12,
+        "mean": 5.017,
+        "total": 60.2,
+        "t": 1.303,
+        "ci95_mean": [
+          -3.458,
+          13.492
+        ],
+        "win_pct": 66.67,
+        "stops": 1
+      },
+      "2015": {
+        "n": 12,
+        "mean": -0.917,
+        "total": -11.0,
+        "t": -0.159,
+        "ci95_mean": [
+          -13.603,
+          11.77
+        ],
+        "win_pct": 50.0,
+        "stops": 2
+      },
+      "2016": {
+        "n": 11,
+        "mean": 11.118,
+        "total": 122.3,
+        "t": 1.309,
+        "ci95_mean": [
+          -7.805,
+          30.041
+        ],
+        "win_pct": 63.64,
+        "stops": 3
+      },
+      "2017": {
+        "n": 12,
+        "mean": 17.442,
+        "total": 209.3,
+        "t": 2.821,
+        "ci95_mean": [
+          3.833,
+          31.051
+        ],
+        "win_pct": 83.33,
+        "stops": 1
+      },
+      "2018": {
+        "n": 12,
+        "mean": -3.525,
+        "total": -42.3,
+        "t": -0.632,
+        "ci95_mean": [
+          -15.808,
+          8.758
+        ],
+        "win_pct": 41.67,
+        "stops": 4
+      },
+      "2019": {
+        "n": 12,
+        "mean": 0.417,
+        "total": 5.0,
+        "t": 0.09,
+        "ci95_mean": [
+          -9.81,
+          10.643
+        ],
+        "win_pct": 41.67,
+        "stops": 1
+      },
+      "2020": {
+        "n": 12,
+        "mean": 6.575,
+        "total": 78.9,
+        "t": 0.824,
+        "ci95_mean": [
+          -10.979,
+          24.129
+        ],
+        "win_pct": 58.33,
+        "stops": 3
+      },
+      "2021": {
+        "n": 12,
+        "mean": -8.35,
+        "total": -100.2,
+        "t": -1.615,
+        "ci95_mean": [
+          -19.727,
+          3.027
+        ],
+        "win_pct": 33.33,
+        "stops": 5
+      },
+      "2022": {
+        "n": 12,
+        "mean": 0.633,
+        "total": 7.6,
+        "t": 0.09,
+        "ci95_mean": [
+          -14.885,
+          16.152
+        ],
+        "win_pct": 33.33,
+        "stops": 4
+      },
+      "2023": {
+        "n": 12,
+        "mean": 1.725,
+        "total": 20.7,
+        "t": 0.371,
+        "ci95_mean": [
+          -8.513,
+          11.963
+        ],
+        "win_pct": 66.67,
+        "stops": 2
+      },
+      "2024": {
+        "n": 12,
+        "mean": -1.367,
+        "total": -16.4,
+        "t": -0.379,
+        "ci95_mean": [
+          -9.313,
+          6.579
+        ],
+        "win_pct": 33.33,
+        "stops": 0
+      },
+      "2025": {
+        "n": 12,
+        "mean": 10.092,
+        "total": 121.1,
+        "t": 3.006,
+        "ci95_mean": [
+          2.703,
+          17.48
+        ],
+        "win_pct": 83.33,
+        "stops": 0
+      },
+      "2026": {
+        "n": 9,
+        "mean": 4.633,
+        "total": 41.7,
+        "t": 0.555,
+        "ci95_mean": [
+          -14.608,
+          23.875
+        ],
+        "win_pct": 66.67,
+        "stops": 3
+      }
+    },
+    "missing_month_ends": [
+      "2016-03-31"
+    ],
+    "month_end_trades": [
+      {
+        "date": "2006-01-31",
+        "pips": 9.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-02-28",
+        "pips": 0.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-03-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2006-04-28",
+        "pips": 47.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-05-31",
+        "pips": -21.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-06-30",
+        "pips": 24.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-07-31",
+        "pips": 9.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-08-31",
+        "pips": 6.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-09-29",
+        "pips": 17.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-10-31",
+        "pips": -10.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-11-30",
+        "pips": 41.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-12-29",
+        "pips": 4.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-01-31",
+        "pips": -17.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-02-28",
+        "pips": 7.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-03-30",
+        "pips": 24.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-04-30",
+        "pips": 12.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-05-31",
+        "pips": 18.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-06-29",
+        "pips": 16.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-07-31",
+        "pips": 12.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-08-31",
+        "pips": 12.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-09-28",
+        "pips": 15.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-10-31",
+        "pips": 46.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-11-30",
+        "pips": 6.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-12-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-01-31",
+        "pips": 16.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-02-29",
+        "pips": 46.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-03-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-04-30",
+        "pips": 16.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-05-30",
+        "pips": 8.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-06-30",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-07-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-08-29",
+        "pips": -8.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-09-30",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-10-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-11-28",
+        "pips": 1.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-12-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2009-01-30",
+        "pips": 78.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-02-27",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2009-03-31",
+        "pips": 22.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-04-30",
+        "pips": 61.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-05-29",
+        "pips": 48.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-06-30",
+        "pips": 33.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-07-31",
+        "pips": 29.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-08-31",
+        "pips": 18.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-09-30",
+        "pips": 14.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-10-30",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2009-11-30",
+        "pips": -15.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-12-31",
+        "pips": -4.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-01-29",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2010-02-26",
+        "pips": -4.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-03-31",
+        "pips": 37.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-04-30",
+        "pips": 20.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-05-28",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2010-06-30",
+        "pips": 7.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-07-30",
+        "pips": -3.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-08-31",
+        "pips": -21.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-09-30",
+        "pips": -11.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-10-29",
+        "pips": 16.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-11-30",
+        "pips": 15.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-12-31",
+        "pips": 16.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-01-31",
+        "pips": 2.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-02-28",
+        "pips": 17.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-03-31",
+        "pips": -12.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-04-28",
+        "pips": 3.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-05-31",
+        "pips": -11.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-06-30",
+        "pips": 13.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-07-29",
+        "pips": 3.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-08-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2011-09-30",
+        "pips": 2.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-10-31",
+        "pips": 53.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-11-30",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2011-12-30",
+        "pips": 11.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-01-31",
+        "pips": 16.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-02-29",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2012-03-30",
+        "pips": -3.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-04-30",
+        "pips": -10.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-05-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2012-06-29",
+        "pips": -16.3,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-07-31",
+        "pips": 12.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-08-31",
+        "pips": 24.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-09-28",
+        "pips": 4.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-10-31",
+        "pips": 3.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-11-30",
+        "pips": 22.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-12-31",
+        "pips": 3.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-01-31",
+        "pips": 18.7,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-02-28",
+        "pips": 6.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-03-28",
+        "pips": -5.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-04-30",
+        "pips": 26.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-05-31",
+        "pips": -10.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-06-28",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2013-07-31",
+        "pips": -6.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-08-30",
+        "pips": -2.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-09-30",
+        "pips": 34.9,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-10-31",
+        "pips": 24.7,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-11-29",
+        "pips": 29.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-12-31",
+        "pips": 13.3,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-01-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2014-02-28",
+        "pips": 17.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-03-31",
+        "pips": 9.7,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-04-30",
+        "pips": 18.3,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-05-30",
+        "pips": 5.6,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-06-30",
+        "pips": 9.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-07-31",
+        "pips": -0.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-08-29",
+        "pips": -4.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-09-30",
+        "pips": -5.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-10-31",
+        "pips": 7.3,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-11-28",
+        "pips": 25.9,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-12-31",
+        "pips": 1.9,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-01-30",
+        "pips": 22.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-02-27",
+        "pips": 6.9,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-03-31",
+        "pips": -5.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-04-30",
+        "pips": 31.6,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-05-29",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2015-06-30",
+        "pips": -17.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-07-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2015-08-31",
+        "pips": -8.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-09-30",
+        "pips": 3.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-10-30",
+        "pips": 23.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-11-30",
+        "pips": 6.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-12-31",
+        "pips": -23.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2016-01-29",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2016-02-29",
+        "pips": 37.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-04-29",
+        "pips": 21.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-05-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2016-06-30",
+        "pips": 8.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-07-29",
+        "pips": 27.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-08-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2016-09-30",
+        "pips": 17.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-10-31",
+        "pips": 49.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-11-30",
+        "pips": 42.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-12-30",
+        "pips": -8.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-01-31",
+        "pips": 30.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-02-28",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2017-03-31",
+        "pips": 43.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-04-28",
+        "pips": 1.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-05-31",
+        "pips": 24.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-06-30",
+        "pips": 35.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-07-31",
+        "pips": 43.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-08-31",
+        "pips": 15.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-09-29",
+        "pips": 28.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-10-31",
+        "pips": 11.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-11-30",
+        "pips": -12.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-12-29",
+        "pips": 12.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-01-31",
+        "pips": 25.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-02-28",
+        "pips": -3.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-03-29",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2018-04-30",
+        "pips": 7.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-05-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2018-06-29",
+        "pips": 19.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-07-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2018-08-31",
+        "pips": -1.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-09-28",
+        "pips": 21.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-10-31",
+        "pips": -12.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-11-30",
+        "pips": 0.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-12-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2019-01-31",
+        "pips": 22.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-02-28",
+        "pips": 11.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-03-29",
+        "pips": -8.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-04-30",
+        "pips": -8.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-05-31",
+        "pips": -22.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-06-28",
+        "pips": -2.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-07-31",
+        "pips": 26.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-08-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2019-09-30",
+        "pips": -1.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-10-31",
+        "pips": -6.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-11-29",
+        "pips": 8.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-12-31",
+        "pips": 10.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-01-31",
+        "pips": 26.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-02-28",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2020-03-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2020-04-30",
+        "pips": 61.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-05-29",
+        "pips": -12.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-06-30",
+        "pips": 1.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-07-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2020-08-31",
+        "pips": 30.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-09-30",
+        "pips": 9.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-10-30",
+        "pips": -11.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-11-30",
+        "pips": 18.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-12-31",
+        "pips": 30.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-01-29",
+        "pips": 22.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-02-26",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2021-03-31",
+        "pips": 5.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-04-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2021-05-28",
+        "pips": 15.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-06-30",
+        "pips": -8.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-07-30",
+        "pips": -13.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-08-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2021-09-30",
+        "pips": -8.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-10-29",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2021-11-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2021-12-31",
+        "pips": 10.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-01-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2022-02-28",
+        "pips": -3.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-03-31",
+        "pips": 11.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-04-29",
+        "pips": -0.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-05-31",
+        "pips": -0.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-06-30",
+        "pips": -1.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-07-29",
+        "pips": 46.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-08-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2022-09-30",
+        "pips": 38.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-10-31",
+        "pips": 17.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-11-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2022-12-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2023-01-31",
+        "pips": -10.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-02-28",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2023-03-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2023-04-28",
+        "pips": 23.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-05-31",
+        "pips": 1.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-06-30",
+        "pips": -10.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-07-31",
+        "pips": 7.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-08-31",
+        "pips": 18.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-09-29",
+        "pips": 4.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-10-31",
+        "pips": 10.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-11-30",
+        "pips": 15.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-12-29",
+        "pips": 11.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-01-31",
+        "pips": -0.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-02-29",
+        "pips": -17.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-03-28",
+        "pips": -3.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-04-30",
+        "pips": -1.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-05-31",
+        "pips": -10.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-06-28",
+        "pips": 11.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-07-31",
+        "pips": 4.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-08-30",
+        "pips": -14.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-09-30",
+        "pips": 24.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-10-31",
+        "pips": -12.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-11-29",
+        "pips": 10.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-12-31",
+        "pips": -8.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-01-31",
+        "pips": 14.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-02-28",
+        "pips": -15.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-03-31",
+        "pips": 5.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-04-30",
+        "pips": 22.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-05-30",
+        "pips": 8.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-06-30",
+        "pips": -6.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-07-31",
+        "pips": 10.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-08-29",
+        "pips": 14.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-09-30",
+        "pips": 7.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-10-31",
+        "pips": 14.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-11-28",
+        "pips": 26.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-12-31",
+        "pips": 18.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-01-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2026-02-27",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2026-03-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2026-04-30",
+        "pips": 35.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-05-29",
+        "pips": 36.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-06-30",
+        "pips": 23.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-07-31",
+        "pips": 9.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-08-31",
+        "pips": 11.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-09-30",
+        "pips": 0.5,
+        "feed": "exness",
+        "stopped": false
+      }
+    ],
+    "incomplete_intervals": {
+      "2006-09-29": 14
+    },
+    "times": {
+      "14:45-15:00": {
+        "n": 248,
+        "mean": -2.358,
+        "total": -584.8,
+        "t": -3.438,
+        "ci95_mean": [
+          -3.709,
+          -1.007
+        ],
+        "win_pct": 39.52,
+        "stops": 15
+      },
+      "16:15-16:30": {
+        "n": 248,
+        "mean": -2.058,
+        "total": -510.4,
+        "t": -2.658,
+        "ci95_mean": [
+          -3.583,
+          -0.533
+        ],
+        "win_pct": 39.11,
+        "stops": 22
+      }
+    },
+    "robustness": {
+      "entry_1540": {
+        "n": 248,
+        "mean": 4.398,
+        "total": 1090.7,
+        "t": 3.043,
+        "ci95_mean": [
+          1.551,
+          7.244
+        ],
+        "win_pct": 56.85,
+        "stops": 56
+      },
+      "entry_1550": {
+        "n": 248,
+        "mean": 4.53,
+        "total": 1123.4,
+        "t": 3.999,
+        "ci95_mean": [
+          2.299,
+          6.761
+        ],
+        "win_pct": 61.69,
+        "stops": 27
+      },
+      "exit_1558": {
+        "n": 248,
+        "mean": 2.823,
+        "total": 700.2,
+        "t": 2.346,
+        "ci95_mean": [
+          0.453,
+          5.194
+        ],
+        "win_pct": 56.45,
+        "stops": 36
+      },
+      "exit_1602": {
+        "n": 248,
+        "mean": 4.292,
+        "total": 1064.4,
+        "t": 2.953,
+        "ci95_mean": [
+          1.429,
+          7.155
+        ],
+        "win_pct": 56.85,
+        "stops": 53
+      },
+      "stop_15": {
+        "n": 248,
+        "mean": 3.976,
+        "total": 986.1,
+        "t": 3.18,
+        "ci95_mean": [
+          1.514,
+          6.439
+        ],
+        "win_pct": 52.42,
+        "stops": 98
+      },
+      "stop_40": {
+        "n": 248,
+        "mean": 3.822,
+        "total": 947.9,
+        "t": 2.645,
+        "ci95_mean": [
+          0.976,
+          6.668
+        ],
+        "win_pct": 58.87,
+        "stops": 16
+      },
+      "no_stop": {
+        "n": 248,
+        "mean": 2.963,
+        "total": 734.9,
+        "t": 1.639,
+        "ci95_mean": [
+          -0.597,
+          6.524
+        ],
+        "win_pct": 59.27,
+        "stops": 0
+      },
+      "spread_plus_0_5": {
+        "n": 248,
+        "mean": 3.374,
+        "total": 836.7,
+        "t": 2.497,
+        "ci95_mean": [
+          0.713,
+          6.035
+        ],
+        "win_pct": 56.45,
+        "stops": 52
+      },
+      "spread_plus_1": {
+        "n": 248,
+        "mean": 2.886,
+        "total": 715.8,
+        "t": 2.141,
+        "ci95_mean": [
+          0.231,
+          5.542
+        ],
+        "win_pct": 56.45,
+        "stops": 54
+      },
+      "stop_slip_3": {
+        "n": 248,
+        "mean": 3.744,
+        "total": 928.6,
+        "t": 2.67,
+        "ci95_mean": [
+          0.983,
+          6.506
+        ],
+        "win_pct": 58.06,
+        "stops": 46
+      },
+      "exclude_best_5": {
+        "n": 243,
+        "mean": 3.138,
+        "total": 762.5,
+        "t": 2.466,
+        "ci95_mean": [
+          0.631,
+          5.644
+        ],
+        "win_pct": 57.2,
+        "stops": 46
+      },
+      "last_calendar_weekday": {
+        "n": 248,
+        "mean": 4.619,
+        "total": 1145.6,
+        "t": 3.42,
+        "ci95_mean": [
+          1.959,
+          7.28
+        ],
+        "win_pct": 58.47,
+        "stops": 44
+      }
+    },
+    "modern_robustness": {
+      "entry_1540": {
+        "since_2016": {
+          "n": 128,
+          "mean": 3.989,
+          "total": 510.6,
+          "t": 2.037,
+          "ci95_mean": [
+            0.114,
+            7.864
+          ],
+          "win_pct": 56.25,
+          "stops": 29
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 9.224,
+          "total": 193.7,
+          "t": 2.061,
+          "ci95_mean": [
+            -0.111,
+            18.559
+          ],
+          "win_pct": 71.43,
+          "stops": 3
+        }
+      },
+      "entry_1550": {
+        "since_2016": {
+          "n": 128,
+          "mean": 3.906,
+          "total": 500.0,
+          "t": 2.494,
+          "ci95_mean": [
+            0.807,
+            7.005
+          ],
+          "win_pct": 57.81,
+          "stops": 15
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 8.481,
+          "total": 178.1,
+          "t": 2.597,
+          "ci95_mean": [
+            1.668,
+            15.293
+          ],
+          "win_pct": 71.43,
+          "stops": 1
+        }
+      },
+      "exit_1558": {
+        "since_2016": {
+          "n": 128,
+          "mean": 2.782,
+          "total": 356.1,
+          "t": 1.561,
+          "ci95_mean": [
+            -0.744,
+            6.309
+          ],
+          "win_pct": 55.47,
+          "stops": 22
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 8.495,
+          "total": 178.4,
+          "t": 2.032,
+          "ci95_mean": [
+            -0.226,
+            17.217
+          ],
+          "win_pct": 71.43,
+          "stops": 2
+        }
+      },
+      "exit_1602": {
+        "since_2016": {
+          "n": 128,
+          "mean": 4.048,
+          "total": 518.2,
+          "t": 1.92,
+          "ci95_mean": [
+            -0.123,
+            8.22
+          ],
+          "win_pct": 53.91,
+          "stops": 30
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 8.729,
+          "total": 183.3,
+          "t": 2.016,
+          "ci95_mean": [
+            -0.303,
+            17.76
+          ],
+          "win_pct": 76.19,
+          "stops": 3
+        }
+      },
+      "stop_15": {
+        "since_2016": {
+          "n": 128,
+          "mean": 3.115,
+          "total": 398.7,
+          "t": 1.811,
+          "ci95_mean": [
+            -0.288,
+            6.518
+          ],
+          "win_pct": 49.22,
+          "stops": 55
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 8.781,
+          "total": 184.4,
+          "t": 2.477,
+          "ci95_mean": [
+            1.388,
+            16.174
+          ],
+          "win_pct": 76.19,
+          "stops": 5
+        }
+      },
+      "stop_40": {
+        "since_2016": {
+          "n": 128,
+          "mean": 3.188,
+          "total": 408.1,
+          "t": 1.638,
+          "ci95_mean": [
+            -0.664,
+            7.041
+          ],
+          "win_pct": 55.47,
+          "stops": 8
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 7.329,
+          "total": 153.9,
+          "t": 1.733,
+          "ci95_mean": [
+            -1.494,
+            16.151
+          ],
+          "win_pct": 76.19,
+          "stops": 1
+        }
+      },
+      "no_stop": {
+        "since_2016": {
+          "n": 128,
+          "mean": 3.071,
+          "total": 393.1,
+          "t": 1.505,
+          "ci95_mean": [
+            -0.966,
+            7.108
+          ],
+          "win_pct": 55.47,
+          "stops": 0
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 6.967,
+          "total": 146.3,
+          "t": 1.568,
+          "ci95_mean": [
+            -2.299,
+            16.232
+          ],
+          "win_pct": 76.19,
+          "stops": 0
+        }
+      },
+      "spread_plus_0_5": {
+        "since_2016": {
+          "n": 128,
+          "mean": 3.026,
+          "total": 387.3,
+          "t": 1.636,
+          "ci95_mean": [
+            -0.635,
+            6.687
+          ],
+          "win_pct": 53.12,
+          "stops": 27
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 6.876,
+          "total": 144.4,
+          "t": 1.676,
+          "ci95_mean": [
+            -1.683,
+            15.435
+          ],
+          "win_pct": 71.43,
+          "stops": 4
+        }
+      },
+      "spread_plus_1": {
+        "since_2016": {
+          "n": 128,
+          "mean": 2.452,
+          "total": 313.9,
+          "t": 1.323,
+          "ci95_mean": [
+            -1.217,
+            6.121
+          ],
+          "win_pct": 53.12,
+          "stops": 29
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 6.471,
+          "total": 135.9,
+          "t": 1.592,
+          "ci95_mean": [
+            -2.011,
+            14.953
+          ],
+          "win_pct": 71.43,
+          "stops": 4
+        }
+      },
+      "stop_slip_3": {
+        "since_2016": {
+          "n": 128,
+          "mean": 2.888,
+          "total": 369.7,
+          "t": 1.496,
+          "ci95_mean": [
+            -0.931,
+            6.708
+          ],
+          "win_pct": 54.69,
+          "stops": 26
+        },
+        "since_2025": {
+          "n": 21,
+          "mean": 7.324,
+          "total": 153.8,
+          "t": 1.761,
+          "ci95_mean": [
+            -1.353,
+            16.0
+          ],
+          "win_pct": 76.19,
+          "stops": 3
+        }
+      }
+    },
+    "calendar_weekday_dates_without_trade": [
+      "2016-03-31"
+    ],
+    "alternate_month_end_difference_dates": [
+      "2010-05-28",
+      "2011-04-28",
+      "2013-03-28",
+      "2018-03-29",
+      "2021-05-28",
+      "2024-03-28"
+    ],
+    "permutation": {
+      "full": {
+        "draws": 10000,
+        "beat_or_equal": 0,
+        "p_plus_one": 0.0001,
+        "null_mean": -1.2,
+        "null_q95": 0.176
+      },
+      "since_2016": {
+        "draws": 10000,
+        "beat_or_equal": 0,
+        "p_plus_one": 0.0001,
+        "null_mean": -1.009,
+        "null_q95": 0.782
+      },
+      "since_2025": {
+        "draws": 10000,
+        "beat_or_equal": 0,
+        "p_plus_one": 0.0001,
+        "null_mean": -1.067,
+        "null_q95": 2.31
+      }
+    },
+    "compound": {
+      "since_2016": {
+        "n": 128,
+        "final_eur": 1404.81,
+        "return_pct": 40.48,
+        "max_drawdown_pct": -13.49
+      },
+      "2025_to_2026_09": {
+        "n": 21,
+        "final_eur": 1136.24,
+        "return_pct": 13.62,
+        "max_drawdown_pct": -5.88
+      }
+    }
+  },
+  "EURUSD": {
+    "meta": {
+      "sources": {
+        "EURUSD_hd_bid_m1.parquet": [
+          "2006-01-03 00:00:00",
+          "2015-12-31 21:58:00",
+          3502341
+        ],
+        "EURUSDm_2016_m1.parquet": [
+          "2016-01-03 21:01:00",
+          "2018-12-31 22:00:00",
+          1110239
+        ],
+        "EURUSDm_m1.parquet": [
+          "2019-01-02 00:00:00",
+          "2026-09-30 23:59:00",
+          2836482
+        ],
+        "EURUSDm_2026_10_m1.parquet": [
+          "2026-10-01 00:00:00",
+          "2026-10-16 20:58:00",
+          16975
+        ]
+      },
+      "duplicates": 0,
+      "duplicate_disagreements": 0,
+      "model_spread_pips": 1.0,
+      "spread_sample_n": 1550,
+      "spread_quantiles": {
+        "0.1": 1.0,
+        "0.5": 1.0,
+        "0.9": 1.3,
+        "0.99": 1.9
+      }
+    },
+    "main": {
+      "n": 248,
+      "mean": -2.172,
+      "total": -538.7,
+      "t": -2.348,
+      "ci95_mean": [
+        -3.994,
+        -0.35
+      ],
+      "win_pct": 43.95,
+      "stops": 35
+    },
+    "other_business_days": {
+      "n": 5012,
+      "mean": -1.475,
+      "total": -7390.2,
+      "t": -10.783,
+      "ci95_mean": [
+        -1.743,
+        -1.206
+      ],
+      "win_pct": 42.2,
+      "stops": 172
+    },
+    "other_business_days_since_2016": {
+      "n": 2601,
+      "mean": -1.574,
+      "total": -4094.3,
+      "t": -9.511,
+      "ci95_mean": [
+        -1.899,
+        -1.25
+      ],
+      "win_pct": 41.48,
+      "stops": 39
+    },
+    "other_business_days_since_2025": {
+      "n": 424,
+      "mean": -1.067,
+      "total": -452.5,
+      "t": -2.714,
+      "ci95_mean": [
+        -1.84,
+        -0.294
+      ],
+      "win_pct": 43.4,
+      "stops": 5
+    },
+    "since_2016": {
+      "n": 128,
+      "mean": 0.44,
+      "total": 56.3,
+      "t": 0.343,
+      "ci95_mean": [
+        -2.096,
+        2.975
+      ],
+      "win_pct": 52.34,
+      "stops": 11
+    },
+    "since_2025": {
+      "n": 20,
+      "mean": 6.725,
+      "total": 134.5,
+      "t": 3.106,
+      "ci95_mean": [
+        2.193,
+        11.257
+      ],
+      "win_pct": 80.0,
+      "stops": 0
+    },
+    "periods": {
+      "2006-15": {
+        "n": 120,
+        "mean": -4.958,
+        "total": -595.0,
+        "t": -3.83,
+        "ci95_mean": [
+          -7.522,
+          -2.395
+        ],
+        "win_pct": 35.0,
+        "stops": 24
+      },
+      "2016-21": {
+        "n": 72,
+        "mean": -0.896,
+        "total": -64.5,
+        "t": -0.482,
+        "ci95_mean": [
+          -4.603,
+          2.811
+        ],
+        "win_pct": 48.61,
+        "stops": 9
+      },
+      "2022-26": {
+        "n": 56,
+        "mean": 2.157,
+        "total": 120.8,
+        "t": 1.281,
+        "ci95_mean": [
+          -1.216,
+          5.531
+        ],
+        "win_pct": 57.14,
+        "stops": 2
+      }
+    },
+    "per_year": {
+      "2006": {
+        "n": 12,
+        "mean": 3.5,
+        "total": 42.0,
+        "t": 1.341,
+        "ci95_mean": [
+          -2.244,
+          9.244
+        ],
+        "win_pct": 50.0,
+        "stops": 0
+      },
+      "2007": {
+        "n": 12,
+        "mean": -3.0,
+        "total": -36.0,
+        "t": -0.762,
+        "ci95_mean": [
+          -11.665,
+          5.665
+        ],
+        "win_pct": 50.0,
+        "stops": 1
+      },
+      "2008": {
+        "n": 12,
+        "mean": -11.333,
+        "total": -136.0,
+        "t": -2.172,
+        "ci95_mean": [
+          -22.816,
+          0.149
+        ],
+        "win_pct": 16.67,
+        "stops": 6
+      },
+      "2009": {
+        "n": 12,
+        "mean": 0.25,
+        "total": 3.0,
+        "t": 0.049,
+        "ci95_mean": [
+          -10.98,
+          11.48
+        ],
+        "win_pct": 41.67,
+        "stops": 2
+      },
+      "2010": {
+        "n": 12,
+        "mean": -5.667,
+        "total": -68.0,
+        "t": -1.486,
+        "ci95_mean": [
+          -14.062,
+          2.729
+        ],
+        "win_pct": 33.33,
+        "stops": 2
+      },
+      "2011": {
+        "n": 12,
+        "mean": -8.242,
+        "total": -98.9,
+        "t": -2.397,
+        "ci95_mean": [
+          -15.808,
+          -0.675
+        ],
+        "win_pct": 33.33,
+        "stops": 3
+      },
+      "2012": {
+        "n": 12,
+        "mean": -7.3,
+        "total": -87.6,
+        "t": -2.039,
+        "ci95_mean": [
+          -15.179,
+          0.579
+        ],
+        "win_pct": 33.33,
+        "stops": 3
+      },
+      "2013": {
+        "n": 12,
+        "mean": -5.783,
+        "total": -69.4,
+        "t": -1.826,
+        "ci95_mean": [
+          -12.754,
+          1.187
+        ],
+        "win_pct": 25.0,
+        "stops": 1
+      },
+      "2014": {
+        "n": 12,
+        "mean": -0.758,
+        "total": -9.1,
+        "t": -0.2,
+        "ci95_mean": [
+          -9.113,
+          7.596
+        ],
+        "win_pct": 50.0,
+        "stops": 1
+      },
+      "2015": {
+        "n": 12,
+        "mean": -11.25,
+        "total": -135.0,
+        "t": -2.381,
+        "ci95_mean": [
+          -21.65,
+          -0.85
+        ],
+        "win_pct": 16.67,
+        "stops": 5
+      },
+      "2016": {
+        "n": 12,
+        "mean": 0.958,
+        "total": 11.5,
+        "t": 0.216,
+        "ci95_mean": [
+          -8.825,
+          10.742
+        ],
+        "win_pct": 58.33,
+        "stops": 2
+      },
+      "2017": {
+        "n": 12,
+        "mean": 6.317,
+        "total": 75.8,
+        "t": 1.376,
+        "ci95_mean": [
+          -3.784,
+          16.417
+        ],
+        "win_pct": 66.67,
+        "stops": 1
+      },
+      "2018": {
+        "n": 12,
+        "mean": -2.575,
+        "total": -30.9,
+        "t": -0.756,
+        "ci95_mean": [
+          -10.07,
+          4.92
+        ],
+        "win_pct": 41.67,
+        "stops": 0
+      },
+      "2019": {
+        "n": 12,
+        "mean": -5.858,
+        "total": -70.3,
+        "t": -1.798,
+        "ci95_mean": [
+          -13.028,
+          1.312
+        ],
+        "win_pct": 33.33,
+        "stops": 1
+      },
+      "2020": {
+        "n": 12,
+        "mean": 3.3,
+        "total": 39.6,
+        "t": 0.524,
+        "ci95_mean": [
+          -10.563,
+          17.163
+        ],
+        "win_pct": 58.33,
+        "stops": 1
+      },
+      "2021": {
+        "n": 12,
+        "mean": -7.517,
+        "total": -90.2,
+        "t": -1.771,
+        "ci95_mean": [
+          -16.859,
+          1.825
+        ],
+        "win_pct": 33.33,
+        "stops": 4
+      },
+      "2022": {
+        "n": 12,
+        "mean": 6.783,
+        "total": 81.4,
+        "t": 1.539,
+        "ci95_mean": [
+          -2.92,
+          16.486
+        ],
+        "win_pct": 66.67,
+        "stops": 1
+      },
+      "2023": {
+        "n": 12,
+        "mean": -6.75,
+        "total": -81.0,
+        "t": -1.84,
+        "ci95_mean": [
+          -14.825,
+          1.325
+        ],
+        "win_pct": 33.33,
+        "stops": 1
+      },
+      "2024": {
+        "n": 12,
+        "mean": -1.175,
+        "total": -14.1,
+        "t": -0.464,
+        "ci95_mean": [
+          -6.745,
+          4.395
+        ],
+        "win_pct": 33.33,
+        "stops": 0
+      },
+      "2025": {
+        "n": 12,
+        "mean": 6.758,
+        "total": 81.1,
+        "t": 2.332,
+        "ci95_mean": [
+          0.38,
+          13.136
+        ],
+        "win_pct": 83.33,
+        "stops": 0
+      },
+      "2026": {
+        "n": 8,
+        "mean": 6.675,
+        "total": 53.4,
+        "t": 1.925,
+        "ci95_mean": [
+          -1.523,
+          14.873
+        ],
+        "win_pct": 75.0,
+        "stops": 0
+      }
+    },
+    "missing_month_ends": [
+      "2026-03-31"
+    ],
+    "month_end_trades": [
+      {
+        "date": "2006-01-31",
+        "pips": 8.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-02-28",
+        "pips": -2.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-03-31",
+        "pips": -7.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-04-28",
+        "pips": 19.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-05-31",
+        "pips": 0.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-06-30",
+        "pips": 12.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-07-31",
+        "pips": -5.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-08-31",
+        "pips": -4.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-09-29",
+        "pips": 1.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-10-31",
+        "pips": -6.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-11-30",
+        "pips": 11.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2006-12-29",
+        "pips": 15.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-01-31",
+        "pips": -22.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-02-28",
+        "pips": 11.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-03-30",
+        "pips": 7.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-04-30",
+        "pips": 6.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-05-31",
+        "pips": 7.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-06-29",
+        "pips": -9.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-07-31",
+        "pips": -8.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-08-31",
+        "pips": -8.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-09-28",
+        "pips": 6.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-10-31",
+        "pips": 16.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2007-11-30",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2007-12-31",
+        "pips": -17.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-01-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-02-29",
+        "pips": 29.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-03-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-04-30",
+        "pips": 13.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-05-30",
+        "pips": -2.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-06-30",
+        "pips": -9.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-07-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-08-29",
+        "pips": 0.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-09-30",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-10-31",
+        "pips": -17.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2008-11-28",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2008-12-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2009-01-30",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2009-02-27",
+        "pips": -11.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-03-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2009-04-30",
+        "pips": 18.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-05-29",
+        "pips": 26.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-06-30",
+        "pips": 17.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-07-31",
+        "pips": -4.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-08-31",
+        "pips": -9.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-09-30",
+        "pips": -4.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-10-30",
+        "pips": 14.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-11-30",
+        "pips": -12.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2009-12-31",
+        "pips": 18.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-01-29",
+        "pips": -12.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-02-26",
+        "pips": 9.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-03-31",
+        "pips": 0.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-04-30",
+        "pips": -13.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-05-28",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2010-06-30",
+        "pips": -14.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-07-30",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2010-08-31",
+        "pips": 2.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-09-30",
+        "pips": 0.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-10-29",
+        "pips": -10.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-11-30",
+        "pips": 1.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2010-12-31",
+        "pips": 19.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-01-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2011-02-28",
+        "pips": 2.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-03-31",
+        "pips": -3.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-04-28",
+        "pips": 6.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-05-31",
+        "pips": -15.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-06-30",
+        "pips": 6.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-07-29",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2011-08-31",
+        "pips": -11.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-09-30",
+        "pips": -8.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-10-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2011-11-30",
+        "pips": -2.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2011-12-30",
+        "pips": 1.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-01-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2012-02-29",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2012-03-30",
+        "pips": -8.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-04-30",
+        "pips": -0.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-05-31",
+        "pips": -6.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-06-29",
+        "pips": 0.9,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-07-31",
+        "pips": 7.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-08-31",
+        "pips": 8.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-09-28",
+        "pips": 1.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-10-31",
+        "pips": -14.7,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-11-30",
+        "pips": -0.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2012-12-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2013-01-31",
+        "pips": -8.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-02-28",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2013-03-28",
+        "pips": 0.6,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-04-30",
+        "pips": 15.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-05-31",
+        "pips": -11.3,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-06-28",
+        "pips": -19.3,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-07-31",
+        "pips": 7.6,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-08-30",
+        "pips": -10.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-09-30",
+        "pips": -0.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-10-31",
+        "pips": -8.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-11-29",
+        "pips": -1.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2013-12-31",
+        "pips": -8.7,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-01-31",
+        "pips": -8.2,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-02-28",
+        "pips": 12.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-03-31",
+        "pips": -14.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-04-30",
+        "pips": -1.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-05-30",
+        "pips": 16.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-06-30",
+        "pips": 10.9,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-07-31",
+        "pips": -8.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-08-29",
+        "pips": -13.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-09-30",
+        "pips": 11.3,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-10-31",
+        "pips": 9.5,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-11-28",
+        "pips": 2.3,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2014-12-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2015-01-30",
+        "pips": -9.4,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-02-27",
+        "pips": -0.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-03-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2015-04-30",
+        "pips": 25.1,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-05-29",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2015-06-30",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2015-07-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2015-08-31",
+        "pips": 8.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-09-30",
+        "pips": -1.8,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-10-30",
+        "pips": -18.6,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-11-30",
+        "pips": -14.0,
+        "feed": "hist",
+        "stopped": false
+      },
+      {
+        "date": "2015-12-31",
+        "pips": -25.0,
+        "feed": "hist",
+        "stopped": true
+      },
+      {
+        "date": "2016-01-29",
+        "pips": -7.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-02-29",
+        "pips": -5.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-03-31",
+        "pips": 0.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-04-29",
+        "pips": 10.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-05-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2016-06-30",
+        "pips": 13.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-07-29",
+        "pips": 10.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-08-31",
+        "pips": 0.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-09-30",
+        "pips": 23.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-10-31",
+        "pips": 19.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-11-30",
+        "pips": -2.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2016-12-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2017-01-31",
+        "pips": 15.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-02-28",
+        "pips": 4.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-03-31",
+        "pips": 19.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-04-28",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2017-05-31",
+        "pips": 17.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-06-30",
+        "pips": -9.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-07-31",
+        "pips": 32.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-08-31",
+        "pips": 19.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-09-29",
+        "pips": 3.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-10-31",
+        "pips": -7.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-11-30",
+        "pips": -4.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2017-12-29",
+        "pips": 10.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-01-31",
+        "pips": -15.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-02-28",
+        "pips": 1.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-03-29",
+        "pips": -15.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-04-30",
+        "pips": -3.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-05-31",
+        "pips": -10.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-06-29",
+        "pips": 14.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-07-31",
+        "pips": -3.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-08-31",
+        "pips": -17.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-09-28",
+        "pips": 20.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-10-31",
+        "pips": 4.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-11-30",
+        "pips": -7.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2018-12-31",
+        "pips": 2.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-01-31",
+        "pips": -12.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-02-28",
+        "pips": 11.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-03-29",
+        "pips": -5.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-04-30",
+        "pips": -15.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-05-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2019-06-28",
+        "pips": 1.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-07-31",
+        "pips": -0.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-08-30",
+        "pips": -21.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-09-30",
+        "pips": -8.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-10-31",
+        "pips": 1.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-11-29",
+        "pips": 8.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2019-12-31",
+        "pips": -4.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-01-31",
+        "pips": 20.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-02-28",
+        "pips": 9.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-03-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2020-04-30",
+        "pips": 58.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-05-29",
+        "pips": -2.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-06-30",
+        "pips": 10.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-07-31",
+        "pips": -13.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-08-31",
+        "pips": 10.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-09-30",
+        "pips": 0.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-10-30",
+        "pips": -14.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-11-30",
+        "pips": -16.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2020-12-31",
+        "pips": 0.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-01-29",
+        "pips": 18.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-02-26",
+        "pips": 1.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-03-31",
+        "pips": 10.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-04-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2021-05-28",
+        "pips": -6.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-06-30",
+        "pips": -5.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-07-30",
+        "pips": -6.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-08-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2021-09-30",
+        "pips": -2.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2021-10-29",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2021-11-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2021-12-31",
+        "pips": 0.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-01-31",
+        "pips": 6.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-02-28",
+        "pips": 14.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-03-31",
+        "pips": 24.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-04-29",
+        "pips": 9.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-05-31",
+        "pips": -5.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-06-30",
+        "pips": 28.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-07-29",
+        "pips": 18.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-08-31",
+        "pips": -4.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-09-30",
+        "pips": 15.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-10-31",
+        "pips": 6.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2022-11-30",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2022-12-30",
+        "pips": -7.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-01-31",
+        "pips": 6.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-02-28",
+        "pips": -21.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-03-31",
+        "pips": -25.0,
+        "feed": "exness",
+        "stopped": true
+      },
+      {
+        "date": "2023-04-28",
+        "pips": 10.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-05-31",
+        "pips": -16.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-06-30",
+        "pips": -11.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-07-31",
+        "pips": -7.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-08-31",
+        "pips": 12.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-09-29",
+        "pips": 3.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-10-31",
+        "pips": -10.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-11-30",
+        "pips": -2.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2023-12-29",
+        "pips": -19.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-01-31",
+        "pips": 2.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-02-29",
+        "pips": -11.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-03-28",
+        "pips": -2.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-04-30",
+        "pips": -12.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-05-31",
+        "pips": -0.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-06-28",
+        "pips": 17.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-07-31",
+        "pips": -6.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-08-30",
+        "pips": -2.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-09-30",
+        "pips": 10.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-10-31",
+        "pips": 2.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-11-29",
+        "pips": -0.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2024-12-31",
+        "pips": -10.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-01-31",
+        "pips": 17.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-02-28",
+        "pips": -13.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-03-31",
+        "pips": 13.3,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-04-30",
+        "pips": 9.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-05-30",
+        "pips": 16.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-06-30",
+        "pips": -9.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-07-31",
+        "pips": 2.4,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-08-29",
+        "pips": 7.8,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-09-30",
+        "pips": 1.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-10-31",
+        "pips": 13.6,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-11-28",
+        "pips": 15.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2025-12-31",
+        "pips": 7.5,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-01-30",
+        "pips": -8.1,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-02-27",
+        "pips": -6.2,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-04-30",
+        "pips": 13.0,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-05-29",
+        "pips": 19.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-06-30",
+        "pips": 12.9,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-07-31",
+        "pips": 11.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-08-31",
+        "pips": 6.7,
+        "feed": "exness",
+        "stopped": false
+      },
+      {
+        "date": "2026-09-30",
+        "pips": 3.5,
+        "feed": "exness",
+        "stopped": false
+      }
+    ],
+    "incomplete_intervals": {
+      "2006-09-29": 14,
+      "2007-10-31": 14
+    }
+  }
+}
