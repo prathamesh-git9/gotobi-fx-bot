@@ -17,3 +17,15 @@ Pass = positive in both halves, beats the same trade at ordinary times, t > 2. D
 | Bitcoin: CME weekend gap, funding times, ETF 4 pm NAV, monthly expiry | all fail |
 | DAX / FTSE / US500 expiry auctions | all fail |
 | Codex: pre-FOMC drift, pre-holiday, toshin, JP half-year end, weekend gaps, BoJ days | all fail its Bonferroni gate (closest: BoJ-day USD/JPY long, p 0.018) |
+
+## Round 3 (`lab3.py`, `codex_audit/explore3`)
+
+| Idea | Result |
+|---|---|
+| Japanese importers paying ahead of long Tokyo closures (gotobi-style long) | 2006-15 +11.7 (17 trades) but 2016-26 -4.8: fail |
+| US corporate tax days, buy USD | fail |
+| Friday 4 pm fix / mid-month fix (GBPUSD, EURUSD) | fail |
+| GBPUSD month-end fix, quarter-ends vs other month-ends | +4.66 vs +2.93 pips (fits a rebalancing story) |
+| Sterling through crosses at the month-end fix | EURGBP sell +0.52 (weak), GBPJPY buy +3.51 (t 1.4, both halves up) |
+| Gotobi long on GBPJPY / CADJPY / CHFJPY | +0.27 / +0.48 / -0.36: fail (only EURJPY carries the flow) |
+| Codex: holiday reopenings (US, DE, UK, JP), FX futures expiry, US tax settlement, UK fiscal year | all fail Bonferroni |

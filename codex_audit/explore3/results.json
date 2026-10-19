@@ -1,0 +1,415 @@
+[
+  {
+    "idea": "US holiday reopening",
+    "symbol": "US500m",
+    "hold": 120,
+    "train": {
+      "30": {
+        "n": 18,
+        "event_mean_r": -0.16729629629629483,
+        "control_mean_r": -0.07072222222221897,
+        "difference_r": -0.09657407407407594,
+        "event_win_pct": 38.88888888888889,
+        "event_net_units": -90.33999999999924
+      },
+      "60": {
+        "n": 18,
+        "event_mean_r": -0.17274074074073942,
+        "control_mean_r": -0.24472222222222154,
+        "difference_r": 0.07198148148148212,
+        "event_win_pct": 33.33333333333333,
+        "event_net_units": -93.27999999999929
+      },
+      "120": {
+        "n": 17,
+        "event_mean_r": -0.10945098039215541,
+        "control_mean_r": -0.30850980392156624,
+        "difference_r": 0.19905882352941082,
+        "event_win_pct": 35.294117647058826,
+        "event_net_units": -55.819999999999254
+      }
+    },
+    "test": {
+      "n": 46,
+      "event_mean_r": 0.06566666666666626,
+      "control_mean_r": -0.0025000000000025145,
+      "difference_r": 0.06816666666666873,
+      "event_win_pct": 58.69565217391305,
+      "event_net_units": 90.61999999999944
+    },
+    "test_2022_2024": {
+      "n": 30,
+      "event_mean_r": 0.15346666666666403,
+      "control_mean_r": -0.11334444444444572,
+      "difference_r": 0.26681111111110967,
+      "event_win_pct": 63.33333333333333,
+      "event_net_units": 138.11999999999762
+    },
+    "test_2025_2026": {
+      "n": 16,
+      "event_mean_r": -0.09895833333332954,
+      "control_mean_r": 0.20533333333332848,
+      "difference_r": -0.30429166666665797,
+      "event_win_pct": 50.0,
+      "event_net_units": -47.49999999999818
+    },
+    "p_one_sided": 0.3478365216347837,
+    "p_bonferroni": 1.0,
+    "survivor": false,
+    "eligible_dates": 122
+  },
+  {
+    "idea": "German holiday reopening",
+    "symbol": "DE30m",
+    "hold": 30,
+    "train": {
+      "30": {
+        "n": 9,
+        "event_mean_r": -0.25988888888888645,
+        "control_mean_r": -0.13455555555555396,
+        "difference_r": -0.12533333333333255,
+        "event_win_pct": 33.33333333333333,
+        "event_net_units": -233.89999999999782
+      },
+      "60": {
+        "n": 9,
+        "event_mean_r": -0.32177777777778016,
+        "control_mean_r": -0.057555555555558774,
+        "difference_r": -0.2642222222222214,
+        "event_win_pct": 22.22222222222222,
+        "event_net_units": -289.6000000000022
+      },
+      "120": {
+        "n": 9,
+        "event_mean_r": -0.5431111111111102,
+        "control_mean_r": -0.006333333333334166,
+        "difference_r": -0.5367777777777761,
+        "event_win_pct": 33.33333333333333,
+        "event_net_units": -488.7999999999993
+      }
+    },
+    "test": {
+      "n": 23,
+      "event_mean_r": 0.012043478260872254,
+      "control_mean_r": -0.16117391304347936,
+      "difference_r": 0.17321739130435163,
+      "event_win_pct": 39.130434782608695,
+      "event_net_units": 27.700000000006185
+    },
+    "test_2022_2024": {
+      "n": 14,
+      "event_mean_r": 0.0027857142857166195,
+      "control_mean_r": -0.15657142857143036,
+      "difference_r": 0.15935714285714697,
+      "event_win_pct": 28.57142857142857,
+      "event_net_units": 3.900000000003274
+    },
+    "test_2025_2026": {
+      "n": 9,
+      "event_mean_r": 0.026444444444447688,
+      "control_mean_r": -0.16833333333333333,
+      "difference_r": 0.19477777777778105,
+      "event_win_pct": 55.55555555555556,
+      "event_net_units": 23.80000000000291
+    },
+    "p_one_sided": 0.15455845441545585,
+    "p_bonferroni": 1.0,
+    "survivor": false,
+    "eligible_dates": 73
+  },
+  {
+    "idea": "UK holiday reopening",
+    "symbol": "GBPUSDm",
+    "hold": 120,
+    "train": {
+      "30": {
+        "n": 26,
+        "event_mean_r": 0.07692307692307529,
+        "control_mean_r": -0.14723076923076703,
+        "difference_r": 0.22415384615384232,
+        "event_win_pct": 57.692307692307686,
+        "event_net_units": 49.999999999998934
+      },
+      "60": {
+        "n": 25,
+        "event_mean_r": 0.25743999999998834,
+        "control_mean_r": -0.28175999999999846,
+        "difference_r": 0.5391999999999868,
+        "event_win_pct": 60.0,
+        "event_net_units": 160.8999999999927
+      },
+      "120": {
+        "n": 25,
+        "event_mean_r": 0.27343999999999724,
+        "control_mean_r": -0.3291199999999961,
+        "difference_r": 0.6025599999999933,
+        "event_win_pct": 64.0,
+        "event_net_units": 170.89999999999827
+      }
+    },
+    "test": {
+      "n": 23,
+      "event_mean_r": 0.21408695652173215,
+      "control_mean_r": -0.04643478260869865,
+      "difference_r": 0.2605217391304308,
+      "event_win_pct": 65.21739130434783,
+      "event_net_units": 123.09999999999599
+    },
+    "test_2022_2024": {
+      "n": 14,
+      "event_mean_r": 0.002285714285716572,
+      "control_mean_r": -0.10400000000000885,
+      "difference_r": 0.10628571428572542,
+      "event_win_pct": 50.0,
+      "event_net_units": 0.8000000000008001
+    },
+    "test_2025_2026": {
+      "n": 9,
+      "event_mean_r": 0.5435555555555341,
+      "control_mean_r": 0.04311111111111722,
+      "difference_r": 0.5004444444444169,
+      "event_win_pct": 88.88888888888889,
+      "event_net_units": 122.2999999999952
+    },
+    "p_one_sided": 0.06708932910670894,
+    "p_bonferroni": 0.46962530374696254,
+    "survivor": false,
+    "eligible_dates": 61
+  },
+  {
+    "idea": "Japan holiday reopening",
+    "symbol": "USDJPYm",
+    "hold": 30,
+    "train": {
+      "30": {
+        "n": 39,
+        "event_mean_r": -0.009333333333334174,
+        "control_mean_r": 0.04779487179487701,
+        "difference_r": -0.05712820512821118,
+        "event_win_pct": 43.58974358974359,
+        "event_net_units": -9.100000000000819
+      },
+      "60": {
+        "n": 39,
+        "event_mean_r": 0.006871794871795618,
+        "control_mean_r": 0.08687179487179865,
+        "difference_r": -0.08000000000000303,
+        "event_win_pct": 51.28205128205128,
+        "event_net_units": 6.700000000000728
+      },
+      "120": {
+        "n": 37,
+        "event_mean_r": 0.02583783783784138,
+        "control_mean_r": 0.14918918918918717,
+        "difference_r": -0.12335135135134578,
+        "event_win_pct": 54.054054054054056,
+        "event_net_units": 23.900000000003274
+      }
+    },
+    "test": {
+      "n": 39,
+      "event_mean_r": -0.12246153846154019,
+      "control_mean_r": -0.07353846153846579,
+      "difference_r": -0.048923076923074404,
+      "event_win_pct": 43.58974358974359,
+      "event_net_units": -119.40000000000168
+    },
+    "test_2022_2024": {
+      "n": 20,
+      "event_mean_r": -0.11680000000000064,
+      "control_mean_r": -0.19180000000000064,
+      "difference_r": 0.075,
+      "event_win_pct": 45.0,
+      "event_net_units": -58.40000000000032
+    },
+    "test_2025_2026": {
+      "n": 19,
+      "event_mean_r": -0.12842105263158182,
+      "control_mean_r": 0.05094736842104459,
+      "difference_r": -0.1793684210526264,
+      "event_win_pct": 42.10526315789473,
+      "event_net_units": -61.000000000001364
+    },
+    "p_one_sided": 0.6256437435625644,
+    "p_bonferroni": 1.0,
+    "survivor": false,
+    "eligible_dates": 144
+  },
+  {
+    "idea": "Quarterly FX futures expiry proxy",
+    "symbol": "EURUSDm",
+    "hold": 120,
+    "train": {
+      "30": {
+        "n": 23,
+        "event_mean_r": -0.12869565217391046,
+        "control_mean_r": -0.0784347826086843,
+        "difference_r": -0.05026086956522614,
+        "event_win_pct": 30.434782608695656,
+        "event_net_units": -73.99999999999851
+      },
+      "60": {
+        "n": 23,
+        "event_mean_r": -0.1584347826086871,
+        "control_mean_r": -0.1177391304347739,
+        "difference_r": -0.040695652173913195,
+        "event_win_pct": 43.47826086956522,
+        "event_net_units": -91.09999999999508
+      },
+      "120": {
+        "n": 23,
+        "event_mean_r": -0.016173913043476092,
+        "control_mean_r": -0.12052173913043271,
+        "difference_r": 0.10434782608695661,
+        "event_win_pct": 56.52173913043478,
+        "event_net_units": -9.299999999998754
+      }
+    },
+    "test": {
+      "n": 17,
+      "event_mean_r": 0.00870588235293029,
+      "control_mean_r": 0.1807058823529338,
+      "difference_r": -0.1720000000000035,
+      "event_win_pct": 52.94117647058824,
+      "event_net_units": 3.6999999999953737
+    },
+    "test_2022_2024": {
+      "n": 11,
+      "event_mean_r": 0.011636363636359125,
+      "control_mean_r": 0.08945454545455013,
+      "difference_r": -0.07781818181819102,
+      "event_win_pct": 54.54545454545454,
+      "event_net_units": 3.1999999999987594
+    },
+    "test_2025_2026": {
+      "n": 6,
+      "event_mean_r": 0.0033333333333107618,
+      "control_mean_r": 0.34799999999997056,
+      "difference_r": -0.3446666666666598,
+      "event_win_pct": 50.0,
+      "event_net_units": 0.49999999999661426
+    },
+    "p_one_sided": 0.7448825511744882,
+    "p_bonferroni": 1.0,
+    "survivor": false,
+    "eligible_dates": 43
+  },
+  {
+    "idea": "US estimated-tax settlement",
+    "symbol": "US500m",
+    "hold": 120,
+    "train": {
+      "30": {
+        "n": 8,
+        "event_mean_r": -0.20420833333333235,
+        "control_mean_r": 0.008625000000000677,
+        "difference_r": -0.212833333333333,
+        "event_win_pct": 25.0,
+        "event_net_units": -49.00999999999976
+      },
+      "60": {
+        "n": 8,
+        "event_mean_r": -0.05041666666666819,
+        "control_mean_r": 0.07004166666666832,
+        "difference_r": -0.12045833333333651,
+        "event_win_pct": 50.0,
+        "event_net_units": -12.100000000000364
+      },
+      "120": {
+        "n": 7,
+        "event_mean_r": -0.1928571428571472,
+        "control_mean_r": -0.10109523809523603,
+        "difference_r": -0.09176190476191116,
+        "event_win_pct": 42.857142857142854,
+        "event_net_units": -40.50000000000091
+      }
+    },
+    "test": {
+      "n": 19,
+      "event_mean_r": -0.1602982456140365,
+      "control_mean_r": -0.02831578947368635,
+      "difference_r": -0.1319824561403501,
+      "event_win_pct": 42.10526315789473,
+      "event_net_units": -91.3700000000008
+    },
+    "test_2022_2024": {
+      "n": 11,
+      "event_mean_r": 0.02236363636363118,
+      "control_mean_r": -0.31106060606060776,
+      "difference_r": 0.3334242424242389,
+      "event_win_pct": 63.63636363636363,
+      "event_net_units": 7.37999999999829
+    },
+    "test_2025_2026": {
+      "n": 8,
+      "event_mean_r": -0.41145833333332954,
+      "control_mean_r": 0.3604583333333305,
+      "difference_r": -0.7719166666666599,
+      "event_win_pct": 12.5,
+      "event_net_units": -98.74999999999909
+    },
+    "p_one_sided": 0.7395226047739523,
+    "p_bonferroni": 1.0,
+    "survivor": false,
+    "eligible_dates": 44
+  },
+  {
+    "idea": "UK fiscal-year boundary",
+    "symbol": "GBPUSDm",
+    "hold": 30,
+    "train": {
+      "30": {
+        "n": 4,
+        "event_mean_r": 0.39400000000000546,
+        "control_mean_r": -0.24800000000000377,
+        "difference_r": 0.6420000000000092,
+        "event_win_pct": 100.0,
+        "event_net_units": 39.400000000000546
+      },
+      "60": {
+        "n": 4,
+        "event_mean_r": 0.27399999999999647,
+        "control_mean_r": -0.30599999999998406,
+        "difference_r": 0.5799999999999805,
+        "event_win_pct": 75.0,
+        "event_net_units": 27.399999999999647
+      },
+      "120": {
+        "n": 4,
+        "event_mean_r": 0.22299999999999542,
+        "control_mean_r": -0.38399999999998435,
+        "difference_r": 0.6069999999999798,
+        "event_win_pct": 50.0,
+        "event_net_units": 22.299999999999542
+      }
+    },
+    "test": {
+      "n": 4,
+      "event_mean_r": 0.49799999999997624,
+      "control_mean_r": -0.47199999999998354,
+      "difference_r": 0.9699999999999598,
+      "event_win_pct": 75.0,
+      "event_net_units": 49.799999999997624
+    },
+    "test_2022_2024": {
+      "n": 2,
+      "event_mean_r": 0.5219999999999558,
+      "control_mean_r": -0.47999999999999154,
+      "difference_r": 1.0019999999999474,
+      "event_win_pct": 100.0,
+      "event_net_units": 26.09999999999779
+    },
+    "test_2025_2026": {
+      "n": 2,
+      "event_mean_r": 0.47399999999999665,
+      "control_mean_r": -0.46399999999997554,
+      "difference_r": 0.9379999999999722,
+      "event_win_pct": 50.0,
+      "event_net_units": 23.699999999999832
+    },
+    "p_one_sided": 0.06151938480615194,
+    "p_bonferroni": 0.4306356936430636,
+    "survivor": false,
+    "eligible_dates": 11
+  }
+]
