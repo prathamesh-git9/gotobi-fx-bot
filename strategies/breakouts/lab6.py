@@ -122,8 +122,9 @@ def B1():
 
 
 # ------------------------------------------------------------------ B2 noise-area momentum
-def b2_daily(sym):
-    """Daily returns of the noise-area strategy and of the intraday-long benchmark (both at the paper's sizing)."""
+def b2_daily(sym, positions=False):
+    """Daily returns of the noise-area strategy and of the intraday-long benchmark (both at the paper's sizing).
+    positions=True also returns every position: (day, side, leverage, entry, exit, minute mid path, entry minute)."""
     df = load(sym, flow=True)
     mid = ((df.bclose + df.aclose) / 2).astype("float64")
     loc = df.index.tz_localize("UTC").tz_convert(NY)
@@ -145,7 +146,7 @@ def b2_daily(sym):
     close = np.vstack([g.mid.to_numpy() for _, g in days])            # 389 minutes, 09:30 .. 15:58
     opn = np.array([(g.bo.iloc[0] + g.ao.iloc[0]) / 2 for _, g in days])
     move = np.abs(close / opn[:, None] - 1)
-    res, bench = {}, {}
+    res, bench, trades = {}, {}, []
     dret = np.r_[np.nan, close[1:, -1] / close[:-1, -1] - 1]
     for k in range(15, len(days)):
         d, g = days[k]
@@ -159,7 +160,7 @@ def b2_daily(sym):
         bid, ask = g.bo.to_numpy(), g.ao.to_numpy()
         vol = np.nanstd(dret[k - 14:k], ddof=1)
         lev = min(4.0, 0.02 / vol) if vol > 0 else 1.0
-        pos, entry, r = 0, 0.0, 0.0
+        pos, entry, r, t_in = 0, 0.0, 0.0, 0
         for t in list(range(30, 361, 30)) + [388]:            # decisions at 10:00, 10:30, ... 15:30; flat at 15:58
             p = px[t - 1]                                      # last completed minute
             want = pos
@@ -175,11 +176,16 @@ def b2_daily(sym):
                 if pos:
                     x = bid[t] if pos > 0 else ask[t]
                     r += pos * (x - entry) / entry
+                    if positions:
+                        trades.append((pd.Timestamp(d), pos, lev, entry, x, px[t_in:t].copy(), t_in))
                 if want:
                     entry = ask[t] if want > 0 else bid[t]
+                    t_in = t
                 pos = want
         res[pd.Timestamp(d)] = lev * r
         bench[pd.Timestamp(d)] = lev * (bid[388] - ask[0]) / ask[0]
+    if positions:
+        return pd.Series(res), pd.Series(bench), trades
     return pd.Series(res), pd.Series(bench)
 
 

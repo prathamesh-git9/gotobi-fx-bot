@@ -1,0 +1,13 @@
+label,risk,accounts,breaches,payouts,fees,paid,net,open_profit_not_paid,first_payout_days,capital,window,stops_hit,windows,median_net,p_loss,worst,best
+"NASDAQ momentum C=$1,100, since Sep 2019 (7 yrs)",1.0,1.0,0.0,1.0,159.0,512.0,353.0,291.0,1449.0,1100,since Sep 2019 (7 yrs),0.0,,,,,
+"NASDAQ momentum C=$1,100, last 2 years",1.0,1.0,0.0,0.0,159.0,0.0,-159.0,96.0,,1100,last 2 years,0.0,,,,,
+rolling 2-year windows,,,,,,,,,,1100,,,61.0,-159.0,0.8032786885245902,-159.0,275.0
+"NASDAQ momentum C=$2,500, since Sep 2019 (7 yrs)",1.0,2.0,1.0,2.0,318.0,1589.0,1271.0,205.0,1449.0,2500,since Sep 2019 (7 yrs),0.0,,,,,
+"NASDAQ momentum C=$2,500, last 2 years",1.0,2.0,1.0,0.0,318.0,0.0,-318.0,205.0,,2500,last 2 years,0.0,,,,,
+rolling 2-year windows,,,,,,,,,,2500,,,61.0,247.0,0.4098360655737705,-318.0,774.0
+"NASDAQ momentum C=$5,000, since Sep 2019 (7 yrs)",1.0,7.0,6.0,3.0,1113.0,2500.0,1387.0,545.0,97.0,5000,since Sep 2019 (7 yrs),17.0,,,,,
+"NASDAQ momentum C=$5,000, last 2 years",1.0,4.0,3.0,0.0,636.0,0.0,-636.0,545.0,,5000,last 2 years,17.0,,,,,
+rolling 2-year windows,,,,,,,,,,5000,,,61.0,202.0,0.26229508196721313,-636.0,1665.0
+"NASDAQ momentum C=$10,000, since Sep 2019 (7 yrs)",1.0,36.0,35.0,2.0,5724.0,3012.0,-2712.0,658.0,97.0,10000,since Sep 2019 (7 yrs),180.0,,,,,
+"NASDAQ momentum C=$10,000, last 2 years",1.0,14.0,13.0,0.0,2226.0,0.0,-2226.0,658.0,,10000,last 2 years,180.0,,,,,
+rolling 2-year windows,,,,,,,,,,10000,,,61.0,-814.0,0.6229508196721312,-2862.0,2882.0

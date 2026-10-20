@@ -1,0 +1,27 @@
+Gotobi bot trades on a Funded Friday $10K Instant account (fee $159, 80% split), fixed risk per trade
+
+== last 10 years ==   (for comparison: your own EUR 1,000 at 6% risk, compounding -> EUR 37,115, max drop 37.0%)
+  Exness costs     risk $ 25/trade: accounts bought  1 (breached  0), payouts  0 = $     0  fees $  159  NET $   -159  | unpaid profit at the end $+1,635  | days to 1st payout None
+  Exness costs     risk $ 50/trade: accounts bought  1 (breached  0), payouts  6 = $ 2,451  fees $  159  NET $ +2,292  | unpaid profit at the end $ +206  | days to 1st payout 834
+  Exness costs     risk $ 65/trade: accounts bought  1 (breached  0), payouts  8 = $ 3,445  fees $  159  NET $ +3,286  | unpaid profit at the end $  -56  | days to 1st payout 190
+  Exness costs     risk $ 90/trade: accounts bought  2 (breached  1), payouts 10 = $ 4,843  fees $  318  NET $ +4,525  | unpaid profit at the end $ +187  | days to 1st payout 130
+  +1 pip per trade risk $ 25/trade: accounts bought  1 (breached  0), payouts  0 = $     0  fees $  159  NET $   -159  | unpaid profit at the end $+1,005  | days to 1st payout None
+  +1 pip per trade risk $ 50/trade: accounts bought  1 (breached  0), payouts  4 = $ 1,661  fees $  159  NET $ +1,502  | unpaid profit at the end $  -65  | days to 1st payout 2010
+  +1 pip per trade risk $ 65/trade: accounts bought  2 (breached  1), payouts  5 = $ 2,136  fees $  318  NET $ +1,818  | unpaid profit at the end $ +230  | days to 1st payout 1040
+  +1 pip per trade risk $ 90/trade: accounts bought  3 (breached  2), payouts  6 = $ 2,917  fees $  477  NET $ +2,440  | unpaid profit at the end $ +391  | days to 1st payout 175
+
+== last 2 years ==   (for comparison: your own EUR 1,000 at 6% risk, compounding -> EUR 3,873, max drop 37.0%)
+  Exness costs     risk $ 25/trade: accounts bought  1 (breached  0), payouts  0 = $     0  fees $  159  NET $   -159  | unpaid profit at the end $ +600  | days to 1st payout None
+  Exness costs     risk $ 50/trade: accounts bought  1 (breached  0), payouts  2 = $   857  fees $  159  NET $   +698  | unpaid profit at the end $ +128  | days to 1st payout 175
+  Exness costs     risk $ 65/trade: accounts bought  1 (breached  0), payouts  2 = $   943  fees $  159  NET $   +784  | unpaid profit at the end $ +381  | days to 1st payout 168
+  Exness costs     risk $ 90/trade: accounts bought  2 (breached  1), payouts  3 = $ 1,530  fees $  318  NET $ +1,212  | unpaid profit at the end $ +187  | days to 1st payout 157
+  +1 pip per trade risk $ 25/trade: accounts bought  1 (breached  0), payouts  0 = $     0  fees $  159  NET $   -159  | unpaid profit at the end $ +474  | days to 1st payout None
+  +1 pip per trade risk $ 50/trade: accounts bought  1 (breached  0), payouts  2 = $   811  fees $  159  NET $   +652  | unpaid profit at the end $  -65  | days to 1st payout 175
+  +1 pip per trade risk $ 65/trade: accounts bought  2 (breached  1), payouts  2 = $   940  fees $  318  NET $   +622  | unpaid profit at the end $ +230  | days to 1st payout 161
+  +1 pip per trade risk $ 90/trade: accounts bought  2 (breached  1), payouts  2 = $ 1,146  fees $  318  NET $   +828  | unpaid profit at the end $ +391  | days to 1st payout 175
+
+== every 2-year window starting each month, Nov 2016 .. Oct 2024 (Exness costs) ==
+  risk $ 25/trade: median NET $   -159 | lose money in 100% of 96 windows | worst $   -159 best $   -159 | first account breached before any payout in 0/96
+  risk $ 50/trade: median NET $   +244 | lose money in  45% of 96 windows | worst $   -159 best $   +693 | first account breached before any payout in 0/96
+  risk $ 65/trade: median NET $   +262 | lose money in  33% of 96 windows | worst $   -159 best $ +1,233 | first account breached before any payout in 0/96
+  risk $ 90/trade: median NET $   +282 | lose money in  12% of 96 windows | worst $   -159 best $ +1,701 | first account breached before any payout in 0/96

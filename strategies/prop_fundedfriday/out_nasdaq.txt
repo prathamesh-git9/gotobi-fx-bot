@@ -1,0 +1,13 @@
+1560 NASDAQ momentum positions, Sep 2019 - Sep 2026
+  C=$ 1,100 since Sep 2019 (7 yrs): accounts  1 (breached  0), payouts  1 = $   512  fees $  159  NET $   +353  | unpaid $  +291 | days to 1st payout 1449 | $90 stops hit 0
+  C=$ 1,100 last 2 years          : accounts  1 (breached  0), payouts  0 = $     0  fees $  159  NET $   -159  | unpaid $   +96 | days to 1st payout None | $90 stops hit 0
+  C=$ 1,100 every 2-year window from each month Oct 2019..Oct 2024: median NET $   -159, lose money in  80% of 61, worst $   -159, best $   +275
+  C=$ 2,500 since Sep 2019 (7 yrs): accounts  2 (breached  1), payouts  2 = $ 1,589  fees $  318  NET $ +1,271  | unpaid $  +205 | days to 1st payout 1449 | $90 stops hit 0
+  C=$ 2,500 last 2 years          : accounts  2 (breached  1), payouts  0 = $     0  fees $  318  NET $   -318  | unpaid $  +205 | days to 1st payout None | $90 stops hit 0
+  C=$ 2,500 every 2-year window from each month Oct 2019..Oct 2024: median NET $   +247, lose money in  41% of 61, worst $   -318, best $   +774
+  C=$ 5,000 since Sep 2019 (7 yrs): accounts  7 (breached  6), payouts  3 = $ 2,500  fees $1,113  NET $ +1,387  | unpaid $  +545 | days to 1st payout 97 | $90 stops hit 17
+  C=$ 5,000 last 2 years          : accounts  4 (breached  3), payouts  0 = $     0  fees $  636  NET $   -636  | unpaid $  +545 | days to 1st payout None | $90 stops hit 17
+  C=$ 5,000 every 2-year window from each month Oct 2019..Oct 2024: median NET $   +202, lose money in  26% of 61, worst $   -636, best $ +1,665
+  C=$10,000 since Sep 2019 (7 yrs): accounts 36 (breached 35), payouts  2 = $ 3,012  fees $5,724  NET $ -2,712  | unpaid $  +658 | days to 1st payout 97 | $90 stops hit 180
+  C=$10,000 last 2 years          : accounts 14 (breached 13), payouts  0 = $     0  fees $2,226  NET $ -2,226  | unpaid $  +658 | days to 1st payout None | $90 stops hit 180
+  C=$10,000 every 2-year window from each month Oct 2019..Oct 2024: median NET $   -814, lose money in  62% of 61, worst $ -2,862, best $ +2,882
