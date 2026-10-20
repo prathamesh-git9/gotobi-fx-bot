@@ -1,0 +1,302 @@
+[
+ {
+  "name": "G4 AUDNZD H1 z-score +-2.5 fade (Gemini)",
+  "passes": false,
+  "ten_years": {
+   "n": 1077,
+   "pips": -1.32,
+   "R": -0.158,
+   "t": -4.03,
+   "win": 33.2,
+   "eur": 24,
+   "dd": 97.9
+  },
+  "two_years": {
+   "n": 233,
+   "pips": -1.32,
+   "R": -0.138,
+   "t": -1.66,
+   "win": 34.8,
+   "eur": 486,
+   "dd": 58.9
+  },
+  "dev_R": -0.151,
+  "hold_R": -0.186,
+  "random_R": -0.314
+ },
+ {
+  "name": "Q1 EURGBP H1 z-score +-2 fade (Qwen)",
+  "passes": false,
+  "ten_years": {
+   "n": 2717,
+   "pips": -0.7,
+   "R": -0.203,
+   "t": -7.36,
+   "win": 28.3,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 506,
+   "pips": -0.47,
+   "R": -0.144,
+   "t": -2.23,
+   "win": 31.4,
+   "eur": 189,
+   "dd": 87.4
+  },
+  "dev_R": -0.243,
+  "hold_R": -0.149,
+  "random_R": -0.276
+ },
+ {
+  "name": "Q2 USDCNH new 20h extreme -> AUDUSD catch-up (Qwen)",
+  "passes": false,
+  "ten_years": {
+   "n": 2486,
+   "pips": -1.52,
+   "R": -0.144,
+   "t": -7.32,
+   "win": 38.1,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 521,
+   "pips": -0.65,
+   "R": -0.066,
+   "t": -1.51,
+   "win": 41.1,
+   "eur": 454,
+   "dd": 62.0
+  },
+  "dev_R": -0.177,
+  "hold_R": -0.129,
+  "random_R": -0.143
+ },
+ {
+  "name": "Q3 GBPUSD fade a >0.25% 07-09 UTC move to 12:00 (Qwen)",
+  "passes": false,
+  "ten_years": {
+   "n": 438,
+   "pips": 0.03,
+   "R": -0.001,
+   "t": -0.02,
+   "win": 40.9,
+   "eur": 838,
+   "dd": 48.6
+  },
+  "two_years": {
+   "n": 46,
+   "pips": -1.02,
+   "R": -0.051,
+   "t": -0.33,
+   "win": 47.8,
+   "eur": 944,
+   "dd": 18.8
+  },
+  "dev_R": 0.033,
+  "hold_R": -0.036,
+  "random_R": -0.138
+ },
+ {
+  "name": "Q4 USDJPY breaks out but gold holds -> buy gold (Qwen)",
+  "passes": false,
+  "ten_years": {
+   "n": 706,
+   "pips": -5.15,
+   "R": -0.129,
+   "t": -3.48,
+   "win": 40.2,
+   "eur": 140,
+   "dd": 86.4
+  },
+  "two_years": {
+   "n": 170,
+   "pips": -6.49,
+   "R": -0.093,
+   "t": -1.16,
+   "win": 40.6,
+   "eur": 702,
+   "dd": 37.2
+  },
+  "dev_R": -0.188,
+  "hold_R": -0.084,
+  "random_R": -0.079
+ },
+ {
+  "name": "Q5 US30/USTEC ratio z>2: buy the laggard at the open (Qwen)",
+  "passes": false,
+  "ten_years": {
+   "n": 106,
+   "pips": -17.23,
+   "R": -0.168,
+   "t": -0.88,
+   "win": 37.7,
+   "eur": 876,
+   "dd": 25.4
+  },
+  "two_years": {
+   "n": 57,
+   "pips": -1.01,
+   "R": 0.045,
+   "t": 0.27,
+   "win": 40.4,
+   "eur": 1035,
+   "dd": 19.2
+  },
+  "dev_R": -0.406,
+  "hold_R": -0.051,
+  "random_R": -0.165
+ },
+ {
+  "name": "G3 US500 RSI(2)<10 on M15 in an uptrend, exit RSI>70 (Gemini)",
+  "passes": false,
+  "ten_years": {
+   "n": 1804,
+   "pips": -13.69,
+   "R": -0.094,
+   "t": -6.53,
+   "win": 56.8,
+   "eur": 30,
+   "dd": 97.0
+  },
+  "two_years": {
+   "n": 564,
+   "pips": 0.93,
+   "R": -0.023,
+   "t": -0.87,
+   "win": 62.6,
+   "eur": 735,
+   "dd": 26.8
+  },
+  "dev_R": -0.124,
+  "hold_R": -0.075,
+  "random_R": -0.064
+ },
+ {
+  "name": "G2 USDJPY carry while VIX<20 and above EMA100 (Gemini); control = no VIX filter",
+  "passes": false,
+  "ten_years": {
+   "n": 101,
+   "pips": 12.15,
+   "R": 0.018,
+   "t": 0.21,
+   "win": 32.7,
+   "eur": 1022,
+   "dd": 16.7
+  },
+  "two_years": {
+   "n": 27,
+   "pips": -4.79,
+   "R": -0.006,
+   "t": -0.05,
+   "win": 37.0,
+   "eur": 995,
+   "dd": 6.8
+  },
+  "dev_R": -0.112,
+  "hold_R": 0.162,
+  "random_R": 0.085
+ },
+ {
+  "name": "G5 GBPUSD M5 Bollinger 2.5 + 3x tick volume fade (Gemini)",
+  "passes": false,
+  "ten_years": {
+   "n": 2112,
+   "pips": -1.73,
+   "R": -0.079,
+   "t": -5.44,
+   "win": 53.2,
+   "eur": 29,
+   "dd": 97.3
+  },
+  "two_years": {
+   "n": 304,
+   "pips": -1.72,
+   "R": -0.081,
+   "t": -2.34,
+   "win": 52.6,
+   "eur": 598,
+   "dd": 42.3
+  },
+  "dev_R": -0.063,
+  "hold_R": -0.084,
+  "random_R": -0.088
+ },
+ {
+  "name": "G5 XAUUSD M5 Bollinger 2.5 + 3x tick volume fade (Gemini)",
+  "passes": false,
+  "ten_years": {
+   "n": 1366,
+   "pips": -8.89,
+   "R": -0.064,
+   "t": -3.5,
+   "win": 55.0,
+   "eur": 154,
+   "dd": 84.9
+  },
+  "two_years": {
+   "n": 476,
+   "pips": -16.36,
+   "R": -0.083,
+   "t": -2.56,
+   "win": 55.5,
+   "eur": 432,
+   "dd": 61.9
+  },
+  "dev_R": -0.098,
+  "hold_R": -0.055,
+  "random_R": -0.043
+ },
+ {
+  "name": "G1 EURUSD follow the NFP first-15-min move to 21:00 UTC (Gemini)",
+  "passes": false,
+  "ten_years": {
+   "n": 103,
+   "pips": 0.49,
+   "R": -0.057,
+   "t": -0.46,
+   "win": 42.7,
+   "eur": 862,
+   "dd": 28.5
+  },
+  "two_years": {
+   "n": 16,
+   "pips": 4.06,
+   "R": -0.026,
+   "t": -0.1,
+   "win": 43.8,
+   "eur": 989,
+   "dd": 5.6
+  },
+  "dev_R": -0.056,
+  "hold_R": -0.074,
+  "random_R": 0.021
+ },
+ {
+  "name": "G1 USDJPY follow the NFP first-15-min move to 21:00 UTC (Gemini)",
+  "passes": false,
+  "ten_years": {
+   "n": 107,
+   "pips": -1.18,
+   "R": -0.027,
+   "t": -0.19,
+   "win": 37.4,
+   "eur": 902,
+   "dd": 21.1
+  },
+  "two_years": {
+   "n": 17,
+   "pips": -2.87,
+   "R": -0.213,
+   "t": -0.83,
+   "win": 29.4,
+   "eur": 927,
+   "dd": 9.7
+  },
+  "dev_R": -0.131,
+  "hold_R": 0.014,
+  "random_R": -0.125
+ }
+]

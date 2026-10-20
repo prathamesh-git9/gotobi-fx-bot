@@ -1,0 +1,63 @@
+
+fail  Q1 EURGBP H1 z-score +-2 fade (Qwen)
+   10 yrs:  2717 trades   -0.70 pips -0.203R (t -7.36) win 28.3%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :   506 trades   -0.47 pips -0.144R (t -2.23) win 31.4%  EUR 1,000 ->    189 (max drop 87%)
+   2016-21 -0.243R | 2022-26 -0.149R | random direction -0.276R
+
+fail  G4 AUDNZD H1 z-score +-2.5 fade (Gemini)
+   10 yrs:  1077 trades   -1.32 pips -0.158R (t -4.03) win 33.2%  EUR 1,000 ->     24 (max drop 98%)
+   2 yrs :   233 trades   -1.32 pips -0.138R (t -1.66) win 34.8%  EUR 1,000 ->    486 (max drop 59%)
+   2016-21 -0.151R | 2022-26 -0.186R | random direction -0.314R
+
+fail  Q2 USDCNH new 20h extreme -> AUDUSD catch-up (Qwen)
+   10 yrs:  2486 trades   -1.52 pips -0.144R (t -7.32) win 38.1%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :   521 trades   -0.65 pips -0.066R (t -1.51) win 41.1%  EUR 1,000 ->    454 (max drop 62%)
+   2016-21 -0.177R | 2022-26 -0.129R | random direction -0.143R
+
+fail  Q3 GBPUSD fade a >0.25% 07-09 UTC move to 12:00 (Qwen)
+   10 yrs:   438 trades   +0.03 pips -0.001R (t -0.02) win 40.9%  EUR 1,000 ->    838 (max drop 49%)
+   2 yrs :    46 trades   -1.02 pips -0.051R (t -0.33) win 47.8%  EUR 1,000 ->    944 (max drop 19%)
+   2016-21 +0.033R | 2022-26 -0.036R | random direction -0.138R
+
+fail  Q4 USDJPY breaks out but gold holds -> buy gold (Qwen)
+   10 yrs:   706 trades   -5.15 pips -0.129R (t -3.48) win 40.2%  EUR 1,000 ->    140 (max drop 86%)
+   2 yrs :   170 trades   -6.49 pips -0.093R (t -1.16) win 40.6%  EUR 1,000 ->    702 (max drop 37%)
+   2016-21 -0.188R | 2022-26 -0.084R | random direction -0.079R
+
+fail  Q5 US30/USTEC ratio z>2: buy the laggard at the open (Qwen)
+   10 yrs:   106 trades  -17.23 pips -0.168R (t -0.88) win 37.7%  EUR 1,000 ->    876 (max drop 25%)
+   2 yrs :    57 trades   -1.01 pips +0.045R (t  0.27) win 40.4%  EUR 1,000 ->  1,035 (max drop 19%)
+   2016-21 -0.406R | 2022-26 -0.051R | random direction -0.165R
+
+fail  G3 US500 RSI(2)<10 on M15 in an uptrend, exit RSI>70 (Gemini)
+   10 yrs:  1804 trades  -13.69 pips -0.094R (t -6.53) win 56.8%  EUR 1,000 ->     30 (max drop 97%)
+   2 yrs :   564 trades   +0.93 pips -0.023R (t -0.87) win 62.6%  EUR 1,000 ->    735 (max drop 27%)
+   2016-21 -0.124R | 2022-26 -0.075R | random direction -0.064R
+   (average hold 17 days with VIX, 20 without)
+
+fail  G2 USDJPY carry while VIX<20 and above EMA100 (Gemini); control = no VIX filter
+   10 yrs:   101 trades  +12.15 pips +0.018R (t  0.21) win 32.7%  EUR 1,000 ->  1,022 (max drop 17%)
+   2 yrs :    27 trades   -4.79 pips -0.006R (t -0.05) win 37.0%  EUR 1,000 ->    995 (max drop 7%)
+   2016-21 -0.112R | 2022-26 +0.162R | random direction +0.085R
+
+fail  G5 GBPUSD M5 Bollinger 2.5 + 3x tick volume fade (Gemini)
+   10 yrs:  2112 trades   -1.73 pips -0.079R (t -5.44) win 53.2%  EUR 1,000 ->     29 (max drop 97%)
+   2 yrs :   304 trades   -1.72 pips -0.081R (t -2.34) win 52.6%  EUR 1,000 ->    598 (max drop 42%)
+   2016-21 -0.063R | 2022-26 -0.084R | random direction -0.088R
+
+fail  G5 XAUUSD M5 Bollinger 2.5 + 3x tick volume fade (Gemini)
+   10 yrs:  1366 trades   -8.89 pips -0.064R (t -3.50) win 55.0%  EUR 1,000 ->    154 (max drop 85%)
+   2 yrs :   476 trades  -16.36 pips -0.083R (t -2.56) win 55.5%  EUR 1,000 ->    432 (max drop 62%)
+   2016-21 -0.098R | 2022-26 -0.055R | random direction -0.043R
+   EURUSDm: 112 NFP days found
+
+fail  G1 EURUSD follow the NFP first-15-min move to 21:00 UTC (Gemini)
+   10 yrs:   103 trades   +0.49 pips -0.057R (t -0.46) win 42.7%  EUR 1,000 ->    862 (max drop 28%)
+   2 yrs :    16 trades   +4.06 pips -0.026R (t -0.10) win 43.8%  EUR 1,000 ->    989 (max drop 6%)
+   2016-21 -0.056R | 2022-26 -0.074R | random direction +0.021R
+   USDJPYm: 116 NFP days found
+
+fail  G1 USDJPY follow the NFP first-15-min move to 21:00 UTC (Gemini)
+   10 yrs:   107 trades   -1.18 pips -0.027R (t -0.19) win 37.4%  EUR 1,000 ->    902 (max drop 21%)
+   2 yrs :    17 trades   -2.87 pips -0.213R (t -0.83) win 29.4%  EUR 1,000 ->    927 (max drop 10%)
+   2016-21 -0.131R | 2022-26 +0.014R | random direction -0.125R
