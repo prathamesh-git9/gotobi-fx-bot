@@ -1,0 +1,27 @@
+
+fail  GM1 EURUSD 10:00 NY option-cut fade (pinned mornings)
+   10 yrs:   411 trades   -1.39 pips -0.116R (t -4.97) win 41.1%  EUR 1,000 ->    378 (max drop 64%)
+   2 yrs :   115 trades   -0.43 pips -0.036R (t -0.88) win 49.6%  EUR 1,000 ->    917 (max drop 11%)
+   2016-21 -0.123R | 2022-26 -0.112R | random direction -0.110R
+   GM2: 348 auctions, 13 with a > 4 pip candle
+
+fail  GM2 USDJPY Treasury-auction momentum (10y/30y)
+   10 yrs:    11 trades   -0.71 pips -0.071R (t -0.26) win 45.5%  EUR 1,000 ->    983 (max drop 6%)
+   2 yrs :     2 trades   -1.20 pips -0.120R (t   nan) win 50.0%  EUR 1,000 ->    995 (max drop 2%)
+   2016-21 -0.220R | 2022-26 +0.187R | random direction -0.090R
+
+fail  GM3 GBPUSD Friday London-close fade of a >1.2% week
+   10 yrs:   135 trades   -2.05 pips -0.137R (t -1.79) win 40.0%  EUR 1,000 ->    676 (max drop 40%)
+   2 yrs :    21 trades   -0.92 pips -0.061R (t -0.31) win 42.9%  EUR 1,000 ->    971 (max drop 11%)
+   2016-21 -0.140R | 2022-26 -0.050R | random direction -0.054R
+   GM4: 112 NFP days, 37 at an extreme at 08:45
+
+fail  GM4 US500 post-NFP fade at 08:45
+   10 yrs:    37 trades  -21.72 pips -0.145R (t -1.57) win 37.8%  EUR 1,000 ->    896 (max drop 15%)
+   2 yrs :     9 trades  +10.99 pips +0.073R (t  0.32) win 55.6%  EUR 1,000 ->  1,013 (max drop 2%)
+   2016-21 -0.317R | 2022-26 -0.040R | random direction -0.235R
+
+fail  GM5 XAUUSD buy into the Shanghai 09:30 (flat/down Asia)
+   10 yrs:  1143 trades   -1.69 pips -0.113R (t -4.90) win 41.1%  EUR 1,000 ->     66 (max drop 94%)
+   2 yrs :   133 trades   -1.87 pips -0.125R (t -1.33) win 38.3%  EUR 1,000 ->    696 (max drop 34%)
+   2016-21 -0.161R | 2022-26 -0.078R | random direction -0.204R

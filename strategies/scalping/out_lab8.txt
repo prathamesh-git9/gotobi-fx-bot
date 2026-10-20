@@ -1,0 +1,100 @@
+
+fail  N1 EURUSD 08:30 data shock, momentum
+   10 yrs:   409 trades   -1.78 pips -0.129R (t -3.51) win 42.8%  EUR 1,000 ->    332 (max drop 67%)
+   2 yrs :    81 trades   -1.27 pips -0.095R (t -1.20) win 45.7%  EUR 1,000 ->    850 (max drop 19%)
+   2016-21 -0.247R | 2022-26 -0.034R | random direction -0.154R
+
+fail  N2 EURUSD 08:30 data shock, faded
+   10 yrs:   408 trades   -1.52 pips -0.331R (t -5.01) win 23.3%  EUR 1,000 ->     58 (max drop 95%)
+   2 yrs :    81 trades   -2.01 pips -0.392R (t -3.26) win 24.7%  EUR 1,000 ->    519 (max drop 54%)
+   2016-21 -0.267R | 2022-26 -0.402R | random direction -0.305R
+
+fail  N3 EURUSD 10:00 data shock, momentum
+   10 yrs:   155 trades   -0.09 pips -0.023R (t -0.30) win 43.9%  EUR 1,000 ->    907 (max drop 23%)
+   2 yrs :    34 trades   -3.17 pips -0.332R (t -2.96) win 35.3%  EUR 1,000 ->    795 (max drop 22%)
+   2016-21 +0.032R | 2022-26 -0.038R | random direction -0.050R
+
+fail  N4 EURUSD FOMC statement, momentum
+   10 yrs:    80 trades   +0.33 pips -0.055R (t -0.58) win 50.0%  EUR 1,000 ->    905 (max drop 16%)
+   2 yrs :    16 trades   +3.17 pips +0.053R (t  0.32) win 56.2%  EUR 1,000 ->  1,016 (max drop 6%)
+   2016-21 -0.130R | 2022-26 -0.063R | random direction +0.027R
+
+fail  N5 EURUSD FOMC statement, faded
+   10 yrs:    80 trades   -2.26 pips -0.390R (t -2.37) win 20.0%  EUR 1,000 ->    517 (max drop 52%)
+   2 yrs :    16 trades   -4.52 pips -0.580R (t -2.28) win 12.5%  EUR 1,000 ->    827 (max drop 20%)
+   2016-21 -0.027R | 2022-26 -0.607R | random direction -0.391R
+
+fail  N1 USDJPY 08:30 data shock, momentum
+   10 yrs:   447 trades   -1.54 pips -0.112R (t -3.34) win 41.4%  EUR 1,000 ->    351 (max drop 66%)
+   2 yrs :    95 trades   -4.70 pips -0.159R (t -1.99) win 37.9%  EUR 1,000 ->    730 (max drop 31%)
+   2016-21 -0.127R | 2022-26 -0.104R | random direction -0.098R
+
+fail  N2 USDJPY 08:30 data shock, faded
+   10 yrs:   445 trades   -0.26 pips -0.141R (t -1.64) win 27.9%  EUR 1,000 ->    219 (max drop 85%)
+   2 yrs :    94 trades   +1.07 pips +0.080R (t  0.38) win 36.2%  EUR 1,000 ->  1,084 (max drop 27%)
+   2016-21 -0.329R | 2022-26 -0.014R | random direction -0.237R
+
+fail  N3 USDJPY 10:00 data shock, momentum
+   10 yrs:   216 trades   -0.28 pips +0.003R (t  0.04) win 43.1%  EUR 1,000 ->    969 (max drop 21%)
+   2 yrs :    38 trades   -1.24 pips -0.145R (t -1.18) win 47.4%  EUR 1,000 ->    892 (max drop 12%)
+   2016-21 -0.040R | 2022-26 +0.035R | random direction +0.065R
+
+fail  N4 USDJPY FOMC statement, momentum
+   10 yrs:    80 trades   +1.30 pips +0.030R (t  0.22) win 47.5%  EUR 1,000 ->  1,025 (max drop 14%)
+   2 yrs :    16 trades   -0.91 pips -0.143R (t -0.79) win 31.2%  EUR 1,000 ->    954 (max drop 10%)
+   2016-21 +0.031R | 2022-26 -0.070R | random direction -0.036R
+
+fail  N5 USDJPY FOMC statement, faded
+   10 yrs:    80 trades   -4.62 pips -0.512R (t -4.39) win 18.8%  EUR 1,000 ->    432 (max drop 57%)
+   2 yrs :    16 trades   -4.57 pips -0.745R (t -5.19) win 12.5%  EUR 1,000 ->    786 (max drop 21%)
+   2016-21 -0.198R | 2022-26 -0.746R | random direction -0.384R
+
+fail  N1 XAUUSD 08:30 data shock, momentum
+   10 yrs:   297 trades   +1.68 pips +0.016R (t  0.24) win 43.8%  EUR 1,000 ->  1,021 (max drop 36%)
+   2 yrs :    53 trades  +12.87 pips +0.279R (t  1.12) win 47.2%  EUR 1,000 ->  1,303 (max drop 11%)
+   2016-21 -0.138R | 2022-26 +0.157R | random direction -0.024R
+
+fail  N2 XAUUSD 08:30 data shock, faded
+   10 yrs:   295 trades   -2.96 pips -0.178R (t -1.60) win 26.1%  EUR 1,000 ->    288 (max drop 79%)
+   2 yrs :    52 trades   -5.54 pips -0.366R (t -2.41) win 26.9%  EUR 1,000 ->    674 (max drop 35%)
+   2016-21 +0.072R | 2022-26 -0.468R | random direction -0.244R
+
+fail  N3 XAUUSD 10:00 data shock, momentum
+   10 yrs:   103 trades  +13.91 pips +0.019R (t  0.23) win 45.6%  EUR 1,000 ->  1,025 (max drop 13%)
+   2 yrs :    14 trades  +87.43 pips +0.296R (t  0.92) win 57.1%  EUR 1,000 ->  1,082 (max drop 6%)
+   2016-21 -0.089R | 2022-26 +0.105R | random direction -0.038R
+
+fail  N4 XAUUSD FOMC statement, momentum
+   10 yrs:    80 trades   -3.57 pips -0.170R (t -1.67) win 41.2%  EUR 1,000 ->    751 (max drop 27%)
+   2 yrs :    16 trades   -6.70 pips -0.163R (t -0.71) win 37.5%  EUR 1,000 ->    947 (max drop 14%)
+   2016-21 -0.248R | 2022-26 -0.072R | random direction -0.111R
+
+fail  N5 XAUUSD FOMC statement, faded
+   10 yrs:    80 trades   -9.69 pips -0.500R (t -3.98) win 17.5%  EUR 1,000 ->    439 (max drop 57%)
+   2 yrs :    16 trades  -12.41 pips -0.390R (t -1.22) win 25.0%  EUR 1,000 ->    878 (max drop 14%)
+   2016-21 -0.419R | 2022-26 -0.626R | random direction -0.369R
+
+fail  N1 US500 08:30 data shock, momentum
+   10 yrs:   309 trades  -17.94 pips -0.200R (t -5.22) win 39.8%  EUR 1,000 ->    282 (max drop 72%)
+   2 yrs :    81 trades  -20.24 pips -0.081R (t -1.00) win 45.7%  EUR 1,000 ->    869 (max drop 20%)
+   2016-21 -0.224R | 2022-26 -0.192R | random direction -0.148R
+
+fail  N2 US500 08:30 data shock, faded
+   10 yrs:   309 trades  -15.28 pips -0.463R (t -6.73) win 21.0%  EUR 1,000 ->     52 (max drop 95%)
+   2 yrs :    81 trades   -6.85 pips -0.226R (t -1.28) win 25.9%  EUR 1,000 ->    667 (max drop 33%)
+   2016-21 -0.748R | 2022-26 -0.372R | random direction -0.501R
+
+fail  N3 US500 10:00 data shock, momentum
+   10 yrs:    67 trades  -30.78 pips -0.199R (t -2.25) win 43.3%  EUR 1,000 ->    761 (max drop 26%)
+   2 yrs :    17 trades  -13.93 pips -0.038R (t -0.20) win 58.8%  EUR 1,000 ->    985 (max drop 6%)
+   2016-21 -0.247R | 2022-26 -0.169R | random direction -0.119R
+
+fail  N4 US500 FOMC statement, momentum
+   10 yrs:    57 trades  -12.97 pips -0.144R (t -1.06) win 40.4%  EUR 1,000 ->    839 (max drop 16%)
+   2 yrs :    16 trades  -13.45 pips -0.068R (t -0.21) win 31.2%  EUR 1,000 ->    974 (max drop 12%)
+   2016-21 -0.166R | 2022-26 -0.133R | random direction -0.240R
+
+fail  N5 US500 FOMC statement, faded
+   10 yrs:    57 trades  -22.57 pips -0.435R (t -3.24) win 24.6%  EUR 1,000 ->    601 (max drop 40%)
+   2 yrs :    16 trades  -28.23 pips -0.499R (t -2.05) win 18.8%  EUR 1,000 ->    849 (max drop 15%)
+   2016-21 -0.171R | 2022-26 -0.566R | random direction -0.386R

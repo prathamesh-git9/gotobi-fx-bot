@@ -1,0 +1,25 @@
+
+fail  QW1 USDJPY month-end repatriation short, Tokyo 08:30
+   10 yrs:   119 trades   -1.01 pips -0.067R (t -1.21) win 46.2%  EUR 1,000 ->    844 (max drop 28%)
+   2 yrs :    24 trades   +2.41 pips +0.161R (t  1.15) win 70.8%  EUR 1,000 ->  1,078 (max drop 5%)
+   2016-21 -0.037R | 2022-26 -0.064R | random direction -0.078R
+
+fail  QW2 XAUUSD LBMA AM fix unwind fade
+   10 yrs:  2576 trades   -2.32 pips -0.240R (t -16.40) win 35.9%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :   516 trades   -1.74 pips -0.147R (t -3.81) win 48.4%  EUR 1,000 ->    203 (max drop 82%)
+   2016-21 -0.310R | 2022-26 -0.175R | random direction -0.276R
+
+fail  QW3 US500 Friday gamma pin back to a 100-point strike
+   10 yrs:    38 trades   -6.21 pips -0.121R (t -0.58) win 36.8%  EUR 1,000 ->    901 (max drop 15%)
+   2 yrs :    12 trades   -5.05 pips -0.077R (t -0.27) win 41.7%  EUR 1,000 ->    980 (max drop 5%)
+   2016-21 -0.375R | 2022-26 -0.004R | random direction -0.377R
+
+fail  QW4 US500 post-close MOC exhaustion fade
+   10 yrs:   159 trades  -17.11 pips -0.403R (t -6.73) win 21.4%  EUR 1,000 ->    271 (max drop 74%)
+   2 yrs :    64 trades  -18.28 pips -0.293R (t -3.03) win 29.7%  EUR 1,000 ->    681 (max drop 32%)
+   2016-21 -0.521R | 2022-26 -0.335R | random direction -0.420R
+
+fail  QW5 EURUSD 17:00 NY rollover ghost-wick fade
+   10 yrs:   693 trades   -4.59 pips -0.825R (t -69.27) win  1.9%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :    43 trades   -4.22 pips -0.874R (t -35.66) win  0.0%  EUR 1,000 ->    469 (max drop 53%)
+   2016-21 -0.769R | 2022-26 -0.870R | random direction -0.799R
