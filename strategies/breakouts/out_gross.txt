@@ -1,0 +1,88 @@
+
+===== B1 gross (no spread) =====
+
+fail  B1 USTEC opening-range breakout (Zarattini & Aziz)
+   10 yrs:  1771 trades   +4.33 pips +0.153R (t  2.65) win 24.6%  EUR 1,000 -> 32,406 (max drop 57%)
+   2 yrs :   493 trades   +3.09 pips +0.158R (t  1.47) win 27.2%  EUR 1,000 ->  2,825 (max drop 57%)
+   2016-21 +0.172R | 2022-26 +0.143R | random direction +0.037R
+
+fail  B1v USTEC ORB, 'in play' days only (ticks >= 1.5x)
+   10 yrs:   108 trades   -2.96 pips +0.208R (t  0.85) win 23.1%  EUR 1,000 ->  1,376 (max drop 35%)
+   2 yrs :    80 trades  -21.63 pips -0.148R (t -0.63) win 17.5%  EUR 1,000 ->    739 (max drop 35%)
+   2016-21 -0.462R | 2022-26 +0.269R | random direction -0.003R
+
+fail  B1f USTEC ORB, order-flow imbalance agrees (top third, >= 0.06)
+   10 yrs:   387 trades   +5.40 pips +0.204R (t  1.97) win 31.3%  EUR 1,000 ->  3,562 (max drop 30%)
+   2 yrs :     6 trades  -44.35 pips -0.517R (t -1.43) win 16.7%  EUR 1,000 ->    939 (max drop 6%)
+   2016-21 +0.172R | 2022-26 +0.238R | random direction +0.224R
+
+fail  B1 US500 opening-range breakout (Zarattini & Aziz)
+   10 yrs:  1770 trades   +4.56 pips +0.114R (t  1.83) win 19.9%  EUR 1,000 ->  6,026 (max drop 77%)
+   2 yrs :   494 trades   +4.93 pips +0.117R (t  1.03) win 21.7%  EUR 1,000 ->  1,770 (max drop 53%)
+   2016-21 +0.172R | 2022-26 +0.085R | random direction -0.005R
+
+fail  B1v US500 ORB, 'in play' days only (ticks >= 1.5x)
+   10 yrs:   152 trades  -26.85 pips -0.245R (t -1.51) win 15.8%  EUR 1,000 ->    424 (max drop 64%)
+   2 yrs :    73 trades  -56.30 pips -0.504R (t -3.32) win 15.1%  EUR 1,000 ->    466 (max drop 54%)
+   2016-21 -0.110R | 2022-26 -0.303R | random direction -0.007R
+
+fail  B1f US500 ORB, order-flow imbalance agrees (top third, >= 0.06)
+   10 yrs:   437 trades  +14.39 pips +0.321R (t  2.65) win 27.7%  EUR 1,000 ->  9,751 (max drop 25%)
+   2 yrs :     1 trades +231.55 pips +0.930R (t   nan) win 100.0%  EUR 1,000 ->  1,019 (max drop 0%)
+   2016-21 +0.379R | 2022-26 +0.273R | random direction +0.176R
+
+fail  B1 US30 opening-range breakout (Zarattini & Aziz)
+   10 yrs:  1775 trades   -3.22 pips +0.022R (t  0.40) win 23.3%  EUR 1,000 ->    381 (max drop 87%)
+   2 yrs :   496 trades   -6.27 pips -0.050R (t -0.52) win 22.8%  EUR 1,000 ->    399 (max drop 64%)
+   2016-21 +0.040R | 2022-26 +0.012R | random direction +0.016R
+
+fail  B1v US30 ORB, 'in play' days only (ticks >= 1.5x)
+   10 yrs:    81 trades  -18.32 pips -0.289R (t -1.65) win 23.5%  EUR 1,000 ->    602 (max drop 48%)
+   2 yrs :    33 trades  -16.85 pips -0.273R (t -1.08) win 24.2%  EUR 1,000 ->    824 (max drop 22%)
+   2016-21 +0.137R | 2022-26 -0.458R | random direction +0.044R
+
+fail  B1f US30 ORB, order-flow imbalance agrees (top third, >= 0.06)
+   10 yrs:   350 trades   -8.36 pips -0.038R (t -0.44) win 31.1%  EUR 1,000 ->    641 (max drop 52%)
+   2 yrs :     4 trades -110.11 pips -1.000R (t   nan) win  0.0%  EUR 1,000 ->    922 (max drop 8%)
+   2016-21 +0.049R | 2022-26 -0.153R | random direction +0.079R
+
+fail  B1 DE30 opening-range breakout (Zarattini & Aziz)
+   10 yrs:  1813 trades  +32.69 pips +0.100R (t  1.66) win 21.6%  EUR 1,000 ->  4,239 (max drop 68%)
+   2 yrs :   504 trades  +78.17 pips +0.068R (t  0.64) win 23.2%  EUR 1,000 ->  1,173 (max drop 45%)
+   2016-21 +0.109R | 2022-26 +0.095R | random direction +0.079R
+
+fail  B1v DE30 ORB, 'in play' days only (ticks >= 1.5x)
+   10 yrs:    75 trades  +86.68 pips -0.072R (t -0.31) win 22.7%  EUR 1,000 ->    849 (max drop 44%)
+   2 yrs :    41 trades +187.43 pips +0.021R (t  0.06) win 22.0%  EUR 1,000 ->    984 (max drop 28%)
+   2016-21 +0.213R | 2022-26 -0.156R | random direction -0.109R
+
+fail  B1f DE30 ORB, order-flow imbalance agrees (top third, >= 0.06)
+   10 yrs:   499 trades  +41.59 pips +0.125R (t  1.20) win 26.5%  EUR 1,000 ->  2,106 (max drop 71%)
+   2 yrs :    68 trades +303.12 pips +0.483R (t  1.58) win 35.3%  EUR 1,000 ->  1,777 (max drop 13%)
+   2016-21 +0.346R | 2022-26 -0.028R | random direction +0.236R
+
+===== B2 gross (no spread) =====
+
+B2 US500 noise-area momentum (Zarattini, Aziz & Barbon)
+   since 2019-09: 1748 days (60% traded)  daily t  2.80  Sharpe  1.06   +15.9%/yr  EUR 1,000 ->    2,778 (max drop 17%)
+   2019-21      :  569 days (54% traded)  daily t  2.38  Sharpe  1.58   +25.3%/yr  EUR 1,000 ->    1,664 (max drop 8%)
+   2022-26      : 1179 days (63% traded)  daily t  1.76  Sharpe  0.81   +11.6%/yr  EUR 1,000 ->    1,669 (max drop 17%)
+   last 2 yrs   :  494 days (62% traded)  daily t  0.04  Sharpe  0.03    -0.8%/yr  EUR 1,000 ->      984 (max drop 17%)
+
+B2 US500 benchmark: long 09:30-16:00 every day
+   since 2019-09: 1748 days (100% traded)  daily t  0.37  Sharpe  0.14    -0.1%/yr  EUR 1,000 ->      995 (max drop 39%)
+   2019-21      :  569 days (100% traded)  daily t  0.54  Sharpe  0.36    +6.3%/yr  EUR 1,000 ->    1,149 (max drop 28%)
+   2022-26      : 1179 days (100% traded)  daily t  0.08  Sharpe  0.04    -3.0%/yr  EUR 1,000 ->      866 (max drop 39%)
+   last 2 yrs   :  494 days (100% traded)  daily t -0.33  Sharpe -0.24   -10.4%/yr  EUR 1,000 ->      806 (max drop 30%)
+
+B2 USTEC noise-area momentum (Zarattini, Aziz & Barbon)
+   since 2019-09: 1751 days (59% traded)  daily t  3.09  Sharpe  1.17   +15.9%/yr  EUR 1,000 ->    2,790 (max drop 19%)
+   2019-21      :  573 days (57% traded)  daily t  1.25  Sharpe  0.83   +11.3%/yr  EUR 1,000 ->    1,276 (max drop 10%)
+   2022-26      : 1178 days (59% traded)  daily t  2.92  Sharpe  1.35   +18.2%/yr  EUR 1,000 ->    2,186 (max drop 19%)
+   last 2 yrs   :  493 days (56% traded)  daily t  0.81  Sharpe  0.58    +7.4%/yr  EUR 1,000 ->    1,150 (max drop 19%)
+
+B2 USTEC benchmark: long 09:30-16:00 every day
+   since 2019-09: 1751 days (100% traded)  daily t  0.87  Sharpe  0.33    +5.5%/yr  EUR 1,000 ->    1,451 (max drop 45%)
+   2019-21      :  573 days (100% traded)  daily t  1.20  Sharpe  0.80   +20.8%/yr  EUR 1,000 ->    1,537 (max drop 20%)
+   2022-26      : 1178 days (100% traded)  daily t  0.22  Sharpe  0.10    -1.2%/yr  EUR 1,000 ->      944 (max drop 45%)
+   last 2 yrs   :  493 days (100% traded)  daily t -0.08  Sharpe -0.05    -5.6%/yr  EUR 1,000 ->      893 (max drop 33%)

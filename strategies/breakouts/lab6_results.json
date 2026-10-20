@@ -1,0 +1,1004 @@
+{
+ "B1 USTEC opening-range breakout (Zarattini & Aziz)": {
+  "name": "B1 USTEC opening-range breakout (Zarattini & Aziz)",
+  "passes": false,
+  "ten_years": {
+   "n": 1771,
+   "pips": 0.01,
+   "R": -0.0,
+   "t": -0.01,
+   "win": 23.3,
+   "eur": 211,
+   "dd": 90.2
+  },
+  "two_years": {
+   "n": 493,
+   "pips": 0.31,
+   "R": 0.086,
+   "t": 0.84,
+   "win": 26.6,
+   "eur": 1456,
+   "dd": 58.1
+  },
+  "dev_R": -0.062,
+  "hold_R": 0.031,
+  "random_R": -0.095
+ },
+ "B1v USTEC ORB, 'in play' days only (ticks >= 1.5x)": {
+  "name": "B1v USTEC ORB, 'in play' days only (ticks >= 1.5x)",
+  "passes": false,
+  "ten_years": {
+   "n": 108,
+   "pips": -7.99,
+   "R": 0.131,
+   "t": 0.55,
+   "win": 22.2,
+   "eur": 1175,
+   "dd": 40.7
+  },
+  "two_years": {
+   "n": 80,
+   "pips": -27.36,
+   "R": -0.209,
+   "t": -0.91,
+   "win": 16.2,
+   "eur": 672,
+   "dd": 40.7
+  },
+  "dev_R": -0.484,
+  "hold_R": 0.186,
+  "random_R": -0.088
+ },
+ "B1f USTEC ORB, order-flow imbalance agrees (top third, >= 0.06)": {
+  "name": "B1f USTEC ORB, order-flow imbalance agrees (top third, >= 0.06)",
+  "passes": false,
+  "ten_years": {
+   "n": 387,
+   "pips": 0.34,
+   "R": 0.074,
+   "t": 0.78,
+   "win": 29.5,
+   "eur": 1371,
+   "dd": 32.0
+  },
+  "two_years": {
+   "n": 6,
+   "pips": -45.88,
+   "R": -0.523,
+   "t": -1.47,
+   "win": 16.7,
+   "eur": 938,
+   "dd": 6.5
+  },
+  "dev_R": 0.04,
+  "hold_R": 0.11,
+  "random_R": 0.079
+ },
+ "B1 US500 opening-range breakout (Zarattini & Aziz)": {
+  "name": "B1 US500 opening-range breakout (Zarattini & Aziz)",
+  "passes": false,
+  "ten_years": {
+   "n": 1770,
+   "pips": -10.63,
+   "R": -0.156,
+   "t": -3.05,
+   "win": 17.6,
+   "eur": 1,
+   "dd": 99.9
+  },
+  "two_years": {
+   "n": 494,
+   "pips": -5.14,
+   "R": -0.031,
+   "t": -0.3,
+   "win": 20.6,
+   "eur": 459,
+   "dd": 71.2
+  },
+  "dev_R": -0.208,
+  "hold_R": -0.129,
+  "random_R": -0.235
+ },
+ "B1v US500 ORB, 'in play' days only (ticks >= 1.5x)": {
+  "name": "B1v US500 ORB, 'in play' days only (ticks >= 1.5x)",
+  "passes": false,
+  "ten_years": {
+   "n": 152,
+   "pips": -40.85,
+   "R": -0.401,
+   "t": -2.97,
+   "win": 14.5,
+   "eur": 272,
+   "dd": 72.8
+  },
+  "two_years": {
+   "n": 73,
+   "pips": -59.84,
+   "R": -0.519,
+   "t": -3.53,
+   "win": 15.1,
+   "eur": 457,
+   "dd": 55.2
+  },
+  "dev_R": -0.333,
+  "hold_R": -0.43,
+  "random_R": -0.134
+ },
+ "B1f US500 ORB, order-flow imbalance agrees (top third, >= 0.06)": {
+  "name": "B1f US500 ORB, order-flow imbalance agrees (top third, >= 0.06)",
+  "passes": false,
+  "ten_years": {
+   "n": 437,
+   "pips": -4.51,
+   "R": -0.005,
+   "t": -0.05,
+   "win": 24.5,
+   "eur": 684,
+   "dd": 43.2
+  },
+  "two_years": {
+   "n": 1,
+   "pips": 214.1,
+   "R": 0.83,
+   "t": NaN,
+   "win": 100.0,
+   "eur": 1017,
+   "dd": 0.0
+  },
+  "dev_R": -0.06,
+  "hold_R": 0.04,
+  "random_R": -0.124
+ },
+ "B1 US30 opening-range breakout (Zarattini & Aziz)": {
+  "name": "B1 US30 opening-range breakout (Zarattini & Aziz)",
+  "passes": false,
+  "ten_years": {
+   "n": 1775,
+   "pips": -9.35,
+   "R": -0.104,
+   "t": -2.1,
+   "win": 21.7,
+   "eur": 6,
+   "dd": 99.5
+  },
+  "two_years": {
+   "n": 496,
+   "pips": -7.44,
+   "R": -0.062,
+   "t": -0.65,
+   "win": 22.8,
+   "eur": 357,
+   "dd": 66.7
+  },
+  "dev_R": -0.121,
+  "hold_R": -0.096,
+  "random_R": -0.104
+ },
+ "B1v US30 ORB, 'in play' days only (ticks >= 1.5x)": {
+  "name": "B1v US30 ORB, 'in play' days only (ticks >= 1.5x)",
+  "passes": false,
+  "ten_years": {
+   "n": 81,
+   "pips": -22.03,
+   "R": -0.313,
+   "t": -1.86,
+   "win": 21.0,
+   "eur": 580,
+   "dd": 48.4
+  },
+  "two_years": {
+   "n": 33,
+   "pips": -18.34,
+   "R": -0.282,
+   "t": -1.13,
+   "win": 24.2,
+   "eur": 819,
+   "dd": 22.7
+  },
+  "dev_R": 0.081,
+  "hold_R": -0.469,
+  "random_R": 0.016
+ },
+ "B1f US30 ORB, order-flow imbalance agrees (top third, >= 0.06)": {
+  "name": "B1f US30 ORB, order-flow imbalance agrees (top third, >= 0.06)",
+  "passes": false,
+  "ten_years": {
+   "n": 350,
+   "pips": -16.0,
+   "R": -0.144,
+   "t": -1.81,
+   "win": 28.9,
+   "eur": 313,
+   "dd": 71.0
+  },
+  "two_years": {
+   "n": 4,
+   "pips": -111.78,
+   "R": -1.0,
+   "t": NaN,
+   "win": 0.0,
+   "eur": 922,
+   "dd": 7.8
+  },
+  "dev_R": -0.102,
+  "hold_R": -0.199,
+  "random_R": -0.055
+ },
+ "B1 DE30 opening-range breakout (Zarattini & Aziz)": {
+  "name": "B1 DE30 opening-range breakout (Zarattini & Aziz)",
+  "passes": false,
+  "ten_years": {
+   "n": 1813,
+   "pips": -29.2,
+   "R": -0.176,
+   "t": -3.6,
+   "win": 18.6,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 504,
+   "pips": 23.92,
+   "R": -0.099,
+   "t": -1.06,
+   "win": 21.0,
+   "eur": 245,
+   "dd": 75.9
+  },
+  "dev_R": -0.16,
+  "hold_R": -0.184,
+  "random_R": -0.219
+ },
+ "B1v DE30 ORB, 'in play' days only (ticks >= 1.5x)": {
+  "name": "B1v DE30 ORB, 'in play' days only (ticks >= 1.5x)",
+  "passes": false,
+  "ten_years": {
+   "n": 75,
+   "pips": 55.11,
+   "R": -0.118,
+   "t": -0.54,
+   "win": 22.7,
+   "eur": 796,
+   "dd": 45.1
+  },
+  "two_years": {
+   "n": 41,
+   "pips": 165.48,
+   "R": -0.0,
+   "t": -0.0,
+   "win": 22.0,
+   "eur": 968,
+   "dd": 28.4
+  },
+  "dev_R": 0.092,
+  "hold_R": -0.18,
+  "random_R": -0.15
+ },
+ "B1f DE30 ORB, order-flow imbalance agrees (top third, >= 0.06)": {
+  "name": "B1f DE30 ORB, order-flow imbalance agrees (top third, >= 0.06)",
+  "passes": false,
+  "ten_years": {
+   "n": 499,
+   "pips": -30.31,
+   "R": -0.08,
+   "t": -0.87,
+   "win": 23.4,
+   "eur": 303,
+   "dd": 85.2
+  },
+  "two_years": {
+   "n": 68,
+   "pips": 212.28,
+   "R": 0.219,
+   "t": 0.78,
+   "win": 32.4,
+   "eur": 1261,
+   "dd": 23.4
+  },
+  "dev_R": 0.091,
+  "hold_R": -0.199,
+  "random_R": 0.018
+ },
+ "B4 EURUSD cross of a round level -> follow 30 min": {
+  "name": "B4 EURUSD cross of a round level -> follow 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 6072,
+   "pips": -1.19,
+   "R": -0.119,
+   "t": -9.57,
+   "win": 38.1,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1148,
+   "pips": -0.95,
+   "R": -0.095,
+   "t": -3.3,
+   "win": 38.2,
+   "eur": 91,
+   "dd": 90.9
+  },
+  "dev_R": -0.155,
+  "hold_R": -0.092,
+  "random_R": -0.118
+ },
+ "B4r EURUSD near-touch of a round level -> fade 30 min": {
+  "name": "B4r EURUSD near-touch of a round level -> fade 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 6432,
+   "pips": -1.13,
+   "R": -0.113,
+   "t": -9.86,
+   "win": 40.8,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1202,
+   "pips": -1.04,
+   "R": -0.104,
+   "t": -4.03,
+   "win": 40.7,
+   "eur": 68,
+   "dd": 94.5
+  },
+  "dev_R": -0.124,
+  "hold_R": -0.115,
+  "random_R": -0.102
+ },
+ "B4 EURUSD cross of a placebo +23 level -> follow 30 min": {
+  "name": "B4 EURUSD cross of a placebo +23 level -> follow 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 6244,
+   "pips": -1.27,
+   "R": -0.127,
+   "t": -10.28,
+   "win": 37.5,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1183,
+   "pips": -1.21,
+   "R": -0.121,
+   "t": -4.25,
+   "win": 37.8,
+   "eur": 45,
+   "dd": 95.9
+  },
+  "dev_R": -0.138,
+  "hold_R": -0.119,
+  "random_R": -0.117
+ },
+ "B4r EURUSD near-touch of a placebo +23 level -> fade 30 min": {
+  "name": "B4r EURUSD near-touch of a placebo +23 level -> fade 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 6523,
+   "pips": -0.87,
+   "R": -0.087,
+   "t": -7.79,
+   "win": 42.2,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1245,
+   "pips": -0.45,
+   "R": -0.045,
+   "t": -1.72,
+   "win": 42.6,
+   "eur": 261,
+   "dd": 82.4
+  },
+  "dev_R": -0.092,
+  "hold_R": -0.07,
+  "random_R": -0.112
+ },
+ "B4 EURUSD cross of a placebo +37 level -> follow 30 min": {
+  "name": "B4 EURUSD cross of a placebo +37 level -> follow 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 6370,
+   "pips": -1.76,
+   "R": -0.176,
+   "t": -15.47,
+   "win": 35.6,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1193,
+   "pips": -1.63,
+   "R": -0.163,
+   "t": -6.18,
+   "win": 36.4,
+   "eur": 17,
+   "dd": 98.4
+  },
+  "dev_R": -0.173,
+  "hold_R": -0.173,
+  "random_R": -0.139
+ },
+ "B4r EURUSD near-touch of a placebo +37 level -> fade 30 min": {
+  "name": "B4r EURUSD near-touch of a placebo +37 level -> fade 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 6646,
+   "pips": -0.75,
+   "R": -0.075,
+   "t": -6.63,
+   "win": 42.2,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1277,
+   "pips": -0.65,
+   "R": -0.065,
+   "t": -2.64,
+   "win": 43.8,
+   "eur": 156,
+   "dd": 86.2
+  },
+  "dev_R": -0.072,
+  "hold_R": -0.069,
+  "random_R": -0.101
+ },
+ "B4 GBPUSD cross of a round level -> follow 30 min": {
+  "name": "B4 GBPUSD cross of a round level -> follow 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 8196,
+   "pips": -1.31,
+   "R": -0.131,
+   "t": -9.83,
+   "win": 35.5,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1388,
+   "pips": -0.62,
+   "R": -0.062,
+   "t": -2.18,
+   "win": 41.9,
+   "eur": 132,
+   "dd": 87.0
+  },
+  "dev_R": -0.171,
+  "hold_R": -0.089,
+  "random_R": -0.131
+ },
+ "B4r GBPUSD near-touch of a round level -> fade 30 min": {
+  "name": "B4r GBPUSD near-touch of a round level -> fade 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 8689,
+   "pips": -1.1,
+   "R": -0.11,
+   "t": -8.98,
+   "win": 38.7,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1515,
+   "pips": -0.82,
+   "R": -0.082,
+   "t": -3.06,
+   "win": 42.0,
+   "eur": 60,
+   "dd": 95.1
+  },
+  "dev_R": -0.129,
+  "hold_R": -0.107,
+  "random_R": -0.134
+ },
+ "B4 GBPUSD cross of a placebo +23 level -> follow 30 min": {
+  "name": "B4 GBPUSD cross of a placebo +23 level -> follow 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 8543,
+   "pips": -1.96,
+   "R": -0.196,
+   "t": -15.62,
+   "win": 33.2,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1413,
+   "pips": -1.42,
+   "R": -0.142,
+   "t": -5.01,
+   "win": 37.2,
+   "eur": 13,
+   "dd": 98.7
+  },
+  "dev_R": -0.221,
+  "hold_R": -0.171,
+  "random_R": -0.156
+ },
+ "B4r GBPUSD near-touch of a placebo +23 level -> fade 30 min": {
+  "name": "B4r GBPUSD near-touch of a placebo +23 level -> fade 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 8856,
+   "pips": -1.19,
+   "R": -0.119,
+   "t": -10.44,
+   "win": 38.9,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1488,
+   "pips": -0.93,
+   "R": -0.093,
+   "t": -3.6,
+   "win": 42.3,
+   "eur": 47,
+   "dd": 96.7
+  },
+  "dev_R": -0.143,
+  "hold_R": -0.102,
+  "random_R": -0.148
+ },
+ "B4 GBPUSD cross of a placebo +37 level -> follow 30 min": {
+  "name": "B4 GBPUSD cross of a placebo +37 level -> follow 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 8651,
+   "pips": -1.58,
+   "R": -0.158,
+   "t": -12.35,
+   "win": 34.4,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1490,
+   "pips": -1.17,
+   "R": -0.117,
+   "t": -4.44,
+   "win": 38.5,
+   "eur": 23,
+   "dd": 97.8
+  },
+  "dev_R": -0.211,
+  "hold_R": -0.115,
+  "random_R": -0.146
+ },
+ "B4r GBPUSD near-touch of a placebo +37 level -> fade 30 min": {
+  "name": "B4r GBPUSD near-touch of a placebo +37 level -> fade 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 8927,
+   "pips": -1.25,
+   "R": -0.125,
+   "t": -10.73,
+   "win": 38.0,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1512,
+   "pips": -1.0,
+   "R": -0.1,
+   "t": -4.05,
+   "win": 39.8,
+   "eur": 37,
+   "dd": 97.0
+  },
+  "dev_R": -0.164,
+  "hold_R": -0.097,
+  "random_R": -0.118
+ },
+ "B4 USDJPY cross of a round level -> follow 30 min": {
+  "name": "B4 USDJPY cross of a round level -> follow 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 6816,
+   "pips": -0.68,
+   "R": -0.068,
+   "t": -4.1,
+   "win": 36.8,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1662,
+   "pips": -0.48,
+   "R": -0.048,
+   "t": -1.24,
+   "win": 37.5,
+   "eur": 96,
+   "dd": 92.0
+  },
+  "dev_R": -0.113,
+  "hold_R": -0.049,
+  "random_R": -0.12
+ },
+ "B4r USDJPY near-touch of a round level -> fade 30 min": {
+  "name": "B4r USDJPY near-touch of a round level -> fade 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 7247,
+   "pips": -1.27,
+   "R": -0.127,
+   "t": -9.47,
+   "win": 38.2,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1767,
+   "pips": -0.56,
+   "R": -0.056,
+   "t": -1.81,
+   "win": 39.5,
+   "eur": 78,
+   "dd": 93.0
+  },
+  "dev_R": -0.143,
+  "hold_R": -0.119,
+  "random_R": -0.114
+ },
+ "B4 USDJPY cross of a placebo +23 level -> follow 30 min": {
+  "name": "B4 USDJPY cross of a placebo +23 level -> follow 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 7145,
+   "pips": -1.45,
+   "R": -0.145,
+   "t": -10.34,
+   "win": 34.1,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1763,
+   "pips": -1.24,
+   "R": -0.124,
+   "t": -4.02,
+   "win": 35.3,
+   "eur": 7,
+   "dd": 99.3
+  },
+  "dev_R": -0.147,
+  "hold_R": -0.147,
+  "random_R": -0.126
+ },
+ "B4r USDJPY near-touch of a placebo +23 level -> fade 30 min": {
+  "name": "B4r USDJPY near-touch of a placebo +23 level -> fade 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 7444,
+   "pips": -0.76,
+   "R": -0.076,
+   "t": -5.76,
+   "win": 39.7,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1818,
+   "pips": -0.13,
+   "R": -0.013,
+   "t": -0.43,
+   "win": 40.8,
+   "eur": 352,
+   "dd": 88.0
+  },
+  "dev_R": -0.111,
+  "hold_R": -0.053,
+  "random_R": -0.117
+ },
+ "B4 USDJPY cross of a placebo +37 level -> follow 30 min": {
+  "name": "B4 USDJPY cross of a placebo +37 level -> follow 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 7163,
+   "pips": -1.44,
+   "R": -0.144,
+   "t": -9.55,
+   "win": 33.8,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1751,
+   "pips": -1.05,
+   "R": -0.105,
+   "t": -2.93,
+   "win": 34.6,
+   "eur": 12,
+   "dd": 99.2
+  },
+  "dev_R": -0.177,
+  "hold_R": -0.127,
+  "random_R": -0.102
+ },
+ "B4r USDJPY near-touch of a placebo +37 level -> fade 30 min": {
+  "name": "B4r USDJPY near-touch of a placebo +37 level -> fade 30 min",
+  "passes": false,
+  "ten_years": {
+   "n": 7396,
+   "pips": -1.08,
+   "R": -0.108,
+   "t": -8.73,
+   "win": 38.5,
+   "eur": 0,
+   "dd": 100.0
+  },
+  "two_years": {
+   "n": 1814,
+   "pips": -1.01,
+   "R": -0.101,
+   "t": -3.74,
+   "win": 37.4,
+   "eur": 16,
+   "dd": 98.7
+  },
+  "dev_R": -0.111,
+  "hold_R": -0.112,
+  "random_R": -0.105
+ },
+ "B5 USTEC prior-session high/low breakout, follow it (2R)": {
+  "name": "B5 USTEC prior-session high/low breakout, follow it (2R)",
+  "passes": false,
+  "ten_years": {
+   "n": 633,
+   "pips": 1.88,
+   "R": 0.03,
+   "t": 0.56,
+   "win": 38.5,
+   "eur": 1167,
+   "dd": 44.0
+  },
+  "two_years": {
+   "n": 168,
+   "pips": 15.54,
+   "R": 0.201,
+   "t": 1.91,
+   "win": 45.8,
+   "eur": 1847,
+   "dd": 18.7
+  },
+  "dev_R": -0.046,
+  "hold_R": 0.065,
+  "random_R": -0.063
+ },
+ "B5 US500 prior-session high/low breakout, follow it (2R)": {
+  "name": "B5 US500 prior-session high/low breakout, follow it (2R)",
+  "passes": false,
+  "ten_years": {
+   "n": 606,
+   "pips": -7.05,
+   "R": -0.047,
+   "t": -0.9,
+   "win": 36.3,
+   "eur": 464,
+   "dd": 74.1
+  },
+  "two_years": {
+   "n": 186,
+   "pips": 20.31,
+   "R": 0.133,
+   "t": 1.39,
+   "win": 44.6,
+   "eur": 1538,
+   "dd": 18.4
+  },
+  "dev_R": -0.148,
+  "hold_R": -0.004,
+  "random_R": -0.155
+ },
+ "B5 DE30 prior-session high/low breakout, follow it (2R)": {
+  "name": "B5 DE30 prior-session high/low breakout, follow it (2R)",
+  "passes": false,
+  "ten_years": {
+   "n": 574,
+   "pips": -36.64,
+   "R": -0.064,
+   "t": -1.18,
+   "win": 34.7,
+   "eur": 397,
+   "dd": 70.2
+  },
+  "two_years": {
+   "n": 175,
+   "pips": -18.21,
+   "R": -0.017,
+   "t": -0.17,
+   "win": 36.0,
+   "eur": 887,
+   "dd": 36.9
+  },
+  "dev_R": -0.152,
+  "hold_R": -0.025,
+  "random_R": -0.139
+ },
+ "B5 XAUUSD prior-session high/low breakout, follow it (2R)": {
+  "name": "B5 XAUUSD prior-session high/low breakout, follow it (2R)",
+  "passes": false,
+  "ten_years": {
+   "n": 1136,
+   "pips": -3.32,
+   "R": -0.075,
+   "t": -1.95,
+   "win": 33.9,
+   "eur": 125,
+   "dd": 89.2
+  },
+  "two_years": {
+   "n": 199,
+   "pips": 1.33,
+   "R": 0.021,
+   "t": 0.23,
+   "win": 38.7,
+   "eur": 1018,
+   "dd": 26.1
+  },
+  "dev_R": -0.116,
+  "hold_R": -0.058,
+  "random_R": -0.085
+ },
+ "B2 US500 noise-area momentum (Zarattini, Aziz & Barbon)": {
+  "since 2019-09": {
+   "days": 1748,
+   "traded": 0.6,
+   "t": -0.06,
+   "sharpe": -0.02,
+   "cagr": -1.4,
+   "eur": 904,
+   "dd": 26.1
+  },
+  "2019-21": {
+   "days": 569,
+   "traded": 0.54,
+   "t": 0.24,
+   "sharpe": 0.16,
+   "cagr": 1.3,
+   "eur": 1031,
+   "dd": 13.5
+  },
+  "2022-26": {
+   "days": 1179,
+   "traded": 0.63,
+   "t": -0.25,
+   "sharpe": -0.11,
+   "cagr": -2.8,
+   "eur": 877,
+   "dd": 26.1
+  },
+  "last 2 yrs": {
+   "days": 494,
+   "traded": 0.62,
+   "t": -0.49,
+   "sharpe": -0.35,
+   "cagr": -6.5,
+   "eur": 876,
+   "dd": 23.3
+  }
+ },
+ "B2 US500 benchmark: long 09:30-16:00 every day": {
+  "since 2019-09": {
+   "days": 1748,
+   "traded": 1.0,
+   "t": -1.29,
+   "sharpe": -0.49,
+   "cagr": -16.5,
+   "eur": 287,
+   "dd": 73.6
+  },
+  "2019-21": {
+   "days": 569,
+   "traded": 1.0,
+   "t": -0.81,
+   "sharpe": -0.54,
+   "cagr": -17.6,
+   "eur": 646,
+   "dd": 41.0
+  },
+  "2022-26": {
+   "days": 1179,
+   "traded": 1.0,
+   "t": -1.01,
+   "sharpe": -0.47,
+   "cagr": -15.9,
+   "eur": 444,
+   "dd": 58.4
+  },
+  "last 2 yrs": {
+   "days": 494,
+   "traded": 1.0,
+   "t": -0.64,
+   "sharpe": -0.46,
+   "cagr": -15.8,
+   "eur": 713,
+   "dd": 35.2
+  }
+ },
+ "B2 USTEC noise-area momentum (Zarattini, Aziz & Barbon)": {
+  "since 2019-09": {
+   "days": 1751,
+   "traded": 0.59,
+   "t": 0.87,
+   "sharpe": 0.33,
+   "cagr": 3.6,
+   "eur": 1280,
+   "dd": 21.5
+  },
+  "2019-21": {
+   "days": 573,
+   "traded": 0.57,
+   "t": -0.57,
+   "sharpe": -0.38,
+   "cagr": -6.2,
+   "eur": 864,
+   "dd": 18.7
+  },
+  "2022-26": {
+   "days": 1178,
+   "traded": 0.59,
+   "t": 1.53,
+   "sharpe": 0.71,
+   "cagr": 8.8,
+   "eur": 1481,
+   "dd": 21.5
+  },
+  "last 2 yrs": {
+   "days": 493,
+   "traded": 0.56,
+   "t": 0.48,
+   "sharpe": 0.34,
+   "cagr": 3.9,
+   "eur": 1078,
+   "dd": 21.5
+  }
+ },
+ "B2 USTEC benchmark: long 09:30-16:00 every day": {
+  "since 2019-09": {
+   "days": 1751,
+   "traded": 1.0,
+   "t": -0.25,
+   "sharpe": -0.09,
+   "cagr": -6.6,
+   "eur": 620,
+   "dd": 57.0
+  },
+  "2019-21": {
+   "days": 573,
+   "traded": 1.0,
+   "t": 0.22,
+   "sharpe": 0.15,
+   "cagr": 0.0,
+   "eur": 1001,
+   "dd": 25.9
+  },
+  "2022-26": {
+   "days": 1178,
+   "traded": 1.0,
+   "t": -0.46,
+   "sharpe": -0.21,
+   "cagr": -9.7,
+   "eur": 620,
+   "dd": 52.5
+  },
+  "last 2 yrs": {
+   "days": 493,
+   "traded": 1.0,
+   "t": -0.25,
+   "sharpe": -0.18,
+   "cagr": -9.0,
+   "eur": 831,
+   "dd": 35.8
+  }
+ }
+}

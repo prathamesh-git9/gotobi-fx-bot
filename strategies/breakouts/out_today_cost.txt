@@ -1,0 +1,26 @@
+
+===== B2 at today's spread =====
+
+B2 US500 noise-area momentum (Zarattini, Aziz & Barbon)
+   since 2019-09: 1748 days (60% traded)  daily t  1.85  Sharpe  0.70    +9.9%/yr  EUR 1,000 ->    1,919 (max drop 24%)
+   2019-21      :  569 days (54% traded)  daily t  1.88  Sharpe  1.25   +19.3%/yr  EUR 1,000 ->    1,489 (max drop 8%)
+   2022-26      : 1179 days (63% traded)  daily t  0.95  Sharpe  0.44    +5.6%/yr  EUR 1,000 ->    1,289 (max drop 24%)
+   last 2 yrs   :  494 days (62% traded)  daily t -0.50  Sharpe -0.35    -6.7%/yr  EUR 1,000 ->      874 (max drop 24%)
+
+B2 US500 benchmark: long 09:30-16:00 every day
+   since 2019-09: 1748 days (100% traded)  daily t -0.17  Sharpe -0.06    -5.7%/yr  EUR 1,000 ->      664 (max drop 45%)
+   2019-21      :  569 days (100% traded)  daily t  0.22  Sharpe  0.15    +0.1%/yr  EUR 1,000 ->    1,003 (max drop 29%)
+   2022-26      : 1179 days (100% traded)  daily t -0.36  Sharpe -0.17    -8.4%/yr  EUR 1,000 ->      662 (max drop 45%)
+   last 2 yrs   :  494 days (100% traded)  daily t -0.64  Sharpe -0.46   -15.9%/yr  EUR 1,000 ->      713 (max drop 36%)
+
+B2 USTEC noise-area momentum (Zarattini, Aziz & Barbon)
+   since 2019-09: 1751 days (59% traded)  daily t  2.40  Sharpe  0.91   +11.9%/yr  EUR 1,000 ->    2,190 (max drop 22%)
+   2019-21      :  573 days (57% traded)  daily t  0.85  Sharpe  0.57    +7.3%/yr  EUR 1,000 ->    1,173 (max drop 11%)
+   2022-26      : 1178 days (59% traded)  daily t  2.36  Sharpe  1.09   +14.3%/yr  EUR 1,000 ->    1,867 (max drop 22%)
+   last 2 yrs   :  493 days (56% traded)  daily t  0.44  Sharpe  0.31    +3.5%/yr  EUR 1,000 ->    1,070 (max drop 22%)
+
+B2 USTEC benchmark: long 09:30-16:00 every day
+   since 2019-09: 1751 days (100% traded)  daily t  0.52  Sharpe  0.20    +1.5%/yr  EUR 1,000 ->    1,110 (max drop 49%)
+   2019-21      :  573 days (100% traded)  daily t  0.98  Sharpe  0.65   +15.9%/yr  EUR 1,000 ->    1,398 (max drop 21%)
+   2022-26      : 1178 days (100% traded)  daily t -0.06  Sharpe -0.03    -4.8%/yr  EUR 1,000 ->      794 (max drop 49%)
+   last 2 yrs   :  493 days (100% traded)  daily t -0.27  Sharpe -0.19    -9.4%/yr  EUR 1,000 ->      824 (max drop 36%)

@@ -1,0 +1,60 @@
+
+fail  B1 USTEC opening-range breakout (Zarattini & Aziz)
+   10 yrs:  1771 trades   +0.01 pips -0.000R (t -0.01) win 23.3%  EUR 1,000 ->    211 (max drop 90%)
+   2 yrs :   493 trades   +0.31 pips +0.086R (t  0.84) win 26.6%  EUR 1,000 ->  1,456 (max drop 58%)
+   2016-21 -0.062R | 2022-26 +0.031R | random direction -0.095R
+
+fail  B1v USTEC ORB, 'in play' days only (ticks >= 1.5x)
+   10 yrs:   108 trades   -7.99 pips +0.131R (t  0.55) win 22.2%  EUR 1,000 ->  1,175 (max drop 41%)
+   2 yrs :    80 trades  -27.36 pips -0.209R (t -0.91) win 16.2%  EUR 1,000 ->    672 (max drop 41%)
+   2016-21 -0.484R | 2022-26 +0.186R | random direction -0.088R
+
+fail  B1f USTEC ORB, order-flow imbalance agrees (top third, >= 0.06)
+   10 yrs:   387 trades   +0.34 pips +0.074R (t  0.78) win 29.5%  EUR 1,000 ->  1,371 (max drop 32%)
+   2 yrs :     6 trades  -45.88 pips -0.523R (t -1.47) win 16.7%  EUR 1,000 ->    938 (max drop 6%)
+   2016-21 +0.040R | 2022-26 +0.110R | random direction +0.079R
+
+fail  B1 US500 opening-range breakout (Zarattini & Aziz)
+   10 yrs:  1770 trades  -10.63 pips -0.156R (t -3.05) win 17.6%  EUR 1,000 ->      1 (max drop 100%)
+   2 yrs :   494 trades   -5.14 pips -0.031R (t -0.30) win 20.6%  EUR 1,000 ->    459 (max drop 71%)
+   2016-21 -0.208R | 2022-26 -0.129R | random direction -0.235R
+
+fail  B1v US500 ORB, 'in play' days only (ticks >= 1.5x)
+   10 yrs:   152 trades  -40.85 pips -0.401R (t -2.97) win 14.5%  EUR 1,000 ->    272 (max drop 73%)
+   2 yrs :    73 trades  -59.84 pips -0.519R (t -3.53) win 15.1%  EUR 1,000 ->    457 (max drop 55%)
+   2016-21 -0.333R | 2022-26 -0.430R | random direction -0.134R
+
+fail  B1f US500 ORB, order-flow imbalance agrees (top third, >= 0.06)
+   10 yrs:   437 trades   -4.51 pips -0.005R (t -0.05) win 24.5%  EUR 1,000 ->    684 (max drop 43%)
+   2 yrs :     1 trades +214.10 pips +0.830R (t   nan) win 100.0%  EUR 1,000 ->  1,017 (max drop 0%)
+   2016-21 -0.060R | 2022-26 +0.040R | random direction -0.124R
+
+fail  B1 US30 opening-range breakout (Zarattini & Aziz)
+   10 yrs:  1775 trades   -9.35 pips -0.104R (t -2.10) win 21.7%  EUR 1,000 ->      6 (max drop 100%)
+   2 yrs :   496 trades   -7.44 pips -0.062R (t -0.65) win 22.8%  EUR 1,000 ->    357 (max drop 67%)
+   2016-21 -0.121R | 2022-26 -0.096R | random direction -0.104R
+
+fail  B1v US30 ORB, 'in play' days only (ticks >= 1.5x)
+   10 yrs:    81 trades  -22.03 pips -0.313R (t -1.86) win 21.0%  EUR 1,000 ->    580 (max drop 48%)
+   2 yrs :    33 trades  -18.34 pips -0.282R (t -1.13) win 24.2%  EUR 1,000 ->    819 (max drop 23%)
+   2016-21 +0.081R | 2022-26 -0.469R | random direction +0.016R
+
+fail  B1f US30 ORB, order-flow imbalance agrees (top third, >= 0.06)
+   10 yrs:   350 trades  -16.00 pips -0.144R (t -1.81) win 28.9%  EUR 1,000 ->    313 (max drop 71%)
+   2 yrs :     4 trades -111.78 pips -1.000R (t   nan) win  0.0%  EUR 1,000 ->    922 (max drop 8%)
+   2016-21 -0.102R | 2022-26 -0.199R | random direction -0.055R
+
+fail  B1 DE30 opening-range breakout (Zarattini & Aziz)
+   10 yrs:  1813 trades  -29.20 pips -0.176R (t -3.60) win 18.6%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :   504 trades  +23.92 pips -0.099R (t -1.06) win 21.0%  EUR 1,000 ->    245 (max drop 76%)
+   2016-21 -0.160R | 2022-26 -0.184R | random direction -0.219R
+
+fail  B1v DE30 ORB, 'in play' days only (ticks >= 1.5x)
+   10 yrs:    75 trades  +55.11 pips -0.118R (t -0.54) win 22.7%  EUR 1,000 ->    796 (max drop 45%)
+   2 yrs :    41 trades +165.48 pips -0.000R (t -0.00) win 22.0%  EUR 1,000 ->    968 (max drop 28%)
+   2016-21 +0.092R | 2022-26 -0.180R | random direction -0.150R
+
+fail  B1f DE30 ORB, order-flow imbalance agrees (top third, >= 0.06)
+   10 yrs:   499 trades  -30.31 pips -0.080R (t -0.87) win 23.4%  EUR 1,000 ->    303 (max drop 85%)
+   2 yrs :    68 trades +212.28 pips +0.219R (t  0.78) win 32.4%  EUR 1,000 ->  1,261 (max drop 23%)
+   2016-21 +0.091R | 2022-26 -0.199R | random direction +0.018R

@@ -1,0 +1,134 @@
+
+fail  B4 EURUSD cross of a round level -> follow 30 min
+   10 yrs:  6072 trades   -1.19 pips -0.119R (t -9.57) win 38.1%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1148 trades   -0.95 pips -0.095R (t -3.30) win 38.2%  EUR 1,000 ->     91 (max drop 91%)
+   2016-21 -0.155R | 2022-26 -0.092R | random direction -0.118R
+
+fail  B4r EURUSD near-touch of a round level -> fade 30 min
+   10 yrs:  6432 trades   -1.13 pips -0.113R (t -9.86) win 40.8%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1202 trades   -1.04 pips -0.104R (t -4.03) win 40.7%  EUR 1,000 ->     68 (max drop 94%)
+   2016-21 -0.124R | 2022-26 -0.115R | random direction -0.102R
+
+fail  B4 EURUSD cross of a placebo +23 level -> follow 30 min
+   10 yrs:  6244 trades   -1.27 pips -0.127R (t -10.28) win 37.5%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1183 trades   -1.21 pips -0.121R (t -4.25) win 37.8%  EUR 1,000 ->     45 (max drop 96%)
+   2016-21 -0.138R | 2022-26 -0.119R | random direction -0.117R
+
+fail  B4r EURUSD near-touch of a placebo +23 level -> fade 30 min
+   10 yrs:  6523 trades   -0.87 pips -0.087R (t -7.79) win 42.2%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1245 trades   -0.45 pips -0.045R (t -1.72) win 42.6%  EUR 1,000 ->    261 (max drop 82%)
+   2016-21 -0.092R | 2022-26 -0.070R | random direction -0.112R
+
+fail  B4 EURUSD cross of a placebo +37 level -> follow 30 min
+   10 yrs:  6370 trades   -1.76 pips -0.176R (t -15.47) win 35.6%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1193 trades   -1.63 pips -0.163R (t -6.18) win 36.4%  EUR 1,000 ->     17 (max drop 98%)
+   2016-21 -0.173R | 2022-26 -0.173R | random direction -0.139R
+
+fail  B4r EURUSD near-touch of a placebo +37 level -> fade 30 min
+   10 yrs:  6646 trades   -0.75 pips -0.075R (t -6.63) win 42.2%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1277 trades   -0.65 pips -0.065R (t -2.64) win 43.8%  EUR 1,000 ->    156 (max drop 86%)
+   2016-21 -0.072R | 2022-26 -0.069R | random direction -0.101R
+
+fail  B4 GBPUSD cross of a round level -> follow 30 min
+   10 yrs:  8196 trades   -1.31 pips -0.131R (t -9.83) win 35.5%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1388 trades   -0.62 pips -0.062R (t -2.18) win 41.9%  EUR 1,000 ->    132 (max drop 87%)
+   2016-21 -0.171R | 2022-26 -0.089R | random direction -0.131R
+
+fail  B4r GBPUSD near-touch of a round level -> fade 30 min
+   10 yrs:  8689 trades   -1.10 pips -0.110R (t -8.98) win 38.7%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1515 trades   -0.82 pips -0.082R (t -3.06) win 42.0%  EUR 1,000 ->     60 (max drop 95%)
+   2016-21 -0.129R | 2022-26 -0.107R | random direction -0.134R
+
+fail  B4 GBPUSD cross of a placebo +23 level -> follow 30 min
+   10 yrs:  8543 trades   -1.96 pips -0.196R (t -15.62) win 33.2%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1413 trades   -1.42 pips -0.142R (t -5.01) win 37.2%  EUR 1,000 ->     13 (max drop 99%)
+   2016-21 -0.221R | 2022-26 -0.171R | random direction -0.156R
+
+fail  B4r GBPUSD near-touch of a placebo +23 level -> fade 30 min
+   10 yrs:  8856 trades   -1.19 pips -0.119R (t -10.44) win 38.9%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1488 trades   -0.93 pips -0.093R (t -3.60) win 42.3%  EUR 1,000 ->     47 (max drop 97%)
+   2016-21 -0.143R | 2022-26 -0.102R | random direction -0.148R
+
+fail  B4 GBPUSD cross of a placebo +37 level -> follow 30 min
+   10 yrs:  8651 trades   -1.58 pips -0.158R (t -12.35) win 34.4%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1490 trades   -1.17 pips -0.117R (t -4.44) win 38.5%  EUR 1,000 ->     23 (max drop 98%)
+   2016-21 -0.211R | 2022-26 -0.115R | random direction -0.146R
+
+fail  B4r GBPUSD near-touch of a placebo +37 level -> fade 30 min
+   10 yrs:  8927 trades   -1.25 pips -0.125R (t -10.73) win 38.0%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1512 trades   -1.00 pips -0.100R (t -4.05) win 39.8%  EUR 1,000 ->     37 (max drop 97%)
+   2016-21 -0.164R | 2022-26 -0.097R | random direction -0.118R
+
+fail  B4 USDJPY cross of a round level -> follow 30 min
+   10 yrs:  6816 trades   -0.68 pips -0.068R (t -4.10) win 36.8%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1662 trades   -0.48 pips -0.048R (t -1.24) win 37.5%  EUR 1,000 ->     96 (max drop 92%)
+   2016-21 -0.113R | 2022-26 -0.049R | random direction -0.120R
+
+fail  B4r USDJPY near-touch of a round level -> fade 30 min
+   10 yrs:  7247 trades   -1.27 pips -0.127R (t -9.47) win 38.2%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1767 trades   -0.56 pips -0.056R (t -1.81) win 39.5%  EUR 1,000 ->     78 (max drop 93%)
+   2016-21 -0.143R | 2022-26 -0.119R | random direction -0.114R
+
+fail  B4 USDJPY cross of a placebo +23 level -> follow 30 min
+   10 yrs:  7145 trades   -1.45 pips -0.145R (t -10.34) win 34.1%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1763 trades   -1.24 pips -0.124R (t -4.02) win 35.3%  EUR 1,000 ->      7 (max drop 99%)
+   2016-21 -0.147R | 2022-26 -0.147R | random direction -0.126R
+
+fail  B4r USDJPY near-touch of a placebo +23 level -> fade 30 min
+   10 yrs:  7444 trades   -0.76 pips -0.076R (t -5.76) win 39.7%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1818 trades   -0.13 pips -0.013R (t -0.43) win 40.8%  EUR 1,000 ->    352 (max drop 88%)
+   2016-21 -0.111R | 2022-26 -0.053R | random direction -0.117R
+
+fail  B4 USDJPY cross of a placebo +37 level -> follow 30 min
+   10 yrs:  7163 trades   -1.44 pips -0.144R (t -9.55) win 33.8%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1751 trades   -1.05 pips -0.105R (t -2.93) win 34.6%  EUR 1,000 ->     12 (max drop 99%)
+   2016-21 -0.177R | 2022-26 -0.127R | random direction -0.102R
+
+fail  B4r USDJPY near-touch of a placebo +37 level -> fade 30 min
+   10 yrs:  7396 trades   -1.08 pips -0.108R (t -8.73) win 38.5%  EUR 1,000 ->      0 (max drop 100%)
+   2 yrs :  1814 trades   -1.01 pips -0.101R (t -3.74) win 37.4%  EUR 1,000 ->     16 (max drop 99%)
+   2016-21 -0.111R | 2022-26 -0.112R | random direction -0.105R
+
+fail  B5 USTEC prior-session high/low breakout, follow it (2R)
+   10 yrs:   633 trades   +1.88 pips +0.030R (t  0.56) win 38.5%  EUR 1,000 ->  1,167 (max drop 44%)
+   2 yrs :   168 trades  +15.54 pips +0.201R (t  1.91) win 45.8%  EUR 1,000 ->  1,847 (max drop 19%)
+   2016-21 -0.046R | 2022-26 +0.065R | random direction -0.063R
+
+fail  B5 US500 prior-session high/low breakout, follow it (2R)
+   10 yrs:   606 trades   -7.05 pips -0.047R (t -0.90) win 36.3%  EUR 1,000 ->    464 (max drop 74%)
+   2 yrs :   186 trades  +20.31 pips +0.133R (t  1.39) win 44.6%  EUR 1,000 ->  1,538 (max drop 18%)
+   2016-21 -0.148R | 2022-26 -0.004R | random direction -0.155R
+
+fail  B5 DE30 prior-session high/low breakout, follow it (2R)
+   10 yrs:   574 trades  -36.64 pips -0.064R (t -1.18) win 34.7%  EUR 1,000 ->    397 (max drop 70%)
+   2 yrs :   175 trades  -18.21 pips -0.017R (t -0.17) win 36.0%  EUR 1,000 ->    887 (max drop 37%)
+   2016-21 -0.152R | 2022-26 -0.025R | random direction -0.139R
+
+fail  B5 XAUUSD prior-session high/low breakout, follow it (2R)
+   10 yrs:  1136 trades   -3.32 pips -0.075R (t -1.95) win 33.9%  EUR 1,000 ->    125 (max drop 89%)
+   2 yrs :   199 trades   +1.33 pips +0.021R (t  0.23) win 38.7%  EUR 1,000 ->  1,018 (max drop 26%)
+   2016-21 -0.116R | 2022-26 -0.058R | random direction -0.085R
+
+B2 US500 noise-area momentum (Zarattini, Aziz & Barbon)
+   since 2019-09: 1748 days (60% traded)  daily t -0.06  Sharpe -0.02    -1.4%/yr  EUR 1,000 ->      904 (max drop 26%)
+   2019-21      :  569 days (54% traded)  daily t  0.24  Sharpe  0.16    +1.3%/yr  EUR 1,000 ->    1,031 (max drop 14%)
+   2022-26      : 1179 days (63% traded)  daily t -0.25  Sharpe -0.11    -2.8%/yr  EUR 1,000 ->      877 (max drop 26%)
+   last 2 yrs   :  494 days (62% traded)  daily t -0.49  Sharpe -0.35    -6.5%/yr  EUR 1,000 ->      876 (max drop 23%)
+
+B2 US500 benchmark: long 09:30-16:00 every day
+   since 2019-09: 1748 days (100% traded)  daily t -1.29  Sharpe -0.49   -16.5%/yr  EUR 1,000 ->      287 (max drop 74%)
+   2019-21      :  569 days (100% traded)  daily t -0.81  Sharpe -0.54   -17.6%/yr  EUR 1,000 ->      646 (max drop 41%)
+   2022-26      : 1179 days (100% traded)  daily t -1.01  Sharpe -0.47   -15.9%/yr  EUR 1,000 ->      444 (max drop 58%)
+   last 2 yrs   :  494 days (100% traded)  daily t -0.64  Sharpe -0.46   -15.8%/yr  EUR 1,000 ->      713 (max drop 35%)
+
+B2 USTEC noise-area momentum (Zarattini, Aziz & Barbon)
+   since 2019-09: 1751 days (59% traded)  daily t  0.87  Sharpe  0.33    +3.6%/yr  EUR 1,000 ->    1,280 (max drop 21%)
+   2019-21      :  573 days (57% traded)  daily t -0.57  Sharpe -0.38    -6.2%/yr  EUR 1,000 ->      864 (max drop 19%)
+   2022-26      : 1178 days (59% traded)  daily t  1.53  Sharpe  0.71    +8.8%/yr  EUR 1,000 ->    1,481 (max drop 21%)
+   last 2 yrs   :  493 days (56% traded)  daily t  0.48  Sharpe  0.34    +3.9%/yr  EUR 1,000 ->    1,078 (max drop 21%)
+
+B2 USTEC benchmark: long 09:30-16:00 every day
+   since 2019-09: 1751 days (100% traded)  daily t -0.25  Sharpe -0.09    -6.6%/yr  EUR 1,000 ->      620 (max drop 57%)
+   2019-21      :  573 days (100% traded)  daily t  0.22  Sharpe  0.15    +0.0%/yr  EUR 1,000 ->    1,001 (max drop 26%)
+   2022-26      : 1178 days (100% traded)  daily t -0.46  Sharpe -0.21    -9.7%/yr  EUR 1,000 ->      620 (max drop 53%)
+   last 2 yrs   :  493 days (100% traded)  daily t -0.25  Sharpe -0.18    -9.0%/yr  EUR 1,000 ->      831 (max drop 36%)
