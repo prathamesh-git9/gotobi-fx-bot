@@ -1,0 +1,327 @@
+[
+ {
+  "name": "S1 USTEC overnight-range sweep at the NY open",
+  "passes": false,
+  "ten_years": {
+   "n": 942,
+   "pips": -1.81,
+   "R": -0.113,
+   "t": -2.6,
+   "win": 31.0,
+   "eur": 86,
+   "dd": 92.4
+  },
+  "two_years": {
+   "n": 279,
+   "pips": 1.28,
+   "R": -0.065,
+   "t": -0.8,
+   "win": 32.6,
+   "eur": 630,
+   "dd": 47.2
+  },
+  "dev_R": -0.074,
+  "hold_R": -0.129,
+  "random_R": -0.046
+ },
+ {
+  "name": "S1 US500 overnight-range sweep at the NY open",
+  "passes": false,
+  "ten_years": {
+   "n": 775,
+   "pips": -8.46,
+   "R": -0.152,
+   "t": -3.22,
+   "win": 29.7,
+   "eur": 72,
+   "dd": 96.0
+  },
+  "two_years": {
+   "n": 270,
+   "pips": 5.95,
+   "R": -0.008,
+   "t": -0.1,
+   "win": 34.4,
+   "eur": 864,
+   "dd": 49.6
+  },
+  "dev_R": -0.201,
+  "hold_R": -0.137,
+  "random_R": -0.189
+ },
+ {
+  "name": "S1 US30 overnight-range sweep at the NY open",
+  "passes": false,
+  "ten_years": {
+   "n": 954,
+   "pips": -3.76,
+   "R": -0.119,
+   "t": -2.76,
+   "win": 31.1,
+   "eur": 74,
+   "dd": 94.7
+  },
+  "two_years": {
+   "n": 301,
+   "pips": 7.46,
+   "R": 0.072,
+   "t": 0.88,
+   "win": 37.2,
+   "eur": 1368,
+   "dd": 26.1
+  },
+  "dev_R": -0.192,
+  "hold_R": -0.09,
+  "random_R": -0.094
+ },
+ {
+  "name": "S1 XAUUSD overnight-range sweep at the NY open",
+  "passes": false,
+  "ten_years": {
+   "n": 961,
+   "pips": -2.55,
+   "R": -0.103,
+   "t": -2.42,
+   "win": 31.5,
+   "eur": 98,
+   "dd": 93.8
+  },
+  "two_years": {
+   "n": 206,
+   "pips": -0.21,
+   "R": -0.026,
+   "t": -0.27,
+   "win": 34.5,
+   "eur": 834,
+   "dd": 46.8
+  },
+  "dev_R": -0.136,
+  "hold_R": -0.044,
+  "random_R": -0.11
+ },
+ {
+  "name": "S2 USTEC previous-day high/low sweep, NY morning",
+  "passes": false,
+  "ten_years": {
+   "n": 512,
+   "pips": -4.38,
+   "R": -0.05,
+   "t": -0.84,
+   "win": 34.6,
+   "eur": 501,
+   "dd": 70.1
+  },
+  "two_years": {
+   "n": 142,
+   "pips": -0.45,
+   "R": 0.063,
+   "t": 0.55,
+   "win": 38.7,
+   "eur": 1135,
+   "dd": 17.6
+  },
+  "dev_R": -0.007,
+  "hold_R": -0.069,
+  "random_R": -0.172
+ },
+ {
+  "name": "S2 US500 previous-day high/low sweep, NY morning",
+  "passes": false,
+  "ten_years": {
+   "n": 450,
+   "pips": -21.58,
+   "R": -0.201,
+   "t": -3.33,
+   "win": 28.4,
+   "eur": 141,
+   "dd": 87.5
+  },
+  "two_years": {
+   "n": 151,
+   "pips": -27.29,
+   "R": -0.181,
+   "t": -1.7,
+   "win": 27.8,
+   "eur": 549,
+   "dd": 45.1
+  },
+  "dev_R": -0.182,
+  "hold_R": -0.209,
+  "random_R": -0.17
+ },
+ {
+  "name": "S2 US30 previous-day high/low sweep, NY morning",
+  "passes": false,
+  "ten_years": {
+   "n": 501,
+   "pips": -5.93,
+   "R": -0.087,
+   "t": -1.46,
+   "win": 32.3,
+   "eur": 348,
+   "dd": 77.6
+  },
+  "two_years": {
+   "n": 147,
+   "pips": 16.28,
+   "R": 0.137,
+   "t": 1.17,
+   "win": 40.1,
+   "eur": 1410,
+   "dd": 14.9
+  },
+  "dev_R": -0.092,
+  "hold_R": -0.086,
+  "random_R": -0.129
+ },
+ {
+  "name": "S2 XAUUSD previous-day high/low sweep, NY morning",
+  "passes": false,
+  "ten_years": {
+   "n": 611,
+   "pips": 2.01,
+   "R": -0.058,
+   "t": -1.06,
+   "win": 33.9,
+   "eur": 398,
+   "dd": 76.0
+  },
+  "two_years": {
+   "n": 124,
+   "pips": 11.28,
+   "R": -0.08,
+   "t": -0.66,
+   "win": 33.1,
+   "eur": 785,
+   "dd": 39.2
+  },
+  "dev_R": -0.01,
+  "hold_R": -0.081,
+  "random_R": -0.126
+ },
+ {
+  "name": "S3 USTEC opening-range Judas swing",
+  "passes": false,
+  "ten_years": {
+   "n": 1108,
+   "pips": -0.86,
+   "R": -0.057,
+   "t": -1.32,
+   "win": 34.2,
+   "eur": 182,
+   "dd": 85.5
+  },
+  "two_years": {
+   "n": 342,
+   "pips": -3.63,
+   "R": -0.154,
+   "t": -1.92,
+   "win": 29.5,
+   "eur": 301,
+   "dd": 70.5
+  },
+  "dev_R": 0.001,
+  "hold_R": -0.081,
+  "random_R": -0.18
+ },
+ {
+  "name": "S3 US500 opening-range Judas swing",
+  "passes": false,
+  "ten_years": {
+   "n": 977,
+   "pips": -8.76,
+   "R": -0.123,
+   "t": -2.95,
+   "win": 34.8,
+   "eur": 65,
+   "dd": 95.0
+  },
+  "two_years": {
+   "n": 334,
+   "pips": -4.98,
+   "R": -0.103,
+   "t": -1.31,
+   "win": 32.9,
+   "eur": 440,
+   "dd": 59.3
+  },
+  "dev_R": -0.132,
+  "hold_R": -0.12,
+  "random_R": -0.143
+ },
+ {
+  "name": "S3 US30 opening-range Judas swing",
+  "passes": false,
+  "ten_years": {
+   "n": 1098,
+   "pips": -2.34,
+   "R": -0.098,
+   "t": -2.1,
+   "win": 29.9,
+   "eur": 69,
+   "dd": 96.1
+  },
+  "two_years": {
+   "n": 328,
+   "pips": -0.87,
+   "R": -0.027,
+   "t": -0.27,
+   "win": 27.7,
+   "eur": 685,
+   "dd": 65.2
+  },
+  "dev_R": -0.137,
+  "hold_R": -0.082,
+  "random_R": -0.083
+ },
+ {
+  "name": "S4 XAUUSD Asia-range sweep at the London open",
+  "passes": false,
+  "ten_years": {
+   "n": 1036,
+   "pips": -2.93,
+   "R": -0.167,
+   "t": -4.0,
+   "win": 28.0,
+   "eur": 22,
+   "dd": 98.4
+  },
+  "two_years": {
+   "n": 216,
+   "pips": -3.39,
+   "R": -0.153,
+   "t": -1.66,
+   "win": 28.2,
+   "eur": 477,
+   "dd": 54.1
+  },
+  "dev_R": -0.167,
+  "hold_R": -0.186,
+  "random_R": -0.173
+ },
+ {
+  "name": "S4 USTEC Asia-range sweep at the London open",
+  "passes": false,
+  "ten_years": {
+   "n": 675,
+   "pips": -3.17,
+   "R": -0.184,
+   "t": -3.58,
+   "win": 27.4,
+   "eur": 66,
+   "dd": 93.9
+  },
+  "two_years": {
+   "n": 252,
+   "pips": -1.15,
+   "R": -0.119,
+   "t": -1.38,
+   "win": 29.4,
+   "eur": 500,
+   "dd": 54.7
+  },
+  "dev_R": -0.191,
+  "hold_R": -0.181,
+  "random_R": -0.209
+ }
+]

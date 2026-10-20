@@ -1,0 +1,65 @@
+
+fail  S1 USTEC overnight-range sweep at the NY open
+   10 yrs:   942 trades   -1.81 pips -0.113R (t -2.60) win 31.0%  EUR 1,000 ->     86 (max drop 92%)
+   2 yrs :   279 trades   +1.28 pips -0.065R (t -0.80) win 32.6%  EUR 1,000 ->    630 (max drop 47%)
+   2016-21 -0.074R | 2022-26 -0.129R | random direction -0.046R
+
+fail  S1 US500 overnight-range sweep at the NY open
+   10 yrs:   775 trades   -8.46 pips -0.152R (t -3.22) win 29.7%  EUR 1,000 ->     72 (max drop 96%)
+   2 yrs :   270 trades   +5.95 pips -0.008R (t -0.10) win 34.4%  EUR 1,000 ->    864 (max drop 50%)
+   2016-21 -0.201R | 2022-26 -0.137R | random direction -0.189R
+
+fail  S1 US30 overnight-range sweep at the NY open
+   10 yrs:   954 trades   -3.76 pips -0.119R (t -2.76) win 31.1%  EUR 1,000 ->     74 (max drop 95%)
+   2 yrs :   301 trades   +7.46 pips +0.072R (t  0.88) win 37.2%  EUR 1,000 ->  1,368 (max drop 26%)
+   2016-21 -0.192R | 2022-26 -0.090R | random direction -0.094R
+
+fail  S1 XAUUSD overnight-range sweep at the NY open
+   10 yrs:   961 trades   -2.55 pips -0.103R (t -2.42) win 31.5%  EUR 1,000 ->     98 (max drop 94%)
+   2 yrs :   206 trades   -0.21 pips -0.026R (t -0.27) win 34.5%  EUR 1,000 ->    834 (max drop 47%)
+   2016-21 -0.136R | 2022-26 -0.044R | random direction -0.110R
+
+fail  S2 USTEC previous-day high/low sweep, NY morning
+   10 yrs:   512 trades   -4.38 pips -0.050R (t -0.84) win 34.6%  EUR 1,000 ->    501 (max drop 70%)
+   2 yrs :   142 trades   -0.45 pips +0.063R (t  0.55) win 38.7%  EUR 1,000 ->  1,135 (max drop 18%)
+   2016-21 -0.007R | 2022-26 -0.069R | random direction -0.172R
+
+fail  S2 US500 previous-day high/low sweep, NY morning
+   10 yrs:   450 trades  -21.58 pips -0.201R (t -3.33) win 28.4%  EUR 1,000 ->    141 (max drop 88%)
+   2 yrs :   151 trades  -27.29 pips -0.181R (t -1.70) win 27.8%  EUR 1,000 ->    549 (max drop 45%)
+   2016-21 -0.182R | 2022-26 -0.209R | random direction -0.170R
+
+fail  S2 US30 previous-day high/low sweep, NY morning
+   10 yrs:   501 trades   -5.93 pips -0.087R (t -1.46) win 32.3%  EUR 1,000 ->    348 (max drop 78%)
+   2 yrs :   147 trades  +16.28 pips +0.137R (t  1.17) win 40.1%  EUR 1,000 ->  1,410 (max drop 15%)
+   2016-21 -0.092R | 2022-26 -0.086R | random direction -0.129R
+
+fail  S2 XAUUSD previous-day high/low sweep, NY morning
+   10 yrs:   611 trades   +2.01 pips -0.058R (t -1.06) win 33.9%  EUR 1,000 ->    398 (max drop 76%)
+   2 yrs :   124 trades  +11.28 pips -0.080R (t -0.66) win 33.1%  EUR 1,000 ->    785 (max drop 39%)
+   2016-21 -0.010R | 2022-26 -0.081R | random direction -0.126R
+
+fail  S3 USTEC opening-range Judas swing
+   10 yrs:  1108 trades   -0.86 pips -0.057R (t -1.32) win 34.2%  EUR 1,000 ->    182 (max drop 86%)
+   2 yrs :   342 trades   -3.63 pips -0.154R (t -1.92) win 29.5%  EUR 1,000 ->    301 (max drop 70%)
+   2016-21 +0.001R | 2022-26 -0.081R | random direction -0.180R
+
+fail  S3 US500 opening-range Judas swing
+   10 yrs:   977 trades   -8.76 pips -0.123R (t -2.95) win 34.8%  EUR 1,000 ->     65 (max drop 95%)
+   2 yrs :   334 trades   -4.98 pips -0.103R (t -1.31) win 32.9%  EUR 1,000 ->    440 (max drop 59%)
+   2016-21 -0.132R | 2022-26 -0.120R | random direction -0.143R
+
+fail  S3 US30 opening-range Judas swing
+   10 yrs:  1098 trades   -2.34 pips -0.098R (t -2.10) win 29.9%  EUR 1,000 ->     69 (max drop 96%)
+   2 yrs :   328 trades   -0.87 pips -0.027R (t -0.27) win 27.7%  EUR 1,000 ->    685 (max drop 65%)
+   2016-21 -0.137R | 2022-26 -0.082R | random direction -0.083R
+
+fail  S4 XAUUSD Asia-range sweep at the London open
+   10 yrs:  1036 trades   -2.93 pips -0.167R (t -4.00) win 28.0%  EUR 1,000 ->     22 (max drop 98%)
+   2 yrs :   216 trades   -3.39 pips -0.153R (t -1.66) win 28.2%  EUR 1,000 ->    477 (max drop 54%)
+   2016-21 -0.167R | 2022-26 -0.186R | random direction -0.173R
+
+fail  S4 USTEC Asia-range sweep at the London open
+   10 yrs:   675 trades   -3.17 pips -0.184R (t -3.58) win 27.4%  EUR 1,000 ->     66 (max drop 94%)
+   2 yrs :   252 trades   -1.15 pips -0.119R (t -1.38) win 29.4%  EUR 1,000 ->    500 (max drop 55%)
+   2016-21 -0.191R | 2022-26 -0.181R | random direction -0.209R
