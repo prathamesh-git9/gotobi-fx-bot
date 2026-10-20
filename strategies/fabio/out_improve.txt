@@ -1,0 +1,74 @@
+  TREND be=True stop=2ATR minRR=1.5 allday allMonths             design 1843 trades -0.186R | (hold-out hidden)
+  TREND be=True stop=2ATR minRR=1.5 allday noSummer              design 1353 trades -0.178R | (hold-out hidden)
+  TREND be=True stop=2ATR minRR=1.5 first2h allMonths            design 1379 trades -0.188R | (hold-out hidden)
+  TREND be=True stop=2ATR minRR=1.5 first2h noSummer             design  996 trades -0.174R | (hold-out hidden)
+  TREND be=True stop=2ATR minRR=2.5 allday allMonths             design 1822 trades -0.166R | (hold-out hidden)
+  TREND be=True stop=2ATR minRR=2.5 allday noSummer              design 1335 trades -0.160R | (hold-out hidden)
+  TREND be=True stop=2ATR minRR=2.5 first2h allMonths            design 1366 trades -0.167R | (hold-out hidden)
+  TREND be=True stop=2ATR minRR=2.5 first2h noSummer             design  986 trades -0.158R | (hold-out hidden)
+  TREND be=True stop=4ATR minRR=1.5 allday allMonths             design 1705 trades -0.156R | (hold-out hidden)
+  TREND be=True stop=4ATR minRR=1.5 allday noSummer              design 1251 trades -0.149R | (hold-out hidden)
+  TREND be=True stop=4ATR minRR=1.5 first2h allMonths            design 1282 trades -0.148R | (hold-out hidden)
+  TREND be=True stop=4ATR minRR=1.5 first2h noSummer             design  927 trades -0.135R | (hold-out hidden)
+  TREND be=True stop=4ATR minRR=2.5 allday allMonths             design 1680 trades -0.149R | (hold-out hidden)
+  TREND be=True stop=4ATR minRR=2.5 allday noSummer              design 1228 trades -0.146R | (hold-out hidden)
+  TREND be=True stop=4ATR minRR=2.5 first2h allMonths            design 1272 trades -0.145R | (hold-out hidden)
+  TREND be=True stop=4ATR minRR=2.5 first2h noSummer             design  918 trades -0.138R | (hold-out hidden)
+  TREND be=False stop=2ATR minRR=1.5 allday allMonths            design 1749 trades -0.196R | (hold-out hidden)
+  TREND be=False stop=2ATR minRR=1.5 allday noSummer             design 1287 trades -0.196R | (hold-out hidden)
+  TREND be=False stop=2ATR minRR=1.5 first2h allMonths           design 1330 trades -0.193R | (hold-out hidden)
+  TREND be=False stop=2ATR minRR=1.5 first2h noSummer            design  966 trades -0.188R | (hold-out hidden)
+  TREND be=False stop=2ATR minRR=2.5 allday allMonths            design 1716 trades -0.172R | (hold-out hidden)
+  TREND be=False stop=2ATR minRR=2.5 allday noSummer             design 1260 trades -0.174R | (hold-out hidden)
+  TREND be=False stop=2ATR minRR=2.5 first2h allMonths           design 1315 trades -0.167R | (hold-out hidden)
+  TREND be=False stop=2ATR minRR=2.5 first2h noSummer            design  955 trades -0.167R | (hold-out hidden)
+  TREND be=False stop=4ATR minRR=1.5 allday allMonths            design 1630 trades -0.170R | (hold-out hidden)
+  TREND be=False stop=4ATR minRR=1.5 allday noSummer             design 1200 trades -0.165R | (hold-out hidden)
+  TREND be=False stop=4ATR minRR=1.5 first2h allMonths           design 1250 trades -0.160R | (hold-out hidden)
+  TREND be=False stop=4ATR minRR=1.5 first2h noSummer            design  908 trades -0.147R | (hold-out hidden)
+  TREND be=False stop=4ATR minRR=2.5 allday allMonths            design 1597 trades -0.162R | (hold-out hidden)
+  TREND be=False stop=4ATR minRR=2.5 allday noSummer             design 1171 trades -0.161R | (hold-out hidden)
+  TREND be=False stop=4ATR minRR=2.5 first2h allMonths           design 1240 trades -0.158R | (hold-out hidden)
+  TREND be=False stop=4ATR minRR=2.5 first2h noSummer            design  899 trades -0.151R | (hold-out hidden)
+  MR-London be=True stop=2ATR minRR=1.0 allMonths                design  273 trades -0.109R | (hold-out hidden)
+  MR-London be=True stop=2ATR minRR=1.0 May-Aug                  design   98 trades -0.101R | (hold-out hidden)
+  MR-London be=True stop=2ATR minRR=1.5 allMonths                design  169 trades -0.054R | (hold-out hidden)
+  MR-London be=True stop=2ATR minRR=1.5 May-Aug                  design   51 trades -0.055R | (hold-out hidden)
+  MR-London be=True stop=4ATR minRR=1.0 allMonths                design  179 trades -0.036R | (hold-out hidden)
+  MR-London be=True stop=4ATR minRR=1.0 May-Aug                  design   60 trades +0.010R | (hold-out hidden)
+  MR-London be=True stop=4ATR minRR=1.5 allMonths                design   86 trades +0.019R | (hold-out hidden)
+  MR-London be=True stop=4ATR minRR=1.5 May-Aug                  design   24 trades -0.028R | (hold-out hidden)
+  MR-London be=False stop=2ATR minRR=1.0 allMonths               design  265 trades -0.080R | (hold-out hidden)
+  MR-London be=False stop=2ATR minRR=1.0 May-Aug                 design   94 trades -0.069R | (hold-out hidden)
+  MR-London be=False stop=2ATR minRR=1.5 allMonths               design  165 trades -0.014R | (hold-out hidden)
+  MR-London be=False stop=2ATR minRR=1.5 May-Aug                 design   49 trades +0.001R | (hold-out hidden)
+  MR-London be=False stop=4ATR minRR=1.0 allMonths               design  177 trades -0.033R | (hold-out hidden)
+  MR-London be=False stop=4ATR minRR=1.0 May-Aug                 design   59 trades +0.008R | (hold-out hidden)
+  MR-London be=False stop=4ATR minRR=1.5 allMonths               design   84 trades +0.040R | (hold-out hidden)
+  MR-London be=False stop=4ATR minRR=1.5 May-Aug                 design   23 trades +0.023R | (hold-out hidden)
+
+CHOSEN on 2016-2021 for trend: TREND be=True stop=4ATR minRR=1.5 first2h noSummer  (design -0.135R, 927 trades)
+
+CHOSEN on 2016-2021 for mr: MR-London be=False stop=2ATR minRR=1.5 allMonths  (design -0.014R, 165 trades)
+
+=== The chosen versions, judged once ===
+
+NASDAQ TREND be=True stop=4ATR minRR=1.5 first2h noSummer: 2016-21 -0.135R | 2022-26 -0.072R (t -1.65) | random -0.071R
+   10 yrs (2016-10..2026-09) :  1680 trades -0.102R (t -3.42) win 25.5% | EUR 1,000 at 0.5%:    411 (drop 59%) | at 2%:      20 (drop 98%)
+   2 yrs (2024-10..2026-09)  :   361 trades -0.060R (t -0.90) win 24.4% | EUR 1,000 at 0.5%:    891 (drop 16%) | at 2%:     580 (drop 52%)
+   2026 (Jan..Sep)           :   121 trades -0.106R (t -0.94) win 21.5% | EUR 1,000 at 0.5%:    936 (drop 8%) | at 2%:     747 (drop 29%)
+
+NASDAQ MR-London be=False stop=2ATR minRR=1.5 allMonths: 2016-21 -0.014R | 2022-26 -0.103R (t -1.43) | random -0.147R
+   10 yrs (2016-10..2026-09) :   481 trades -0.069R (t -1.16) win 33.9% | EUR 1,000 at 0.5%:    839 (drop 25%) | at 2%:     439 (drop 70%)
+   2 yrs (2024-10..2026-09)  :   143 trades +0.059R (t  0.51) win 37.8% | EUR 1,000 at 0.5%:  1,039 (drop 8%) | at 2%:   1,121 (drop 29%)
+   2026 (Jan..Sep)           :    55 trades +0.014R (t  0.07) win 34.5% | EUR 1,000 at 0.5%:  1,002 (drop 5%) | at 2%:     994 (drop 18%)
+
+S&P 500 cross-check, TREND be=True stop=4ATR minRR=1.5 first2h noSummer: 2016-21 -0.120R | 2022-26 -0.115R
+   10 yrs (2016-10..2026-09) :  1630 trades -0.106R (t -3.50) | EUR 1,000 at 0.5%:    407 | at 2%:      19
+   2 yrs (2024-10..2026-09)  :   365 trades -0.078R (t -1.19) | EUR 1,000 at 0.5%:    861 | at 2%:     504
+   2026 (Jan..Sep)           :   132 trades -0.105R (t -0.98) | EUR 1,000 at 0.5%:    930 | at 2%:     728
+
+S&P 500 cross-check, MR-London be=False stop=2ATR minRR=1.5 allMonths: 2016-21 -0.217R | 2022-26 -0.202R
+   10 yrs (2016-10..2026-09) :   380 trades -0.207R (t -3.58) | EUR 1,000 at 0.5%:    670 | at 2%:     187
+   2 yrs (2024-10..2026-09)  :   137 trades -0.083R (t -0.76) | EUR 1,000 at 0.5%:    942 | at 2%:     762
+   2026 (Jan..Sep)           :    62 trades -0.266R (t -1.76) | EUR 1,000 at 0.5%:    920 | at 2%:     706

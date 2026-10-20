@@ -1,0 +1,74 @@
+
+######## USTECm: 2016-01-03 .. 2026-09-29
+
+fail  USTEC TREND, limit at LVN   (2016-21 -0.293R | 2022-26 -0.203R | random -0.123R)
+   10 yrs (2016-10..2026-09) :  4967 trades -0.253R (t -14.28) win 17.1% | EUR 1,000 at 0.5%:      2 (drop 100%) | at 2%:       0 (drop 100%)
+   2 yrs (2024-10..2026-09)  :  1023 trades -0.182R (t -4.45) win 16.9% | EUR 1,000 at 0.5%:    386 (drop 62%) | at 2%:      17 (drop 98%)
+   2026 (Jan..Sep)           :   382 trades -0.141R (t -2.11) win 18.3% | EUR 1,000 at 0.5%:    757 (drop 28%) | at 2%:     299 (drop 74%)
+
+fail  USTEC TREND, confirmation   (2016-21 -0.151R | 2022-26 -0.06R | random -0.112R)
+   10 yrs (2016-10..2026-09) :  3201 trades -0.106R (t -4.90) win 24.9% | EUR 1,000 at 0.5%:    173 (drop 83%) | at 2%:       0 (drop 100%)
+   2 yrs (2024-10..2026-09)  :   670 trades -0.074R (t -1.55) win 24.2% | EUR 1,000 at 0.5%:    770 (drop 26%) | at 2%:     302 (drop 74%)
+   2026 (Jan..Sep)           :   247 trades -0.064R (t -0.80) win 24.3% | EUR 1,000 at 0.5%:    919 (drop 15%) | at 2%:     673 (drop 49%)
+
+fail  USTEC MEAN REVERSION London, limit   (2016-21 -0.106R | 2022-26 -0.124R | random -0.08R)
+   10 yrs (2016-10..2026-09) :   916 trades -0.117R (t -3.33) win 32.0% | EUR 1,000 at 0.5%:    578 (drop 43%) | at 2%:      96 (drop 91%)
+   2 yrs (2024-10..2026-09)  :   247 trades -0.003R (t -0.05) win 34.0% | EUR 1,000 at 0.5%:    992 (drop 14%) | at 2%:     927 (drop 47%)
+   2026 (Jan..Sep)           :    97 trades -0.176R (t -1.51) win 25.8% | EUR 1,000 at 0.5%:    917 (drop 10%) | at 2%:     693 (drop 36%)
+
+fail  USTEC MEAN REVERSION London, confirmation   (2016-21 -0.081R | 2022-26 -0.046R | random -0.183R)
+   10 yrs (2016-10..2026-09) :   552 trades -0.059R (t -1.38) win 37.1% | EUR 1,000 at 0.5%:    845 (drop 21%) | at 2%:     469 (drop 63%)
+   2 yrs (2024-10..2026-09)  :   151 trades +0.043R (t  0.52) win 39.7% | EUR 1,000 at 0.5%:  1,031 (drop 5%) | at 2%:   1,105 (drop 19%)
+   2026 (Jan..Sep)           :    55 trades +0.093R (t  0.63) win 41.8% | EUR 1,000 at 0.5%:  1,025 (drop 3%) | at 2%:   1,093 (drop 12%)
+
+fail  USTEC MEAN REVERSION NY, May-Aug, confirmation   (2016-21 -0.097R | 2022-26 0.157R | random -0.126R)
+   10 yrs (2016-10..2026-09) :   242 trades +0.052R (t  0.73) win 39.7% | EUR 1,000 at 0.5%:  1,060 (drop 10%) | at 2%:   1,211 (drop 36%)
+   2 yrs (2024-10..2026-09)  :    55 trades +0.266R (t  1.80) win 49.1% | EUR 1,000 at 0.5%:  1,075 (drop 2%) | at 2%:   1,322 (drop 8%)
+   2026 (Jan..Sep)           :    28 trades +0.311R (t  1.40) win 50.0% | EUR 1,000 at 0.5%:  1,044 (drop 2%) | at 2%:   1,181 (drop 6%)
+
+fail  USTEC TREND, confirmation, FUTURES-like cost   (2016-21 -0.019R | 2022-26 0.004R | random 0.014R)
+   10 yrs (2016-10..2026-09) :  3349 trades -0.011R (t -0.49) win 24.8% | EUR 1,000 at 0.5%:    776 (drop 29%) | at 2%:     161 (drop 84%)
+   2 yrs (2024-10..2026-09)  :   677 trades -0.051R (t -1.05) win 24.7% | EUR 1,000 at 0.5%:    832 (drop 22%) | at 2%:     409 (drop 67%)
+   2026 (Jan..Sep)           :   252 trades -0.055R (t -0.69) win 24.2% | EUR 1,000 at 0.5%:    928 (drop 14%) | at 2%:     698 (drop 46%)
+
+fail  USTEC MEAN REVERSION London, confirmation, FUTURES-like cost   (2016-21 0.087R | 2022-26 0.015R | random -0.069R)
+   10 yrs (2016-10..2026-09) :   721 trades +0.044R (t  1.09) win 39.9% | EUR 1,000 at 0.5%:  1,160 (drop 12%) | at 2%:   1,597 (drop 41%)
+   2 yrs (2024-10..2026-09)  :   158 trades +0.073R (t  0.88) win 41.8% | EUR 1,000 at 0.5%:  1,057 (drop 5%) | at 2%:   1,217 (drop 19%)
+   2026 (Jan..Sep)           :    58 trades +0.024R (t  0.17) win 37.9% | EUR 1,000 at 0.5%:  1,006 (drop 4%) | at 2%:   1,014 (drop 17%)
+
+######## US500m: 2016-01-03 .. 2026-09-30
+
+fail  US500 TREND, limit at LVN   (2016-21 -0.284R | 2022-26 -0.22R | random -0.124R)
+   10 yrs (2016-10..2026-09) :  4843 trades -0.246R (t -13.83) win 18.4% | EUR 1,000 at 0.5%:      2 (drop 100%) | at 2%:       0 (drop 100%)
+   2 yrs (2024-10..2026-09)  :  1020 trades -0.109R (t -2.53) win 19.5% | EUR 1,000 at 0.5%:    560 (drop 46%) | at 2%:      74 (drop 94%)
+   2026 (Jan..Sep)           :   381 trades -0.155R (t -2.25) win 17.1% | EUR 1,000 at 0.5%:    737 (drop 29%) | at 2%:     267 (drop 77%)
+
+fail  US500 TREND, confirmation   (2016-21 -0.143R | 2022-26 -0.096R | random -0.142R)
+   10 yrs (2016-10..2026-09) :  3127 trades -0.112R (t -5.20) win 25.8% | EUR 1,000 at 0.5%:    164 (drop 85%) | at 2%:       0 (drop 100%)
+   2 yrs (2024-10..2026-09)  :   686 trades -0.015R (t -0.29) win 26.5% | EUR 1,000 at 0.5%:    938 (drop 16%) | at 2%:     652 (drop 53%)
+   2026 (Jan..Sep)           :   259 trades -0.080R (t -1.00) win 23.9% | EUR 1,000 at 0.5%:    896 (drop 16%) | at 2%:     605 (drop 52%)
+
+fail  US500 MEAN REVERSION London, limit   (2016-21 -0.226R | 2022-26 -0.176R | random -0.145R)
+   10 yrs (2016-10..2026-09) :   761 trades -0.185R (t -5.01) win 31.4% | EUR 1,000 at 0.5%:    489 (drop 51%) | at 2%:      51 (drop 95%)
+   2 yrs (2024-10..2026-09)  :   222 trades -0.092R (t -1.17) win 31.5% | EUR 1,000 at 0.5%:    899 (drop 15%) | at 2%:     625 (drop 50%)
+   2026 (Jan..Sep)           :   104 trades -0.218R (t -2.00) win 27.9% | EUR 1,000 at 0.5%:    891 (drop 14%) | at 2%:     619 (drop 46%)
+
+fail  US500 MEAN REVERSION London, confirmation   (2016-21 -0.146R | 2022-26 -0.166R | random -0.182R)
+   10 yrs (2016-10..2026-09) :   481 trades -0.139R (t -3.26) win 34.5% | EUR 1,000 at 0.5%:    712 (drop 29%) | at 2%:     241 (drop 76%)
+   2 yrs (2024-10..2026-09)  :   145 trades -0.103R (t -1.19) win 36.6% | EUR 1,000 at 0.5%:    926 (drop 13%) | at 2%:     718 (drop 43%)
+   2026 (Jan..Sep)           :    69 trades -0.216R (t -1.87) win 31.9% | EUR 1,000 at 0.5%:    927 (drop 9%) | at 2%:     732 (drop 32%)
+
+fail  US500 MEAN REVERSION NY, May-Aug, confirmation   (2016-21 -0.192R | 2022-26 -0.251R | random -0.373R)
+   10 yrs (2016-10..2026-09) :   204 trades -0.220R (t -3.22) win 28.4% | EUR 1,000 at 0.5%:    797 (drop 20%) | at 2%:     391 (drop 61%)
+   2 yrs (2024-10..2026-09)  :    54 trades -0.320R (t -2.57) win 25.9% | EUR 1,000 at 0.5%:    917 (drop 9%) | at 2%:     701 (drop 33%)
+   2026 (Jan..Sep)           :    36 trades -0.500R (t -3.96) win 16.7% | EUR 1,000 at 0.5%:    914 (drop 9%) | at 2%:     694 (drop 31%)
+
+fail  US500 TREND, confirmation, FUTURES-like cost   (2016-21 0.038R | 2022-26 -0.003R | random 0.036R)
+   10 yrs (2016-10..2026-09) :  3370 trades +0.017R (t  0.72) win 26.0% | EUR 1,000 at 0.5%:  1,228 (drop 25%) | at 2%:     951 (drop 73%)
+   2 yrs (2024-10..2026-09)  :   691 trades +0.026R (t  0.52) win 26.8% | EUR 1,000 at 0.5%:  1,078 (drop 11%) | at 2%:   1,129 (drop 39%)
+   2026 (Jan..Sep)           :   260 trades -0.016R (t -0.20) win 25.8% | EUR 1,000 at 0.5%:    973 (drop 9%) | at 2%:     839 (drop 36%)
+
+fail  US500 MEAN REVERSION London, confirmation, FUTURES-like cost   (2016-21 0.023R | 2022-26 -0.066R | random -0.095R)
+   10 yrs (2016-10..2026-09) :   656 trades -0.022R (t -0.54) win 37.8% | EUR 1,000 at 0.5%:    923 (drop 16%) | at 2%:     653 (drop 54%)
+   2 yrs (2024-10..2026-09)  :   148 trades -0.057R (t -0.66) win 37.8% | EUR 1,000 at 0.5%:    957 (drop 11%) | at 2%:     817 (drop 39%)
+   2026 (Jan..Sep)           :    70 trades -0.149R (t -1.25) win 34.3% | EUR 1,000 at 0.5%:    948 (drop 8%) | at 2%:     800 (drop 28%)
