@@ -1,0 +1,65 @@
+
+fail  O1 US500 European-open drift, every day
+   10 yrs:  1750 trades   -9.81 pips -0.043R (t -5.41) win 39.1%  EUR 1,000 ->    210 (max drop 82%)
+   2 yrs :   490 trades   -1.16 pips -0.003R (t -0.31) win 48.2%  EUR 1,000 ->    962 (max drop 12%)
+   2016-21 -0.036R | 2022-26 -0.047R | random direction -0.064R
+
+fail  O2 US500 European-open drift after a down US session
+   10 yrs:   793 trades   -9.35 pips -0.041R (t -3.13) win 42.2%  EUR 1,000 ->    506 (max drop 57%)
+   2 yrs :   217 trades   -2.14 pips -0.008R (t -0.41) win 49.3%  EUR 1,000 ->    961 (max drop 11%)
+   2016-21 -0.036R | 2022-26 -0.044R | random direction -0.051R
+
+fail  O3 US500 European-open drift after a down last half-hour
+   10 yrs:   879 trades   -7.93 pips -0.038R (t -3.30) win 41.1%  EUR 1,000 ->    505 (max drop 57%)
+   2 yrs :   239 trades   +2.46 pips +0.006R (t  0.37) win 53.1%  EUR 1,000 ->  1,027 (max drop 10%)
+   2016-21 -0.034R | 2022-26 -0.039R | random direction -0.037R
+
+fail  O1 USTEC European-open drift, every day
+   10 yrs:  1755 trades   -2.55 pips -0.037R (t -3.92) win 43.1%  EUR 1,000 ->    256 (max drop 80%)
+   2 yrs :   489 trades   +1.05 pips +0.008R (t  0.53) win 50.1%  EUR 1,000 ->  1,069 (max drop 14%)
+   2016-21 -0.037R | 2022-26 -0.037R | random direction -0.058R
+
+fail  O2 USTEC European-open drift after a down US session
+   10 yrs:   767 trades   -2.83 pips -0.042R (t -2.68) win 44.1%  EUR 1,000 ->    509 (max drop 55%)
+   2 yrs :   209 trades   -0.14 pips -0.007R (t -0.26) win 51.2%  EUR 1,000 ->    966 (max drop 13%)
+   2016-21 -0.054R | 2022-26 -0.037R | random direction -0.059R
+
+fail  O3 USTEC European-open drift after a down last half-hour
+   10 yrs:   874 trades   -1.80 pips -0.030R (t -2.14) win 45.1%  EUR 1,000 ->    574 (max drop 53%)
+   2 yrs :   236 trades   +2.05 pips +0.014R (t  0.64) win 50.8%  EUR 1,000 ->  1,064 (max drop 9%)
+   2016-21 -0.023R | 2022-26 -0.034R | random direction -0.072R
+
+fail  O1 US30 European-open drift, every day
+   10 yrs:  1760 trades   -5.55 pips -0.031R (t -3.95) win 42.2%  EUR 1,000 ->    326 (max drop 74%)
+   2 yrs :   493 trades   -0.04 pips -0.001R (t -0.06) win 50.9%  EUR 1,000 ->    989 (max drop 12%)
+   2016-21 -0.023R | 2022-26 -0.035R | random direction -0.037R
+
+fail  O2 US30 European-open drift after a down US session
+   10 yrs:   807 trades   -5.55 pips -0.029R (t -2.37) win 43.7%  EUR 1,000 ->    615 (max drop 49%)
+   2 yrs :   242 trades   -1.26 pips -0.006R (t -0.36) win 52.1%  EUR 1,000 ->    970 (max drop 9%)
+   2016-21 -0.008R | 2022-26 -0.039R | random direction -0.029R
+
+fail  O3 US30 European-open drift after a down last half-hour
+   10 yrs:   900 trades   -4.59 pips -0.027R (t -2.51) win 44.2%  EUR 1,000 ->    603 (max drop 50%)
+   2 yrs :   255 trades   +1.94 pips +0.006R (t  0.44) win 57.6%  EUR 1,000 ->  1,030 (max drop 9%)
+   2016-21 -0.018R | 2022-26 -0.032R | random direction -0.031R
+
+fail  G1 US500 opening-gap fill (0.15-0.60% gaps, 1:1)
+   10 yrs:   852 trades   -7.81 pips -0.057R (t -1.74) win 46.4%  EUR 1,000 ->    324 (max drop 69%)
+   2 yrs :   231 trades   -9.22 pips -0.073R (t -1.18) win 45.5%  EUR 1,000 ->    685 (max drop 33%)
+   2016-21 -0.033R | 2022-26 -0.070R | random direction -0.102R
+
+fail  G1 USTEC opening-gap fill (0.15-0.60% gaps, 1:1)
+   10 yrs:   736 trades   -0.74 pips -0.039R (t -1.09) win 47.7%  EUR 1,000 ->    485 (max drop 65%)
+   2 yrs :   208 trades   -0.90 pips -0.027R (t -0.40) win 48.1%  EUR 1,000 ->    859 (max drop 33%)
+   2016-21 +0.022R | 2022-26 -0.072R | random direction -0.130R
+
+fail  G1 US30 opening-gap fill (0.15-0.60% gaps, 1:1)
+   10 yrs:   882 trades   -3.12 pips -0.029R (t -0.91) win 48.5%  EUR 1,000 ->    505 (max drop 59%)
+   2 yrs :   246 trades   +0.76 pips -0.012R (t -0.20) win 48.8%  EUR 1,000 ->    898 (max drop 26%)
+   2016-21 -0.047R | 2022-26 -0.021R | random direction -0.095R
+
+fail  G1 DE30 opening-gap fill (0.15-0.60% gaps, 1:1)
+   10 yrs:   866 trades  -64.44 pips -0.130R (t -3.96) win 43.5%  EUR 1,000 ->     89 (max drop 94%)
+   2 yrs :   243 trades  +13.91 pips +0.029R (t  0.46) win 50.6%  EUR 1,000 ->  1,098 (max drop 34%)
+   2016-21 -0.181R | 2022-26 -0.106R | random direction -0.103R

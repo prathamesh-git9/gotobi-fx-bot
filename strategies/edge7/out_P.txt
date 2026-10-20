@@ -1,0 +1,19 @@
+check, NASDAQ momentum at full size since Sep 2019 (lab6 today's-spread run said +11.9%/yr): {'eur': 2190, 'cagr': np.float64(11.7), 'dd': np.float64(22.1), 'sharpe': np.float64(0.91)}
+
+P  daily-return correlations between sleeves:
+                                        gotobi USDJPY (6%)  gotobi long EURJPY (3%)  GBPUSD month-end fix (3%)  NASDAQ noise-area momentum (half size)
+gotobi USDJPY (6%)                                    1.00                     0.19                       0.07                                    0.00
+gotobi long EURJPY (3%)                               0.19                     1.00                       0.02                                   -0.01
+GBPUSD month-end fix (3%)                             0.07                     0.02                       1.00                                   -0.03
+NASDAQ noise-area momentum (half size)                0.00                    -0.01                      -0.03                                    1.00
+
+P  EUR 1,000 compounded daily (per year, max drop, Sharpe):
+   gotobi bot alone (6%)                      since Sep 2019: EUR  19,040 (+51.6%/yr, drop 41.0%, Sharpe 1.75) | last 2 yrs: EUR  3,805 (+95.1%/yr, drop 41.0%)
+   gotobi + EURJPY + GBP fix                  since Sep 2019: EUR  52,148 (+74.8%/yr, drop 40.7%, Sharpe 1.91) | last 2 yrs: EUR  4,814 (+119.5%/yr, drop 40.7%)
+   all four                                   since Sep 2019: EUR  78,413 (+85.2%/yr, drop 44.9%, Sharpe 2.06) | last 2 yrs: EUR  5,002 (+123.8%/yr, drop 44.9%)
+   gotobi + EURJPY + GBP fix, scaled to the bot's 2019-21 risk (x0.72) since Sep 2019: EUR  18,216 (+50.7%/yr, drop 30.8%, Sharpe 1.91) | last 2 yrs: EUR  3,151 (+77.6%/yr, drop 30.8%)
+   all four, scaled to the bot's 2019-21 risk (x0.69) since Sep 2019: EUR  21,485 (+54.2%/yr, drop 33.1%, Sharpe 2.06) | last 2 yrs: EUR  3,089 (+75.8%/yr, drop 33.1%)
+   gotobi USDJPY (6%)                         since Sep 2019: EUR  19,040 (+51.6%/yr, drop 41.0%, Sharpe 1.75) | last 2 yrs: EUR  3,805 (+95.1%/yr, drop 41.0%)
+   gotobi long EURJPY (3%)                    since Sep 2019: EUR   2,423 (+13.3%/yr, drop 22.3%, Sharpe 1.13) | last 2 yrs: EUR  1,073 ( +3.6%/yr, drop 18.3%)
+   GBPUSD month-end fix (3%)                  since Sep 2019: EUR   1,191 ( +2.5%/yr, drop 19.8%, Sharpe 0.34) | last 2 yrs: EUR  1,194 ( +9.3%/yr, drop  8.7%)
+   NASDAQ noise-area momentum (half size)     since Sep 2019: EUR   1,503 ( +5.9%/yr, drop 11.6%, Sharpe 0.88) | last 2 yrs: EUR  1,039 ( +2.0%/yr, drop 11.6%)

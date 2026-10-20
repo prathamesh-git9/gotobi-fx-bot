@@ -122,69 +122,72 @@ def B1():
 
 
 # ------------------------------------------------------------------ B2 noise-area momentum
+def b2_daily(sym):
+    """Daily returns of the noise-area strategy and of the intraday-long benchmark (both at the paper's sizing)."""
+    df = load(sym, flow=True)
+    mid = ((df.bclose + df.aclose) / 2).astype("float64")
+    loc = df.index.tz_localize("UTC").tz_convert(NY)
+    key = pd.DataFrame({"mid": mid.to_numpy(), "n": df.n.to_numpy(), "bo": df.bopen.to_numpy(), "ao": df.aopen.to_numpy(),
+                        "date": loc.date, "mod": loc.hour * 60 + loc.minute})
+    del df, mid, loc
+    gc.collect()
+    key = key[(key["mod"] >= 570) & (key["mod"] <= 958)]          # 09:30 .. 15:58 (quotes stop at 15:59 some years)
+    days = []
+    for d, g in key.groupby("date"):
+        if pd.Timestamp(d).weekday() >= 5:
+            continue
+        g = g.set_index("mod").reindex(range(570, 959))
+        if g.mid.isna().mean() > 0.2 or pd.isna(g.bo.iloc[0]) or pd.isna(g.bo.iloc[-1]):
+            continue
+        days.append((d, g.ffill()))
+    del key
+    gc.collect()
+    close = np.vstack([g.mid.to_numpy() for _, g in days])            # 389 minutes, 09:30 .. 15:58
+    opn = np.array([(g.bo.iloc[0] + g.ao.iloc[0]) / 2 for _, g in days])
+    move = np.abs(close / opn[:, None] - 1)
+    res, bench = {}, {}
+    dret = np.r_[np.nan, close[1:, -1] / close[:-1, -1] - 1]
+    for k in range(15, len(days)):
+        d, g = days[k]
+        sig = move[k - 14:k].mean(axis=0)
+        prev_c = close[k - 1, -1]
+        ub = max(opn[k], prev_c) * (1 + sig)
+        lb = min(opn[k], prev_c) * (1 - sig)
+        px = g.mid.to_numpy()
+        w = g.n.to_numpy()
+        vwap = np.cumsum(px * w) / np.maximum(np.cumsum(w), 1)
+        bid, ask = g.bo.to_numpy(), g.ao.to_numpy()
+        vol = np.nanstd(dret[k - 14:k], ddof=1)
+        lev = min(4.0, 0.02 / vol) if vol > 0 else 1.0
+        pos, entry, r = 0, 0.0, 0.0
+        for t in list(range(30, 361, 30)) + [388]:            # decisions at 10:00, 10:30, ... 15:30; flat at 15:58
+            p = px[t - 1]                                      # last completed minute
+            want = pos
+            if t == 388:
+                want = 0
+            elif pos == 0:
+                want = 1 if p > ub[t - 1] else -1 if p < lb[t - 1] else 0
+            elif pos == 1 and p < max(ub[t - 1], vwap[t - 1]):
+                want = -1 if p < lb[t - 1] else 0
+            elif pos == -1 and p > min(lb[t - 1], vwap[t - 1]):
+                want = 1 if p > ub[t - 1] else 0
+            if want != pos:
+                if pos:
+                    x = bid[t] if pos > 0 else ask[t]
+                    r += pos * (x - entry) / entry
+                if want:
+                    entry = ask[t] if want > 0 else bid[t]
+                pos = want
+        res[pd.Timestamp(d)] = lev * r
+        bench[pd.Timestamp(d)] = lev * (bid[388] - ask[0]) / ask[0]
+    return pd.Series(res), pd.Series(bench)
+
+
 def B2():
     for sym in ("US500m", "USTECm"):
-        df = load(sym, flow=True)
-        mid = ((df.bclose + df.aclose) / 2).astype("float64")
-        loc = df.index.tz_localize("UTC").tz_convert(NY)
-        key = pd.DataFrame({"mid": mid.to_numpy(), "n": df.n.to_numpy(), "bo": df.bopen.to_numpy(), "ao": df.aopen.to_numpy(),
-                            "date": loc.date, "mod": loc.hour * 60 + loc.minute})
-        del df, mid, loc
-        gc.collect()
-        key = key[(key["mod"] >= 570) & (key["mod"] <= 958)]          # 09:30 .. 15:58 (quotes stop at 15:59 some years)
-        days = []
-        for d, g in key.groupby("date"):
-            if pd.Timestamp(d).weekday() >= 5:
-                continue
-            g = g.set_index("mod").reindex(range(570, 959))
-            if g.mid.isna().mean() > 0.2 or pd.isna(g.bo.iloc[0]) or pd.isna(g.bo.iloc[-1]):
-                continue
-            g = g.ffill()
-            days.append((d, g))
-        del key
-        gc.collect()
-        D = len(days)
-        close = np.vstack([g.mid.to_numpy() for _, g in days])            # 389 minutes, 09:30 .. 15:58
-        opn = np.array([(g.bo.iloc[0] + g.ao.iloc[0]) / 2 for _, g in days])
-        move = np.abs(close / opn[:, None] - 1)
-        res, bench = [], []
-        dret = np.r_[np.nan, close[1:, -1] / close[:-1, -1] - 1]
-        for k in range(15, D):
-            d, g = days[k]
-            sig = move[k - 14:k].mean(axis=0)
-            prev_c = close[k - 1, -1]
-            ub = max(opn[k], prev_c) * (1 + sig)
-            lb = min(opn[k], prev_c) * (1 - sig)
-            px = g.mid.to_numpy()
-            w = g.n.to_numpy()
-            vwap = np.cumsum(px * w) / np.maximum(np.cumsum(w), 1)
-            bid, ask = g.bo.to_numpy(), g.ao.to_numpy()
-            vol = np.nanstd(dret[k - 14:k], ddof=1)
-            lev = min(4.0, 0.02 / vol) if vol > 0 else 1.0
-            pos, entry, r = 0, 0.0, 0.0
-            for t in list(range(30, 361, 30)) + [388]:            # decisions at 10:00, 10:30, ... 15:30; flat at 15:58
-                p = px[t - 1]                                      # last completed minute
-                want = pos
-                if t == 388:
-                    want = 0
-                elif pos == 0:
-                    want = 1 if p > ub[t - 1] else -1 if p < lb[t - 1] else 0
-                elif pos == 1 and p < max(ub[t - 1], vwap[t - 1]):
-                    want = -1 if p < lb[t - 1] else 0
-                elif pos == -1 and p > min(lb[t - 1], vwap[t - 1]):
-                    want = 1 if p > ub[t - 1] else 0
-                if want != pos:
-                    if pos:
-                        x = bid[t] if pos > 0 else ask[t]
-                        r += pos * (x - entry) / entry
-                    if want:
-                        entry = ask[t] if want > 0 else bid[t]
-                    pos = want
-            res.append((pd.Timestamp(d), lev * r))
-            bench.append((pd.Timestamp(d), lev * (bid[388] - ask[0]) / ask[0]))
-        for name, rows in ((f"B2 {sym[:-1]} noise-area momentum (Zarattini, Aziz & Barbon)", res),
-                           (f"B2 {sym[:-1]} benchmark: long 09:30-16:00 every day", bench)):
-            s = pd.Series(dict(rows))
+        res, bench = b2_daily(sym)
+        for name, s in ((f"B2 {sym[:-1]} noise-area momentum (Zarattini, Aziz & Barbon)", res),
+                        (f"B2 {sym[:-1]} benchmark: long 09:30-16:00 every day", bench)):
             OUT[name] = {}
             print(f"\n{name}")
             for lab, a, b in (("since 2019-09", "2019-09-01", "2026-10-01"), ("2019-21", "2019-09-01", "2022-01-01"),
@@ -200,7 +203,6 @@ def B2():
                                       cagr=round(cagr * 100, 1), eur=round(eq.iloc[-1]), dd=round(dd * 100, 1))
                 print(f"   {lab:13}: {len(x):4} days ({traded:.0%} traded)  daily t {tstat(x):5.2f}  Sharpe {sh:5.2f}"
                       f"  {cagr * 100:+6.1f}%/yr  EUR 1,000 -> {eq.iloc[-1]:>8,.0f} (max drop {dd * 100:.0f}%)")
-        del days, close, move
         gc.collect()
 
 

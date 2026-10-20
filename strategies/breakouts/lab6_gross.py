@@ -20,6 +20,8 @@ def mid_load(sym, flow=False):
 
 
 lab6.load = mid_load
-for k in sys.argv[1:] or ["B1", "B2"]:
-    print(f"\n===== {k} gross (no spread) =====")
-    getattr(lab6, k)()
+
+if __name__ == "__main__":
+    for k in sys.argv[1:] or ["B1", "B2"]:
+        print(f"\n===== {k} gross (no spread) =====")
+        getattr(lab6, k)()
