@@ -1,0 +1,445 @@
+{
+  "rules_frozen_before_returns": true,
+  "source_data": "E:\\Projects\\New folder\\liquidity_sweep\\data",
+  "coverage": {
+    "XAUUSDm": {
+      "first": "2016-10-02 22:05:00",
+      "last": "2026-09-30 23:59:00",
+      "m1_rows": 3523072,
+      "complete_m15": 230739
+    },
+    "USTECm": {
+      "first": "2019-08-04 22:00:00",
+      "last": "2026-09-29 23:59:00",
+      "m1_rows": 2439513,
+      "complete_m15": 161234
+    },
+    "US500m": {
+      "first": "2019-08-04 22:00:00",
+      "last": "2026-09-30 23:59:00",
+      "m1_rows": 2404885,
+      "complete_m15": 144385
+    },
+    "EURUSDm": {
+      "first": "2016-10-02 21:01:00",
+      "last": "2026-09-30 23:59:00",
+      "m1_rows": 3671450,
+      "complete_m15": 227254
+    },
+    "GBPUSDm": {
+      "first": "2016-10-02 21:01:00",
+      "last": "2026-09-30 23:59:00",
+      "m1_rows": 3690383,
+      "complete_m15": 233082
+    }
+  },
+  "bonferroni_tests": 4,
+  "windows": {
+    "full": [
+      "2016-10-01",
+      "2026-10-01"
+    ],
+    "recent": [
+      "2024-10-01",
+      "2026-10-01"
+    ],
+    "holdout": [
+      "2022-01-01",
+      "2026-10-01"
+    ]
+  },
+  "rules": {
+    "PD-break": {
+      "full": {
+        "trades": 4670,
+        "average_r": -0.1629335988735945,
+        "t": -8.412724593225825,
+        "win_rate": 0.28693790149892934,
+        "final_eur": 4.753797689076205e-05,
+        "max_drawdown": 0.9999999533022679,
+        "random_direction": {
+          "trades": 4670,
+          "average_r": -0.1632639302317923,
+          "t": -8.42958208653812,
+          "win_rate": 0.2860813704496788,
+          "final_eur": 4.6084866464030585e-05,
+          "max_drawdown": 0.9999999592466882
+        },
+        "beats_random_average_r": true
+      },
+      "recent": {
+        "trades": 1340,
+        "average_r": -0.1443419987283925,
+        "t": -3.9397726390788197,
+        "win_rate": 0.291044776119403,
+        "final_eur": 12.900000177486417,
+        "max_drawdown": 0.987328010318803,
+        "random_direction": {
+          "trades": 1340,
+          "average_r": -0.16198041713867933,
+          "t": -4.4475196018592635,
+          "win_rate": 0.2835820895522388,
+          "final_eur": 8.073605962714684,
+          "max_drawdown": 0.9928055673668862
+        },
+        "beats_random_average_r": true
+      },
+      "holdout": {
+        "trades": 2824,
+        "average_r": -0.1359308882323086,
+        "t": -5.389181870047253,
+        "win_rate": 0.2963881019830028,
+        "final_eur": 0.16803253675015,
+        "max_drawdown": 0.9998497322053922,
+        "one_sided_p": 0.9999999616920529,
+        "bonferroni_p": 1.0,
+        "passes": false,
+        "random_direction": {
+          "trades": 2824,
+          "average_r": -0.15309736062096646,
+          "t": -6.105531188161518,
+          "win_rate": 0.28824362606232296,
+          "final_eur": 0.0642838956122484,
+          "max_drawdown": 0.9999416855621219
+        },
+        "beats_random_average_r": true
+      },
+      "by_symbol_holdout": {
+        "XAUUSDm": {
+          "trades": 629,
+          "average_r": -0.11177039725798116,
+          "t": -2.0855956642048783,
+          "win_rate": 0.3068362480127186,
+          "final_eur": 195.52442410503443,
+          "max_drawdown": 0.8044755758949655
+        },
+        "USTECm": {
+          "trades": 556,
+          "average_r": -0.12845144271359682,
+          "t": -2.2371431561995188,
+          "win_rate": 0.2949640287769784,
+          "final_eur": 195.6441306316667,
+          "max_drawdown": 0.8514277030385496
+        },
+        "US500m": {
+          "trades": 466,
+          "average_r": -0.13796111069266984,
+          "t": -2.2233740616456537,
+          "win_rate": 0.2982832618025751,
+          "final_eur": 233.94632461039862,
+          "max_drawdown": 0.7834906295201626
+        },
+        "EURUSDm": {
+          "trades": 542,
+          "average_r": -0.20281943486135318,
+          "t": -3.6038405906985704,
+          "win_rate": 0.2730627306273063,
+          "final_eur": 91.90882016301542,
+          "max_drawdown": 0.9098225861822847
+        },
+        "GBPUSDm": {
+          "trades": 631,
+          "average_r": -0.10765171959805377,
+          "t": -1.9983206114375782,
+          "win_rate": 0.3058637083993661,
+          "final_eur": 204.29236084842825,
+          "max_drawdown": 0.8072655392913483
+        }
+      }
+    },
+    "PD-retest": {
+      "full": {
+        "trades": 2727,
+        "average_r": -0.1872173684271419,
+        "t": -7.526758828099867,
+        "win_rate": 0.28492849284928495,
+        "final_eur": 0.014507171079468492,
+        "max_drawdown": 0.999986050797039,
+        "random_direction": {
+          "trades": 2727,
+          "average_r": -0.1659655745041922,
+          "t": -6.619898939054733,
+          "win_rate": 0.2918958562522919,
+          "final_eur": 0.04576883381356527,
+          "max_drawdown": 0.9999566668140546
+        },
+        "beats_random_average_r": false
+      },
+      "recent": {
+        "trades": 744,
+        "average_r": -0.19399281683774194,
+        "t": -4.063907163466253,
+        "win_rate": 0.2782258064516129,
+        "final_eur": 43.20957365912595,
+        "max_drawdown": 0.9614597447399639,
+        "random_direction": {
+          "trades": 744,
+          "average_r": -0.1567879904493151,
+          "t": -3.242230325717122,
+          "win_rate": 0.2916666666666667,
+          "final_eur": 74.8298465738508,
+          "max_drawdown": 0.9308156004309812
+        },
+        "beats_random_average_r": false
+      },
+      "holdout": {
+        "trades": 1617,
+        "average_r": -0.21073071838453955,
+        "t": -6.583273594135563,
+        "win_rate": 0.2752009894867038,
+        "final_eur": 0.6362813179393333,
+        "max_drawdown": 0.9994519925945222,
+        "one_sided_p": 0.9999999999689835,
+        "bonferroni_p": 1.0,
+        "passes": false,
+        "random_direction": {
+          "trades": 1617,
+          "average_r": -0.1251223294787496,
+          "t": -3.785559192447643,
+          "win_rate": 0.30612244897959184,
+          "final_eur": 9.888488391866534,
+          "max_drawdown": 0.9929859272167689
+        },
+        "beats_random_average_r": false
+      },
+      "by_symbol_holdout": {
+        "XAUUSDm": {
+          "trades": 333,
+          "average_r": -0.10137900455111444,
+          "t": -1.3913466956106346,
+          "win_rate": 0.3183183183183183,
+          "final_eur": 452.94290043984057,
+          "max_drawdown": 0.6815874017076159
+        },
+        "USTECm": {
+          "trades": 319,
+          "average_r": -0.2085509627666338,
+          "t": -2.854796096277085,
+          "win_rate": 0.26959247648902823,
+          "final_eur": 236.79619136072714,
+          "max_drawdown": 0.8018863383208278
+        },
+        "US500m": {
+          "trades": 259,
+          "average_r": -0.28287769103828153,
+          "t": -3.650685182250857,
+          "win_rate": 0.2548262548262548,
+          "final_eur": 212.45104416685766,
+          "max_drawdown": 0.7936376566584149
+        },
+        "EURUSDm": {
+          "trades": 313,
+          "average_r": -0.34359031545571894,
+          "t": -5.041082666851678,
+          "win_rate": 0.2268370607028754,
+          "final_eur": 105.5734206936582,
+          "max_drawdown": 0.8964154035580276
+        },
+        "GBPUSDm": {
+          "trades": 393,
+          "average_r": -0.1517952042574253,
+          "t": -2.2813451089917494,
+          "win_rate": 0.2951653944020356,
+          "final_eur": 264.49504408508665,
+          "max_drawdown": 0.750468840488499
+        }
+      }
+    },
+    "Channel-break": {
+      "full": {
+        "trades": 24235,
+        "average_r": -0.182936253629551,
+        "t": -21.604152364307957,
+        "win_rate": 0.2783990096967196,
+        "final_eur": 6.310535407004234e-40,
+        "max_drawdown": 1.0,
+        "random_direction": {
+          "trades": 24235,
+          "average_r": -0.18416312189605333,
+          "t": -21.77425205956315,
+          "win_rate": 0.27835774706003713,
+          "final_eur": 3.5410688726290444e-40,
+          "max_drawdown": 1.0
+        },
+        "beats_random_average_r": true
+      },
+      "recent": {
+        "trades": 7360,
+        "average_r": -0.15294872538545534,
+        "t": -9.802484954680608,
+        "win_rate": 0.2866847826086957,
+        "final_eur": 1.18595654571889e-08,
+        "max_drawdown": 0.999999999989188,
+        "random_direction": {
+          "trades": 7360,
+          "average_r": -0.1540801705564806,
+          "t": -9.875599066059335,
+          "win_rate": 0.28627717391304347,
+          "final_eur": 1.003762096382405e-08,
+          "max_drawdown": 0.999999999991481
+        },
+        "beats_random_average_r": true
+      },
+      "holdout": {
+        "trades": 14860,
+        "average_r": -0.1731983781781806,
+        "t": -15.915668384686652,
+        "win_rate": 0.2807537012113055,
+        "final_eur": 2.281273473681871e-22,
+        "max_drawdown": 1.0,
+        "one_sided_p": 1.0,
+        "bonferroni_p": 1.0,
+        "passes": false,
+        "random_direction": {
+          "trades": 14860,
+          "average_r": -0.1719787678096482,
+          "t": -15.80130313601599,
+          "win_rate": 0.2814266487213997,
+          "final_eur": 3.2772964252148903e-22,
+          "max_drawdown": 1.0
+        },
+        "beats_random_average_r": false
+      },
+      "by_symbol_holdout": {
+        "XAUUSDm": {
+          "trades": 3469,
+          "average_r": -0.1231768391344791,
+          "t": -5.363352168683826,
+          "win_rate": 0.2963390025944076,
+          "final_eur": 0.05480671388261331,
+          "max_drawdown": 0.9999526487999632
+        },
+        "USTECm": {
+          "trades": 2997,
+          "average_r": -0.15722299963336472,
+          "t": -6.427883494115348,
+          "win_rate": 0.284617951284618,
+          "final_eur": 0.027485417140268725,
+          "max_drawdown": 0.9999800785779798
+        },
+        "US500m": {
+          "trades": 2259,
+          "average_r": -0.1654982046008004,
+          "t": -5.910115401792775,
+          "win_rate": 0.2855245683930943,
+          "final_eur": 0.2532066355608225,
+          "max_drawdown": 0.9997493555590411
+        },
+        "EURUSDm": {
+          "trades": 2945,
+          "average_r": -0.1780487254404676,
+          "t": -7.315124033093675,
+          "win_rate": 0.2794567062818336,
+          "final_eur": 0.009903778519730278,
+          "max_drawdown": 0.9999902827918762
+        },
+        "GBPUSDm": {
+          "trades": 3190,
+          "average_r": -0.24357873801055682,
+          "t": -10.70234074978949,
+          "win_rate": 0.2579937304075235,
+          "final_eur": 6.039003099740157e-05,
+          "max_drawdown": 0.9999999450958359
+        }
+      }
+    },
+    "BOS-FVG-retest": {
+      "full": {
+        "trades": 1424,
+        "average_r": -0.16445503280073917,
+        "t": -4.725655201517613,
+        "win_rate": 0.2914325842696629,
+        "final_eur": 5.643689231811132,
+        "max_drawdown": 0.994462628304738,
+        "random_direction": {
+          "trades": 1424,
+          "average_r": -0.14253200101543043,
+          "t": -4.053848947916746,
+          "win_rate": 0.29564606741573035,
+          "final_eur": 10.4535644998493,
+          "max_drawdown": 0.990126088557932
+        },
+        "beats_random_average_r": false
+      },
+      "recent": {
+        "trades": 433,
+        "average_r": -0.16887089900620736,
+        "t": -2.6540042423440715,
+        "win_rate": 0.2840646651270208,
+        "final_eur": 198.9311864126594,
+        "max_drawdown": 0.8087200130647506,
+        "random_direction": {
+          "trades": 433,
+          "average_r": -0.20109589528475522,
+          "t": -3.211595831394426,
+          "win_rate": 0.27251732101616627,
+          "final_eur": 151.03752225488023,
+          "max_drawdown": 0.8564909947477707
+        },
+        "beats_random_average_r": true
+      },
+      "holdout": {
+        "trades": 889,
+        "average_r": -0.16910476538764874,
+        "t": -3.821966515081632,
+        "win_rate": 0.28683914510686165,
+        "final_eur": 36.23550542622892,
+        "max_drawdown": 0.9639328762783165,
+        "one_sided_p": 0.9999291887601734,
+        "bonferroni_p": 1.0,
+        "passes": false,
+        "random_direction": {
+          "trades": 889,
+          "average_r": -0.16374283736362236,
+          "t": -3.692129465418314,
+          "win_rate": 0.2879640044994376,
+          "final_eur": 39.81722540908662,
+          "max_drawdown": 0.9614410933965611
+        },
+        "beats_random_average_r": false
+      },
+      "by_symbol_holdout": {
+        "XAUUSDm": {
+          "trades": 206,
+          "average_r": -0.028412124639717554,
+          "t": -0.29504534823018785,
+          "win_rate": 0.3300970873786408,
+          "final_eur": 823.2783310852363,
+          "max_drawdown": 0.47823576680832014
+        },
+        "USTECm": {
+          "trades": 161,
+          "average_r": -0.14988949854779987,
+          "t": -1.4155676281232747,
+          "win_rate": 0.2919254658385093,
+          "final_eur": 582.4451774656487,
+          "max_drawdown": 0.6022708078564333
+        },
+        "US500m": {
+          "trades": 146,
+          "average_r": -0.18262135047437142,
+          "t": -1.6646256085716298,
+          "win_rate": 0.273972602739726,
+          "final_eur": 557.2847934947396,
+          "max_drawdown": 0.46351403764486043
+        },
+        "EURUSDm": {
+          "trades": 172,
+          "average_r": -0.3668858575389147,
+          "t": -4.050390059710629,
+          "win_rate": 0.22674418604651161,
+          "final_eur": 268.56625908601194,
+          "max_drawdown": 0.7364930738952002
+        },
+        "GBPUSDm": {
+          "trades": 204,
+          "average_r": -0.14991149422397337,
+          "t": -1.6124910507828567,
+          "win_rate": 0.29901960784313725,
+          "final_eur": 504.8983393746627,
+          "max_drawdown": 0.532687308740542
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,893 @@
+{
+  "protocol": "RULES.md originally frozen before execution; cross-symbol overlap correction after first holdout inspection; CFD adaptation of published rules",
+  "coverage": {
+    "XAUUSD": {
+      "first": "2016-09-01 00:00:00",
+      "last": "2026-09-30 23:55:00",
+      "m5_bars": 711933
+    },
+    "USTEC": {
+      "first": "2019-08-04 22:00:00",
+      "last": "2026-09-29 23:55:00",
+      "m5_bars": 488297
+    },
+    "US500": {
+      "first": "2019-08-04 22:00:00",
+      "last": "2026-09-30 23:55:00",
+      "m5_bars": 488396
+    },
+    "EURUSD": {
+      "first": "2016-09-01 00:00:00",
+      "last": "2026-09-30 23:55:00",
+      "m5_bars": 750081
+    },
+    "GBPUSD": {
+      "first": "2016-09-01 00:00:00",
+      "last": "2026-09-30 23:55:00",
+      "m5_bars": 750728
+    },
+    "USDJPY": {
+      "first": "2016-09-01 00:00:00",
+      "last": "2026-09-30 23:55:00",
+      "m5_bars": 750648
+    }
+  },
+  "rules": {
+    "R1_smc_fvg": {
+      "full": {
+        "trades": 894,
+        "average_R": -0.10530002214985258,
+        "t": -2.6321593026569587,
+        "win_rate": 0.348993288590604,
+        "final_eur": 117.9141146303447,
+        "max_drawdown": 0.911805535592571,
+        "random_average_R": -0.057484741228856905,
+        "paired_t": -0.9228226623002191,
+        "p_positive": 0.9956845773480044,
+        "p_vs_random": 0.821825554426865,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "holdout": {
+        "trades": 486,
+        "average_R": -0.087218643775769,
+        "t": -1.5816190637152343,
+        "win_rate": 0.35185185185185186,
+        "final_eur": 371.42671924472137,
+        "max_drawdown": 0.746866981234441,
+        "random_average_R": -0.0356616895507538,
+        "paired_t": -0.7345810031813611,
+        "p_positive": 0.9428057811069763,
+        "p_vs_random": 0.7685251407474534,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "recent": {
+        "trades": 196,
+        "average_R": 0.015441621954141909,
+        "t": 0.17006972227472064,
+        "win_rate": 0.3826530612244898,
+        "final_eur": 998.2588047758995,
+        "max_drawdown": 0.3923313014849499,
+        "random_average_R": 0.062157608022133125,
+        "paired_t": -0.3870569229321738,
+        "p_positive": 0.43256580980298226,
+        "p_vs_random": 0.6504319238234895,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "by_symbol_holdout": {
+        "XAUUSD": {
+          "trades": 89,
+          "average_R": -0.25341339112566025,
+          "t": -2.231841527234625,
+          "win_rate": 0.3258426966292135,
+          "final_eur": 623.575241020697,
+          "max_drawdown": 0.41170371084721724,
+          "random_average_R": 0.08212621275027984,
+          "paired_t": -2.240231293200861,
+          "p_positive": 0.9859173505483237,
+          "p_vs_random": 0.9862027465790699
+        },
+        "USTEC": {
+          "trades": 130,
+          "average_R": -0.18154341765088047,
+          "t": -1.6897933568066903,
+          "win_rate": 0.3153846153846154,
+          "final_eur": 599.7540359842953,
+          "max_drawdown": 0.5165657600316189,
+          "random_average_R": -0.030469350609023057,
+          "paired_t": -1.096833286833317,
+          "p_positive": 0.9532585949875354,
+          "p_vs_random": 0.8626212209136738
+        },
+        "US500": {
+          "trades": 93,
+          "average_R": -0.09923346329351136,
+          "t": -0.7629346798994127,
+          "win_rate": 0.34408602150537637,
+          "final_eur": 807.8196409128135,
+          "max_drawdown": 0.43429568219708914,
+          "random_average_R": -0.2915597155827387,
+          "paired_t": 1.3640699008021933,
+          "p_positive": 0.776272893524901,
+          "p_vs_random": 0.08793672297255409
+        },
+        "EURUSD": {
+          "trades": 99,
+          "average_R": 0.19814633154215958,
+          "t": 1.5546761258981148,
+          "win_rate": 0.41414141414141414,
+          "final_eur": 1434.0730323172459,
+          "max_drawdown": 0.13229802655844558,
+          "random_average_R": -0.013973822055237407,
+          "paired_t": 1.3073130726498405,
+          "p_positive": 0.06162342472848056,
+          "p_vs_random": 0.09708267232716752
+        },
+        "GBPUSD": {
+          "trades": 75,
+          "average_R": -0.08828799342137007,
+          "t": -0.6322686528452958,
+          "win_rate": 0.37333333333333335,
+          "final_eur": 857.2853903911379,
+          "max_drawdown": 0.24933601610499956,
+          "random_average_R": 0.10424884607193251,
+          "paired_t": -0.9684303605398111,
+          "p_positive": 0.7354199624079578,
+          "p_vs_random": 0.8320079584219041
+        }
+      }
+    },
+    "R2_sr_retest": {
+      "full": {
+        "trades": 13908,
+        "average_R": -0.23614785854303783,
+        "t": -21.887474164405972,
+        "win_rate": 0.26538682772505034,
+        "final_eur": 2.93297935306809e-28,
+        "max_drawdown": 1.0,
+        "random_average_R": -0.2299752943299556,
+        "paired_t": -0.4876574326729619,
+        "p_positive": 1.0,
+        "p_vs_random": 0.6870999025473673,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "holdout": {
+        "trades": 7372,
+        "average_R": -0.20873734881908446,
+        "t": -13.906913923647716,
+        "win_rate": 0.2749593054801953,
+        "final_eur": 3.572273746210149e-12,
+        "max_drawdown": 0.9999999999999966,
+        "random_average_R": -0.2163534207395568,
+        "paired_t": 0.42955730867370584,
+        "p_positive": 1.0,
+        "p_vs_random": 0.33376512661603636,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "recent": {
+        "trades": 3056,
+        "average_R": -0.19727141450649804,
+        "t": -8.411045587081658,
+        "win_rate": 0.2781413612565445,
+        "final_eur": 0.0020489873015326716,
+        "max_drawdown": 0.9999981390800892,
+        "random_average_R": -0.20633666229912856,
+        "paired_t": 0.32569029089355656,
+        "p_positive": 1.0,
+        "p_vs_random": 0.3723404979712819,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "by_symbol_holdout": {
+        "XAUUSD": {
+          "trades": 1543,
+          "average_R": -0.13791286189176058,
+          "t": -4.090178546128189,
+          "win_rate": 0.29812054439403757,
+          "final_eur": 8.253369849880551,
+          "max_drawdown": 0.9919021096449366,
+          "random_average_R": -0.1759365858998979,
+          "paired_t": 0.9657882021354148,
+          "p_positive": 0.9999773352996747,
+          "p_vs_random": 0.16715080657449513
+        },
+        "USTEC": {
+          "trades": 1769,
+          "average_R": -0.24129487308925124,
+          "t": -7.980163624983418,
+          "win_rate": 0.2634256642170718,
+          "final_eur": 0.10898096284335816,
+          "max_drawdown": 0.9998969407672544,
+          "random_average_R": -0.21763316931956847,
+          "paired_t": -0.6581073169589111,
+          "p_positive": 0.9999999999999987,
+          "p_vs_random": 0.7447225726482462
+        },
+        "US500": {
+          "trades": 1303,
+          "average_R": -0.2780693494745508,
+          "t": -8.048085899490017,
+          "win_rate": 0.25326170376055257,
+          "final_eur": 0.4674157134480458,
+          "max_drawdown": 0.9995413896061146,
+          "random_average_R": -0.22529913995704046,
+          "paired_t": -1.2866226631475157,
+          "p_positive": 0.9999999999999991,
+          "p_vs_random": 0.9007727217190299
+        },
+        "EURUSD": {
+          "trades": 1406,
+          "average_R": -0.1962501688343367,
+          "t": -5.707364090936277,
+          "win_rate": 0.283072546230441,
+          "final_eur": 2.4985184391571966,
+          "max_drawdown": 0.9979040337863653,
+          "random_average_R": -0.24391341358278973,
+          "paired_t": 1.1952435103491812,
+          "p_positive": 0.9999999930121016,
+          "p_vs_random": 0.11609680406528158
+        },
+        "GBPUSD": {
+          "trades": 1351,
+          "average_R": -0.19312321195707,
+          "t": -5.438188611386165,
+          "win_rate": 0.27609178386380456,
+          "final_eur": 3.4007673070596316,
+          "max_drawdown": 0.9970946216804825,
+          "random_average_R": -0.22352860863118246,
+          "paired_t": 0.7100271682765984,
+          "p_positive": 0.9999999680900241,
+          "p_vs_random": 0.23890495632315392
+        }
+      }
+    },
+    "R3_orb": {
+      "full": {
+        "trades": 1561,
+        "average_R": -0.02336628761604976,
+        "t": -0.35212705961550395,
+        "win_rate": 0.17360666239590006,
+        "final_eur": 70.13464711030471,
+        "max_drawdown": 0.9818912135476948,
+        "random_average_R": 0.021564439004717318,
+        "paired_t": -0.598083162824462,
+        "p_positive": 0.6376047313917201,
+        "p_vs_random": 0.725064369840432,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "holdout": {
+        "trades": 1047,
+        "average_R": 0.05922796856056293,
+        "t": 0.6876347343662165,
+        "win_rate": 0.18242597898758356,
+        "final_eur": 811.1828440721899,
+        "max_drawdown": 0.9026222053869373,
+        "random_average_R": 0.04457971001282024,
+        "paired_t": 0.14904760870657233,
+        "p_positive": 0.24591763622321544,
+        "p_vs_random": 0.44077239820153796,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "recent": {
+        "trades": 445,
+        "average_R": 0.10187483220926236,
+        "t": 0.8298432403768237,
+        "win_rate": 0.2247191011235955,
+        "final_eur": 1447.0588841733397,
+        "max_drawdown": 0.6382237610353381,
+        "random_average_R": 0.11947966298896139,
+        "paired_t": -0.11462114977127141,
+        "p_positive": 0.20353668252456897,
+        "p_vs_random": 0.5456013850467942,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "by_symbol_holdout": {
+        "USTEC": {
+          "trades": 1047,
+          "average_R": 0.05922796856056293,
+          "t": 0.6876347343662165,
+          "win_rate": 0.18242597898758356,
+          "final_eur": 811.1828440721899,
+          "max_drawdown": 0.9026222053869373,
+          "random_average_R": 0.04457971001282024,
+          "paired_t": 0.14904760870657233,
+          "p_positive": 0.24591763622321544,
+          "p_vs_random": 0.44077239820153796
+        }
+      }
+    },
+    "R4_orb_rvol": {
+      "full": {
+        "trades": 757,
+        "average_R": -0.07908699502097633,
+        "t": -0.7934769698768643,
+        "win_rate": 0.13738441215323646,
+        "final_eur": 109.27526654468303,
+        "max_drawdown": 0.9317183951633451,
+        "random_average_R": -0.21097957855831423,
+        "paired_t": 1.2836883978340627,
+        "p_positive": 0.7861255266429522,
+        "p_vs_random": 0.09982215677118995,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 0.7985772541695196
+      },
+      "holdout": {
+        "trades": 516,
+        "average_R": -0.04249060354941392,
+        "t": -0.34358566863699674,
+        "win_rate": 0.14534883720930233,
+        "final_eur": 313.1948258133306,
+        "max_drawdown": 0.8755460067058525,
+        "random_average_R": -0.23729169418557503,
+        "paired_t": 1.5174219835773113,
+        "p_positive": 0.6343509365057303,
+        "p_vs_random": 0.06488688093222236,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 0.5190950474577789
+      },
+      "recent": {
+        "trades": 216,
+        "average_R": -0.0703388165699016,
+        "t": -0.3796713768203231,
+        "win_rate": 0.16666666666666666,
+        "final_eur": 557.3997869053537,
+        "max_drawdown": 0.6154825392293528,
+        "random_average_R": -0.260111109053876,
+        "paired_t": 1.034467188613181,
+        "p_positive": 0.6477179383459677,
+        "p_vs_random": 0.15103998104616734,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "by_symbol_holdout": {
+        "USTEC": {
+          "trades": 516,
+          "average_R": -0.04249060354941392,
+          "t": -0.34358566863699674,
+          "win_rate": 0.14534883720930233,
+          "final_eur": 313.1948258133306,
+          "max_drawdown": 0.8755460067058525,
+          "random_average_R": -0.23729169418557503,
+          "paired_t": 1.5174219835773113,
+          "p_positive": 0.6343509365057303,
+          "p_vs_random": 0.06488688093222236
+        }
+      }
+    },
+    "R5_noise_vwap": {
+      "full": {
+        "trades": 1586,
+        "average_R": 0.0006798815418603049,
+        "t": 0.07754459127064858,
+        "win_rate": 0.37578814627994955,
+        "final_eur": 983.4608117505686,
+        "max_drawdown": 0.17383606805730678,
+        "random_average_R": -0.02010644722254186,
+        "paired_t": 2.264739138171095,
+        "p_positive": 0.46910005335141464,
+        "p_vs_random": 0.011831617587064426,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 0.0946529406965154
+      },
+      "holdout": {
+        "trades": 1109,
+        "average_R": 0.0005967535057113069,
+        "t": 0.05785545727155316,
+        "win_rate": 0.37240757439134353,
+        "final_eur": 987.4419184015978,
+        "max_drawdown": 0.17383606805730778,
+        "random_average_R": -0.015467074666228382,
+        "paired_t": 1.4076025252703968,
+        "p_positive": 0.4769370977090365,
+        "p_vs_random": 0.07976463758563967,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 0.6381171006851174
+      },
+      "recent": {
+        "trades": 451,
+        "average_R": -0.005545620204898854,
+        "t": -0.3235829934403467,
+        "win_rate": 0.3835920177383592,
+        "final_eur": 940.1120574804108,
+        "max_drawdown": 0.17383606805730667,
+        "random_average_R": -0.014727598737670723,
+        "paired_t": 0.4741492998660622,
+        "p_positive": 0.6267979548078326,
+        "p_vs_random": 0.31781171221494003,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "by_symbol_holdout": {
+        "US500": {
+          "trades": 1109,
+          "average_R": 0.0005967535057113069,
+          "t": 0.05785545727155316,
+          "win_rate": 0.37240757439134353,
+          "final_eur": 987.4419184015978,
+          "max_drawdown": 0.17383606805730778,
+          "random_average_R": -0.015467074666228382,
+          "paired_t": 1.4076025252703968,
+          "p_positive": 0.4769370977090365,
+          "p_vs_random": 0.07976463758563967
+        }
+      }
+    },
+    "R6_first_last": {
+      "full": {
+        "trades": 1756,
+        "average_R": -0.027713228143641636,
+        "t": -6.621172273218423,
+        "win_rate": 0.4316628701594533,
+        "final_eur": 373.6721532113366,
+        "max_drawdown": 0.6374584948897606,
+        "random_average_R": -0.024323618195185505,
+        "paired_t": -0.5900281992055554,
+        "p_positive": 0.9999999999763884,
+        "p_vs_random": 0.7223761491719549,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "holdout": {
+        "trades": 1179,
+        "average_R": -0.017006997763544137,
+        "t": -3.503663260803824,
+        "win_rate": 0.457167090754877,
+        "final_eur": 665.2140653016961,
+        "max_drawdown": 0.35142945129918635,
+        "random_average_R": -0.023679250266946724,
+        "paired_t": 1.016181900937837,
+        "p_positive": 0.9997619420320331,
+        "p_vs_random": 0.15487571662161,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "recent": {
+        "trades": 494,
+        "average_R": -0.006970548870774943,
+        "t": -1.0156969748577847,
+        "win_rate": 0.46558704453441296,
+        "final_eur": 931.3048070737152,
+        "max_drawdown": 0.0960581226968068,
+        "random_average_R": -0.011288912145125148,
+        "paired_t": 0.4429324117926054,
+        "p_positive": 0.8448640455032475,
+        "p_vs_random": 0.3290044537078812,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "by_symbol_holdout": {
+        "US500": {
+          "trades": 1179,
+          "average_R": -0.017006997763544137,
+          "t": -3.503663260803824,
+          "win_rate": 0.457167090754877,
+          "final_eur": 665.2140653016961,
+          "max_drawdown": 0.35142945129918635,
+          "random_average_R": -0.023679250266946724,
+          "paired_t": 1.016181900937837,
+          "p_positive": 0.9997619420320331,
+          "p_vs_random": 0.15487571662161
+        }
+      }
+    },
+    "R7_round_cross": {
+      "full": {
+        "trades": 26281,
+        "average_R": -0.10155047372626232,
+        "t": -17.99254993948936,
+        "win_rate": 0.39800616414900497,
+        "final_eur": 8.11468305011954e-23,
+        "max_drawdown": 1.0,
+        "random_average_R": -0.09499790723335838,
+        "paired_t": -0.9279367579277128,
+        "p_positive": 1.0,
+        "p_vs_random": 0.8232755510080603,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "holdout": {
+        "trades": 13089,
+        "average_R": -0.08048468179386875,
+        "t": -9.60567481585699,
+        "win_rate": 0.4097333638933456,
+        "final_eur": 6.501432298387246e-08,
+        "max_drawdown": 0.9999999999366749,
+        "random_average_R": -0.09316341966536425,
+        "paired_t": 1.224139291064114,
+        "p_positive": 1.0,
+        "p_vs_random": 0.11046086055121951,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 0.8836868844097561
+      },
+      "recent": {
+        "trades": 5167,
+        "average_R": -0.08574724211340858,
+        "t": -6.910937212217262,
+        "win_rate": 0.4205535126766015,
+        "final_eur": 0.06251384775996538,
+        "max_drawdown": 0.9999381058477164,
+        "random_average_R": -0.09875130636732737,
+        "paired_t": 0.8308774899770663,
+        "p_positive": 0.9999999999973013,
+        "p_vs_random": 0.2030406198248701,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "by_symbol_holdout": {
+        "EURUSD": {
+          "trades": 3761,
+          "average_R": -0.0703408667907424,
+          "t": -5.109118685567807,
+          "win_rate": 0.41850571656474345,
+          "final_eur": 2.955741610984863,
+          "max_drawdown": 0.9973306640426709,
+          "random_average_R": -0.08362031374633913,
+          "paired_t": 0.749842931342219,
+          "p_positive": 0.9999998301245261,
+          "p_vs_random": 0.22669811127232684
+        },
+        "GBPUSD": {
+          "trades": 4588,
+          "average_R": -0.08451787271141696,
+          "t": -6.124089655991673,
+          "win_rate": 0.41608544027898864,
+          "final_eur": 0.19297510788074057,
+          "max_drawdown": 0.9998145162386685,
+          "random_average_R": -0.10544202266782313,
+          "paired_t": 1.2361710254910965,
+          "p_positive": 0.9999999995058672,
+          "p_vs_random": 0.10822914710901592
+        },
+        "USDJPY": {
+          "trades": 4740,
+          "average_R": -0.08462953586497576,
+          "t": -5.4902082819637,
+          "win_rate": 0.39662447257383965,
+          "final_eur": 0.11398331576788627,
+          "max_drawdown": 0.9998863206096505,
+          "random_average_R": -0.08885063291139213,
+          "paired_t": 0.2249222593161426,
+          "p_positive": 0.9999999788797526,
+          "p_vs_random": 0.41102472502207943
+        }
+      }
+    },
+    "R8_round_fade": {
+      "full": {
+        "trades": 3635,
+        "average_R": -0.09781568088032812,
+        "t": -5.654358536685149,
+        "win_rate": 0.38514442916093533,
+        "final_eur": 0.36974875056921186,
+        "max_drawdown": 0.9997105425700173,
+        "random_average_R": -0.11245557083906116,
+        "paired_t": 0.6803351946362386,
+        "p_positive": 0.9999999915757962,
+        "p_vs_random": 0.24816779233739203,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "holdout": {
+        "trades": 1991,
+        "average_R": -0.09981717729783887,
+        "t": -4.156135164474565,
+        "win_rate": 0.38272225012556504,
+        "final_eur": 11.889057480991319,
+        "max_drawdown": 0.9888319363832971,
+        "random_average_R": -0.06519738824711041,
+        "paired_t": -1.1602219726635343,
+        "p_positive": 0.9999831303410335,
+        "p_vs_random": 0.8769511921217455,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "recent": {
+        "trades": 678,
+        "average_R": -0.1020412979351044,
+        "t": -2.559435128545862,
+        "win_rate": 0.3893805309734513,
+        "final_eur": 216.55615105107128,
+        "max_drawdown": 0.8156262326958826,
+        "random_average_R": -0.052778761061948024,
+        "paired_t": -0.9609098865098032,
+        "p_positive": 0.9946498073749525,
+        "p_vs_random": 0.8315297290041644,
+        "p_positive_bonferroni_8": 1,
+        "p_vs_random_bonferroni_8": 1
+      },
+      "by_symbol_holdout": {
+        "EURUSD": {
+          "trades": 368,
+          "average_R": -0.11217391304347508,
+          "t": -2.2627171341959964,
+          "win_rate": 0.4048913043478261,
+          "final_eur": 409.6348688547644,
+          "max_drawdown": 0.6098561728955549,
+          "random_average_R": -0.07419565217390965,
+          "paired_t": -0.6537394859767,
+          "p_positive": 0.9878814834277447,
+          "p_vs_random": 0.7431554742377107
+        },
+        "GBPUSD": {
+          "trades": 708,
+          "average_R": -0.09133333333332601,
+          "t": -2.2559429533365476,
+          "win_rate": 0.3884180790960452,
+          "final_eur": 232.8715578730927,
+          "max_drawdown": 0.7867450183099243,
+          "random_average_R": -0.04755932203389399,
+          "paired_t": -0.8655140032506506,
+          "p_positive": 0.9878105001909632,
+          "p_vs_random": 0.8064748363394066
+        },
+        "USDJPY": {
+          "trades": 915,
+          "average_R": -0.10141202185792739,
+          "t": -2.7553810556424203,
+          "win_rate": 0.3693989071038251,
+          "final_eur": 124.63329038103979,
+          "max_drawdown": 0.8847373696301527,
+          "random_average_R": -0.07522622950819796,
+          "paired_t": -0.5657885780865926,
+          "p_positive": 0.9970105223859785,
+          "p_vs_random": 0.714161808865693
+        }
+      }
+    }
+  },
+  "diagnostics": {
+    "R7_round_cross_placebo": {
+      "full": {
+        "trades": 27145,
+        "average_R": -0.11125643764965511,
+        "t": -20.279225102571484,
+        "win_rate": 0.3889850801252533,
+        "final_eur": 6.90097294740832e-26,
+        "max_drawdown": 1.0,
+        "random_average_R": -0.09197067599925982,
+        "paired_t": -2.771243759201237,
+        "p_positive": 1.0,
+        "p_vs_random": 0.9972059696129529
+      },
+      "holdout": {
+        "trades": 13682,
+        "average_R": -0.08889577547141797,
+        "t": -10.971079044969297,
+        "win_rate": 0.39891828680017544,
+        "final_eur": 2.371733979280736e-09,
+        "max_drawdown": 0.9999999999978717,
+        "random_average_R": -0.0796392340301097,
+        "paired_t": -0.8963027410062633,
+        "p_positive": 1.0,
+        "p_vs_random": 0.8149465669747411
+      },
+      "recent": {
+        "trades": 5397,
+        "average_R": -0.09423605706873656,
+        "t": -7.93395785975297,
+        "win_rate": 0.39948119325551235,
+        "final_eur": 0.016819278637220124,
+        "max_drawdown": 0.9999845306840712,
+        "random_average_R": -0.10251028349082467,
+        "paired_t": 0.5398913126050457,
+        "p_positive": 0.9999999999999987,
+        "p_vs_random": 0.2946471341797931
+      }
+    },
+    "R8_round_fade_placebo": {
+      "full": {
+        "trades": 3629,
+        "average_R": -0.11906751171121305,
+        "t": -7.02310147623788,
+        "win_rate": 0.37971893083494074,
+        "final_eur": 0.08240467257382134,
+        "max_drawdown": 0.9999299581597636,
+        "random_average_R": -0.1388635987875413,
+        "paired_t": 0.903619640452045,
+        "p_positive": 0.9999999999987104,
+        "p_vs_random": 0.1831285584689106
+      },
+      "holdout": {
+        "trades": 1982,
+        "average_R": -0.10026236125126105,
+        "t": -4.256068070918991,
+        "win_rate": 0.3905146316851665,
+        "final_eur": 12.143358568001663,
+        "max_drawdown": 0.9883049513721245,
+        "random_average_R": -0.10942078708375096,
+        "paired_t": 0.2944754028121063,
+        "p_positive": 0.9999891117452155,
+        "p_vs_random": 0.3842127547928177
+      },
+      "recent": {
+        "trades": 639,
+        "average_R": -0.07633176838810797,
+        "t": -1.862850064521217,
+        "win_rate": 0.4194053208137715,
+        "final_eur": 328.83912939276837,
+        "max_drawdown": 0.7000144640350383,
+        "random_average_R": -0.11263849765258238,
+        "paired_t": 0.6787093590231702,
+        "p_positive": 0.9685286402132468,
+        "p_vs_random": 0.24878407381178658
+      }
+    },
+    "R2_sr_retest_flow_confirm": {
+      "unfiltered": {
+        "trades": 7372,
+        "average_R": -0.20873734881908446,
+        "t": -13.906913923647716,
+        "win_rate": 0.2749593054801953,
+        "final_eur": 3.572273746210149e-12,
+        "max_drawdown": 0.9999999999999966,
+        "random_average_R": -0.2163534207395568,
+        "paired_t": 0.42955730867370584,
+        "p_positive": 1.0,
+        "p_vs_random": 0.33376512661603636
+      },
+      "quote_direction_only": {
+        "trades": 6746,
+        "average_R": -0.20944936935805483,
+        "t": -13.350280652974718,
+        "win_rate": 0.27453305662614885,
+        "final_eur": 5.470925321692887e-11,
+        "max_drawdown": 0.9999999999999503,
+        "random_average_R": -0.2142132109739458,
+        "paired_t": 0.2563836049186415,
+        "p_positive": 1.0,
+        "p_vs_random": 0.39883123266176473
+      },
+      "tick_count_only": {
+        "trades": 5935,
+        "average_R": -0.19527723365387756,
+        "t": -11.529799648985872,
+        "win_rate": 0.27649536647009265,
+        "final_eur": 1.1085935238118218e-08,
+        "max_drawdown": 0.999999999990264,
+        "random_average_R": -0.21535536824639617,
+        "paired_t": 1.0109385689954153,
+        "p_positive": 1.0,
+        "p_vs_random": 0.15604352576371322
+      },
+      "both": {
+        "trades": 5394,
+        "average_R": -0.19719703934811833,
+        "t": -11.104788494958095,
+        "win_rate": 0.2756766777901372,
+        "final_eur": 8.990631687171286e-08,
+        "max_drawdown": 0.9999999999256848,
+        "random_average_R": -0.21443779884356984,
+        "paired_t": 0.8271073001163517,
+        "p_positive": 1.0,
+        "p_vs_random": 0.20410642053323025
+      }
+    },
+    "R3_orb_flow_confirm": {
+      "unfiltered": {
+        "trades": 1047,
+        "average_R": 0.05922796856056293,
+        "t": 0.6876347343662165,
+        "win_rate": 0.18242597898758356,
+        "final_eur": 811.1828440721899,
+        "max_drawdown": 0.9026222053869373,
+        "random_average_R": 0.04457971001282024,
+        "paired_t": 0.14904760870657233,
+        "p_positive": 0.24591763622321544,
+        "p_vs_random": 0.44077239820153796
+      },
+      "quote_direction_only": {
+        "trades": 933,
+        "average_R": 0.06459746800633973,
+        "t": 0.7146101737961686,
+        "win_rate": 0.18220793140407288,
+        "final_eur": 932.5400145205141,
+        "max_drawdown": 0.8823062371613714,
+        "random_average_R": 0.048928786796296156,
+        "paired_t": 0.1517181590808089,
+        "p_positive": 0.23751445130998242,
+        "p_vs_random": 0.43972103419149006
+      },
+      "tick_count_only": {
+        "trades": 516,
+        "average_R": -0.04249060354941392,
+        "t": -0.34358566863699674,
+        "win_rate": 0.14534883720930233,
+        "final_eur": 313.1948258133306,
+        "max_drawdown": 0.8755460067058525,
+        "random_average_R": -0.11877911089022611,
+        "paired_t": 0.6106304324177115,
+        "p_positive": 0.6343509365057303,
+        "p_vs_random": 0.2708568260841726
+      },
+      "both": {
+        "trades": 451,
+        "average_R": -0.008769884234001442,
+        "t": -0.06521893807330965,
+        "win_rate": 0.14634146341463414,
+        "final_eur": 480.8394289968659,
+        "max_drawdown": 0.8008384717765129,
+        "random_average_R": -0.08534538519128979,
+        "paired_t": 0.5728367440125539,
+        "p_positive": 0.5259856772158349,
+        "p_vs_random": 0.2835206719502742
+      }
+    },
+    "R4_orb_rvol_flow_confirm": {
+      "unfiltered": {
+        "trades": 516,
+        "average_R": -0.04249060354941392,
+        "t": -0.34358566863699674,
+        "win_rate": 0.14534883720930233,
+        "final_eur": 313.1948258133306,
+        "max_drawdown": 0.8755460067058525,
+        "random_average_R": -0.23729169418557503,
+        "paired_t": 1.5174219835773113,
+        "p_positive": 0.6343509365057303,
+        "p_vs_random": 0.06488688093222236
+      },
+      "quote_direction_only": {
+        "trades": 451,
+        "average_R": -0.008769884234001442,
+        "t": -0.06521893807330965,
+        "win_rate": 0.14634146341463414,
+        "final_eur": 480.8394289968659,
+        "max_drawdown": 0.8008384717765129,
+        "random_average_R": -0.17241539301340564,
+        "paired_t": 1.170194991892223,
+        "p_positive": 0.5259856772158349,
+        "p_vs_random": 0.12127093515896627
+      },
+      "tick_count_only": {
+        "trades": 516,
+        "average_R": -0.04249060354941392,
+        "t": -0.34358566863699674,
+        "win_rate": 0.14534883720930233,
+        "final_eur": 313.1948258133306,
+        "max_drawdown": 0.8755460067058525,
+        "random_average_R": -0.23729169418557503,
+        "paired_t": 1.5174219835773113,
+        "p_positive": 0.6343509365057303,
+        "p_vs_random": 0.06488688093222236
+      },
+      "both": {
+        "trades": 451,
+        "average_R": -0.008769884234001442,
+        "t": -0.06521893807330965,
+        "win_rate": 0.14634146341463414,
+        "final_eur": 480.8394289968659,
+        "max_drawdown": 0.8008384717765129,
+        "random_average_R": -0.17241539301340564,
+        "paired_t": 1.170194991892223,
+        "p_positive": 0.5259856772158349,
+        "p_vs_random": 0.12127093515896627
+      }
+    },
+    "R7_round_cross_round_15min_price": {
+      "events": 64488,
+      "mean_grid_units": -0.0012878520034733615,
+      "fraction_in_rule_direction": 0.4877186453293636
+    },
+    "R7_round_cross_placebo_15min_price": {
+      "events": 69138,
+      "mean_grid_units": -0.00251518701726975,
+      "fraction_in_rule_direction": 0.48218056640342505
+    },
+    "R8_round_fade_round_15min_price": {
+      "events": 3944,
+      "mean_grid_units": 0.0025289046653137917,
+      "fraction_in_rule_direction": 0.4852941176470588
+    },
+    "R8_round_fade_placebo_15min_price": {
+      "events": 3923,
+      "mean_grid_units": -0.012828447616620553,
+      "fraction_in_rule_direction": 0.46673464185572267
+    }
+  }
+}
