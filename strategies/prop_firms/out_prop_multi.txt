@@ -1,0 +1,54 @@
+
+######## FundedNext Stellar Instant $5K: fee $149.99, split 70%, max risk per trade $150
+  $25/trade (= 6% of EUR 359)        2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts   0 = $      0  fees $   150  NET $    -150  | still in account $  +217
+  $25/trade (= 6% of EUR 359)        last 2 years          : accounts  1 (breached  0), payouts   3 = $    222  fees $   150  NET $     +72  | still in account $  +283
+  $25/trade (= 6% of EUR 359)        last 10 years         : accounts  1 (breached  0), payouts  12 = $    887  fees $   150  NET $    +737  | still in account $  +367
+  $50/trade (= 6% of EUR 718)        2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts   1 = $     82  fees $   150  NET $     -68  | still in account $  +316
+  $50/trade (= 6% of EUR 718)        last 2 years          : accounts  2 (breached  1), payouts   8 = $    641  fees $   300  NET $    +341  | still in account $  +289
+  $50/trade (= 6% of EUR 718)        last 10 years         : accounts  1 (breached  0), payouts  27 = $  2,052  fees $   150  NET $  +1,902  | still in account $  +338
+  $75/trade (= 6% of EUR 1,078)      2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts   3 = $    256  fees $   150  NET $    +106  | still in account $  +284
+  $75/trade (= 6% of EUR 1,078)      last 2 years          : accounts  2 (breached  1), payouts  14 = $  1,119  fees $   300  NET $    +819  | still in account $  +211
+  $75/trade (= 6% of EUR 1,078)      last 10 years         : accounts  2 (breached  1), payouts  41 = $  3,292  fees $   300  NET $  +2,992  | still in account $  +211
+  $100/trade (= 6% of EUR 1,437)     2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts   5 = $    435  fees $   150  NET $    +285  | still in account $  +245
+  $100/trade (= 6% of EUR 1,437)     last 2 years          : accounts  4 (breached  3), payouts  20 = $  1,758  fees $   600  NET $  +1,158  | still in account $  +245
+  $100/trade (= 6% of EUR 1,437)     last 10 years         : accounts  8 (breached  7), payouts  55 = $  4,631  fees $ 1,200  NET $  +3,431  | still in account $  +245
+  $140/trade (= 6% of EUR 2,011)     2026 (1 Jan - 20 Oct) : accounts  2 (breached  1), payouts   8 = $    694  fees $   300  NET $    +394  | still in account $  +224
+  $140/trade (= 6% of EUR 2,011)     last 2 years          : accounts  5 (breached  4), payouts  28 = $  2,693  fees $   750  NET $  +1,943  | still in account $  +133
+  $140/trade (= 6% of EUR 2,011)     last 10 years         : accounts 18 (breached 17), payouts  75 = $  6,827  fees $ 2,700  NET $  +4,128  | still in account $  +133
+  $150/trade (= 6% of EUR 2,155)     2026 (1 Jan - 20 Oct) : accounts  2 (breached  1), payouts   8 = $    774  fees $   300  NET $    +474  | still in account $  +218
+  $150/trade (= 6% of EUR 2,155)     last 2 years          : accounts  6 (breached  5), payouts  30 = $  2,830  fees $   900  NET $  +1,930  | still in account $  +218
+  $150/trade (= 6% of EUR 2,155)     last 10 years         : accounts 20 (breached 19), payouts  79 = $  7,368  fees $ 3,000  NET $  +4,368  | still in account $  +218
+
+######## Instant Funding PRO $5K: fee $239.0, split 80%, max risk per trade $150
+  $25/trade (= 6% of EUR 359)        2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts   0 = $      0  fees $   239  NET $    -239  | still in account $  +217
+  $25/trade (= 6% of EUR 359)        last 2 years          : accounts  1 (breached  0), payouts  11 = $    291  fees $   239  NET $     +52  | still in account $  +236
+  $25/trade (= 6% of EUR 359)        last 10 years         : accounts  1 (breached  0), payouts  38 = $  1,124  fees $   239  NET $    +885  | still in account $  +230
+  $50/trade (= 6% of EUR 718)        2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts   3 = $    168  fees $   239  NET $     -71  | still in account $  +223
+  $50/trade (= 6% of EUR 718)        last 2 years          : accounts  1 (breached  0), payouts  25 = $    808  fees $   239  NET $    +569  | still in account $  +190
+  $50/trade (= 6% of EUR 718)        last 10 years         : accounts  1 (breached  0), payouts  71 = $  2,463  fees $   239  NET $  +2,224  | still in account $  +190
+  $75/trade (= 6% of EUR 1,078)      2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts   7 = $    352  fees $   239  NET $    +113  | still in account $  +209
+  $75/trade (= 6% of EUR 1,078)      last 2 years          : accounts  2 (breached  1), payouts  34 = $  1,509  fees $   478  NET $  +1,031  | still in account $  +161
+  $75/trade (= 6% of EUR 1,078)      last 10 years         : accounts  2 (breached  1), payouts  94 = $  3,992  fees $   478  NET $  +3,514  | still in account $  +161
+  $100/trade (= 6% of EUR 1,437)     2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts  11 = $    562  fees $   239  NET $    +323  | still in account $  +164
+  $100/trade (= 6% of EUR 1,437)     last 2 years          : accounts  2 (breached  1), payouts  35 = $  2,011  fees $   478  NET $  +1,533  | still in account $  +170
+  $100/trade (= 6% of EUR 1,437)     last 10 years         : accounts  2 (breached  1), payouts 101 = $  5,323  fees $   478  NET $  +4,845  | still in account $  +170
+  $140/trade (= 6% of EUR 2,011)     2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts  15 = $    867  fees $   239  NET $    +628  | still in account $  +129
+  $140/trade (= 6% of EUR 2,011)     last 2 years          : accounts  3 (breached  2), payouts  39 = $  3,115  fees $   717  NET $  +2,398  | still in account $  +138
+  $140/trade (= 6% of EUR 2,011)     last 10 years         : accounts  7 (breached  6), payouts 130 = $  8,394  fees $ 1,673  NET $  +6,721  | still in account $  +138
+  $150/trade (= 6% of EUR 2,155)     2026 (1 Jan - 20 Oct) : accounts  1 (breached  0), payouts  15 = $    943  fees $   239  NET $    +704  | still in account $  +121
+  $150/trade (= 6% of EUR 2,155)     last 2 years          : accounts  3 (breached  2), payouts  43 = $  3,315  fees $   717  NET $  +2,598  | still in account $   +71
+  $150/trade (= 6% of EUR 2,155)     last 10 years         : accounts  7 (breached  6), payouts 133 = $  8,864  fees $ 1,673  NET $  +7,191  | still in account $   +71
+
+######## Survival check: a fresh account started at the beginning of each month, kept for 12 months
+  FundedNext Stellar Instant $5K   $ 25/trade: breached within the year in   0% of 108 starts, median NET $  -150, worst $  -150, best $    -1
+  FundedNext Stellar Instant $5K   $ 50/trade: breached within the year in   8% of 108 starts, median NET $  -150, worst $  -223, best $  +323
+  FundedNext Stellar Instant $5K   $ 75/trade: breached within the year in  31% of 108 starts, median NET $  -150, worst $  -300, best $  +651
+  FundedNext Stellar Instant $5K   $100/trade: breached within the year in  50% of 108 starts, median NET $   -70, worst $  -450, best $+1,039
+  FundedNext Stellar Instant $5K   $140/trade: breached within the year in  82% of 108 starts, median NET $    +2, worst $  -750, best $+1,352
+  FundedNext Stellar Instant $5K   $150/trade: breached within the year in  86% of 108 starts, median NET $   -22, worst $  -750, best $+1,329
+  Instant Funding PRO $5K          $ 25/trade: breached within the year in   0% of 108 starts, median NET $  -239, worst $  -239, best $   -39
+  Instant Funding PRO $5K          $ 50/trade: breached within the year in   0% of 108 starts, median NET $  -239, worst $  -239, best $  +361
+  Instant Funding PRO $5K          $ 75/trade: breached within the year in   8% of 108 starts, median NET $  -150, worst $  -239, best $  +789
+  Instant Funding PRO $5K          $100/trade: breached within the year in  10% of 108 starts, median NET $   -54, worst $  -239, best $+1,199
+  Instant Funding PRO $5K          $140/trade: breached within the year in  35% of 108 starts, median NET $   +88, worst $  -613, best $+1,854
+  Instant Funding PRO $5K          $150/trade: breached within the year in  38% of 108 starts, median NET $  +133, worst $  -628, best $+2,017
