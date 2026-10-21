@@ -53,3 +53,36 @@ Nov 2016 – Oct 2025, and kept for 12 months.
 - At 6% of EUR 2,000 ($140), 2026 would have paid +$628, but in a typical year the account is lost about a third of
   the time.
 - For comparison, your own EUR 2,000 at 6% on Exness made EUR 3,253 (+63%) in 2026, with your own money at risk.
+
+## Cheaper and better: Instant Funding IF Micro PRO ([prop_micro.py](prop_micro.py))
+
+Rules from [instantfunding.com/help/if-micro](https://instantfunding.com/help/if-micro/), read 21 Oct 2026:
+- 6% static max loss from the start; 4% daily loss (of the higher of balance/equity at the 17:00 NY rollover);
+- **at most 1% of the starting balance at risk per trade idea (hard breach)**;
+- own EAs allowed; news, overnight and weekend holding allowed;
+- payouts on demand once profit is at least 5% and the best day is at most 15% of the cycle's profit; 80% split.
+
+Prices on the live page: $5K $53 · $10K $109 · $25K $234 · $50K $439 · $100K $813.
+
+Gotobi bot, risk 0.98% of the starting balance per trade:
+
+| Account | Fee | Risk/trade | 2026, no withdrawals: your 80% after fee | Last 2 yrs net | Last 10 yrs net (accounts lost) | Lost within a year |
+|---|---:|---:|---:|---:|---:|---:|
+| $5,000 | $53 | $49 | EUR 247 | $921 | $2,306 (2) | 1% |
+| $10,000 | $109 | $98 | EUR 492 | $1,840 | $4,604 (2) | 1% |
+| $25,000 | $234 | $245 | EUR 1,262 | $4,638 | $11,625 (2) | 1% |
+| $50,000 | $439 | $490 | EUR 2,549 | $9,305 | $23,336 (2) | 1% |
+| $100,000 | $813 | $980 | EUR 5,154 | $18,676 | $46,867 (2) | 1% |
+
+At 0.75% risk the profits are about 23% lower, and no 12-month start lost the account.
+
+Why it beats IF PRO: the cap is 1% of a large balance instead of 3% of a small one, so the same fee buys much bigger
+trades. The $10K Micro ($109) earns about what the PRO $5K ($239) does. The $25K Micro (about the same fee) earns
+about 2.4x as much.
+
+Caveats:
+- A gap through the stop could push the loss past 1%, which is a hard breach. Run the bot at **0.75–0.9%**, not
+  0.98%.
+- The firm's commission/spread is not modelled; $5/lot would cut about 15% of the profit.
+- Payouts are discretionary, and the accounts are simulated.
+- Bigger accounts mean bigger fees lost on a breach.
